@@ -53,3 +53,5 @@ curl -X POST -H 'Content-Type: application/json' \
     -d '{ "delete": {"query":"*:*"} }'
 )
 
+https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
+
