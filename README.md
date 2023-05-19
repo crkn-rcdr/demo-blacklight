@@ -23,19 +23,24 @@ Things you may want to cover:
 
 * ...
 
+Local Deployment:
 
 docker compose up -d
 
+(On first run only)
+
 docker container ls
 
-docker exec -it my_new_blacklightapp-solr-1 solr create_core -c blacklight
+docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight
 
-docker exec -it my_new_blacklightapp-web-1 bash 
+docker exec -it demo-blacklight-web-1 bash 
 
 rake solr:marc:index MARC_FILE=test.mrc
 
-docker logs my_new_blacklightapp-web-1 --follow
+docker logs demo-blacklight-web-1 --follow
 
+
+Go to:
 http://localhost:3000
 
 Run the db migrations by clicking the button
@@ -47,4 +52,6 @@ curl -X POST -H 'Content-Type: application/json' \
     'http://localhost:8983/solr/blacklight/update?commit=true' \
     -d '{ "delete": {"query":"*:*"} }'
 )
+
+https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
 
