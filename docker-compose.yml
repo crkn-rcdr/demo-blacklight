@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - solr
+    networks:
+      blapp:
+        ipv4_address: 10.5.0.5
+  solr:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - data:/var/solr
+    networks:
+      blapp:
+        ipv4_address: 10.5.0.6
+volumes:
+  data:
+networks:
+  blapp:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
