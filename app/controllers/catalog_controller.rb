@@ -116,13 +116,13 @@ class CatalogController < ApplicationController
 
 
     #config.add_facet_field 'title_tsim', label: 'Title'
-    config.add_facet_field 'subject_tsim', label: 'Subject'
     config.add_facet_field 'format', label: 'Format'
-    config.add_facet_field 'author_tsim', label: 'Author'
-    config.add_facet_field 'language_ssim', label: 'Language'
-    config.add_facet_field 'pub_date_si', label: 'Published'
-    config.add_facet_field 'subject_geo_ssim', label: 'Region'
-    config.add_facet_field 'title_series_tsim', label: 'Series'
+    config.add_facet_field 'title_series_tsim_str', label: 'Series'
+    config.add_facet_field 'subject_ssim_str', label: 'Subject'
+    config.add_facet_field 'author_ssm_str', label: 'Author'
+    config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
+    config.add_facet_field 'language_ssim_str', label: 'Language'
+    config.add_facet_field 'published_ssm_str', label: 'Published'
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
