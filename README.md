@@ -23,8 +23,11 @@ Things you may want to cover:
 
 * ...
 
+Local Deployment:
 
 docker compose up -d
+
+(On first run only)
 
 docker container ls
 
@@ -36,6 +39,8 @@ rake solr:marc:index MARC_FILE=test.mrc
 
 docker logs my_new_blacklightapp-web-1 --follow
 
+
+Go to:
 http://localhost:3000
 
 Run the db migrations by clicking the button
