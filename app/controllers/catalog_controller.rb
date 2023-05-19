@@ -37,7 +37,8 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :q => "*:*",
       :qt => "*:*",
-      df: "title_tsim"
+      df: "title_tsim",
+      qf: "title_tsim^100 author_tsim^20 all_text_timv"
     }
 
     # solr path which will be added to solr base url before the other solr params.
