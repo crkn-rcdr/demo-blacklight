@@ -37,12 +37,14 @@ Go to the above link for Blacklight and run the db migrations by clicking the bu
 
 See CRKN test data!
 
-Note: (—force-recreate if you want to reset the contents of solr, or use
-curl -X POST -H 'Content-Type: application/json' \
+Notes: (
+* with docker compose up, use --force-recreate if you want to reset the contents of solr
+* or use this Solr API curl command:
+`curl -X POST -H 'Content-Type: application/json' \
     'http://localhost:8983/solr/blacklight/update?commit=true' \
     -d '{ "delete": {"query":"*:*"} }'
-)
+)`
 
-Reference:
+## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
 
