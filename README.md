@@ -5,40 +5,30 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Ruby version
+3.0.3
 
-* System dependencies
+## System dependencies
+Docker, Docker-compose
 
-* Configuration
+## Configuration
+See: https://github.com/projectblacklight/blacklight/wiki
 
-* Database creation
+## Deployment instructions
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Local Deployment:
+### Local Deployment
 
 docker compose up -d
 
-(On first run only)
+(On first run only, to get container name) docker container ls
 
-docker container ls
+(On first run only) docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight
 
-docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight
+(On first run only) docker exec -it demo-blacklight-web-1 bash 
 
-docker exec -it demo-blacklight-web-1 bash 
+(On first run only) rake solr:marc:index MARC_FILE=test.mrc
 
-rake solr:marc:index MARC_FILE=test.mrc
-
-docker logs demo-blacklight-web-1 --follow
-
+(On first run only) docker logs demo-blacklight-web-1 --follow
 
 Go to:
 http://localhost:3000
@@ -53,5 +43,6 @@ curl -X POST -H 'Content-Type: application/json' \
     -d '{ "delete": {"query":"*:*"} }'
 )
 
+Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
 
