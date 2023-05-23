@@ -15,17 +15,17 @@ See: https://github.com/projectblacklight/blacklight/wiki
 
 ### Local Deployment
 
-docker compose up -d
+`docker compose up -d`
 
-(On first run only, to get container name if your folder name is different) docker container ls
+(On first run only, to get container name if your folder name is different) `docker container ls`
 
-(On first run only) docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight
+(On first run only) `docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight`
 
-(On first run only) docker exec -it demo-blacklight-web-1 bash 
+(On first run only) `docker exec -it demo-blacklight-web-1 bash`
 
-(On first run only) rake solr:marc:index MARC_FILE=test.mrc
+(On first run only) `rake solr:marc:index MARC_FILE=test.mrc`
 
-(On first run only) docker logs demo-blacklight-web-1 --follow
+(On first run only) `docker logs demo-blacklight-web-1 --follow`
 
 Solr instance will be running at:
 http://localhost:8983
