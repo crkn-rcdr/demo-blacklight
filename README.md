@@ -27,10 +27,13 @@ docker compose up -d
 
 (On first run only) docker logs demo-blacklight-web-1 --follow
 
-Go to:
+Solr instance will be running at:
+http://localhost:8983
+
+Blacklight instance will be running at:
 http://localhost:3000
 
-Run the db migrations by clicking the button
+Go to the above link and run the db migrations by clicking the button.
 
 See CRKN test data!
 
