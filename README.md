@@ -33,7 +33,7 @@ http://localhost:8983
 Blacklight instance will be running at:
 http://localhost:3000
 
-Go to the above link and run the db migrations by clicking the button.
+Go to the above link for Blacklight and run the db migrations by clicking the button.
 
 See CRKN test data!
 
