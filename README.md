@@ -37,7 +37,7 @@ Go to the above link for Blacklight and run the db migrations by clicking the bu
 
 See CRKN test data!
 
-Notes: (
+Notes: 
 * with docker compose up, use --force-recreate if you want to reset the contents of solr
 * or use this Solr API curl command:
 `curl -X POST -H 'Content-Type: application/json' \
