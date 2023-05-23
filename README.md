@@ -17,7 +17,7 @@ See: https://github.com/projectblacklight/blacklight/wiki
 
 docker compose up -d
 
-(On first run only, to get container name) docker container ls
+(On first run only, to get container name if your folder name is different) docker container ls
 
 (On first run only) docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight
 
