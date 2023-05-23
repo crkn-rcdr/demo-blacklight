@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+A docker compose demo that will allow you to spin up a test instance of blacklight in a flash.
 
 ## Ruby version
 3.0.3
