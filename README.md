@@ -28,7 +28,7 @@ See: https://github.com/projectblacklight/blacklight/wiki
 (On first run only) `docker logs demo-blacklight-web-1 --follow`
 
 Solr instance will be running at:
-http://localhost:8993
+http://localhost:8983
 
 Blacklight instance will be running at:
 http://localhost:3000
