@@ -1,0 +1,53 @@
+                                                                                                             0.7s
+[17:29] root@toma demo-blacklight# docker exec -it demo-blacklight-web-1 bash
+root@18cb56c0eef0:/app# rake solr:marc:index MARC_FILE=test.mrc
+2023-05-31T21:30:49+00:00  INFO    Traject::SolrJsonWriter writing to 'http://10.202.1.10:8983/solr/blacklight/update/json' in batches of 100 with 1 bg threads
+2023-05-31T21:30:49+00:00  INFO    Traject::Indexer with 1 processing threads, reader: Traject::MarcReader and writer: Traject::SolrJsonWriter
+2023-05-31T21:30:51+00:00 ERROR Error in Solr batch add. Will retry documents individually at performance penalty: Solr response: 400: {
+  "responseHeader":{
+    "status":400,
+    "QTime":1888},
+  "error":{
+    "metadata":[
+      "error-class","org.apache.solr.common.SolrException",
+      "root-error-class","java.lang.NumberFormatException"],
+    "msg":"ERROR: [doc=93391] Error adding field 'isbn_tsim'='[9780665933912, 0665933916, 9780665933929, 0665933924, 9780665933936, 0665933932, 9780665933943, 0665933940, 9780665933950, 0665933959, 9780665933967, 0665933967, 9780665933974, 0665933975, 9780665933981, 0665933983, 9780665933998, 0665933991, 9780665934001, 0665934009, 9780665934018, 0665934017, 9780665934025, 0665934025, 9780665934032, 0665934033, 9780665934056, 066593405X, 0665933916 (v. 1), 0665933924 (v. 2), 0665933932 (v. 3), 0665933940 (v. 4), 0665933959 (v. 5), 0665933967 (v. 6), 0665933975 (v. 7), 0665933983 (v. 8), 0665933991 (v. 9), 0665934009 (v. 10), 0665934017 (v. 11), 0665934025 (v. 12), 0665934033 (v. 13), 066593405X (v. 15)]' msg=For input string: \"066593405X\"",
+    "code":400}}
+
+2023-05-31T21:30:51+00:00 ERROR Could not add record <record #9 (test.mrc #9), source_id:93391 output_id:93391>: Solr error response: 400: {
+  "responseHeader":{
+    "status":400,
+    "QTime":3},
+  "error":{
+    "metadata":[
+      "error-class","org.apache.solr.common.SolrException",
+      "root-error-class","java.lang.NumberFormatException"],
+    "msg":"ERROR: [doc=93391] Error adding field 'isbn_tsim'='[9780665933912, 0665933916, 9780665933929, 0665933924, 9780665933936, 0665933932, 9780665933943, 0665933940, 9780665933950, 0665933959, 9780665933967, 0665933967, 9780665933974, 0665933975, 9780665933981, 0665933983, 9780665933998, 0665933991, 9780665934001, 0665934009, 9780665934018, 0665934017, 9780665934025, 0665934025, 9780665934032, 0665934033, 9780665934056, 066593405X, 0665933916 (v. 1), 0665933924 (v. 2), 0665933932 (v. 3), 0665933940 (v. 4), 0665933959 (v. 5), 0665933967 (v. 6), 0665933975 (v. 7), 0665933983 (v. 8), 0665933991 (v. 9), 0665934009 (v. 10), 0665934017 (v. 11), 0665934025 (v. 12), 0665934033 (v. 13), 066593405X (v. 15)]' msg=For input string: \"066593405X\"",
+    "code":400}}
+
+2023-05-31T21:30:51+00:00 ERROR Could not add record <record #10 (test.mrc #10), source_id:94563 output_id:94563>: Solr error response: 400: {
+  "responseHeader":{
+    "status":400,
+    "QTime":2},
+  "error":{
+    "metadata":[
+      "error-class","org.apache.solr.common.SolrException",
+      "root-error-class","java.lang.NumberFormatException"],
+    "msg":"ERROR: [doc=94563] Error adding field 'isbn_tsim'='[9780665945632, 0665945639, 9780665945649, 0665945647, 0665945639 (v. 1), 0665945647 (v. 2)]' msg=For input string: \"0665945639 (v. 1)\"",
+    "code":400}}
+
+2023-05-31T21:30:51+00:00 ERROR Could not add record <record #14 (test.mrc #14), source_id:48978 output_id:48978>: Solr error response: 400: {
+  "responseHeader":{
+    "status":400,
+    "QTime":91},
+  "error":{
+    "metadata":[
+      "error-class","org.apache.solr.common.SolrException",
+      "root-error-class","java.lang.NumberFormatException"],
+    "msg":"ERROR: [doc=48978] Error adding field 'isbn_tsim'='[9780665489785, 0665489781, 0665489781 (v. 1)]' msg=For input string: \"0665489781 (v. 1)\"",
+    "code":400}}
+
+2023-05-31T21:30:51+00:00  WARN Traject::SolrJsonWriter: 3 skipped records
+2023-05-31T21:30:51+00:00  INFO Traject::SolrJsonWriter sending commit to solr at url http://10.202.1.10:8983/solr/blacklight/update/json...
+2023-05-31T21:30:52+00:00  INFO finished Traject::Indexer#process: 14 records in 2.765 seconds; 5.1 records/second overall.
+2023-05-31T21:30:52+00:00 ERROR Traject::Indexer#process returning 'false' due to 3 skipped records.
