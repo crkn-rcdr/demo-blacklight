@@ -19,6 +19,6 @@ RUN rails generate blacklight:install --devise --marc --solr_version=latest
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["rails", "server", "-b", "0.0.0.0"]

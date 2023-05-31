@@ -28,10 +28,10 @@ See: https://github.com/projectblacklight/blacklight/wiki
 (On first run only) `docker logs demo-blacklight-web-1 --follow`
 
 Solr instance will be running at:
-http://localhost:8983
+http://localhost:8993
 
 Blacklight instance will be running at:
-http://localhost:3000
+http://localhost:3001
 
 Go to the above link for Blacklight and run the db migrations by clicking the button.
 
