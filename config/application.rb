@@ -19,6 +19,5 @@ module MyNewBlacklightapp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.web_console.permissions = 'toma.tor.c7a.ca'
-    config.hosts << "toma.tor.c7a.ca"
   end
 end
