@@ -1,7 +1,7 @@
                                                                                                              0.7s
 [17:29] root@toma demo-blacklight# docker exec -it demo-blacklight-web-1 bash
 root@18cb56c0eef0:/app# rake solr:marc:index MARC_FILE=test.mrc
-2023-05-31T21:30:49+00:00  INFO    Traject::SolrJsonWriter writing to 'http://10.202.1.10:8983/solr/blacklight/update/json' in batches of 100 with 1 bg threads
+2023-05-31T21:30:49+00:00  INFO    Traject::SolrJsonWriter writing to 'http://10.200.1.35:8983/solr/blacklight/update/json' in batches of 100 with 1 bg threads
 2023-05-31T21:30:49+00:00  INFO    Traject::Indexer with 1 processing threads, reader: Traject::MarcReader and writer: Traject::SolrJsonWriter
 2023-05-31T21:30:51+00:00 ERROR Error in Solr batch add. Will retry documents individually at performance penalty: Solr response: 400: {
   "responseHeader":{
@@ -48,6 +48,6 @@ root@18cb56c0eef0:/app# rake solr:marc:index MARC_FILE=test.mrc
     "code":400}}
 
 2023-05-31T21:30:51+00:00  WARN Traject::SolrJsonWriter: 3 skipped records
-2023-05-31T21:30:51+00:00  INFO Traject::SolrJsonWriter sending commit to solr at url http://10.202.1.10:8983/solr/blacklight/update/json...
+2023-05-31T21:30:51+00:00  INFO Traject::SolrJsonWriter sending commit to solr at url http://10.200.1.35:8983/solr/blacklight/update/json...
 2023-05-31T21:30:52+00:00  INFO finished Traject::Indexer#process: 14 records in 2.765 seconds; 5.1 records/second overall.
 2023-05-31T21:30:52+00:00 ERROR Traject::Indexer#process returning 'false' due to 3 skipped records.
