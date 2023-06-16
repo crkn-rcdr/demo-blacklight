@@ -23,5 +23,4 @@ Rails.application.configure do
 #   # Report violations without enforcing the policy.
 #   # config.content_security_policy_report_only = true
     # config.hosts.clear
-    config.hosts << 'c7a.ca'
 end
