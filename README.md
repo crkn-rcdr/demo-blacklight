@@ -23,7 +23,11 @@ See: https://github.com/projectblacklight/blacklight/wiki
 
 (On first run only) `docker exec -it demo-blacklight-web-1 bash`
 
-(On first run only) `rake solr:marc:index MARC_FILE=test.mrc`
+(On first run only)
+`rake solr:marc:index MARC_FILE=MasterFile_GovDocs_8140Records.mrc`
+`rake solr:marc:index MARC_FILE=MasterFile_Monographs_23768-48970_20011Records.mrc`
+`rake solr:marc:index MARC_FILE=MasterFile_Monographs_9_xxxx_2265Records.mrc`
+`rake solr:marc:index MARC_FILE=MasterFile_Serials_4796Records.mrc`
 
 (On first run only) `docker logs demo-blacklight-web-1 --follow`
 
