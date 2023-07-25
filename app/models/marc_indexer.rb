@@ -1,6 +1,4 @@
 $:.unshift './config'
-require 'rubygems' 
-require 'translator'
 class MarcIndexer < Blacklight::Marc::Indexer
   # this mixin defines lambda factory method get_format for legacy marc formats
   include Blacklight::Marc::Indexer::Formats
@@ -40,7 +38,6 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field 'title_vern_ssm', extract_marc('245a', alternate_script: :only), trim_punctuation
 
     #    subtitle
-
     to_field 'subtitle_tsim', extract_marc('245b')
     to_field 'subtitle_ssm', extract_marc('245b', alternate_script: false), trim_punctuation
     to_field 'subtitle_vern_ssm', extract_marc('245b', alternate_script: :only), trim_punctuation
@@ -68,7 +65,6 @@ class MarcIndexer < Blacklight::Marc::Indexer
     }.join(':'))
 
     to_field 'title_series_tsim', extract_marc("440anpv:490av")
-
     to_field 'title_si', marc_sortable_title
 
     # Author fields
@@ -97,9 +93,39 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field 'subject_geo_ssim',  extract_marc("651a:650z"), trim_punctuation
 
     # Publication fields
-    tr = Translator.new()
-    english_only = lambda  do |rec, acc|
-      acc.map!{|x| tr.to_en(x)  }
+    
+    # Remove the accents from the string. Uses String::ACCENTS_MAPPING as the source map.
+    ACCENTS_MAPPING = {
+      'E' => [200,201,202,203],
+      'e' => [232,233,234,235],
+      'A' => [192,193,194,195,196,197],
+      'a' => [224,225,226,227,228,229,230],
+      'C' => [199],
+      'c' => [231],
+      'O' => [210,211,212,213,214,216],
+      'o' => [242,243,244,245,246,248],
+      'I' => [204,205,206,207],
+      'i' => [236,237,238,239],
+      'U' => [217,218,219,220],
+      'u' => [249,250,251,252],
+      'N' => [209],
+      'n' => [241],
+      'Y' => [221],
+      'y' => [253,255],
+      'AE' => [306],
+      'ae' => [346],
+      'OE' => [188],
+      'oe' => [189]
+    }
+
+    remove_accent = lambda  do |rec, acc|
+      acc.map!{|x| String::ACCENTS_MAPPING.each {|letter,accents|
+          packed = accents.pack('U*')
+          rxp = Regexp.new("[#{packed}]", nil)
+          x.gsub!(rxp, letter)
+        }
+        x 
+      }
     end
 
     to_field 'published_ssm', extract_marc('260a', alternate_script: false), english_only, trim_punctuation
