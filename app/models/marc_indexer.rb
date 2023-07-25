@@ -95,7 +95,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
     # Publication fields
     
     # Remove the accents from the string. Uses String::ACCENTS_MAPPING as the source map.
-    ACCENTS_MAPPING = {
+    accents_mapping = {
       'E' => [200,201,202,203],
       'e' => [232,233,234,235],
       'A' => [192,193,194,195,196,197],
@@ -119,7 +119,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
     }
 
     remove_accent = lambda  do |rec, acc|
-      acc.map!{|x| String::ACCENTS_MAPPING.each {|letter,accents|
+      acc.map!{|x| String::accents_mapping.each {|letter,accents|
           packed = accents.pack('U*')
           rxp = Regexp.new("[#{packed}]", nil)
           x.gsub!(rxp, letter)
