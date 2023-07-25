@@ -96,8 +96,8 @@ class MarcIndexer < Blacklight::Marc::Indexer
     
     # Remove the accents from the string. Uses String::ACCENTS_MAPPING as the source map.
     remove_accent = lambda {|rec, acc| acc.map!{|x| 
-      I18n.transliterate(x)
-      x.tr('?', '')
+      y = I18n.transliterate(x)
+      y.tr('?', '')
     } }
 
     to_field 'published_ssm', extract_marc('260a', alternate_script: false), remove_accent, trim_punctuation
