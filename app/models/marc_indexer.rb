@@ -128,8 +128,8 @@ class MarcIndexer < Blacklight::Marc::Indexer
       }
     end
 
-    to_field 'published_ssm', extract_marc('260a', alternate_script: false), english_only, trim_punctuation
-    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), english_only, trim_punctuation
+    to_field 'published_ssm', extract_marc('260a', alternate_script: false), remove_accent, trim_punctuation
+    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), remove_accent, trim_punctuation
 
 
     to_field 'pub_date_si', marc_publication_date
