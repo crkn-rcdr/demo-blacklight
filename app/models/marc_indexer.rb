@@ -1,4 +1,6 @@
 $:.unshift './config'
+require 'rubygems' 
+require 'translator'
 class MarcIndexer < Blacklight::Marc::Indexer
   # this mixin defines lambda factory method get_format for legacy marc formats
   include Blacklight::Marc::Indexer::Formats
@@ -95,8 +97,15 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field 'subject_geo_ssim',  extract_marc("651a:650z"), trim_punctuation
 
     # Publication fields
-    to_field 'published_ssm', extract_marc('260a', alternate_script: false), trim_punctuation
-    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), trim_punctuation
+    tr = Translator.new()
+    english_only = lambda  do |rec, acc|
+      acc.map!{|x| tr.to_en(x)  }
+    end
+
+    to_field 'published_ssm', extract_marc('260a', alternate_script: false), english_only, trim_punctuation
+    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), english_only, trim_punctuation
+
+
     to_field 'pub_date_si', marc_publication_date
     to_field 'pub_date_ssim', marc_publication_date
 
