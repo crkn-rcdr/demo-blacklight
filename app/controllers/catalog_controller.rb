@@ -123,6 +123,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
     config.add_facet_field 'published_ssm_str', label: 'Published'
+    config.add_facet_field 'collection_tsim', label: 'Collection'
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
@@ -158,7 +159,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'pub_date_si', label: 'Published'
     config.add_show_field 'subject_geo_ssim', label: 'Region'
     config.add_show_field 'title_series_tsim', label: 'Series'
-
+    config.add_show_field 'collection_tsim', label: 'Collection'
+    
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
     #
