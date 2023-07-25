@@ -119,7 +119,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
     }
 
     remove_accent = lambda  do |rec, acc|
-      acc.map!{|x| String::accents_mapping.each {|letter,accents|
+      acc.map!{|x| accents_mapping.each {|letter,accents|
           packed = accents.pack('U*')
           rxp = Regexp.new("[#{packed}]", nil)
           x.gsub!(rxp, letter)
