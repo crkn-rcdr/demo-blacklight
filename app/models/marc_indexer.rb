@@ -157,5 +157,10 @@ class MarcIndexer < Blacklight::Marc::Indexer
         end
       end
     end
+
+
+    # Additional CRKN Information
+    to_field 'collection_tsim', extract_marc('999a')
+
   end
 end
