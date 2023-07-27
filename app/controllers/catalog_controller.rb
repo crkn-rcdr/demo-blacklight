@@ -123,7 +123,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'author_ssm_str', label: 'Author'
     config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
-    config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index'
+    config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
     config.add_facet_field 'pub_date_si', label: 'Publish Date'
 
 
