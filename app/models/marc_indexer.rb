@@ -98,9 +98,9 @@ class MarcIndexer < Blacklight::Marc::Indexer
     remove_accent = lambda {|rec, acc| acc.map!{|x| 
       x = I18n.transliterate(x)
       x = x.tr('?', '')
-      x = x..tr('[', '')
-      x = x..tr(']', '')
-      x = x..tr('.', '')
+      x = x.tr('[', '')
+      x = x.tr(']', '')
+      x = x.tr('.', '')
       x.tr(',', '')
     } }
 
