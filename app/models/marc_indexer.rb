@@ -98,6 +98,9 @@ class MarcIndexer < Blacklight::Marc::Indexer
     remove_accent = lambda {|rec, acc| acc.map!{|x| 
       y = I18n.transliterate(x)
       y.tr('?', '')
+      y.tr('[', '')
+      y.tr(']', '')
+      y.tr('.', '')
     } }
 
     to_field 'published_ssm', extract_marc('260a', alternate_script: false), remove_accent, trim_punctuation
