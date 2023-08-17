@@ -118,7 +118,7 @@ class CatalogController < ApplicationController
     #config.add_facet_field 'title_tsim', label: 'Title'
     config.add_facet_field 'format', label: 'Format'
     config.add_facet_field 'collection_tsim_str', label: 'Collection'
-    config.add_facet_field 'title_series_tsim_str', label: 'Series'
+    #config.add_facet_field 'title_series_tsim_str', label: 'Series'
     config.add_facet_field 'subject_ssim_str', label: 'Subject'
     config.add_facet_field 'author_ssm_str', label: 'Author'
     config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
