@@ -21,9 +21,11 @@ class MarcIndexer < Blacklight::Marc::Indexer
 
     to_field "language_ssim", marc_languages("008[35-37]:041a:041d:")
     to_field "format", get_format
-    to_field "isbn_tsim",  extract_marc('020a', separator: nil) do |rec, acc|
+
+    #Look into this
+    to_field "isbn_tsim", extract_marc('020a', separator: nil) do |rec, acc|
          orig = acc.dup
-         acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)}
+         # acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)} # Can't handle 'x' assigned after by them~
          acc << orig
          acc.flatten!
          acc.uniq!
@@ -95,17 +97,17 @@ class MarcIndexer < Blacklight::Marc::Indexer
     # Publication fields
     
     # Remove the accents from the string
-    remove_accent = lambda {|rec, acc| acc.map!{|x| 
-      x = I18n.transliterate(x)
-      x = x.tr('?', '')
-      x = x.tr('[', '')
-      x = x.tr(']', '')
-      x = x.tr('.', '')
-      x.tr(',', '')
-    } }
+    #remove_accent = lambda {|rec, acc| acc.map!{|x| 
+    #  x = I18n.transliterate(x)
+    #  x = x.tr('?', '')
+    #  x = x.tr('[', '')
+    #  x = x.tr(']', '')
+    #  x = x.tr('.', '')
+    #  x.tr(',', '')
+    #} }
 
-    to_field 'published_ssm', extract_marc('260a', alternate_script: false), remove_accent, trim_punctuation
-    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), remove_accent, trim_punctuation
+    to_field 'published_ssm', extract_marc('260a', alternate_script: false), trim_punctuation #remove_accent
+    to_field 'published_vern_ssm', extract_marc('260a', alternate_script: :only), trim_punctuation #remove_accent
 
 
     to_field 'pub_date_si', marc_publication_date
