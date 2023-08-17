@@ -147,13 +147,13 @@ class CatalogController < ApplicationController
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'author_tsim', label: 'Author'
     config.add_index_field 'language_ssim', label: 'Language'
-    config.add_index_field 'collection_tsim_str', label: 'Collection'
+    config.add_index_field 'collection_tsim', label: 'Collection'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
     config.add_show_field 'title_tsim', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
-    config.add_show_field 'collection_tsim_str', label: 'Collection'
+    config.add_show_field 'collection_tsim', label: 'Collection'
     config.add_show_field 'subject_tsim', label: 'Subject'
     config.add_show_field 'format', label: 'Format'
     config.add_show_field 'url_fulltext_ssim', label: 'URL'
