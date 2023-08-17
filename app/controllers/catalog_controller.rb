@@ -152,6 +152,7 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_show_field 'title_tsim', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
+    config.add_show_field 'collection_tsim_str', label: 'Collection'
     config.add_show_field 'subject_tsim', label: 'Subject'
     config.add_show_field 'format', label: 'Format'
     config.add_show_field 'url_fulltext_ssim', label: 'URL'
@@ -161,7 +162,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'pub_date_si', label: 'Publish Date'
     config.add_show_field 'subject_geo_ssim', label: 'Region'
     config.add_show_field 'title_series_tsim', label: 'Series'
-    config.add_show_field 'collection_tsim_str', label: 'Collection'
     
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
