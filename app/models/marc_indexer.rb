@@ -23,13 +23,13 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field "format", get_format
 
     #Look into this
-    to_field "isbn_tsim", extract_marc('020a', separator: nil) do |rec, acc|
-         orig = acc.dup
-         # acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)} # Can't handle 'x' assigned after by them~
-         acc << orig
-         acc.flatten!
-         acc.uniq!
-    end
+    #to_field "isbn_tsim", extract_marc('020a', separator: nil) do |rec, acc|
+    #     orig = acc.dup
+    #     # acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)} # Can't handle 'x' assigned after by them~
+    #     acc << orig
+    #     acc.flatten!
+    #     acc.uniq!
+    #end
 
     to_field 'material_type_ssm', extract_marc('300a'), trim_punctuation
 
