@@ -162,7 +162,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'published_ssm_str', label: 'Publishing Location'
     config.add_show_field 'pub_date_si', label: 'Publish Date'
     config.add_show_field 'subject_geo_ssim', label: 'Region'
-    config.add_show_field 'title_series_tsim', label: 'Series'
+    #config.add_show_field 'title_series_tsim', label: 'Series'
     
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
