@@ -80,3 +80,5 @@ gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "\~\>\ 5.1"
 gem "sassc-rails", "~> 2.1"
 gem "blacklight-marc", "~> 8.0"
+
+gem 'legacy_ocr_search', path: '../legacy_ocr_search'
