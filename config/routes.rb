@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount LegacyOcrSearch::Engine, at: "/legacy_ocr_search"
   mount Blacklight::Engine => '/'
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
   root to: "catalog#index"
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  
   # Defines the root path route ("/")
   # root "articles#index"
 end

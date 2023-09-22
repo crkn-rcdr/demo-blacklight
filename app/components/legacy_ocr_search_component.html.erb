@@ -1,0 +1,13 @@
+<span documentId="<%= @documentId %>">
+    <%= @documentId %>
+</span>
+<span term="<%= @term %>">
+    <%= @term %>
+</span>
+<%= content %>
+
+<% if @legacy_ocr_search_results %>
+    <% @legacy_ocr_search_results.each do |legacy_ocr_search_result| %>
+        <%= legacy_ocr_search_result['key'] %>
+    <% end %>
+<% end %>

@@ -1,0 +1,23 @@
+production:
+  solr:
+    hostname: tokaji.tor.c7a.ca
+    port: 8983
+    log_level: WARNING
+    path: /solr/cosearch2
+    # read_timeout: 2
+    # open_timeout: 0.5
+
+development:
+  solr:
+    hostname: tokaji.tor.c7a.ca
+    port: 8983
+    log_level: WARNING
+    path: /solr/cosearch2
+
+test:
+  solr:
+    hostname: tokaji.tor.c7a.ca
+    port: 8983
+    log_level: WARNING
+    path: /solr/cosearch2
+    
