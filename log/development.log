@@ -6174,3 +6174,74 @@ Looking for document index partial document_list
 Completed 200 OK in 699ms (Views: 342.1ms | ActiveRecord: 0.3ms | Solr: 335.9ms | Allocations: 298606)
 
 
+Started GET "/?search_field=all_fields&q=canada" for 127.0.0.1 at 2023-09-22 08:55:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#index as HTML
+  Parameters: {"search_field"=>"all_fields", "q"=>"canada"}
+  [1m[36mSearch Load (0.1ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?) ORDER BY updated_at desc[0m  [["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1]]
+Solr query: get select {"qt"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "json"=>{"query"=>{"bool"=>{"must"=>["canada", "*:*"]}}}, "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+Solr fetch (111.6ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (Duration: 0.5ms | Allocations: 322)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (Duration: 0.1ms | Allocations: 141)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_results_header.html.erb (Duration: 0.4ms | Allocations: 144)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_constraints.html.erb (Duration: 10.9ms | Allocations: 4193)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_did_you_mean.html.erb (Duration: 2.5ms | Allocations: 794)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_paginate_compact.html.erb (Duration: 5.8ms | Allocations: 2775)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_widget.html.erb (Duration: 6.8ms | Allocations: 3080)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_per_page_widget.html.erb (Duration: 1.9ms | Allocations: 1320)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_view_type_group.html.erb (Duration: 3.9ms | Allocations: 1397)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_and_per_page.html.erb (Duration: 24.4ms | Allocations: 10881)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_header.html.erb (Duration: 29.7ms | Allocations: 12599)
+Looking for document index partial document_list
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_results_pagination.html.erb (Duration: 11.2ms | Allocations: 4961)
+  Rendered catalog/_search_results.html.erb (Duration: 533.8ms | Allocations: 79479)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight (Duration: 791.0ms | Allocations: 343685)
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.6ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.5ms | Allocations: 843)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 24.8ms | Allocations: 12240)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.8ms | Allocations: 344)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight/base.html.erb (Duration: 5132.0ms | Allocations: 231515)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb (Duration: 5924.9ms | Allocations: 575853)
+Completed 200 OK in 6079ms (Views: 5930.5ms | ActiveRecord: 0.7ms | Allocations: 657361)
+
+
+Started GET "/?page=2&q=canada&search_field=all_fields" for 127.0.0.1 at 2023-09-22 08:55:27 -0400
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2", "q"=>"canada", "search_field"=>"all_fields"}
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?) ORDER BY updated_at desc[0m  [["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1]]
+Solr query: get select {"qt"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "json"=>{"query"=>{"bool"=>{"must"=>["canada", "*:*"]}}}, "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "start"=>10, "sort"=>"score desc, pub_date_si desc"}
+Solr fetch (51.0ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (Duration: 0.1ms | Allocations: 134)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (Duration: 0.1ms | Allocations: 131)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_results_header.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_constraints.html.erb (Duration: 3.7ms | Allocations: 2032)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_did_you_mean.html.erb (Duration: 0.8ms | Allocations: 224)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_paginate_compact.html.erb (Duration: 2.5ms | Allocations: 1174)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_widget.html.erb (Duration: 2.6ms | Allocations: 1609)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_per_page_widget.html.erb (Duration: 1.4ms | Allocations: 1171)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_view_type_group.html.erb (Duration: 1.0ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_and_per_page.html.erb (Duration: 10.4ms | Allocations: 5656)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_header.html.erb (Duration: 13.0ms | Allocations: 6330)
+Looking for document index partial document_list
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_results_pagination.html.erb (Duration: 16.2ms | Allocations: 3393)
+  Rendered catalog/_search_results.html.erb (Duration: 534.1ms | Allocations: 61503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight (Duration: 677.1ms | Allocations: 266119)
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 1.0ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.8ms | Allocations: 204)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 19.5ms | Allocations: 6381)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.2ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight/base.html.erb (Duration: 59.5ms | Allocations: 14792)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb (Duration: 738.8ms | Allocations: 281110)
+Completed 200 OK in 801ms (Views: 739.5ms | ActiveRecord: 0.3ms | Allocations: 298049)
+
+
