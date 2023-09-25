@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  L_MATCHING_PAGES_PRE: "Pages containing the search term"
+  L_MATCHING_PAGES_SUF: "in this item"
