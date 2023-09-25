@@ -15,10 +15,9 @@
       <%= title %>
 
       <% if @component.to_s == 'div' %>
-
-        <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
-        <br/><br/>
         <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
+        <br/><br/>
+        <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
         <br/><br/>
       <% end %>
       
