@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ #uv {
+    height: 40rem;
+ }

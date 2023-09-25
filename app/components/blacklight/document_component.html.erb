@@ -15,12 +15,10 @@
       <%= title %>
 
       <% if @component.to_s == 'div' %>
-        <div>
-            <p>TODO: IIIF Viewer</p>
-        </div>
 
+        <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
+        <br/><br/>
         <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
-        
         <br/><br/>
       <% end %>
       

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount IiifViewer::Engine, at: "/iiif_viewer"
   mount LegacyOcrSearch::Engine, at: "/legacy_ocr_search"
   mount Blacklight::Engine => '/'
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
