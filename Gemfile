@@ -81,5 +81,5 @@ gem "bootstrap", "\~\>\ 5.1"
 gem "sassc-rails", "~> 2.1"
 gem "blacklight-marc", "~> 8.0"
 
-gem 'legacy_ocr_search', path: '../legacy_ocr_search'
-gem 'iiif_viewer', path: '../iiif_viewer'
+gem "legacy_ocr_search", :git => "https://github.com/crkn-rcdr/legacy_ocr_search.git"
+gem 'iiif_viewer', :git => "https://github.com/crkn-rcdr/iiif_viewer.git"

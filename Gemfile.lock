@@ -1,11 +1,13 @@
-PATH
-  remote: ../iiif_viewer
+GIT
+  remote: https://github.com/crkn-rcdr/iiif_viewer.git
+  revision: 6393a682b415f60b3208af2a4377bc8aed474bcb
   specs:
     iiif_viewer (0.1.0)
       rails (>= 7.0.8)
 
-PATH
-  remote: ../legacy_ocr_search
+GIT
+  remote: https://github.com/crkn-rcdr/legacy_ocr_search.git
+  revision: 2454208858757c48cffb83e1432bc5f42a6e01f8
   specs:
     legacy_ocr_search (0.1.0)
       rails (>= 7.0.4.3)
