@@ -19048,3 +19048,617 @@ Solr fetch (11.8ms)
 Completed 200 OK in 187ms (Views: 85.2ms | ActiveRecord: 1.1ms | Solr: 79.0ms | Allocations: 58043)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:24:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#index as HTML
+  [1m[32mSOLR Request (26.4ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, facet: [1m[1mtrue[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m10[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+Solr fetch (32.2ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_home_text.html.erb (Duration: 1.4ms | Allocations: 374)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_home.html.erb (Duration: 3.1ms | Allocations: 705)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_sitelinks_search_box.html.erb (Duration: 1.0ms | Allocations: 224)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight (Duration: 264.3ms | Allocations: 235568)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 2.6ms | Allocations: 563)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 5.4ms | Allocations: 1148)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 125.5ms | Allocations: 11439)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 1.2ms | Allocations: 348)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 7359.3ms | Allocations: 279741)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb (Duration: 7626.0ms | Allocations: 516116)
+Completed 200 OK in 7686ms (Views: 7629.1ms | ActiveRecord: 0.0ms | Solr: 26.4ms | Allocations: 541336)
+
+
+Started GET "/?f%5Bformat%5D%5B%5D=ebook" for 127.0.0.1 at 2023-10-02 17:25:15 -0400
+Processing by CatalogController#index as HTML
+  Parameters: {"f"=>{"format"=>["ebook"]}}
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ORDER BY updated_at desc[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1]]
+  [1m[32mSOLR Request (22.7ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mtrue[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m10[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+Solr fetch (26.3ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (Duration: 0.6ms | Allocations: 304)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_results_header.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_constraints.html.erb (Duration: 16.9ms | Allocations: 4286)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_did_you_mean.html.erb (Duration: 2.9ms | Allocations: 682)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_paginate_compact.html.erb (Duration: 9.5ms | Allocations: 2808)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_widget.html.erb (Duration: 9.0ms | Allocations: 2803)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_per_page_widget.html.erb (Duration: 2.2ms | Allocations: 1370)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_view_type_group.html.erb (Duration: 4.6ms | Allocations: 1195)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_sort_and_per_page.html.erb (Duration: 33.8ms | Allocations: 10616)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_header.html.erb (Duration: 40.3ms | Allocations: 12304)
+Looking for document index partial document_list
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_results_pagination.html.erb (Duration: 13.1ms | Allocations: 5389)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_search_results.html.erb (Duration: 151.7ms | Allocations: 67312)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/index.html.erb within layouts/blacklight (Duration: 308.1ms | Allocations: 297450)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.7ms | Allocations: 210)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 11.8ms | Allocations: 6416)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.2ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 26.3ms | Allocations: 15842)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/blacklight.html.erb (Duration: 336.0ms | Allocations: 313502)
+Completed 200 OK in 410ms (Views: 336.7ms | ActiveRecord: 1.2ms | Solr: 22.7ms | Allocations: 346382)
+
+
+Started POST "/catalog/9_90016/track?counter=1&document_id=9_90016&search_id=1" for 127.0.0.1 at 2023-10-02 17:25:18 -0400
+Processing by CatalogController#track as TURBO_STREAM
+  Parameters: {"redirect"=>"/catalog/9_90016", "authenticity_token"=>"[FILTERED]", "counter"=>"1", "document_id"=>"9_90016", "search_id"=>"1", "id"=>"9_90016"}
+Redirected to http://127.0.0.1:3000/catalog/9_90016
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 483)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:25:18 -0400
+Processing by CatalogController#show as TURBO_STREAM
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f448c0d2780>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (8.0ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (8.7ms)
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (7.0ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (8.9ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 2.0ms | Allocations: 613)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 39.8ms | Allocations: 20437)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 10.1ms | Allocations: 3329)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.1ms | Allocations: 4702)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 64.7ms | Allocations: 27435)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.8ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 13.6ms | Allocations: 7385)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.6ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 30.4ms | Allocations: 16813)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 96.9ms | Allocations: 44657)
+Completed 200 OK in 130ms (Views: 97.7ms | ActiveRecord: 0.5ms | Solr: 15.1ms | Allocations: 64061)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:28:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007fd6296a5f20>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (13.2ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (15.5ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.2ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.7ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 5.8ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 67.2ms | Allocations: 36099)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 10.5ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.7ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 97.8ms | Allocations: 45025)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.9ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 2.2ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 31.5ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 1.3ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.7ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.8ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 231.5ms | Allocations: 138208)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 331.5ms | Allocations: 183911)
+Completed 200 OK in 436ms (Views: 336.6ms | ActiveRecord: 1.1ms | Solr: 22.4ms | Allocations: 219333)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:29:04 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007fd6020c32a0>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (10.3ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (10.9ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (8.1ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (10.9ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 1.8ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 33.5ms | Allocations: 18272)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 8.1ms | Allocations: 2736)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 11.9ms | Allocations: 3297)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 50.6ms | Allocations: 22732)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.8ms | Allocations: 210)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 17.6ms | Allocations: 7471)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.2ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 36.3ms | Allocations: 17032)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 88.3ms | Allocations: 39947)
+Completed 200 OK in 124ms (Views: 89.0ms | ActiveRecord: 0.4ms | Solr: 18.3ms | Allocations: 57507)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:34:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f5fb372b900>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (11.7ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (13.1ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.9ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (12.4ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 8.4ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 74.4ms | Allocations: 36099)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 10.3ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.9ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 108.4ms | Allocations: 45025)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.6ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.4ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 37.1ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 5.4ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 1048.1ms | Allocations: 141812)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 1158.7ms | Allocations: 187515)
+Completed 200 OK in 1252ms (Views: 1163.8ms | ActiveRecord: 1.1ms | Solr: 21.6ms | Allocations: 222896)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:37:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007fe69401b9b8>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (12.8ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (14.3ms)
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (11.3ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (16.3ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 7.0ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 80.9ms | Allocations: 36099)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 13.1ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 19.5ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 115.7ms | Allocations: 45025)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.6ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.4ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 34.1ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 5.1ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 2.8ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 971.0ms | Allocations: 141773)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 1089.1ms | Allocations: 187476)
+Completed 200 OK in 1208ms (Views: 1097.0ms | ActiveRecord: 1.7ms | Solr: 24.1ms | Allocations: 222856)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:40:22 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007fe64f3ad5d0>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (9.0ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (9.7ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (11.7ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (15.0ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 8.6ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 46.4ms | Allocations: 18272)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 12.9ms | Allocations: 2736)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 17.9ms | Allocations: 3297)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 80.2ms | Allocations: 22732)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.5ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.0ms | Allocations: 210)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 19.3ms | Allocations: 7471)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.3ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 54.9ms | Allocations: 17006)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 137.0ms | Allocations: 39921)
+Completed 200 OK in 185ms (Views: 138.5ms | ActiveRecord: 0.4ms | Solr: 20.7ms | Allocations: 57479)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:45:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f1e66deda38>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (15.2ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (17.7ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.6ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (13.0ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 7.0ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 72.2ms | Allocations: 36100)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 10.7ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.0ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 103.1ms | Allocations: 45025)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 1.1ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 2.3ms | Allocations: 889)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 69.5ms | Allocations: 12117)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 1.3ms | Allocations: 346)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 1131.6ms | Allocations: 142108)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 1237.0ms | Allocations: 187811)
+Completed 200 OK in 1348ms (Views: 1241.4ms | ActiveRecord: 2.0ms | Solr: 24.8ms | Allocations: 223106)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:45:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f695b3ec4e0>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (39.7ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (41.9ms)
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.3ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (12.1ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 5.5ms | Allocations: 1945)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 80.3ms | Allocations: 36099)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 12.1ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 18.5ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 113.0ms | Allocations: 45026)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.9ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 2.2ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 38.8ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 3.9ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 2.7ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.7ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 1038.0ms | Allocations: 142279)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 1153.2ms | Allocations: 187983)
+Completed 200 OK in 1296ms (Views: 1157.3ms | ActiveRecord: 1.3ms | Solr: 49.0ms | Allocations: 223359)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:47:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007fb6991bc270>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (13.4ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (15.0ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (10.2ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (14.6ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 6.4ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 84.3ms | Allocations: 36099)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 11.1ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 17.5ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 115.8ms | Allocations: 45025)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.6ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.6ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 27.1ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 2.9ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 2.6ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 205.2ms | Allocations: 138288)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 323.8ms | Allocations: 183991)
+Completed 200 OK in 443ms (Views: 336.8ms | ActiveRecord: 1.3ms | Solr: 23.6ms | Allocations: 219380)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a3090b4b8>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (17.9ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (20.1ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (8.3ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.8ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 5.3ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 71.4ms | Allocations: 36105)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 10.5ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.0ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 101.0ms | Allocations: 45031)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.7ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.7ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 29.2ms | Allocations: 12112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 3.4ms | Allocations: 345)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 3.1ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 205.6ms | Allocations: 138435)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 308.8ms | Allocations: 184144)
+Completed 200 OK in 421ms (Views: 315.0ms | ActiveRecord: 1.1ms | Solr: 26.3ms | Allocations: 219529)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:39 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a28bdcbe0>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (8.7ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (9.7ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (7.9ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (10.0ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 1.8ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 35.9ms | Allocations: 18272)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 11.5ms | Allocations: 2736)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 15.6ms | Allocations: 3297)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 58.1ms | Allocations: 22731)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.6ms | Allocations: 210)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 14.9ms | Allocations: 7470)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.1ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 33.8ms | Allocations: 17033)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 93.2ms | Allocations: 39946)
+Completed 200 OK in 130ms (Views: 94.2ms | ActiveRecord: 0.3ms | Solr: 16.5ms | Allocations: 57459)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:44 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a28a50970>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (10.3ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (11.3ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (8.8ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.0ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 1.5ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 32.8ms | Allocations: 18270)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 9.1ms | Allocations: 2728)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 12.1ms | Allocations: 3289)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 49.3ms | Allocations: 22720)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 14.6ms | Allocations: 7464)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.2ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 35.3ms | Allocations: 16994)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 85.7ms | Allocations: 39897)
+Completed 200 OK in 125ms (Views: 86.8ms | ActiveRecord: 0.4ms | Solr: 19.1ms | Allocations: 57446)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:46 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a2899ed88>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (14.1ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (14.9ms)
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (10.0ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (12.5ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 2.1ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 40.9ms | Allocations: 18270)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 7.7ms | Allocations: 2728)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 11.8ms | Allocations: 3289)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 59.7ms | Allocations: 22719)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.9ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 20.9ms | Allocations: 7464)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.1ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 42.1ms | Allocations: 16998)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 102.7ms | Allocations: 39900)
+Completed 200 OK in 148ms (Views: 103.9ms | ActiveRecord: 0.4ms | Solr: 24.2ms | Allocations: 57442)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:50 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a28b41a50>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (9.8ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (10.5ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (8.5ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.6ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 2.2ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 42.1ms | Allocations: 18269)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 11.9ms | Allocations: 2728)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.2ms | Allocations: 3289)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 64.5ms | Allocations: 22718)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 16.0ms | Allocations: 7463)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.1ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 35.1ms | Allocations: 17030)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 100.6ms | Allocations: 39930)
+Completed 200 OK in 142ms (Views: 101.6ms | ActiveRecord: 0.3ms | Solr: 18.4ms | Allocations: 57502)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:48:51 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2a28a96560>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (11.1ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (11.8ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (10.3ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (13.1ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 1.6ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 33.8ms | Allocations: 18269)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 7.6ms | Allocations: 2728)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 11.2ms | Allocations: 3289)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 50.4ms | Allocations: 22718)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 14.9ms | Allocations: 7463)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.1ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 33.3ms | Allocations: 17053)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 84.6ms | Allocations: 39953)
+Completed 200 OK in 125ms (Views: 85.5ms | ActiveRecord: 0.3ms | Solr: 21.4ms | Allocations: 57477)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:50:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f2839256af8>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (12.2ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (14.4ms)
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (8.4ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.9ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 5.6ms | Allocations: 1944)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 74.8ms | Allocations: 36100)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 9.5ms | Allocations: 3637)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 15.8ms | Allocations: 5010)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 104.5ms | Allocations: 45026)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.6ms | Allocations: 313)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.4ms | Allocations: 886)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 24.4ms | Allocations: 12113)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.8ms | Allocations: 348)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layouts/blacklight/base.html.erb (Duration: 319.7ms | Allocations: 139006)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 427.3ms | Allocations: 184710)
+Completed 200 OK in 547ms (Views: 431.6ms | ActiveRecord: 1.3ms | Solr: 20.6ms | Allocations: 220001)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:50:14 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f27f39cafa0>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (9.6ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (10.5ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.9ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.9ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 2.2ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 82.4ms | Allocations: 18272)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 11.5ms | Allocations: 2736)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 16.5ms | Allocations: 3297)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 106.0ms | Allocations: 22731)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 1.0ms | Allocations: 210)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 20.8ms | Allocations: 7471)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.4ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 47.0ms | Allocations: 16845)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 158.5ms | Allocations: 39759)
+Completed 200 OK in 200ms (Views: 159.8ms | ActiveRecord: 0.3ms | Solr: 19.5ms | Allocations: 57332)
+
+
+Started GET "/catalog/9_90016" for 127.0.0.1 at 2023-10-02 17:50:18 -0400
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9_90016"}
+[31mUnpermitted parameter: :id. Context: { controller: CatalogController, action: show, request: #<ActionDispatch::Request:0x00007f27f3864800>, params: {"controller"=>"catalog", "action"=>"show", "id"=>"9_90016"} }[0m
+  [1m[32mSOLR Request (11.7ms)[0m  [ path=[1m[1mget[0m parameters={qt: [1m[1m[0m, ids: [1m[1m"9_90016"[0m} ]
+Solr query: get get {:qt=>nil, :ids=>"9_90016"}
+Solr fetch (12.2ms)
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AND "searches"."id" = ? ORDER BY updated_at desc LIMIT ?[0m  [["id", 21], ["id", 20], ["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 13], ["id", 12], ["id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[32mSOLR Request (9.5ms)[0m  [ path=[1m[1mselect[0m parameters={qt: [1m[1m"*:*"[0m, q: [1m[1m"*:*"[0m, df: [1m[1m"title_tsim"[0m, qf: [1m[1m"title_tsim^100 author_tsim^20 all_text_timv"[0m, fq: [1m[1m["{!term f=format}ebook"][0m, facet: [1m[1mfalse[0m, facet.field: [1m[1m["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"][0m, f.published_ssm_str.facet.sort: [1m[1m"index"[0m, f.published_ssm_str.facet.limit: [1m[1m11[0m, rows: [1m[1m2[0m, sort: [1m[1m"score desc, pub_date_si desc"[0m, fl: [1m[1m"id"[0m} ]
+Solr query: get select {"qt"=>"*:*", "q"=>"*:*", "df"=>"title_tsim", "qf"=>"title_tsim^100 author_tsim^20 all_text_timv", "fq"=>["{!term f=format}ebook"], "facet"=>false, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>2, "sort"=>"score desc, pub_date_si desc", "fl"=>"id"}
+Solr fetch (11.7ms)
+  Rendering layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb
+  Rendering /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_start_over.html.erb (Duration: 1.8ms | Allocations: 503)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_main_content.html.erb (Duration: 31.1ms | Allocations: 18269)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_tools.html.erb (Duration: 9.5ms | Allocations: 2728)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/_show_sidebar.html.erb (Duration: 13.1ms | Allocations: 3289)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/catalog/show.html.erb within layouts/catalog_result (Duration: 49.6ms | Allocations: 22718)
+  Rendering layouts/blacklight/base.html.erb
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/blacklight/nav/_search_history.html.erb (Duration: 0.5ms | Allocations: 111)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_user_util_links.html.erb (Duration: 0.8ms | Allocations: 209)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_header_navbar.html.erb (Duration: 15.9ms | Allocations: 7463)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_flash_msg.html.erb within shared/_flash_messages (Duration: 0.1ms | Allocations: 33)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/shared/_modal.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/blacklight/base.html.erb (Duration: 34.7ms | Allocations: 16837)
+  Rendered layout /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/blacklight-8.0.1/app/views/layouts/catalog_result.html.erb (Duration: 85.1ms | Allocations: 39737)
+Completed 200 OK in 124ms (Views: 86.2ms | ActiveRecord: 0.3ms | Solr: 21.2ms | Allocations: 57272)
+
+

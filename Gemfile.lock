@@ -1,17 +1,16 @@
 GIT
-  remote: https://github.com/crkn-rcdr/iiif_viewer.git
-  revision: 334eeedccf20de6c7df936c0b36a1e5f86852f70
-  specs:
-    iiif_viewer (0.1.0)
-      rails (>= 7.0.8)
-
-GIT
   remote: https://github.com/crkn-rcdr/legacy_ocr_search.git
   revision: 2454208858757c48cffb83e1432bc5f42a6e01f8
   specs:
     legacy_ocr_search (0.1.0)
       rails (>= 7.0.4.3)
       sunspot_rails (>= 2.6.0.0)
+
+PATH
+  remote: ../iiif_viewer
+  specs:
+    iiif_viewer (0.1.0)
+      rails (>= 7.0.8)
 
 GEM
   remote: https://rubygems.org/
