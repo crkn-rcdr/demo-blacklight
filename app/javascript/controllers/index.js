@@ -4,7 +4,7 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-//import IIIFViewerController from './iiif_viewer_component_controller'
-//application.register('iiif_viewer', IIIFViewerController)
+//import HelloController from "./hello_controller"
+//application.register("hello", HelloController)
+import IIIFViewerController from './iiif_viewer_component_controller'
+application.register('iiif_viewer', IIIFViewerController)
