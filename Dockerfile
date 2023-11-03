@@ -10,7 +10,6 @@ WORKDIR /app
 
 COPY Gemfile .
 
-RUN bundle lock --add-platform x86_64-linux
 RUN bundle install
 
 RUN gem install devise devise-guests
