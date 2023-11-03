@@ -1,6 +1,6 @@
 # README
 
-A docker compose demo that will allow you to spin up a test instance of blacklight in a flash!
+A docker compose demo that will allow you to spin up a test instance of blacklight in a flash.
 
 ## Ruby version
 3.0.3
