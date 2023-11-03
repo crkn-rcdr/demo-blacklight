@@ -19,6 +19,6 @@ jobs:
     - name: Build
       run: docker-compose build
     - name: Tag
-      run: docker tag docker.io/library/demo-blacklight_web ghcr.io/crkn-rcdr/demo-blacklight_web:latest
+      run: docker tag docker.io/library/demo-blacklight_web ghcr.io/brittnylapierre/demo-blacklight_web:latest
     - name: Push
-      run: docker push ghcr.io/crkn-rcdr/demo-blacklight_web:latest
+      run: docker push ghcr.io/brittnylapierre/demo-blacklight_web:latest
