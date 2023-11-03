@@ -17,3 +17,6 @@
 .dl-invert dt {
     text-align: left !important
 }
+.document-tools-btn {
+    float:right;
+}
