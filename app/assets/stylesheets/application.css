@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.dl-invert dt {
+    text-align: left !important
+}
