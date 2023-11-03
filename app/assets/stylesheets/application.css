@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.mirador65, .mirador-canvas-nav {
+    height: 5rem !important;
+ }
