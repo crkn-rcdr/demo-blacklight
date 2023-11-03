@@ -13,31 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.mirador65, .mirador-canvas-nav {
-   height: 5rem !important;
-}
-
-.c-heOuim {
-   overflow: visible !important;
-}
-
-.c-ldcKiQ {
-   flex-direction: column !important;
-}
-
-.c-gKYThq {
-   display: inline !important;
-   width: 100% !important;
-}
-.c-YcJWa {
-   width: 100% !important;
-   min-height: 11rem !important;
-   margin-top: 2rem !important;
-}
-.c-cZSFet {
-   overflow-y: overlay !important;
-}
-.c-hZsaZg {
-   display: none !important;
-}

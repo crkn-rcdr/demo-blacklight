@@ -6,15 +6,20 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    network_mode: bridge
     depends_on:
       - solr
+    networks:
+      - test
   solr:
     image: solr
     ports:
      - "8983:8983"
-    network_mode: bridge
     volumes:
       - data:/var/solr
+    networks:
+      - test
 volumes:
   data:
+networks:
+  test:
+
