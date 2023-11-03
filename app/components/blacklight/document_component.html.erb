@@ -13,26 +13,11 @@
   <% else %>
     <div class="document-main-section">
       <%= title %>
-
-      <% if @component.to_s == 'div' %>
-        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
-        <br/><br/>
-        <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
-        <br/><br/>
-      <% end %>
-      
       <%= embed %>
-
       <%= content %>
-
       <%= metadata %>
-
       <% metadata_sections.each do |section| %>
         <%= section %>
-      <% end %>
-
-      <% if @component.to_s == 'article' %>
-        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
       <% end %>
 
       <% partials.each do |partial| %>
