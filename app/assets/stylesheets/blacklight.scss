@@ -1,6 +1,8 @@
+@import "variables";
 @import 'bootstrap';
 @import 'blacklight/blacklight';
 @import 'blacklight_marc';
+
 
 $logo-image: image_url('blacklight/canadiana-logo-light.jpg');
 $logo-width: 225px;
