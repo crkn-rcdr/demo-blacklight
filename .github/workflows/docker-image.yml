@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "usability-testing" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build
+      run: docker-compose build
+    - name: Tag
+      run: docker tag demo-blacklight-web ghcr.io/crkn-rcdr/demo-blacklight-web:latest
+    - name: Push
+      run: docker push ghcr.io/crkn-rcdr/demo-blacklight-web:latest
