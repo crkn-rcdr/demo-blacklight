@@ -12,6 +12,7 @@
     <%= body %>
   <% else %>
     <div class="document-main-section">
+      <br/>
       <%= title %>
       <% if @component.to_s == 'div' %>
         <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
@@ -26,6 +27,8 @@
       <% partials.each do |partial| %>
         <%= partial %>
       <% end %>
+
+      <br/>
     </div>
 
     <%= thumbnail %>
