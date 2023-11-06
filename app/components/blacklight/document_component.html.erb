@@ -13,17 +13,24 @@
   <% else %>
     <div class="document-main-section container-xxl">
       <br/>
-      <%= render(Blacklight::Document::SidebarComponent.new(presenter: @presenter)) %>
       <%= title %>
       <% if @component.to_s == 'div' %>
         <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
       <% end %>
       <%= embed %>
       <%= content %>
-      <%= metadata %>
-      <% metadata_sections.each do |section| %>
-        <%= section %>
-      <% end %>
+
+      <div class="row gx-3 gy-1 align-items-center">
+        <div class="col-auto">
+          <%= metadata %>
+          <% metadata_sections.each do |section| %>
+            <%= section %>
+          <% end %>
+        </div>
+        <div class="col-sm-3">
+          <%= render(Blacklight::Document::SidebarComponent.new(presenter: @presenter)) %>
+        </div>
+      </div>
 
       <% partials.each do |partial| %>
         <%= partial %>

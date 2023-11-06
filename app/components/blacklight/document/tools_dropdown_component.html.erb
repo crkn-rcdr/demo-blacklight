@@ -1,0 +1,13 @@
+
+<div class="dropdown document-tools-btn">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <%= t('blacklight.tools.title') %>
+  </button>
+  <%= render Blacklight::Document::ActionsComponent.new(document: document,
+                                                        tag: 'ul',
+                                                        classes: 'dropdown-menu',
+                                                        wrapping_tag: 'li',
+                                                        wrapping_classes: 'dropdown-item',
+                                                        actions: actions,
+                                                        url_opts: Blacklight::Parameters.sanitize(params.to_unsafe_h)) %>
+</div>
