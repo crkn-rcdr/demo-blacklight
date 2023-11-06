@@ -20,3 +20,6 @@
 .document-tools-btn {
     float:right;
 }
+.text-lg-right {
+    text-align: right !important;
+}
