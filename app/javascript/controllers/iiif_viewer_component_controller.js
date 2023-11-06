@@ -142,7 +142,7 @@ export default class extends Controller {
           
                   "galleryThumbWidth": 200,
           
-                  "oneColThumbHeight": 320,
+                  "oneColThumbHeight": 200,
           
                   "oneColThumbWidth": 150,
           
@@ -176,7 +176,7 @@ export default class extends Controller {
           
                   "treeEnabled": true,
           
-                  "twoColThumbHeight": 150,
+                  "twoColThumbHeight": 120,
           
                   "twoColThumbWidth": 90
           
