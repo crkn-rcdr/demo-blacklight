@@ -13,8 +13,7 @@
   <% else %>
     <div class="document-main-section container-xxl">
       <br/>
-
-      <%= content_for(:sidebar) %>
+      <%= render(SidebarComponent.new()) %>
       <%= title %>
       <% if @component.to_s == 'div' %>
         <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
