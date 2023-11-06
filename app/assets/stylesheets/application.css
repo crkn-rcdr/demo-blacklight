@@ -19,9 +19,9 @@ html, body {
 }
 body {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-areas: "main" "footer";
-    grid-template-rows: 1fr 8rem;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8rem; */
 }
 main {
     grid-area: main;
