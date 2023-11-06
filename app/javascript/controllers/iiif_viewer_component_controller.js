@@ -144,7 +144,7 @@ export default class extends Controller {
           
                   "oneColThumbHeight": 320,
           
-                  "oneColThumbWidth": 200,
+                  "oneColThumbWidth": 150,
           
                   "pageModeEnabled": false,
           
@@ -152,7 +152,7 @@ export default class extends Controller {
           
                   "panelCollapsedWidth": 30,
           
-                  "panelExpandedWidth": 200,
+                  "panelExpandedWidth": 150,
           
                   "panelOpen": true,
           
