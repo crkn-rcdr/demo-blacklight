@@ -22,8 +22,10 @@
 
       <br/>
 
+      <% if @component.to_s == 'div' %>
       <div class="row gx-2 gy-1">
         <div class="col-sm-9">
+          <h2>Document Record</h2>
           <%= metadata %>
           <% metadata_sections.each do |section| %>
             <%= section %>
@@ -33,6 +35,15 @@
           <%= render(Blacklight::Document::SidebarComponent.new(presenter: @presenter)) %>
         </div>
       </div>
+      <% end %>
+
+
+      <% if @component.to_s != 'div' %>
+          <%= metadata %>
+          <% metadata_sections.each do |section| %>
+            <%= section %>
+          <% end %>
+      <% end %>
 
       <% partials.each do |partial| %>
         <%= partial %>
