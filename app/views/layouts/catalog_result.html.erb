@@ -1,8 +1,10 @@
+
 <% content_for(:content) do %>
   <section>
-    <%= content_for(:sidebar) %>
-    <%= yield %>
+    <div class="container-xxl">
+      <%= content_for(:sidebar) %>
+      <%= yield %>
+    </div>
   </section>
 <% end %>
-
 <%= render template: "layouts/blacklight/base" %>
