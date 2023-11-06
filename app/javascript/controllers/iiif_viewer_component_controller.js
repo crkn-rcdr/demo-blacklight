@@ -142,9 +142,9 @@ export default class extends Controller {
           
                   "galleryThumbWidth": 200,
           
-                  "oneColThumbHeight": 200,
+                  "oneColThumbHeight": 125,
           
-                  "oneColThumbWidth": 150,
+                  "oneColThumbWidth": 100,
           
                   "pageModeEnabled": false,
           
