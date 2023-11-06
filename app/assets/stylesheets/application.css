@@ -18,7 +18,9 @@
     text-align: left !important
 }
 .document-tools-btn {
-    position: fixed;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:1rem;
     right: 1rem;
     z-index: 1;
 }
