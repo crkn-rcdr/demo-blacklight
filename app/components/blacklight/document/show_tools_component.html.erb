@@ -1,4 +1,5 @@
 
+<h2>Tools & Related Links</h2>
 <%= render Blacklight::Document::ActionsComponent.new(document: document,
   tag: 'ul',
   classes: 'list-group list-group-flush',
@@ -6,4 +7,3 @@
   wrapping_classes: 'list-group-item',
   actions: actions,
   url_opts: Blacklight::Parameters.sanitize(params.to_unsafe_h)) %>
-
