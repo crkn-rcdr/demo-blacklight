@@ -90,7 +90,7 @@ export default class extends Controller {
           
               "preserveViewport": true,
           
-              "rightPanelEnabled": true,
+              "rightPanelEnabled": false,
           
               "saveUserSettings": true,
           
