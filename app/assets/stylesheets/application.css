@@ -24,10 +24,10 @@ body {
     grid-template-rows: 1fr 8rem;
 }
 main {
-    grid-area: "main";
+    grid-area: main;
 }
 footer {
-    grid-area: "footer";
+    grid-area: footer;
 }
 .dl-invert dt {
     text-align: left !important
