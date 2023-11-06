@@ -21,8 +21,8 @@
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top:1rem;
-    right: 1rem;
-    z-index: 1;
+    z-index: 11;
+    text-align: right;
 }
 .text-lg-right {
     text-align: right !important;
