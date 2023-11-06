@@ -13,7 +13,22 @@
  *= require_tree .
  *= require_self
  */
-
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "footer";
+    grid-template-rows: 1fr 8rem;
+}
+main {
+    grid-area: "main";
+}
+footer {
+    grid-area: "footer";
+}
 .dl-invert dt {
     text-align: left !important
 }
