@@ -12,7 +12,10 @@
     <%= body %>
   <% else %>
     <div class="document-main-section container-xxl">
-      <br/>
+
+      <% if @component.to_s == 'div' %>
+        <br/>
+      <% end %>
       <%= title %>
       <% if @component.to_s == 'div' %>
         <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
@@ -20,9 +23,9 @@
       <%= embed %>
       <%= content %>
 
-      <br/>
 
       <% if @component.to_s == 'div' %>
+      <br/>
       <div class="row gx-2 gy-1">
         <div class="col-sm-9">
           <h2>Document Record</h2>
@@ -49,7 +52,9 @@
         <%= partial %>
       <% end %>
 
-      <br/>
+      <% if @component.to_s == 'div' %>
+        <br/>
+      <% end %>
     </div>
 
     <%= thumbnail %>
