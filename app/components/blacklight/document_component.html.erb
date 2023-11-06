@@ -21,13 +21,13 @@
       <%= content %>
 
       <div class="row gx-2 gy-1">
-        <div class="col col-md-9">
+        <div class="col-sm-9">
           <%= metadata %>
           <% metadata_sections.each do |section| %>
             <%= section %>
           <% end %>
         </div>
-        <div class="col col-md-3">
+        <div class="col-sm-3">
           <%= render(Blacklight::Document::SidebarComponent.new(presenter: @presenter)) %>
         </div>
       </div>
