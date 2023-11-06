@@ -13,7 +13,7 @@
   <% else %>
     <div class="document-main-section container-xxl">
       <br/>
-      <%= render(SidebarComponent.new()) %>
+      <%= render(Blacklight::SidebarComponent.new()) %>
       <%= title %>
       <% if @component.to_s == 'div' %>
         <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
