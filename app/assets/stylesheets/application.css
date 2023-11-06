@@ -18,7 +18,9 @@
     text-align: left !important
 }
 .document-tools-btn {
-    float:right;
+    position: fixed;
+    right: 1rem;
+    z-index: 1;
 }
 .text-lg-right {
     text-align: right !important;
