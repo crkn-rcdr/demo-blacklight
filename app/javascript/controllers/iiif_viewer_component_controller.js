@@ -28,7 +28,7 @@ export default class extends Controller {
           
               "booskmarkThumbWidth": 90,
           
-              "dropEnabled": true,
+              "dropEnabled": false,
           
               "footerPanelEnabled": true,
           
@@ -88,15 +88,15 @@ export default class extends Controller {
           
               "pessimisticAccessControl": false,
           
-              "preserveViewport": false,
+              "preserveViewport": true,
           
               "rightPanelEnabled": true,
           
-              "saveUserSettings": false,
+              "saveUserSettings": true,
           
               "clickToZoomEnabled": true,
           
-              "searchWithinEnabled": true,
+              "searchWithinEnabled": false,
           
               "termsOfUseEnabled": true,
           
@@ -104,7 +104,7 @@ export default class extends Controller {
           
               "tokenStorage": "session",
           
-              "useArrowKeysToNavigate": false,
+              "useArrowKeysToNavigate": true,
           
               "zoomToSearchResultEnabled": true,
           
@@ -382,7 +382,7 @@ export default class extends Controller {
           
               },
           
-              "moreInfoRightPanel": {
+              /*"moreInfoRightPanel": {
           
                 "options": {
           
@@ -456,7 +456,7 @@ export default class extends Controller {
           
                 }
           
-              },
+              },*/
           
               "multiSelectDialogue": {
           
