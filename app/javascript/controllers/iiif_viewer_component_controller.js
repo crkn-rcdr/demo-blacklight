@@ -292,7 +292,7 @@ export default class extends Controller {
           
                   "bookmarkEnabled": false,
           
-                  "downloadEnabled": true,
+                  "downloadEnabled": false,
           
                   "embedEnabled": false,
           
@@ -302,13 +302,13 @@ export default class extends Controller {
           
                   "minimiseButtons": true,
           
-                  "moreInfoEnabled": true,
+                  "moreInfoEnabled": false,
           
                   "openEnabled": false,
           
                   "printEnabled": false,
           
-                  "shareEnabled": true
+                  "shareEnabled": false
           
                 },
           

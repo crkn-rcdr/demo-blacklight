@@ -42,3 +42,46 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
+#page-viewer {
+    background: black;
+}
+#pvToolbarTop {
+    background: #282828;
+    padding: 0.5rem;
+    color: white;
+}
+#pvSearch {
+    background: #3a3a3a;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 26rem;
+    height: 2.4rem;
+}
+.pvSearchResults {
+    background: #282828;
+    padding: 0.5rem;
+    color: white;
+}
+.pvSearchResult {
+    color: white !important;
+    margin-right: 0.5rem;
+}
+.pvSearchResults p {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem !important; 
+}
+#pvToolbarBottom {
+    background: #282828;
+    padding: 0.2rem;
+}
+.my-1 {
+    background: #282828;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.767);
+    margin-left: 0.4rem;
+}
+.thumbsView{
+    overflow-x: hidden !important;
+}
