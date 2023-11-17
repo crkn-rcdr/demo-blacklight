@@ -21,6 +21,13 @@ See: https://github.com/projectblacklight/blacklight/wiki
 
 (On first run only) `docker exec -it demo-blacklight-solr-1 solr create_core -c blacklight`
 
+Create full_txt field in blacklight core
+
+(On first run only) `docker exec -it demo-blacklight-solr-1 solr create_core -c page`
+
+Create pkey field in page core
+Create page_txt field in page core
+
 (On first run only) `docker exec -it demo-blacklight-web-1 bash`
 
 (On first run only)
