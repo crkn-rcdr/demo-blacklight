@@ -44,6 +44,10 @@ http://localhost:8983
 Blacklight instance will be running at:
 http://localhost:3000
 
+Swift will be running at:
+http://localhost:8080
+(See docs for more info: https://hub.docker.com/r/jeantil/openstack-swift-keystone-docker/)
+
 Go to the above link for Blacklight and run the db migrations by clicking the button.
 
 See CRKN test data!
@@ -58,4 +62,3 @@ Notes:
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
-

@@ -22,8 +22,6 @@
       <% end %>
       <%= embed %>
       <%= content %>
-
-
       <% if @component.to_s == 'div' %>
       <br/>
       <div class="row gx-2 gy-1">
@@ -39,17 +37,17 @@
         </div>
       </div>
       <% end %>
-
-
       <% if @component.to_s != 'div' %>
           <%= metadata %>
           <% metadata_sections.each do |section| %>
             <%= section %>
           <% end %>
       <% end %>
-
       <% partials.each do |partial| %>
         <%= partial %>
+      <% end %>
+      <% if @component.to_s == 'article' %>
+        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
       <% end %>
     </div>
 
