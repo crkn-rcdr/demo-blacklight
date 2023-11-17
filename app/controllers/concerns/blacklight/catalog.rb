@@ -21,19 +21,14 @@ module Blacklight::Catalog
       record_search_parameters
     end
   
+    #Solr query: get select {"qt"=>"/select", "q"=>"*:*", "df"=>"title_tsim", "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+
     # get search results from the solr index
     def index
-      logger.info "TEST!"
-      logger.info params
-      if params[:q].nil? || params[:q].empty?
-        # {"search_field"=>"title_tsim", "q"=>"British", "controller"=>"catalog", "action"=>"index"}
-        params[:search_field] = "title_tsim"
-        params[:q] = "*:*"
-        params[:controller] = "catalog"
-        params[:action] = "index"
-      end
-      logger.info params
+      validate_search_params
       @response = search_service.search_results
+      logger.info "Did err?"
+
   
       respond_to do |format|
         format.html { store_preferred_view }
@@ -301,5 +296,19 @@ module Blacklight::Catalog
   
     def blacklight_advanced_search_form_params
       {}
+    end
+
+    def validate_search_params
+      logger.info "TEST!"
+      logger.info params
+      if params[:q].nil? || params[:q].empty?
+        # {"search_field"=>"title_tsim", "q"=>"British", "controller"=>"catalog", "action"=>"index"}
+        params[:search_field] = "title_tsim"
+        params[:controller] = "catalog"
+        params[:action] = "index"
+        params[:q] = "*:*"
+        #params.delete("q")
+      end
+      logger.info params
     end
   end
