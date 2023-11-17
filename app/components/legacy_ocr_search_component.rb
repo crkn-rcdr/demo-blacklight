@@ -9,6 +9,7 @@ class LegacyOcrSearchComponent < ViewComponent::Base
             rsolr = RSolr.connect :url => 'http://solr:8983/solr/page'
             if term != "*:*"
                 @legacy_ocr_search_request= rsolr.get 'select', :params => {
+                    :rows => 500,
                     :q => 'page_txt:' + term + ' AND ' + 'pkey:' + @documentId
                 } 
                 legacy_ocr_search_results_unsorted = []
