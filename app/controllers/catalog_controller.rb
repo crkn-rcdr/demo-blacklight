@@ -33,13 +33,18 @@ class CatalogController < ApplicationController
     config.raw_endpoint.enabled = false
   
 
+    #Solr query: get select {"qt"=>"*:*", "json"=>{"query"=>{"bool"=>{"must"=>["honour", "*:*"]}}}, "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
-      :q => "*:*",
-      :qt => "*:*",
-      df: "title_tsim",
-      qf: "title_tsim^100 author_tsim^20 all_text_timv"
+      qt: "/select",
+      q: "*:*"
     }
+    #  :df => "*"
+    #}
+    #  #df: "title_tsim",
+    #  qf: "title_tsim^100 author_tsim^20 all_text_timv^10 full_txt^10"
+    #}
 
     # solr path which will be added to solr base url before the other solr params.
     config.solr_path = 'select'
@@ -146,7 +151,6 @@ class CatalogController < ApplicationController
     config.add_index_field 'title_tsim', label: 'Title'
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'author_tsim', label: 'Author'
-    config.add_index_field 'language_ssim', label: 'Language'
     config.add_index_field 'collection_tsim', label: 'Collection'
 
     # solr fields to be displayed in the show (single result) view
@@ -182,33 +186,57 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', label: 'All Fields'
-    config.add_search_field 'title_tsim', label: 'Title'
-    config.add_search_field 'author_tsim', label: 'Author'
-    config.add_search_field 'subject_geo_ssim', label: 'Region'
-    config.add_search_field 'subject_tsim', label: 'Subject'
+    #config.add_search_field 'all_fields', label: 'All Fields'
+    #config.add_search_field 'title_tsim', label: 'Title'
+    #config.add_search_field 'author_tsim', label: 'Author'
+    #config.add_search_field 'subject_geo_ssim', label: 'Region'
+    #config.add_search_field 'subject_tsim', label: 'Subject'
+    #config.add_search_field 'full_txt', label: 'Full Text'
 
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    #config.add_search_field('title') do |field|
-    #  # solr_parameters hash are sent to Solr as ordinary url query params.
-    #  field.solr_parameters = {
-    #    'spellcheck.dictionary': 'title',
-    #    qf: '${title_qf}',
-    #    pf: '${title_pf}'
-    #  }
-    #end
+    config.add_search_field('title_tsim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'title_tsim'
+      }
+      field.label = "Title"
+    end
 
-    #config.add_search_field('author') do |field|
-    #  field.solr_parameters = {
-    #    'spellcheck.dictionary': 'author',
-    #    qf: '${author_qf}',
-    #    pf: '${author_pf}'
-    #  }
-    #end
+    config.add_search_field('full_txt') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'full_txt'
+      }
+      field.label = "Full Text"
+    end
+
+    config.add_search_field('author_tsim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'author_tsim'
+      }
+      field.label = "Author"
+    end
+
+    config.add_search_field('subject_geo_ssim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'subject_geo_ssim'
+      }
+      field.label = "Region"
+    end
+
+    config.add_search_field('subject_tsim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'subject_tsim'
+      }
+      field.label = "Subject"
+    end
 
 
     # "sort results by" select (pulldown)
