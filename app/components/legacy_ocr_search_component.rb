@@ -1,4 +1,5 @@
 require 'view_component/version'
+
 class LegacyOcrSearchComponent < ViewComponent::Base
     def initialize(documentId:, term:, prefix:)
         @documentId = documentId
