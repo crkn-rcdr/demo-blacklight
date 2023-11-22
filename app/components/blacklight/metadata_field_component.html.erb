@@ -1,8 +1,54 @@
+<!--
+"id":"84056",
+"all_text_timv":["Todd, F. Dundas (Frederick Dundas), 1858-1926., author Guide to bee-keeping in British Columbia / by F. Dundas Todd. Victoria, B.C. : R. Wolfenden, 1911. 1 online resource text txt rdacontent computer c rdamedia online resource cr rdacarrier data file rda CIHM/ICMH Digital series = CIHM/ICMH collection numérisée  ; 84056 \"Printed by Authority of the Legislative Assembly of British Columbia.\" At head of title: Department of Agriculture. Cover title. Original issued in series: Bulletin / British Columbia. Dept. of Agriculture ; numbers 30. Electronic reproduction. Ottawa : Canadiana.org, 2008. 52 pages : illustrations ; 25 cm. Mode of access: Internet. Bee culture British Columbia. Apiculture Colombie-Britannique. British Columbia. Dept. of Agriculture. Bulletin / British Columbia. Dept. of Agriculture ; 30. https://www.canadiana.ca/view/oocihm.84056"],
+"language_ssim":["English"],
+"format":["eBook"],
+"material_type_ssm":["1 online resource"],
+"title_tsim":["Guide to bee-keeping in British Columbia /"],
+"title_ssm":["Guide to bee-keeping in British Columbia"],
+"title_addl_tsim":["Bulletin / British Columbia. Dept. of Agriculture ; 30."],
+"title_si":["Guide to bee-keeping in British Columbia"],
+"author_tsim":["Todd, F. Dundas (Frederick Dundas), author","British Columbia. Dept. of Agriculture."],
+"author_ssm":["Todd, F. Dundas (Frederick Dundas), 1858-1926.,","British Columbia. Dept. of Agriculture."],
+"author_si":["Todd, F. Dundas (Frederick Dundas), 1858-1926., author   Guide to bee-keeping in British Columbia by F. Dundas Todd"],
+"subject_tsim":["Bee culture British Columbia.","Apiculture Colombie-Britannique."],
+"subject_ssim":["Bee culture British Columbia","Apiculture Colombie-Britannique"],
+"published_ssm":["Victoria, B.C. : R. Wolfenden, 1911"],
+"pub_date_si":[2018],
+"pub_date_ssim":[2018],
+"collection_tsim":["Monographs"],
+"doc_source_tsim":["Electronic reproduction. Ottawa : Canadiana.org, 2008."],
+"original_version_note_tsim":["52 pages : illustrations ; 25 cm."],
+"notes_tsim":["\"Printed by Authority of the Legislative Assembly of British Columbia.\"","At head of title: Department of Agriculture.","Cover title.","Original issued in series: Bulletin / British Columbia. Dept. of Agriculture ; numbers 30."],
+"title_series_tsim":["CIHM/ICMH Digital series = CIHM/ICMH collection numérisée  ; 84056"],
+"url_fulltext_ssm":["https://www.canadiana.ca/view/oocihm.84056"],
+"full_txt" : ~
+-->
+
 <%= render(@layout.new(field: @field)) do |component| %>
   <% component.with_label do %>
     <%= label %>
   <% end %>
   <% component.with_value do %>
-    <%= @field.render %>
+    <% @field.values.each do |v| %>
+      <span>
+        <% if @field.field_config[:label] == "Subject" %>  
+          <a href="#" target="_blank"><%= v %></a>
+          <br/>
+        <% elsif @field.field_config[:label] == "Creator" %> 
+          <a href="#" target="_blank"><%= v %> </a>
+          <br/>
+        <% elsif @field.field_config[:label] == "Collection" %> 
+          <a href="#" target="_blank"><%= v %> </a>
+          <br/>
+        <% elsif @field.field_config[:label] == "URL" %> 
+          <a href="<%= v %>" target="_blank"><%= v %></a>
+          <br/>
+        <% else %>
+          <%= v %>
+          <br/>
+        <% end %>
+      </span>
+    <% end %>
   <% end %>
 <% end %>

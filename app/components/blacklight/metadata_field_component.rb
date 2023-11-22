@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Blacklight
   class MetadataFieldComponent < Blacklight::Component
     with_collection_parameter :field

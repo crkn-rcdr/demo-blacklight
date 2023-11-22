@@ -6,11 +6,9 @@ export default class extends Controller {
     let canvasIndex = 0
     const params = new URLSearchParams(window.location.search)
     if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
-    
     //https://codesandbox.io/s/uv-config-example-7kh4s?file=/uv-config.json
     const data = {
-      manifest: "https://www.canadiana.ca/iiif/"+documentId+"/manifest",
-      
+      manifest: "https://www.canadiana.ca/iiif/"+documentId+"/manifest", 
     };
     data.canvasIndex = canvasIndex
     let viewer = UV.init("page-viewer", data);

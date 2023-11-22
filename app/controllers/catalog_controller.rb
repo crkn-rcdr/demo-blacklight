@@ -143,25 +143,32 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_tsim', label: 'Title'
+    config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'author_tsim', label: 'Author'
     config.add_index_field 'collection_tsim', label: 'Collection'
+    config.add_index_field 'id', label: 'ID'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'title_tsim', label: 'Title'
+    config.add_show_field 'title_ssm', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
-    config.add_show_field 'collection_tsim', label: 'Collection'
-    config.add_show_field 'subject_tsim', label: 'Subject'
-    config.add_show_field 'format', label: 'Format'
-    config.add_show_field 'url_fulltext_ssim', label: 'URL'
-    config.add_show_field 'author_tsim', label: 'Author'
+    config.add_show_field 'title_addl_tsim', label: 'Other Titles'
+
+    config.add_show_field 'author_tsim', label: 'Creator'
+    config.add_show_field 'published_ssm', label: 'Published Statement'
+    config.add_show_field 'subject_ssim', label: 'Subject'
+
+    config.add_show_field 'doc_source_tsim', label: 'Document Source'
+    config.add_show_field 'original_version_note_tsim', label: 'Original Version Note'
+    config.add_show_field 'notes_tsim', label: 'Notes'
+
     config.add_show_field 'language_ssim', label: 'Language'
-    config.add_show_field 'published_ssm_str', label: 'Publishing Location'
-    config.add_show_field 'pub_date_si', label: 'Publish Date'
-    config.add_show_field 'subject_geo_ssim', label: 'Region'
-    config.add_show_field 'title_series_tsim', label: 'Series'
+    config.add_show_field 'collection_tsim', label: 'Collection'
+    config.add_show_field 'url_fulltext_ssim', label: 'URL'
+    #config.add_show_field 'subject_geo_ssim', label: 'Region'
+    #config.add_show_field 'title_series_tsim', label: 'Series'
+
     
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -193,10 +200,10 @@ class CatalogController < ApplicationController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('title_tsim') do |field|
+    config.add_search_field('title_ssm') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
       field.solr_parameters = {
-        df: 'title_tsim'
+        df: 'title_ssm'
       }
       field.label = "Title"
     end
