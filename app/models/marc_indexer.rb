@@ -138,6 +138,12 @@ class MarcIndexer < Blacklight::Marc::Indexer
     # Document Source
     to_field 'doc_source_tsim', extract_marc('533abcdu')
 
+    # Rights Statement
+    to_field 'rights_stat_tsim', extract_marc('540abcdfgqu')
+    
+    # Access Note
+    to_field 'access_note_tsim', extract_marc('506abcdefgqu')
+
     # Original Version Note 534 - physical item desc
     to_field 'original_version_note_tsim', extract_marc('534abcefklmnoptxz')
 
@@ -153,6 +159,8 @@ class MarcIndexer < Blacklight::Marc::Indexer
     # CIHM don't need?? Need to ask Jason
     # Will need for issues
     to_field 'title_series_tsim', extract_marc("440anpv:490av")
+
+    to_field 'permalink_fulltext_ssm', extract_marc("856g")
 
     # URL Fields
     notfulltext = /abstract|description|sample text|table of contents|/i
@@ -173,6 +181,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
         end
       end
     end
+
     # Very similar to url_fulltext_display. Should DRY up.
     to_field 'url_suppl_ssm' do |rec, acc|
       rec.fields('856').each do |f|

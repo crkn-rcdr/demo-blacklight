@@ -49,7 +49,7 @@ class CatalogController < ApplicationController
     config.per_page = [10,20,50,100]
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_tsim'
+    config.index.title_field = 'title_ssm'
     config.index.display_type_field = 'format'
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
@@ -165,7 +165,11 @@ class CatalogController < ApplicationController
 
     config.add_show_field 'language_ssim', label: 'Language'
     config.add_show_field 'collection_tsim', label: 'Collection'
-    config.add_show_field 'url_fulltext_ssim', label: 'URL'
+    
+    config.add_show_field 'access_note_tsim', label: 'Access Note'
+    config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
+    config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
+    #config.add_show_field 'url_fulltext_ssm', label: 'Canadiana URL'
     #config.add_show_field 'subject_geo_ssim', label: 'Region'
     #config.add_show_field 'title_series_tsim', label: 'Series'
 
