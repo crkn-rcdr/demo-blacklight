@@ -59,5 +59,5 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
 
 
-  config.hosts << 'crkn-blacklight.c7a.ca'
+  config.hosts << 'ec2-54-237-38-135.compute-1.amazonaws.com:3000'
 end

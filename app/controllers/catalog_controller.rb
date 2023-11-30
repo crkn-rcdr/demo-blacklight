@@ -33,12 +33,12 @@ class CatalogController < ApplicationController
     config.raw_endpoint.enabled = false
   
 
+    #Solr query: get select {"qt"=>"*:*", "json"=>{"query"=>{"bool"=>{"must"=>["honour", "*:*"]}}}, "facet"=>true, "facet.field"=>["format", "collection_tsim_str", "subject_ssim_str", "author_ssm_str", "subject_geo_ssim_str", "language_ssim_str", "published_ssm_str", "pub_date_si"], "f.published_ssm_str.facet.sort"=>"index", "f.published_ssm_str.facet.limit"=>11, "rows"=>10, "sort"=>"score desc, pub_date_si desc"}
+
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
-      :q => "*:*",
-      :qt => "*:*",
-      df: "title_tsim",
-      qf: "title_tsim^100 author_tsim^20 all_text_timv"
+      qt: "/query",
+      q: "*:*"
     }
 
     # solr path which will be added to solr base url before the other solr params.
@@ -49,7 +49,7 @@ class CatalogController < ApplicationController
     config.per_page = [10,20,50,100]
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_tsim'
+    config.index.title_field = 'title_ssm'
     config.index.display_type_field = 'format'
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
@@ -120,7 +120,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'collection_tsim_str', label: 'Collection'
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
     config.add_facet_field 'subject_ssim_str', label: 'Subject'
-    config.add_facet_field 'author_ssm_str', label: 'Author'
+    config.add_facet_field 'author_ssm_str', label: 'Creator'
     config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
     config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
@@ -143,26 +143,36 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_tsim', label: 'Title'
+    config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_tsim', label: 'Author'
-    config.add_index_field 'language_ssim', label: 'Language'
+    config.add_index_field 'author_tsim', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
+    config.add_index_field 'id', label: 'ID'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'title_tsim', label: 'Title'
+    config.add_show_field 'title_ssm', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
-    config.add_show_field 'collection_tsim', label: 'Collection'
-    config.add_show_field 'subject_tsim', label: 'Subject'
-    config.add_show_field 'format', label: 'Format'
-    config.add_show_field 'url_fulltext_ssim', label: 'URL'
-    config.add_show_field 'author_tsim', label: 'Author'
+    config.add_show_field 'title_addl_tsim', label: 'Other Titles'
+
+    config.add_show_field 'author_tsim', label: 'Creator'
+    config.add_show_field 'published_ssm', label: 'Published Statement'
+    config.add_show_field 'subject_ssim', label: 'Subject'
+
+    config.add_show_field 'doc_source_tsim', label: 'Document Source'
+    config.add_show_field 'original_version_note_tsim', label: 'Original Version Note'
+    config.add_show_field 'notes_tsim', label: 'Notes'
+
     config.add_show_field 'language_ssim', label: 'Language'
-    config.add_show_field 'published_ssm_str', label: 'Publishing Location'
-    config.add_show_field 'pub_date_si', label: 'Publish Date'
-    config.add_show_field 'subject_geo_ssim', label: 'Region'
-    config.add_show_field 'title_series_tsim', label: 'Series'
+    config.add_show_field 'collection_tsim', label: 'Collection'
+    
+    config.add_show_field 'access_note_tsim', label: 'Access Note'
+    config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
+    config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
+    #config.add_show_field 'url_fulltext_ssm', label: 'Canadiana URL'
+    #config.add_show_field 'subject_geo_ssim', label: 'Region'
+    #config.add_show_field 'title_series_tsim', label: 'Series'
+
     
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -182,33 +192,57 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', label: 'All Fields'
-    config.add_search_field 'title_tsim', label: 'Title'
-    config.add_search_field 'author_tsim', label: 'Author'
-    config.add_search_field 'subject_geo_ssim', label: 'Region'
-    config.add_search_field 'subject_tsim', label: 'Subject'
+    #config.add_search_field 'all_fields', label: 'All Fields'
+    #config.add_search_field 'title_tsim', label: 'Title'
+    #config.add_search_field 'author_tsim', label: 'Author'
+    #config.add_search_field 'subject_geo_ssim', label: 'Region'
+    #config.add_search_field 'subject_tsim', label: 'Subject'
+    #config.add_search_field 'full_txt', label: 'Full Text'
 
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    #config.add_search_field('title') do |field|
-    #  # solr_parameters hash are sent to Solr as ordinary url query params.
-    #  field.solr_parameters = {
-    #    'spellcheck.dictionary': 'title',
-    #    qf: '${title_qf}',
-    #    pf: '${title_pf}'
-    #  }
-    #end
+    config.add_search_field('title_ssm') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'title_ssm'
+      }
+      field.label = "Title"
+    end
 
-    #config.add_search_field('author') do |field|
-    #  field.solr_parameters = {
-    #    'spellcheck.dictionary': 'author',
-    #    qf: '${author_qf}',
-    #    pf: '${author_pf}'
-    #  }
-    #end
+    config.add_search_field('full_txt') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'full_txt'
+      }
+      field.label = "Full Text"
+    end
+
+    config.add_search_field('author_tsim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'author_tsim'
+      }
+      field.label = "Author"
+    end
+
+    config.add_search_field('subject_geo_ssim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'subject_geo_ssim'
+      }
+      field.label = "Region"
+    end
+
+    config.add_search_field('subject_tsim') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'subject_tsim'
+      }
+      field.label = "Subject"
+    end
 
 
     # "sort results by" select (pulldown)
@@ -218,7 +252,7 @@ class CatalogController < ApplicationController
     # custom Blacklight url parameter value separate from the Solr sort fields.
     config.add_sort_field 'relevance', sort: 'score desc, pub_date_si desc', label: 'relevance'
     config.add_sort_field 'year-desc', sort: 'pub_date_si desc', label: 'year'
-    config.add_sort_field 'author', sort: 'author_si asc', label: 'author'
+    config.add_sort_field 'author', sort: 'author_si asc', label: 'creator'
     #config.add_sort_field 'title_si asc, pub_date_si desc', label: 'title'
 
     # If there are more than this many search results, no spelling ("did you

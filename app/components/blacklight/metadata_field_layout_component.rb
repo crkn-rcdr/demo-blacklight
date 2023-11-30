@@ -15,7 +15,7 @@ module Blacklight
     end)
 
     # @param field [Blacklight::FieldPresenter]
-    def initialize(field:, value_tag: 'dd', label_class: 'col-md-1', value_class: 'col-md-11')
+    def initialize(field:, value_tag: 'dd', label_class: 'col-md-3', value_class: 'col-md-9')
       @field = field
       @key = @field.key.parameterize
       @label_class = label_class

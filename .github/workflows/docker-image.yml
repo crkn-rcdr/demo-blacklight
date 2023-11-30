@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "usability-testing" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        registry: ghcr.io
+        username: ${{github.actor}}
+        password: ${{secrets.GITHUB_TOKEN}}
+    - name: Build
+      run: docker-compose build
+    - name: Tag
+      run: docker tag docker.io/library/demo-blacklight_web ghcr.io/brittnylapierre/demo-blacklight_web:latest
+    - name: Push
+      run: docker push ghcr.io/brittnylapierre/demo-blacklight_web:latest

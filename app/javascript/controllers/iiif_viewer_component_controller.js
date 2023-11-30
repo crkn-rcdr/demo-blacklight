@@ -6,6 +6,9 @@ export default class extends Controller {
     let canvasIndex = 0
     const params = new URLSearchParams(window.location.search)
     if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
+
+
+    let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
     
     //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
     let mconfig = {
@@ -575,7 +578,7 @@ export default class extends Controller {
 
         authNewWindowCenter: "parent", // Configure how to center a new window created by the authentication flow. Options: parent, screen
 
-        sideBarPanel: "info", // Configure which sidebar is selected by default. Options: info, attribution, canvas, annotations, search
+        sideBarPanel: "canvas", // Configure which sidebar is selected by default. Options: info, attribution, canvas, annotations, search
 
         defaultSidebarPanelHeight: 201, // Configure default sidebar height in pixels
 
@@ -591,7 +594,7 @@ export default class extends Controller {
 
         showLocalePicker: false, // Configure locale picker for multi-lingual metadata
 
-        sideBarOpen: false, // Configure if the sidebar (and its content panel) is open by default
+        sideBarOpen: true, // Configure if the sidebar (and its content panel) is open by default
 
         switchCanvasOnSearch: true, // Configure if Mirador should automatically switch to the canvas of the first search result
 
@@ -607,7 +610,7 @@ export default class extends Controller {
 
           annotations: true,
 
-          search: true,
+          search: false,
 
           layers: true
 
@@ -636,7 +639,7 @@ export default class extends Controller {
       },
       
       windows: [{
-        manifestId: "https://www.canadiana.ca/iiif/"+documentId+"/manifest",
+        manifestId: manifest,
         //view: 'single',
         canvasIndex,
       }],
@@ -766,6 +769,74 @@ export default class extends Controller {
 
     }
 
-    let miradorInstance = Mirador.viewer(mconfig);
+
+    fetch(manifest).then((response) => {
+      response.json().then(result => {
+        let miradorInstance = Mirador.viewer(mconfig);
+
+        function setCanvas(pageNum) {
+          // Construct URLSearchParams object instance from current URL querystring.
+          var queryParams = new URLSearchParams(window.location.search);
+
+          if(pageNum === queryParams.get("pageNum")) return
+
+          console.log("updating...")
+
+          queryParams.set("pageNum", pageNum);
+          history.pushState(null, null, "?"+queryParams.toString());
+
+
+          let newCanvasIndex = pageNum-1
+
+          // TODO: think about better way to do this
+          console.log(result)
+          let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
+          console.log(canvasImageUrl)
+
+          /*
+          id="pvFullImage" 
+          href="<%= @canvasImageUrl %>" 
+          */
+          let pvFullImageLink = document.getElementById("pvFullImage");
+          pvFullImageLink.setAttribute("href", canvasImageUrl);
+
+
+          /*
+          id="pvFullImageDownload" 
+          data-download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.jpg" 
+          data-href="<%= @canvasImageUrl %>"
+          */
+          let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload");
+          pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg");
+          pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl);
+
+          /*
+          id="pvDownloadSingle" 
+          download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
+          href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
+          */
+          let pvDownloadSingleLink = document.getElementById("pvDownloadSingle");
+          pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf");
+          pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf");
+        }
+
+        console.log(miradorInstance)
+        miradorInstance.store.subscribe(e => {
+          let state = miradorInstance.store.getState()
+          console.log("s", state)
+          
+          let selected = document.getElementsByClassName("Mui-selected")
+          for(let elem of selected) {
+            if(elem.tagName == "LI") {
+              let para = elem.getElementsByTagName("p");
+              if(para.length) {
+                let pageNum = parseInt(para[0].innerHTML.replace("Image ", ""))
+                setCanvas(pageNum)
+              }
+            }
+          }
+        })
+      })
+    })
   }
 }
