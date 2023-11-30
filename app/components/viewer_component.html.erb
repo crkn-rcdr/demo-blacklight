@@ -2,27 +2,30 @@
     <div id="pvToolbarTop">
         <form class="DocSearch-Form" method="GET">
             <label class="DocSearch-MagnifierLabel" for="docsearch-input" id="docsearch-label">
+                <span class="visually-hidden">Search within this item</span>
                 <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
                     <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
             </label>
             
-            <input type="hidden" name="pageNum" value="<%= params[:pageNum] %>" /> 
-            <input 
-            id="pvSearch" 
-            class="DocSearch-Input" 
-            aria-autocomplete="both" 
-            aria-labelledby="docsearch-label" 
-            autocomplete="off" 
-            autocorrect="off" 
-            autocapitalize="off" 
-            enterkeyhint="search" 
-            spellcheck="false" 
-            placeholder="Search item"
-            type="search"
-            name="q"
-            value="<%= params[:q] %>"/>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <span class="d-inline-flex">
+                <input type="hidden" name="pageNum" value="<%= params[:pageNum] %>" /> 
+                <input 
+                id="pvSearch" 
+                class="DocSearch-Input" 
+                aria-autocomplete="both" 
+                aria-labelledby="docsearch-label" 
+                autocomplete="off" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                enterkeyhint="search" 
+                spellcheck="false" 
+                placeholder="Search within this item..."
+                type="search"
+                name="q"
+                value="<%= params[:q] %>"/>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </span>
         </form>
 
         <% if params[:q] && params[:q].length != 0 && params[:q] != "*:*" %>

@@ -6,6 +6,7 @@ class DocumentDownloadsComponent < ViewComponent::Base
     def initialize(documentId:, prefix:, pageNum:)
         @documentId = documentId
         @prefix = prefix
+        @pageNum = pageNum
         @manifestUrl = "https://www.canadiana.ca/iiif/"+prefix+"."+documentId+"/manifest"
         # Get manifest, compile list of canvases...
         uri = URI(@manifestUrl)
