@@ -56,8 +56,8 @@ footer {
     color: white;
     border: none;
     border-radius: 2px;
-    width: 26rem;
-    height: 2.4rem;
+    max-width: 26rem;
+    min-width: 19rem;
 }
 .pvSearchResults {
     background: #282828;
