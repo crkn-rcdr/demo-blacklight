@@ -777,7 +777,8 @@ export default class extends Controller {
         function setCanvas(pageNum) {
           // Construct URLSearchParams object instance from current URL querystring.
           var queryParams = new URLSearchParams(window.location.search);
-
+          console.log(pageNum, queryParams.get("pageNum"))
+          console.log(typeof pageNum, typeof queryParams.get("pageNum"))
           if(pageNum === queryParams.get("pageNum")) return
 
           console.log("updating...")
@@ -822,15 +823,12 @@ export default class extends Controller {
 
         console.log(miradorInstance)
         miradorInstance.store.subscribe(e => {
-          let state = miradorInstance.store.getState()
-          console.log("s", state)
-          
           let selected = document.getElementsByClassName("Mui-selected")
           for(let elem of selected) {
             if(elem.tagName == "LI") {
               let para = elem.getElementsByTagName("p");
               if(para.length) {
-                let pageNum = parseInt(para[0].innerHTML.replace("Image ", ""))
+                let pageNum = para[0].innerHTML.replace("Image ", "")
                 setCanvas(pageNum)
               }
             }
