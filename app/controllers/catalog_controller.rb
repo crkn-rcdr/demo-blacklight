@@ -120,7 +120,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'collection_tsim_str', label: 'Collection'
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
     config.add_facet_field 'subject_ssim_str', label: 'Subject'
-    config.add_facet_field 'author_ssm_str', label: 'Author'
+    config.add_facet_field 'author_ssm_str', label: 'Creator'
     config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
     config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
@@ -145,7 +145,7 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_tsim', label: 'Author'
+    config.add_index_field 'author_tsim', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
     config.add_index_field 'id', label: 'ID'
 
@@ -252,7 +252,7 @@ class CatalogController < ApplicationController
     # custom Blacklight url parameter value separate from the Solr sort fields.
     config.add_sort_field 'relevance', sort: 'score desc, pub_date_si desc', label: 'relevance'
     config.add_sort_field 'year-desc', sort: 'pub_date_si desc', label: 'year'
-    config.add_sort_field 'author', sort: 'author_si asc', label: 'author'
+    config.add_sort_field 'author', sort: 'author_si asc', label: 'creator'
     #config.add_sort_field 'title_si asc, pub_date_si desc', label: 'title'
 
     # If there are more than this many search results, no spelling ("did you
