@@ -6,13 +6,13 @@
     <% @field.values.each do |v| %>
       <span>
         <% if @field.field_config[:label] == "Subject" %>  
-          <a href="http://localhost:3000/?f%5Bsubject_ssim_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %></a>
+          <a href="/?f%5Bsubject_ssim_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %></a>
           <br/>
         <% elsif @field.field_config[:label] == "Creator" %> 
-          <a href="http://localhost:3000/?f%5Bauthor_ssm_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %> </a>
+          <a href="/?f%5Bauthor_ssm_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %> </a>
           <br/>
         <% elsif @field.field_config[:label] == "Collection" %> 
-          <a href="http://localhost:3000/?f%5Bcollection_tsim_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %> </a>
+          <a href="/?f%5Bcollection_tsim_str%5D%5B%5D=<%= v %>" target="_blank"><%= v %> </a>
           <br/>
         <% elsif @field.field_config[:label] == "Permalink" %> 
           <a href="<%= v %>" target="_blank"><%= v %></a>

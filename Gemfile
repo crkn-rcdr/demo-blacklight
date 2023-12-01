@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'blacklight', ">= 6.1"
+gem 'blacklight', "= 8.0.1"
 
 group :development, :test do
   gem "solr_wrapper", ">= 0.3"
@@ -79,4 +79,4 @@ end
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "\~\>\ 5.1"
 gem "sassc-rails", "~> 2.1"
-gem "blacklight-marc", "~> 8.0"
+gem "blacklight-marc", "= 8.1.0"

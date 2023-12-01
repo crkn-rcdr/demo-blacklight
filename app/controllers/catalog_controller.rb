@@ -121,7 +121,7 @@ class CatalogController < ApplicationController
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
     config.add_facet_field 'subject_ssim_str', label: 'Subject'
     config.add_facet_field 'author_ssm_str', label: 'Creator'
-    config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
+    #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
     config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
     config.add_facet_field 'pub_date_si', label: 'Publish Date'
@@ -193,12 +193,6 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise.
 
     #config.add_search_field 'all_fields', label: 'All Fields'
-    #config.add_search_field 'title_tsim', label: 'Title'
-    #config.add_search_field 'author_tsim', label: 'Author'
-    #config.add_search_field 'subject_geo_ssim', label: 'Region'
-    #config.add_search_field 'subject_tsim', label: 'Subject'
-    #config.add_search_field 'full_txt', label: 'Full Text'
-
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
@@ -228,13 +222,6 @@ class CatalogController < ApplicationController
       field.label = "Author"
     end
 
-    config.add_search_field('subject_geo_ssim') do |field|
-      # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = {
-        df: 'subject_geo_ssim'
-      }
-      field.label = "Region"
-    end
 
     config.add_search_field('subject_tsim') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.

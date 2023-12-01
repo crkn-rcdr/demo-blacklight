@@ -2,6 +2,23 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   initialize() {
+    let searchInput = document.getElementById("pvSearch");
+    let resetButton = document.getElementById("pvSearchReset");
+    resetButton.addEventListener("click", ()=>{
+      searchInput.value = '';
+      // Construct URLSearchParams object instance from current URL querystring.
+      var queryParams = new URLSearchParams(window.location.search);
+      queryParams.set("pageNum", pageNum);
+      if(queryParams.has("q")) queryParams.delete("q");
+      history.pushState(null, null, "?"+queryParams.toString());
+    });
+    searchInput.addEventListener("keydown", () =>{
+      if(searchInput.value === "") resetButton.style.display ="none";
+      else resetButton.style.display ="inherit";
+    });
+
+
+
     const documentId = this.element.getAttribute("data-docid")
     let canvasIndex = 0
     const params = new URLSearchParams(window.location.search)
@@ -773,6 +790,15 @@ export default class extends Controller {
     fetch(manifest).then((response) => {
       response.json().then(result => {
         let miradorInstance = Mirador.viewer(mconfig);
+        const data = {
+          manifest,
+          canvasIndex
+        };
+
+        console.log("page is fully loaded");
+        var queryParams = new URLSearchParams(window.location.search);
+        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
+        else resetButton.style.display ="none";
 
         function setCanvas(pageNum) {
           // Construct URLSearchParams object instance from current URL querystring.

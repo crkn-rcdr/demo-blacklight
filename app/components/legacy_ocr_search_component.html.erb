@@ -1,12 +1,17 @@
 <% if  @term.length != 0 && @term != "*:*" %>
-    <span term="<%= @term %>">
-        <%= I18n.t('L_MATCHING_PAGES_PRE')%> '<%= @term %>' <%= I18n.t('L_MATCHING_PAGES_SUF')%>:
-    </span>
-    <%= content %>
-
     <% if @legacy_ocr_search_results %>
-        <% @legacy_ocr_search_results.each do |legacy_ocr_search_result| %>
-            <a href="/catalog/<%= @documentId %>?pageNum=<%= legacy_ocr_search_result %>&q=<%= @term %>"><%= legacy_ocr_search_result %></a><% if legacy_ocr_search_result != @legacy_ocr_search_results.last %>, <% end %>
+        <% if @legacy_ocr_search_results.length > 0 %>
+            <span term="<%= @term %>">
+                <%= I18n.t('L_MATCHING_PAGES_PRE')%> '<%= @term %>' <%= I18n.t('L_MATCHING_PAGES_SUF')%>:
+            </span>
+            <%= content %>
+            <% @legacy_ocr_search_results.each do |legacy_ocr_search_result| %>
+                <a href="/catalog/<%= @documentId %>?pageNum=<%= legacy_ocr_search_result %>&q=<%= @term %>"><%= legacy_ocr_search_result %></a><% if legacy_ocr_search_result != @legacy_ocr_search_results.last %>, <% end %>
+            <% end %>
+        <% else %>
+            <span term="<%= @term %>">
+                No results for '<%= @term %>' in this item
+            </span>
         <% end %>
     <% end %>
 <% end %>

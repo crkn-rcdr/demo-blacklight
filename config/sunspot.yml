@@ -1,23 +1,23 @@
 production:
   solr:
-    hostname: tokaji.tor.c7a.ca
+    hostname: 159.203.33.98
     port: 8983
     log_level: WARNING
-    path: /solr/cosearch2
+    path: /solr/blacklight
     # read_timeout: 2
     # open_timeout: 0.5
 
 development:
   solr:
-    hostname: tokaji.tor.c7a.ca
+    hostname: 159.203.33.98
     port: 8983
     log_level: WARNING
-    path: /solr/cosearch2
+    path: /solr/coseblacklightarch2
 
 test:
   solr:
-    hostname: tokaji.tor.c7a.ca
+    hostname: 159.203.33.98
     port: 8983
     log_level: WARNING
-    path: /solr/cosearch2
+    path: /solr/blacklight
     
