@@ -1,6 +1,6 @@
 <% if  @term.length != 0 && @term != "*:*" %>
     <% if @legacy_ocr_search_results %>
-        <% if @legacy_ocr_search_results.length %>
+        <% if @legacy_ocr_search_results.length > 0 %>
             <span term="<%= @term %>">
                 <%= I18n.t('L_MATCHING_PAGES_PRE')%> '<%= @term %>' <%= I18n.t('L_MATCHING_PAGES_SUF')%>:
             </span>
@@ -10,7 +10,7 @@
             <% end %>
         <% else %>
             <span term="<%= @term %>">
-                No results for '<%= @term %>' in this item %>:
+                No results for '<%= @term %>' in this item
             </span>
         <% end %>
     <% end %>
