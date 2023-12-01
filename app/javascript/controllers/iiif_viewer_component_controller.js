@@ -4,12 +4,6 @@ export default class extends Controller {
   initialize() {
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
-    window.onload = (event) => {
-      console.log("page is fully loaded");
-      var queryParams = new URLSearchParams(window.location.search);
-      if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
-      else resetButton.style.display ="none";
-    };
     resetButton.addEventListener("click", ()=>{
       searchInput.value = '';
       // Construct URLSearchParams object instance from current URL querystring.
@@ -38,6 +32,12 @@ export default class extends Controller {
           manifest,
           canvasIndex
         };
+
+        console.log("page is fully loaded");
+        var queryParams = new URLSearchParams(window.location.search);
+        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
+        else resetButton.style.display ="none";
+
         let viewer = UV.init("page-viewer", data);
 
         viewer.on(
