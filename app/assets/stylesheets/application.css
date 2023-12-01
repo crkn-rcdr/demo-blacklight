@@ -42,6 +42,12 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
+.MuiPaper-root {
+    border: 1px solid #dbdbdb;
+}
+.MuiToolbar-root {
+    border-bottom: 1px solid #dbdbdb;
+}
 .mirador65, .mirador-canvas-nav {
     height: 5rem !important;
 }
@@ -50,6 +56,9 @@ footer {
 }
 .mirador4 .mosaic-tile {
     box-shadow: none !important;
+}
+.mirador16.mirador15 {
+    border-top: none !important;
 }
 .MuiPaper-elevation1 {
     box-shadow: none !important;
