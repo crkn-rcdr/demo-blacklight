@@ -45,6 +45,15 @@ footer {
 .mirador65, .mirador-canvas-nav {
     height: 5rem !important;
 }
+.MuiPaper-elevation4 {
+    box-shadow: none !important;
+}
+.mirador4 .mosaic-tile {
+    box-shadow: none !important;
+}
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}
 #page-viewer {
     background: white;
 }
