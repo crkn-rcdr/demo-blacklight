@@ -79,6 +79,9 @@ footer {
     background: white;
     padding: 0.5rem;
     color: black;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
 }
 #pvSearch {
     color: black;
@@ -102,11 +105,15 @@ footer {
 #pvToolbarBottom {
     background: white;
     padding: 0.2rem;
+    border-bottom: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
 }
 .my-1 {
     background: white;
     color: #1d808b !important;
     border-color: #156972;
+    margin-right: 0.4rem;
 }
 .thumbsView{
     overflow-x: hidden !important;
