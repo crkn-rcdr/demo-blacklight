@@ -63,6 +63,15 @@ footer {
 .MuiPaper-elevation1 {
     box-shadow: none !important;
 }
+.mosaic-tile {
+    margin: 0 !important;
+}
+.mosaic-root {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
 #page-viewer {
     background: white;
 }
