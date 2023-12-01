@@ -8,16 +8,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3001:3000"
-    depends_on:
-      - solrm
-    networks:
-      - test
-  solrm:
-    image: solr
-    ports:
-     - "8984:8983"
-    volumes:
-      - data:/var/solr
     networks:
       - test
 #  swift:
