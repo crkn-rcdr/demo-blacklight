@@ -42,7 +42,7 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
-.MuiPaper-root {
+.mosaic-window-body{
     border: 1px solid #dbdbdb;
 }
 .MuiToolbar-root {
