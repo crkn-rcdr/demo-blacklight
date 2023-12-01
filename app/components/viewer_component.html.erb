@@ -1,6 +1,6 @@
 <div data-controller="iiif_viewer" data-docid="<%= @prefix %>.<%= @documentId %>">
     <div id="pvToolbarTop">
-        <form class="DocSearch-Form" method="GET">
+        <form id="pvSearchForm" class="DocSearch-Form" method="GET">
             <label class="DocSearch-MagnifierLabel" for="docsearch-input" id="docsearch-label">
                 <span class="visually-hidden">Search within this item</span>
                 <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
@@ -9,7 +9,7 @@
             </label>
             
             <span class="d-inline-flex">
-                <input type="hidden" name="pageNum" value="<%= params[:pageNum] %>" /> 
+                <input type="hidden" name="pageNum" value="1" /> 
                 <input 
                 id="pvSearch" 
                 class="DocSearch-Input" 
@@ -25,6 +25,7 @@
                 name="q"
                 value="<%= params[:q] %>"/>
                 <button type="submit" class="btn btn-primary">Search</button>
+                <button id="pvSearchReset" class="btn btn-secondary">Reset</button>
             </span>
         </form>
 
