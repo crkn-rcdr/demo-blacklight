@@ -193,12 +193,6 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise.
 
     #config.add_search_field 'all_fields', label: 'All Fields'
-    #config.add_search_field 'title_tsim', label: 'Title'
-    #config.add_search_field 'author_tsim', label: 'Author'
-    #config.add_search_field 'subject_geo_ssim', label: 'Region'
-    #config.add_search_field 'subject_tsim', label: 'Subject'
-    #config.add_search_field 'full_txt', label: 'Full Text'
-
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
@@ -228,13 +222,6 @@ class CatalogController < ApplicationController
       field.label = "Author"
     end
 
-    config.add_search_field('subject_geo_ssim') do |field|
-      # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = {
-        df: 'subject_geo_ssim'
-      }
-      field.label = "Region"
-    end
 
     config.add_search_field('subject_tsim') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
