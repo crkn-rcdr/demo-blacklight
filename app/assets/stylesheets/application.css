@@ -59,6 +59,9 @@ footer {
     color: white !important;
     border: none !important;
 }
+#pvSearchForm {
+    padding: 0.5rem;
+}
 #pvSearch { 
     max-width: 26rem;
     min-width: 19rem;
