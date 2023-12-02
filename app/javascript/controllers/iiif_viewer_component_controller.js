@@ -736,7 +736,7 @@ export default class extends Controller {
 
         preserveViewport: true,
 
-        showNavigationControl: false
+        showNavigationControl: false,
 
       },
 
