@@ -42,6 +42,9 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
+.centerPanel > .title {
+    display: none !important;
+}
 #page-viewer {
     background: black;
 }
@@ -91,4 +94,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #pvSearchReset {
     display: none;
+}
+.pv-help-icon {
+    margin-right: 0.4rem;
+}
+.text-aligned {
+    display: flex;
+    align-items: center;
+}
+#download-help {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
