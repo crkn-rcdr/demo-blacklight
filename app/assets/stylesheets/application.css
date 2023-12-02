@@ -53,12 +53,14 @@ footer {
     padding: 0.5rem;
     color: white;
 }
-#pvSearch {
+#pvSearch, .autocompleteText {
     background: #3a3a3a;
     padding: 0.25rem 0.5rem;
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 2px
+}
+#pvSearch { 
     max-width: 26rem;
     min-width: 19rem;
 }
