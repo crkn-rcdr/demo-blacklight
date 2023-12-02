@@ -621,15 +621,15 @@ export default class extends Controller {
 
           info: true,
 
-          attribution: true,
+          attribution: false,
 
           canvas: true,
 
-          annotations: true,
+          annotations: false,
 
           search: false,
 
-          layers: true
+          layers: false
 
         },
 
@@ -682,7 +682,7 @@ export default class extends Controller {
       
       workspace: {
 
-        draggingEnabled: true,
+        draggingEnabled: false,
 
         allowNewWindows: true,
 
@@ -692,7 +692,7 @@ export default class extends Controller {
 
         height: 5000, // height of the elastic mode's virtual canvas
 
-        showZoomControls: false, // Configure if zoom controls should be displayed by default
+        showZoomControls: true, // Configure if zoom controls should be displayed by default
 
         type: "mosaic", // Which workspace type to load by default. Other possible values are "elastic". If "mosaic" or "elastic" are not selected no worksapce type will be used.
 
