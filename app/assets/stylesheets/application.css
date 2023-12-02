@@ -75,6 +75,9 @@ footer {
     margin-top: 0.2rem;
     margin-bottom: 0.5rem !important; 
 }
+#pvToolbarTop a {
+    color: #0c6275 !important;
+}
 #pvToolbarBottom {
     background: #282828;
     padding: 0.2rem;
