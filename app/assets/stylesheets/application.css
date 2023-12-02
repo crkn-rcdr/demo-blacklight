@@ -72,6 +72,9 @@ footer {
     right: 0 !important;
     bottom: 0 !important;
 }
+.MuiToolbar-root > .MuiTypography-root {
+    visibility: hidden;
+}
 #page-viewer {
     background: white;
 }
@@ -124,4 +127,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #pvSearchReset {
     display: none;
+}
+.pv-help-icon {
+    margin-right: 0.4rem;
+}
+.text-aligned {
+    display: flex;
+    align-items: center;
+}
+#download-help {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
