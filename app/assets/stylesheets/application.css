@@ -79,8 +79,14 @@ footer {
     margin-top: 0.2rem;
     margin-bottom: 0.5rem !important; 
 }
-#pvToolbarTop a {
+#pvToolbarTop .pv-go-to-index {
     color: #25a8c4 !important;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+#pvToolbarTop .pv-go-to-index:hover, #pvToolbarTop .pv-go-to-index:active {
+    text-decoration: underline;
 }
 #pvToolbarBottom {
     background: #282828;

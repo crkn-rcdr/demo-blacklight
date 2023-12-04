@@ -6,7 +6,7 @@
             </span>
             <%= content %>
             <% @legacy_ocr_search_results.each do |legacy_ocr_search_result| %>
-                <a href="/catalog/<%= @documentId %>?pageNum=<%= legacy_ocr_search_result %>&q=<%= @term %>"><%= legacy_ocr_search_result %></a><% if legacy_ocr_search_result != @legacy_ocr_search_results.last %>, <% end %>
+                <button class="pv-go-to-index"><%= legacy_ocr_search_result %></button>
             <% end %>
         <% else %>
             <span term="<%= @term %>">

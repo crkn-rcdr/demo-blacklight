@@ -17,33 +17,14 @@ export default class extends Controller {
       else resetButton.style.display ="inherit";
     });
 
-
-
-    const documentId = this.element.getAttribute("data-docid")
-    let canvasIndex = 0
-    const params = new URLSearchParams(window.location.search)
-    if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
-    //https://codesandbox.io/s/uv-config-example-7kh4s?file=/uv-config.json
-    let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
-
-    fetch(manifest).then((response) => {
-      response.json().then(result => {
-        const data = {
-          manifest,
-          canvasIndex
-        };
-
-        console.log("page is fully loaded");
-        var queryParams = new URLSearchParams(window.location.search);
-        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
-        else resetButton.style.display ="none";
-
-        let viewer = UV.init("page-viewer", data);
+    
+    function setViewer(result, data) {
+      let viewer = UV.init("page-viewer", data);
 
         viewer.on(
           "canvasIndexChange",
           function (newCanvasIndex) {
-            let pageNum = newCanvasIndex+1 
+            let pageNum = newCanvasIndex+1
 
             // Construct URLSearchParams object instance from current URL querystring.
             var queryParams = new URLSearchParams(window.location.search);
@@ -948,6 +929,40 @@ export default class extends Controller {
             })
           )}
         )
+    }
+
+
+
+    const documentId = this.element.getAttribute("data-docid")
+    let canvasIndex = 0
+    const params = new URLSearchParams(window.location.search)
+    if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
+    //https://codesandbox.io/s/uv-config-example-7kh4s?file=/uv-config.json
+    let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
+
+    fetch(manifest).then((response) => {
+      response.json().then(result => {
+        console.log("page is fully loaded");
+        var queryParams = new URLSearchParams(window.location.search);
+        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
+        else resetButton.style.display ="none";
+
+        setViewer(result, {
+          manifest,
+          canvasIndex
+        });
+
+        // Update page without reload
+        let goToCanvasButtons = document.getElementsByClassName("pv-go-to-index");
+        for(let button of goToCanvasButtons) {
+          button.addEventListener("click", (e) => {
+            let index = parseInt(e.target.innerHTML.replace(",", ""))-1
+            setViewer(result, {
+              manifest,
+              canvasIndex: index
+            });
+          })
+        }
       });
     });
   }
