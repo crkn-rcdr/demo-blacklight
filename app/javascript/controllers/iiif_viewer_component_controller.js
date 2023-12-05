@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   initialize() {
-    let searchInput = document.getElementById("pvSearch");
+    /*let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{
       searchInput.value = '';
@@ -15,7 +15,7 @@ export default class extends Controller {
     searchInput.addEventListener("keydown", () =>{
       if(searchInput.value === "") resetButton.style.display ="none";
       else resetButton.style.display ="inherit";
-    });
+    });*/
 
 
 
