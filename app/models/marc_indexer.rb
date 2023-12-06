@@ -16,11 +16,10 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field "id", extract_marc("001"), trim, first_only
     to_field "is_issue"
       if acc.count("_") > 2
-        acc.replace "Yes"
+        acc.replace ["Yes"]
       else
-        acc.replace "No"
+        acc.replace ["No"]
       end
-      acc
     end
 
 
