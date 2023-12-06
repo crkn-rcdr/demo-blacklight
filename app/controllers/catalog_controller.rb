@@ -116,15 +116,16 @@ class CatalogController < ApplicationController
 
 
     #config.add_facet_field 'title_tsim', label: 'Title'
+    config.add_facet_field 'is_issue', label: 'Is Issue'
     config.add_facet_field 'format', label: 'Format'
     config.add_facet_field 'collection_tsim_str', label: 'Collection'
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
-    config.add_facet_field 'subject_ssim_str', label: 'Subject'
-    config.add_facet_field 'author_ssm_str', label: 'Creator'
+    config.add_facet_field 'subject_ssim_str', label: 'Subject', limit: true
+    config.add_facet_field 'author_ssm_str', label: 'Creator', limit: true
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
-    config.add_facet_field 'language_ssim_str', label: 'Language'
+    config.add_facet_field 'language_ssim_str', label: 'Language', limit: true
     config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
-    config.add_facet_field 'pub_date_si', label: 'Publish Date'
+    config.add_facet_field 'pub_date_si', label: 'Publish Date', limit: true
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
@@ -145,9 +146,10 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_tsim', label: 'Creator'
+    config.add_index_field 'author_ssm_str', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
     config.add_index_field 'id', label: 'ID'
+    config.add_index_field 'is_issue', label: 'Is Issue'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -155,7 +157,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'title_addl_tsim', label: 'Other Titles'
 
-    config.add_show_field 'author_tsim', label: 'Creator'
+    config.add_show_field 'author_ssm_str', label: 'Creator'
     config.add_show_field 'published_ssm', label: 'Published Statement'
     config.add_show_field 'subject_ssim', label: 'Subject'
 
