@@ -20,6 +20,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
       else
         acc = "No"
       end
+      acc
     end
 
 
