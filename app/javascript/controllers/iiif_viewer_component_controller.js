@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   initialize() {
-    let searchInput = document.getElementById("pvSearch");
+    /*let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{
       searchInput.value = '';
@@ -15,7 +15,7 @@ export default class extends Controller {
     searchInput.addEventListener("keydown", () =>{
       if(searchInput.value === "") resetButton.style.display ="none";
       else resetButton.style.display ="inherit";
-    });
+    });*/
 
     
     function setViewer(result, data) {
@@ -32,36 +32,17 @@ export default class extends Controller {
             history.pushState(null, null, "?"+queryParams.toString());
 
             // TODO: think about better way to do this
-            console.log(result)
+            /*console.log(result)
             let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
             console.log(canvasImageUrl)
-
-            /*
-            id="pvFullImage" 
-            href="<%= @canvasImageUrl %>" 
-            */
             let pvFullImageLink = document.getElementById("pvFullImage");
             pvFullImageLink.setAttribute("href", canvasImageUrl);
-
-
-            /*
-            id="pvFullImageDownload" 
-            data-download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.jpg" 
-            data-href="<%= @canvasImageUrl %>"
-            */
             let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload");
             pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg");
             pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl);
-
-            /*
-            id="pvDownloadSingle" 
-            download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
-            href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
-            */
             let pvDownloadSingleLink = document.getElementById("pvDownloadSingle");
             pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf");
-            pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf");
-
+            pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf");*/
           },
           false
         );
@@ -944,8 +925,8 @@ export default class extends Controller {
       response.json().then(result => {
         console.log("page is fully loaded");
         var queryParams = new URLSearchParams(window.location.search);
-        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
-        else resetButton.style.display ="none";
+        /*if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
+        else resetButton.style.display ="none";*/
 
         setViewer(result, {
           manifest,
@@ -953,7 +934,7 @@ export default class extends Controller {
         });
 
         // Update page without reload
-        let goToCanvasButtons = document.getElementsByClassName("pv-go-to-index");
+        /*let goToCanvasButtons = document.getElementsByClassName("pv-go-to-index");
         for(let button of goToCanvasButtons) {
           button.addEventListener("click", (e) => {
             let index = parseInt(e.target.innerHTML.replace(",", ""))-1
@@ -962,7 +943,7 @@ export default class extends Controller {
               canvasIndex: index
             });
           })
-        }
+        }*/
       });
     });
   }
