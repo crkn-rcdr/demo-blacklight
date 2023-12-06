@@ -32,6 +32,7 @@ Create page_txt field in page core
 
 (On first run only)
 `rake solr:marc:index MARC_FILE=test.mrc`
+`rake solr:marc:index MARC_FILE=issues.mrc`
 
 (On first run only) `docker logs demo-blacklight-web-1 --follow`
 

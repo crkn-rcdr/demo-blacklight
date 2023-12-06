@@ -125,7 +125,7 @@ class CatalogController < ApplicationController
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language', limit: true
     config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
-    config.add_facet_field 'pub_date_si', label: 'Publish Date', limit: true
+    config.add_facet_field 'pub_date_si', label: 'Publish Date', limit: true, date: true
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
