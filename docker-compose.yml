@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3000:3000/udp"
     depends_on:
       - solr
     networks:
@@ -15,7 +15,7 @@ services:
   solr:
     image: solr
     ports:
-     - "8983:8983"
+     - "8983:8983/udp"
     volumes:
       - data:/var/solr
     networks:
