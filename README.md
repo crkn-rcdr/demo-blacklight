@@ -54,7 +54,7 @@ Notes:
 * or use this Solr API curl command:
 `curl -X POST -H 'Content-Type: application/json' 'http://crkn-solr.c7a.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 `curl -X POST -H 'Content-Type: application/json' 'http://localhost:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'http://159.203.33.98:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://24.199.108.51:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
