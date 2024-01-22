@@ -48,9 +48,6 @@ footer {
 .MuiToolbar-root {
     border-bottom: 1px solid #dbdbdb;
 }
-.mirador65, .mirador-canvas-nav {
-    height: 3rem !important;
-}
 .MuiPaper-elevation4 {
     box-shadow: none !important;
 }
@@ -95,7 +92,8 @@ footer {
     flex-direction: row;
     justify-content: center;
 }
-.MuiPaper-root {
+.mirador65, .mirador-canvas-nav {
+    height: 3rem !important;
     background: #ffffff !important;
     top: 0 !important;
 }
@@ -107,6 +105,9 @@ footer {
 }
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
     background-color: rgb(151 151 151 / 8%) !important
+}
+.mirador84.mirador82 {
+    display: none;
 }
 #page-viewer {
     background: white;

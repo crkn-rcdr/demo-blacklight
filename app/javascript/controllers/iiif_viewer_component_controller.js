@@ -740,7 +740,13 @@ export default class extends Controller {
 
         zoomPerScroll: 1,
 
-        mouseNavEnabled: false,
+        gestureSettingsMouse: {
+          scrollToZoom: false
+        },
+
+        gestureSettingsTouch : {
+          scrollToZoom: false
+        }
 
       },
 
