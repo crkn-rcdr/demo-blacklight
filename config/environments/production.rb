@@ -92,5 +92,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  config.hosts << 'ec2-54-237-38-135.compute-1.amazonaws.com:3000'
+  config.hosts << 'blacklight.crkn-demo-test.ca'
 end
