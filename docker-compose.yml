@@ -1,13 +1,23 @@
 version: '3'
 services:
-  webm:
+  web:
     environment:
       - SWIFT_USERNAME=xxx
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3001:3000"
+      - "3000:3000"
+    depends_on:
+      - solr
+    networks:
+      - test
+  solr:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - data:/var/solr
     networks:
       - test
 #  swift:
@@ -24,4 +34,3 @@ volumes:
   swiftdata:
 networks:
   test:
-
