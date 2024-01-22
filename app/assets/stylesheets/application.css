@@ -81,7 +81,7 @@ footer {
 .mirador38 { 
     display: none;
 }
-.mirador73 {
+.mirador67 {
     display:none;
 }
 .openseadragon-canvas {
@@ -95,8 +95,9 @@ footer {
     flex-direction: row;
     justify-content: center;
 }
-.mirador60 {
-    background: #ffffff !important
+.MuiPaper-root {
+    background: #ffffff !important;
+    top: 0 !important;
 }
 .mirador28 {
     border-right: none !important;
