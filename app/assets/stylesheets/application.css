@@ -82,8 +82,7 @@ footer {
     display: none;
 }
 .mirador73 {
-    top: 0;
-    background-color: rgb(255 255 255 / 98%) !important;
+    display:none;
 }
 .openseadragon-canvas {
     top: 50px !important;
@@ -101,6 +100,9 @@ footer {
 }
 .mirador28 {
     border-right: none !important;
+}
+.mirador29 {
+    display: none;
 }
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
     background-color: rgb(151 151 151 / 8%) !important

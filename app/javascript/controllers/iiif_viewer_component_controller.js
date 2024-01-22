@@ -611,7 +611,7 @@ export default class extends Controller {
 
         showLocalePicker: false, // Configure locale picker for multi-lingual metadata
 
-        sideBarOpen: false, // Configure if the sidebar (and its content panel) is open by default
+        sideBarOpen: true, // Configure if the sidebar (and its content panel) is open by default
 
         switchCanvasOnSearch: true, // Configure if Mirador should automatically switch to the canvas of the first search result
 
@@ -738,7 +738,9 @@ export default class extends Controller {
 
         showNavigationControl: false,
 
-        zoomPerScroll: 1
+        zoomPerScroll: 1,
+
+        mouseNavEnabled: false,
 
       },
 
