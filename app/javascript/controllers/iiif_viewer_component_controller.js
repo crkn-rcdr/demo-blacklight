@@ -595,7 +595,7 @@ export default class extends Controller {
 
         authNewWindowCenter: "parent", // Configure how to center a new window created by the authentication flow. Options: parent, screen
 
-        sideBarPanel: "canvas", // Configure which sidebar is selected by default. Options: info, attribution, canvas, annotations, search
+        sideBarPanel: "info", // Configure which sidebar is selected by default. Options: info, attribution, canvas, annotations, search
 
         defaultSidebarPanelHeight: 201, // Configure default sidebar height in pixels
 
@@ -611,7 +611,7 @@ export default class extends Controller {
 
         showLocalePicker: false, // Configure locale picker for multi-lingual metadata
 
-        sideBarOpen: true, // Configure if the sidebar (and its content panel) is open by default
+        sideBarOpen: false, // Configure if the sidebar (and its content panel) is open by default
 
         switchCanvasOnSearch: true, // Configure if Mirador should automatically switch to the canvas of the first search result
 
@@ -623,7 +623,7 @@ export default class extends Controller {
 
           attribution: false,
 
-          canvas: true,
+          canvas: false,
 
           annotations: false,
 
@@ -669,7 +669,7 @@ export default class extends Controller {
 
       thumbnailNavigation: {
 
-        defaultPosition: "off", // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+        defaultPosition: "far-right", // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
 
         displaySettings: true, // Display the settings for this in WindowTopMenu
 
@@ -737,6 +737,8 @@ export default class extends Controller {
         preserveViewport: true,
 
         showNavigationControl: false,
+
+        zoomPerScroll: 1
 
       },
 
