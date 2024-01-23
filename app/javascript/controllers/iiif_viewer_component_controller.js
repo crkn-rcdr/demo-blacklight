@@ -745,7 +745,8 @@ export default class extends Controller {
         },
 
         gestureSettingsTouch : {
-          scrollToZoom: false
+          scrollToZoom: false,
+          clickToZoom: false
         }
 
       },
