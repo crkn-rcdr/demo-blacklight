@@ -76,9 +76,9 @@ footer {
 .mirador-companion-window-header > h3, .mirador-companion-window-header > button {
     display: none;
 }
-/*.mirador38 { 
-    display: none;
-}*/
+.mirador38 { 
+    margin-top: 47px !important;
+}
 button[aria-label="Toggle sidebar"] {
     display: none;  
 }
