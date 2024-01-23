@@ -85,7 +85,8 @@ footer {
     border-right: none !important;
 }
 .mirador-thumb-navigation {
-    border-left: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb !important;
+    border-top: 1px solid #dbdbdb !important;
 }
 .openseadragon-canvas {
     top: 50px !important;
