@@ -144,6 +144,10 @@ button[aria-label="Toggle sidebar"] {
 .mirador6 {
     margin-top: 50px !important;
 }
+.mirador64 {
+    display: inline-flex !important;
+    height: 20px !important;
+}
 #page-viewer {
     background: white;
 }
