@@ -669,7 +669,7 @@ export default class extends Controller {
 
       thumbnailNavigation: {
 
-        defaultPosition: "far-right", // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+        defaultPosition: "off", // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
 
         displaySettings: true, // Display the settings for this in WindowTopMenu
 
