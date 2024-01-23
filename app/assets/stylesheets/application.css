@@ -203,3 +203,6 @@ input[type="search"]::-webkit-search-cancel-button {
     border: none;
     margin-left: 1.4rem;
 }
+div[id$="-gallery"] {
+    border-top: 1px solid #dbdbdb;
+}
