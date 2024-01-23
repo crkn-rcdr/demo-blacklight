@@ -13,9 +13,8 @@
     </div>
     <br/>
 
-    <%= render(DocumentDownloadsComponent.new(documentId: @documentId, prefix: 'oocihm', pageNum: params[:pageNum])) do %><% end %>
 
-    <div id="pvToolbarTop">
+    <div id="pvToolbarTop" aria-label="Viewer controls">
         <form id="pvSearchForm" class="DocSearch-Form" method="GET">
             <label class="DocSearch-MagnifierLabel" for="docsearch-input" id="docsearch-label">
                 <span class="visually-hidden">Search within this item</span>
@@ -51,6 +50,7 @@
             </div>
         <% end %>
 
+        <%= render(DocumentDownloadsComponent.new(documentId: @documentId, prefix: 'oocihm', pageNum: params[:pageNum])) do %><% end %>
     </div>
     <div class="uv" id="page-viewer" style="overflow: hidden; width: 100%; height: 50rem; position: relative;"></div>
 
