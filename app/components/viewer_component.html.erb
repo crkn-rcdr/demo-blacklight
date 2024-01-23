@@ -11,9 +11,9 @@
         <img class="pv-help-icon" src="/info.svg" width="18" height="18" class="" alt=""/>
         <span>57 images, 55 with full-text search</span>
     </div>
+    <br/>
 
     <%= render(DocumentDownloadsComponent.new(documentId: @documentId, prefix: 'oocihm', pageNum: params[:pageNum])) do %><% end %>
-    </div>
 
     <div id="pvToolbarTop">
         <form id="pvSearchForm" class="DocSearch-Form" method="GET">
