@@ -198,7 +198,7 @@ input[type="search"]::-webkit-search-cancel-button {
 #pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
     padding: 0 !important;
     background: white;
-    color: rgba(0, 0, 0, 0.58) !important;
+    color: rgba(0, 0, 0, 0.68) !important;
     border: none;
     margin-left: 0.4rem;
 }
