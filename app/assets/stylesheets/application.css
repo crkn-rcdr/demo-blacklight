@@ -54,7 +54,7 @@ footer {
 .mirador4 .mosaic-tile {
     box-shadow: none !important;
 }
-.mirador16.mirador15 {
+.MuiToolbar-dense {
     border-top: none !important;
     border-bottom: none !important;
 }
@@ -79,8 +79,8 @@ footer {
 .mirador38 { 
     display: none;
 }
-.mirador67 {
-    border: 1px solid #dbdbdb;
+.MuiPaper-root {
+    border: 1px solid #dbdbdb !important;
     border-left: none !important;
     border-right: none !important;
 }
