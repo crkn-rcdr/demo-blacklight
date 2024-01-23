@@ -56,6 +56,7 @@ footer {
 }
 .mirador16.mirador15 {
     border-top: none !important;
+    border-bottom: none !important;
 }
 .MuiPaper-elevation1 {
     box-shadow: none !important;
@@ -80,6 +81,8 @@ footer {
 }
 .mirador67 {
     border: 1px solid #dbdbdb;
+    border-left: none !important;
+    border-right: none !important;
 }
 .openseadragon-canvas {
     top: 50px !important;
@@ -105,6 +108,10 @@ footer {
 }
 .mirador22 {
     display: none;
+}
+.mirador37 {
+    border-top: 1px solid #dbdbdb !important;
+    border-left: 1px solid #dbdbdb !important;
 }
 .mirador40 {
     border-bottom: none;
