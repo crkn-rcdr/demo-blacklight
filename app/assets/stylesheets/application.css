@@ -178,7 +178,7 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: center;
 }
 #download-help {
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
     margin-bottom: 0.4rem;
     /*border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;*/
