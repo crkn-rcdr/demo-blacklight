@@ -135,6 +135,9 @@ button[aria-label="Toggle sidebar"] {
 .mirador84.mirador82 {
     display: none;
 }
+.mirador6 {
+    margin-top: 50px !important;
+}
 #page-viewer {
     background: white;
 }
