@@ -159,12 +159,6 @@ footer {
     border-right: 1px solid #dbdbdb;
     border-top: 1px solid #dbdbdb;
 }
-.my-1 {
-    background: white;
-    color: #1d808b !important;
-    border-color: #156972;
-    margin-left: 0.4rem;
-}
 .thumbsView{
     overflow-x: hidden !important;
 }
@@ -194,9 +188,17 @@ input[type="search"]::-webkit-search-cancel-button {
     border-right: 1px solid #dbdbdb;
     */
 }
-#btn-toolbar {
+#dl-menu {
+    display: inline-flex !important;
     float:right;
 }
 #pvSearchForm {
     display: inline;
+}
+#pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
+    padding: 0 !important;
+    background: white;
+    color: rgba(0, 0, 0, 0.54) !important;
+    border-color: none;
+    margin-left: 0.4rem;
 }
