@@ -44,6 +44,7 @@ footer {
 }
 .mosaic-window-body{
     border: 1px solid #dbdbdb;
+    border-top: none;
 }
 .MuiToolbar-root {
     border-bottom: 1px solid #dbdbdb;
@@ -84,12 +85,17 @@ button[aria-label="Toggle sidebar"] {
 }
 .mosaic-window-body > section > div:nth-child(1) {
     display: inline;
-    width: 58px;
+    width: 160px;
     position: absolute;
     height: fit-content;
     right: 0;
     padding: 0;
-    top: 2;
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb !important;
+}
+.mosaic-window-body > section > div:nth-child(1) button { 
+    padding: 11px !important;
 }
 .mirador-canvas-nav {
     border: 1px solid #dbdbdb !important;
