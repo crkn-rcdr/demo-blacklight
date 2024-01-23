@@ -133,6 +133,9 @@ footer {
     border-top: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #pvSearch {
     color: black;
@@ -188,7 +191,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #dl-menu {
     display: inline-flex !important;
-    float:right;
+    margin-top: 0.4rem;
 }
 #pvSearchForm {
     display: inline;
