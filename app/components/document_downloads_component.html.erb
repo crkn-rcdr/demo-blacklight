@@ -1,7 +1,7 @@
 <div id="dl-menu" class="btn-toolbar">
     <span data-bs-toggle="tooltip" data-bs-placement="top" title="Open full-size image in new tab" data-original-title="Open full-size image in new tab">
         <a id="pvFullImage" 
-        class="btn btn-light mr-1 my-1" 
+        class="btn btn-light mr-1" 
         data-slug="<%= @prefix %>.<%= @documentId %>" 
         href="<%= @canvasImageUrl %>" 
         target="_blank">
@@ -15,7 +15,7 @@
     <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download full-size image in JPG format" data-original-title="Download full-size image in JPG format">
         <button id="pvFullImageDownload" 
             data-controller="document_downloads" 
-            class="btn btn-light btn-outline-primary mr-1 my-1" 
+            class="btn btn-light btn-outline-primary mr-1" 
             data-download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.jpg" 
             data-href="<%= @canvasImageUrl %>">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-filetype-jpg" viewBox="0 0 16 16">
@@ -30,7 +30,7 @@
     <!-- TODO: USE api to download --> 
     <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download PDF (single image)" data-original-title="Download PDF (single image)">
         <a id="pvDownloadSingle" 
-        class="btn btn-light btn-outline-primary mr-1 my-1" 
+        class="btn btn-light btn-outline-primary mr-1" 
         download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
         href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf">
             <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -42,7 +42,7 @@
     <!-- TODO: USE api to download --> 
     <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download PDF (full document)" data-original-title="Download PDF (full document)">
         <a id="pvDownloadFull" 
-        class="btn btn-light btn-outline-primary mr-1 my-1" 
+        class="btn btn-light btn-outline-primary mr-1" 
         download="<%= @prefix %>.<%= @documentId %>.pdf" 
         href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.pdf">
             <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
