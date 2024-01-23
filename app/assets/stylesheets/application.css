@@ -82,6 +82,15 @@ footer {
 button[aria-label="Toggle sidebar"] {
     display: none;  
 }
+.mosaic-window-body > section > div:nth-child(1) {
+    display: inline;
+    width: 58px;
+    position: absolute;
+    height: fit-content;
+    right: 0;
+    padding: 0;
+    top: 2;
+}
 .mirador-canvas-nav {
     border: 1px solid #dbdbdb !important;
     border-left: none !important;
