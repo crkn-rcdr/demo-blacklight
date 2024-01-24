@@ -147,6 +147,7 @@ button[aria-label="Toggle sidebar"] {
 .mirador64 {
     display: inline-flex !important;
     height: 20px !important;
+    margin-bottom: 1rem;
 }
 .MuiIconButton-root {
     color: black !important;
