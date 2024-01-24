@@ -120,6 +120,7 @@ button[aria-label="Toggle sidebar"] {
 }
 .mirador65, .mirador-canvas-nav {
     height: 3rem !important;
+    min-height: 50px !important;
     background: #ffffff !important;
     top: 0 !important;
 }
