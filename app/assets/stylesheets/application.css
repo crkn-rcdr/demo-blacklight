@@ -148,6 +148,9 @@ button[aria-label="Toggle sidebar"] {
     display: inline-flex !important;
     height: 20px !important;
 }
+.MuiIconButton-root {
+    color: black !important;
+}
 #page-viewer {
     background: white;
 }
@@ -224,7 +227,7 @@ input[type="search"]::-webkit-search-cancel-button {
 #pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
     padding: 0 !important;
     background: white;
-    color: rgba(0, 0, 0, 0.68) !important;
+    color: black !important;
     border: none;
     margin-left: 1.4rem;
 }
