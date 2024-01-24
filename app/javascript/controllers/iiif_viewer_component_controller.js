@@ -573,6 +573,11 @@ export default class extends Controller {
       translations: {
 
         // Translations can be added to inject new languages or override existing labels
+        en: { 
+          "currentItem": "Current image",
+          "currentItem_1/1": "Current image",
+          "resource": "Item Title",
+        }
 
       },
 
