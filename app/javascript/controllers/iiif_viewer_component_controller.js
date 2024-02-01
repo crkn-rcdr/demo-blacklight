@@ -806,7 +806,7 @@ export default class extends Controller {
 
     fetch(manifest).then((response) => {
       response.json().then(result => {
-        let miradorInstance = mv.Mirador.viewer(mconfig);
+        let miradorInstance = Mirador.viewer(mconfig);
         const data = {
           manifest,
           canvasIndex
