@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-
+import Mirador from "mirador"
 export default class extends Controller {
   initialize() {
     let searchInput = document.getElementById("pvSearch");
