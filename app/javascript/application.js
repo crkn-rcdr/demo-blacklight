@@ -5,7 +5,7 @@ import bootstrap from "bootstrap"
 import githubAutoCompleteElement from "@github/auto-complete-element"
 import Blacklight from "blacklight"
 import ReactDOM from "react-dom";
-import React from "react";
+import * as React from "react";
 import Mirador from "mirador";
 //import miradorPdiiifPlugin from "@harvard-lts/mirador-pdiiif-plugin"
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
