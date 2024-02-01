@@ -14,4 +14,3 @@ pin "react", to: "https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.
 pin "react-dom", to: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
 pin "mirador", to: "https://esm.sh/mirador@3.3.0"
 #pin "@harvard-lts/mirador-pdiiif-plugin", to: "https://esm.sh/@harvard-lts/mirador-pdiiif-plugin@0.1.29"
-pin_all_from "app/javascript/components", under: "components"
