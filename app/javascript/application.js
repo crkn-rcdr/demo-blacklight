@@ -4,10 +4,8 @@ import "controllers"
 import bootstrap from "bootstrap"
 import githubAutoCompleteElement from "@github/auto-complete-element"
 import Blacklight from "blacklight"
-/*import "jquery"
-const j = jQuery.noConflict(true);
-import miradorPdiiifPlugin from "@harvard-lts/mirador-pdiiif-plugin"*/
 
+import miradorPdiiifPlugin from "@harvard-lts/mirador-pdiiif-plugin"
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
