@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import * as Mirador from "mirador"
+import * as mv from "mirador"
 export default class extends Controller {
   initialize() {
     console.log(Mirador)
@@ -806,7 +806,7 @@ export default class extends Controller {
 
     fetch(manifest).then((response) => {
       response.json().then(result => {
-        let miradorInstance = Mirador.viewer(mconfig);
+        let miradorInstance = mv.Mirador.viewer(mconfig);
         const data = {
           manifest,
           canvasIndex
