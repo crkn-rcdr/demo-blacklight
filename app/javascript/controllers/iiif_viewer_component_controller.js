@@ -1,4 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
+import miradorImageToolsPlugin from 'mirador-image-tools';
+
 import * as mv from "mirador"
 export default class extends Controller {
   initialize() {
@@ -28,6 +30,10 @@ export default class extends Controller {
 
     let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
     
+    let mplugins = [
+      ...miradorImageToolsPlugin
+    ]
+
     //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
     let mconfig = {
 
@@ -806,7 +812,7 @@ export default class extends Controller {
 
     fetch(manifest).then((response) => {
       response.json().then(result => {
-        let miradorInstance = Mirador.viewer(mconfig);
+        let miradorInstance = Mirador.viewer(mconfig, mplugins);
         const data = {
           manifest,
           canvasIndex
