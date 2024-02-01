@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import * as Mirador from "mirador"
 export default class extends Controller {
   initialize() {
+    console.log(Mirador)
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{
