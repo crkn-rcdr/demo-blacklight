@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "browserify --node --ignore-missing index.js -p esmify > bundle.js"
+    "build": "npm install && NODE_PATH=./ NODE_ENV=production browserify --node --ignore-missing index.js -p esmify -t envify > bundle.js && rm -R node_modules"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,12 @@
   },
   "homepage": "https://github.com/crkn-rcdr/demo-blacklight#readme",
   "dependencies": {
+    "envify": "^4.1.0",
+    "mirador": "^3.0.0-rc.4",
+    "mirador-image-tools": "^0.11.0",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "mirador": "^3.0.0-rc.4",
-    "mirador-image-tools": "^0.11.0"
+    "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
