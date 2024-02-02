@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 //import miradorImageToolsPlugin from 'node_modules/mirador-image-tools'
 //import * as mv from "node_modules/mirador"
-import * as mb from "mirador-bundle";
+import * as mb from "..browserify/bundle.js";
 
 console.log(mb)
 const Mirador = mb.Mirador
