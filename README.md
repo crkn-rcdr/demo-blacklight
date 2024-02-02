@@ -56,5 +56,15 @@ Notes:
 `curl -X POST -H 'Content-Type: application/json' 'http://localhost:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 `curl -X POST -H 'Content-Type: application/json' 'http://blacklight.crkn-demo-test.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 
+
+To install new javascript libraries enter the docker container.
+`docker exec -it demo-blacklight-web-1 bash`
+
+Then, run the importmap script. Example:
+`./bin/importmap pin react react-dom`
+
+Then remember to copy the contents of the new importmap file to your local machine.
+`cat config/importmap.rb`
+
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
