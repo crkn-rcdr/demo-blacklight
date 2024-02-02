@@ -1,10 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
-import miradorImageToolsPlugin from 'node_modules/mirador-image-tools';
+//import miradorImageToolsPlugin from 'node_modules/mirador-image-tools'
+//import * as mv from "node_modules/mirador"
+import * as mb from "mirador-bundle";
 
-import * as mv from "node_modules/mirador"
+console.log(mb)
+const Mirador = mb.Mirador
+const miradorImageToolsPlugin = mb.miradorImageToolsPlugin
 export default class extends Controller {
   initialize() {
-    console.log(Mirador)
+    console.log(mb)
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{
