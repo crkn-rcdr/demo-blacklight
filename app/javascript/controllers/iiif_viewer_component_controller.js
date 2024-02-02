@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import miradorImageToolsPlugin from 'app/javascript/controllers/node_modules/mirador-image-tools/es/index.js';
+import miradorImageToolsPlugin from './node_modules/mirador-image-tools/es/index.js';
 
 import * as mv from "mirador"
 export default class extends Controller {
