@@ -1,0 +1,2 @@
+var e={};e=function(){var e=document.getSelection();if(!e.rangeCount)return function(){};var a=document.activeElement;var n=[];for(var t=0;t<e.rangeCount;t++)n.push(e.getRangeAt(t));switch(a.tagName.toUpperCase()){case"INPUT":case"TEXTAREA":a.blur();break;default:a=null;break}e.removeAllRanges();return function(){"Caret"===e.type&&e.removeAllRanges();e.rangeCount||n.forEach((function(a){e.addRange(a)}));a&&a.focus()}};var a=e;export default a;
+

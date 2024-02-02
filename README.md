@@ -60,13 +60,13 @@ Notes:
 To install new javascript libraries enter the docker container.
 `docker exec -it demo-blacklight-web-1 bash`
 
-Then, run the importmap script. Example:
+Then, run the importmap script, ex:
 `./bin/importmap pin react`
-`./bin/importmap pin react-dom`
+
 
 Then remember to copy the contents of the new importmap file to your local machine.
 `cat config/importmap.rb`
-`docker cp demo-blacklight-web-1:/vendor/javascript/ ./vendor/javascript`
+`docker cp demo-blacklight-web-1:/app/vendor/javascript/ ./vendor/javascript`
 
 Or, add manually:
 pin "mirador", to: "https://unpkg.com/mirador@latest/dist/mirador.min.js"
@@ -76,3 +76,17 @@ Then download and add files to vendor/javascript.
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
+
+Couldn't find any packages in ["@material-ui/icons"] on jsdelivr
+Couldn't find any packages in ["@material-ui/lab"] on jspm
+Couldn't find any packages in ["@researchgate/react-intersection-observer"] on jspm
+Couldn't find any packages in ["isomorphic-unfetch"] on jspm
+Couldn't find any packages in ["jss-rtl"] on jspm
+Couldn't find any packages in ["react-aria-live"] on jspm
+Couldn't find any packages in ["react-beautiful-dnd"] on jspm
+Couldn't find any packages in ["react-i18next"] on jspm
+Couldn't find any packages in ["react-mosaic-component"] on jspm
+Couldn't find any packages in ["react-sizeme"] on jspm
+Couldn't find any packages in ["react-window"] on jspm
+Couldn't find any packages in ["redux-saga"] on jspm
+Couldn't find any packages in ["reselectuuid"] on jspm

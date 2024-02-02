@@ -1,14 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
-//import miradorImageToolsPlugin from 'node_modules/mirador-image-tools'
-//import * as mv from "node_modules/mirador"
-import * as mb from "../browserify/bundle.js";
+import miradorImageToolsPlugin from 'mirador-image-tools';
 
-console.log(mb)
-const Mirador = mb.Mirador
-const miradorImageToolsPlugin = mb.miradorImageToolsPlugin
+import * as mv from "mirador"
 export default class extends Controller {
   initialize() {
-    console.log(mb)
+    console.log(Mirador)
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{

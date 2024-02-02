@@ -1,0 +1,2 @@
+var e={};Object.defineProperty(e,"__esModule",{value:true});var o="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"===typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};var t=e.isBrowser="object"===("undefined"===typeof window?"undefined":o(window))&&"object"===("undefined"===typeof document?"undefined":o(document))&&9===document.nodeType;e.default=t;const n=e.__esModule;const r=e.isBrowser;export default e;export{n as __esModule,r as isBrowser};
+
