@@ -1,5 +1,6 @@
 # Pin npm packages by running ./bin/importmap
 
+pin "application"
 pin "@hotwired/turbo-rails", to: "turbo.min.js"
 pin "@hotwired/stimulus", to: "stimulus.min.js"
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
@@ -95,6 +96,3 @@ pin "re-reselect" # @4.0.1
 pin "reselect" # @4.1.8
 pin "url" # @2.0.1
 pin "uuid" # @8.3.2
-
-
-pin "application"
