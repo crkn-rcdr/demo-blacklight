@@ -70,23 +70,8 @@ Then remember to copy the contents of the new importmap file to your local machi
 
 Or, add manually:
 pin "mirador", to: "https://unpkg.com/mirador@latest/dist/mirador.min.js"
-pin "mirador-image-tools", to: "https://unpkg.com/mirador-image-tools@0.11.0/es/index.js"
 
 Then download and add files to vendor/javascript.
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
-
-Couldn't find any packages in ["@material-ui/icons"] on jsdelivr
-Couldn't find any packages in ["@material-ui/lab"] on jspm
-Couldn't find any packages in ["@researchgate/react-intersection-observer"] on jspm
-Couldn't find any packages in ["isomorphic-unfetch"] on jspm
-Couldn't find any packages in ["jss-rtl"] on jspm
-Couldn't find any packages in ["react-aria-live"] on jspm
-Couldn't find any packages in ["react-beautiful-dnd"] on jspm
-Couldn't find any packages in ["react-i18next"] on jspm
-Couldn't find any packages in ["react-mosaic-component"] on jspm
-Couldn't find any packages in ["react-sizeme"] on jspm
-Couldn't find any packages in ["react-window"] on jspm
-Couldn't find any packages in ["redux-saga"] on jspm
-Couldn't find any packages in ["reselectuuid"] on jspm

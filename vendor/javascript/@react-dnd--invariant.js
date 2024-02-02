@@ -1,2 +1,0 @@
-function invariant(e,n,...r){if(isProduction()&&void 0===n)throw new Error("invariant requires an error message argument");if(!e){let e;if(void 0===n)e=new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{let i=0;e=new Error(n.replace(/%s/g,(function(){return r[i++]})));e.name="Invariant Violation"}e.framesToPop=1;throw e}}function isProduction(){return"undefined"!==typeof process&&"production"===process.env.NODE_ENV}export{invariant};
-

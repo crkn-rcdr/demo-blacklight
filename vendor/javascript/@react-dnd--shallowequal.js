@@ -1,2 +1,0 @@
-function shallowEqual(t,e,o,r){let l=o?o.call(r,t,e):void 0;if(void 0!==l)return!!l;if(t===e)return true;if("object"!==typeof t||!t||"object"!==typeof e||!e)return false;const n=Object.keys(t);const s=Object.keys(e);if(n.length!==s.length)return false;const f=Object.prototype.hasOwnProperty.bind(e);for(let s=0;s<n.length;s++){const c=n[s];if(!f(c))return false;const a=t[c];const i=e[c];l=o?o.call(r,a,i,c):void 0;if(false===l||void 0===l&&a!==i)return false}return true}export{shallowEqual};
-
