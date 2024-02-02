@@ -11,7 +11,6 @@
     </script>
 
     <%= javascript_importmap_tags %>
-    <%= javascript_include_tag "application", defer: true %>
     <%= javascript_include_tag "blacklight/blacklight", type: 'module' %>
     <%= opensearch_description_tag application_name, opensearch_catalog_url(format: 'xml') %>
     <%= favicon_link_tag %>
