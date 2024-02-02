@@ -1,7 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
-import miradorImageToolsPlugin from './node_modules/mirador-image-tools/es/index.js';
+//import miradorImageToolsPlugin from './node_modules/mirador-image-tools/es/index.js';
+//import * as mv from "mirador"
 
-import * as mv from "mirador"
+import Mirador from 'mirador/dist/es/src/index.js'
+import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
+
 export default class extends Controller {
   initialize() {
     console.log(Mirador)
