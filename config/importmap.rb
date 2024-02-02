@@ -9,4 +9,4 @@ pin "@github/auto-complete-element", to: "https://cdn.skypack.dev/@github/auto-c
 pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/umd/popper.min.js"
 pin "bootstrap", to: "https://ga.jspm.io/npm:bootstrap@5.3.0/dist/js/bootstrap.js"
 pin "jquery", to: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js"
-pin_all_from 'node_modules', under: 'node_modules', to: 'node_modules'
+pin_all_from 'node_modules'
