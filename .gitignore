@@ -1,2 +1,2 @@
 tmp/cache/*
-app/javascript/browserify/node_modules
+node_modules
