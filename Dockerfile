@@ -11,7 +11,7 @@ WORKDIR /app
 COPY Gemfile .
 
 RUN bundle install
-
+RUN ./bin/rails shakapacker:install
 RUN gem install devise devise-guests
 
 RUN rails generate blacklight:install --devise --marc --solr_version=latest
