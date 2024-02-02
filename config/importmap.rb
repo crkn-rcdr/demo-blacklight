@@ -54,29 +54,6 @@ pin "react-is" # @16.13.1
 pin "react-transition-group" # @4.4.5
 pin "scheduler" # @0.23.0
 pin "tiny-warning" # @1.0.3
-pin "@material-ui/core/Badge", to: "@material-ui--core--Badge.js" # @4.12.4
-pin "@material-ui/core/IconButton", to: "@material-ui--core--IconButton.js" # @4.12.4
-pin "@material-ui/core/ListItemIcon", to: "@material-ui--core--ListItemIcon.js" # @4.12.4
-pin "@material-ui/core/ListItemText", to: "@material-ui--core--ListItemText.js" # @4.12.4
-pin "@material-ui/core/MenuItem", to: "@material-ui--core--MenuItem.js" # @4.12.4
-pin "@material-ui/core/Slider", to: "@material-ui--core--Slider.js" # @4.12.4
-pin "@material-ui/core/Tooltip", to: "@material-ui--core--Tooltip.js" # @4.12.4
-pin "@material-ui/core/styles/colorManipulator", to: "@material-ui--core--styles--colorManipulator.js" # @4.12.4
-pin "@material-ui/core/styles/withStyles", to: "@material-ui--core--styles--withStyles.js" # @4.12.4
-pin "@material-ui/core/styles/withTheme", to: "@material-ui--core--styles--withTheme.js" # @4.12.4
-pin "@material-ui/core/utils", to: "@material-ui--core--utils.js" # @4.12.4
-pin "@material-ui/core/withWidth", to: "@material-ui--core--withWidth.js" # @4.12.4
-pin "@material-ui/icons/Brightness5", to: "@material-ui--icons--Brightness5.js" # @4.11.3
-pin "@material-ui/icons/CloseSharp", to: "@material-ui--icons--CloseSharp.js" # @4.11.3
-pin "@material-ui/icons/ExposureSharp", to: "@material-ui--icons--ExposureSharp.js" # @4.11.3
-pin "@material-ui/icons/Gradient", to: "@material-ui--icons--Gradient.js" # @4.11.3
-pin "@material-ui/icons/InvertColors", to: "@material-ui--icons--InvertColors.js" # @4.11.3
-pin "@material-ui/icons/ReplaySharp", to: "@material-ui--icons--ReplaySharp.js" # @4.11.3
-pin "@material-ui/icons/RotateLeft", to: "@material-ui--icons--RotateLeft.js" # @4.11.3
-pin "@material-ui/icons/RotateRight", to: "@material-ui--icons--RotateRight.js" # @4.11.3
-pin "@material-ui/icons/SwapHoriz", to: "@material-ui--icons--SwapHoriz.js" # @4.11.3
-pin "@material-ui/icons/Tonality", to: "@material-ui--icons--Tonality.js" # @4.11.3
-pin "@material-ui/icons/TuneSharp", to: "@material-ui--icons--TuneSharp.js" # @4.11.3
 pin "deepmerge" # @4.3.1
 pin "lodash/compact", to: "lodash--compact.js" # @4.17.21
 pin "lodash/filter", to: "lodash--filter.js" # @4.17.21
@@ -87,9 +64,6 @@ pin "lodash/groupBy", to: "lodash--groupBy.js" # @4.17.21
 pin "lodash/union", to: "lodash--union.js" # @4.17.21
 pin "lodash/without", to: "lodash--without.js" # @4.17.21
 pin "manifesto.js" # @4.2.17
-pin "mirador/dist/es/src/components/MiradorMenuButton", to: "mirador--dist--es--src--components--MiradorMenuButton.js" # @3.3.0
-pin "mirador/dist/es/src/state/actions", to: "mirador--dist--es--src--state--actions.js" # @3.3.0
-pin "mirador/dist/es/src/state/selectors", to: "mirador--dist--es--src--state--selectors.js" # @3.3.0
 pin "normalize-url" # @8.0.0
 pin "re-reselect" # @5.0.0
 pin "reselect" # @5.1.0
@@ -133,6 +107,9 @@ pin "react-draggable" # @4.4.5
 pin "react-virtualized-auto-sizer" # @1.0.21
 pin "redux-devtools-extension" # @2.13.9
 pin "redux-thunk" # @3.1.0
+pin "@material-ui/core", to: "https://cdn.jsdelivr.net/npm/@material-ui/core@4.12.4/index.min.js"
+pin "@material-ui/lab", to: "https://cdn.jsdelivr.net/npm/@material-ui/lab@4.0.0-alpha.61/index.min.js"
+pin "@material-ui/icons", to: "https://cdn.jsdelivr.net/npm/@material-ui/icons@4.11.3/utils/createSvgIcon.min.js"
 pin "isomorphic-unfetch", to: "https://cdn.jsdelivr.net/npm/isomorphic-unfetch@4.0.2/browser.min.js"
 pin "react-intersection-observer", to: "https://cdn.jsdelivr.net/npm/react-intersection-observer@9.6.0/index.min.js"
 pin "jss-rtl", to: "https://cdn.jsdelivr.net/npm/jss-rtl@0.3.0/lib/main.min.js"
@@ -145,6 +122,5 @@ pin "react-window", to: "https://cdn.jsdelivr.net/npm/react-window@1.8.10/dist/i
 pin "redux-saga", to: "https://cdn.jsdelivr.net/npm/redux-saga@1.3.0/+esm"
 pin "reselect", to: "https://cdn.jsdelivr.net/npm/reselect@5.1.0/+esm"
 pin "uuid", to: "https://cdn.jsdelivr.net/npm/uuid@9.0.1/dist/index.min.js"
-pin "@material-ui/lab", to: "https://cdn.jsdelivr.net/npm/@material-ui/lab@4.0.0-alpha.61/index.min.js"
 pin "mirador", to: "https://unpkg.com/mirador@latest/dist/mirador.min.js"
 pin "mirador-image-tools", to: "https://unpkg.com/mirador-image-tools@0.11.0/es/index.js"
