@@ -1,0 +1,1 @@
+import { Mirador, miradorImageToolsPlugin} from "../src/modules/m3_viewer.js";
