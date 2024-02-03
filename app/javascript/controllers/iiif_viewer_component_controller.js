@@ -6,7 +6,8 @@ import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
 */
 export default class extends Controller {
-  initialize() {
+  initialize() {}
+}
    /* console.log(Mirador)
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
@@ -808,12 +809,12 @@ export default class extends Controller {
 
         crossOrigin: "anonymous"
 
-      }*/
+      }
 
     }
 
 
-    /*fetch(manifest).then((response) => {
+    fetch(manifest).then((response) => {
       response.json().then(result => {
         let miradorInstance = Mirador.viewer(mconfig, mplugins);
         const data = {
@@ -873,6 +874,6 @@ export default class extends Controller {
           }
         })
       })
-    })*/
+    })
   }
-}
+}*/
