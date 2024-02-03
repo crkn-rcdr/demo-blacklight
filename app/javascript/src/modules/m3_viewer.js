@@ -32,7 +32,7 @@ export default {
     
   
     
-        const documentId = "84056";//this.element.getAttribute("data-docid")
+        const documentId = "oocihm.84056";//this.element.getAttribute("data-docid")
         let canvasIndex = 0
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
