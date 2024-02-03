@@ -1,39 +1,19 @@
 # Note: You must restart bin/webpacker-dev-server for changes to take effect
 
 default: &default
-  source_path: app/javascript/packs
-
-  # If nested_entries is true, then we'll pick up subdirectories within the source_entry_path.
-  # You cannot set this option to true if you set source_entry_path to '/'
-  nested_entries: false
-
-  #  While using a File-System-based automated bundle generation feature, miscellaneous warnings suggesting css order
-  #  conflicts may arise due to the mini-css-extract-plugin. For projects where css ordering has been mitigated through
-  #  consistent use of scoping or naming conventions, the css order warnings can be disabled by setting
-  #  css_extract_ignore_order_warnings to true
-  css_extract_ignore_order_warnings: false
-
+  source_path: app/javascript
+  source_entry_path: packs
   public_root_path: public
   public_output_path: packs
+  cache_path: tmp/shakapacker
   webpack_compile_output: true
-  # See https://github.com/shakacode/shakapacker#deployment
-  shakapacker_precompile: true
 
-  # Location for manifest.json, defaults to {public_output_path}/manifest.json if unset
-  # manifest_path: public/packs/manifest.json
-  additional_paths: ['app/javascripts/modules', 'app/javascripts/plugins', 'app/javascripts/components',]
+  # Additional paths webpack should lookup modules
+  # ['app/assets', 'engine/foo/app/assets']
+  additional_paths: []
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
-
-  # Select loader to use, available options are 'babel' (default), 'swc' or 'esbuild'
-  webpack_loader: 'babel'
-
-  # Set to true to enable check for matching versions of shakapacker gem and NPM package - will raise an error if there is a mismatch or wildcard versioning is used
-  ensure_consistent_versioning: false
-
-  # Select whether the compiler will use SHA digest ('digest' option) or most most recent modified timestamp ('mtime') to determine freshness
-  compiler_strategy: digest
 development:
   <<: *default
   compile: true
