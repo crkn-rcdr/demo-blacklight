@@ -21,9 +21,6 @@ default: &default
 
   # Location for manifest.json, defaults to {public_output_path}/manifest.json if unset
   # manifest_path: public/packs/manifest.json
-
-  # Additional paths webpack should look up modules
-  # ['app/assets', 'engine/foo/app/assets']
   additional_paths: ['app/javascripts/modules', 'app/javascripts/plugins', 'app/javascripts/components',]
 
   # Reload manifest.json on all requests so we reload latest compiled packs
@@ -40,4 +37,6 @@ default: &default
 development:
   <<: *default
   compile: true
-  compiler_strategy: mtime
+production:
+  <<: *default
+  compile: true
