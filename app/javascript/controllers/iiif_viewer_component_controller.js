@@ -1,13 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 //import miradorImageToolsPlugin from './node_modules/mirador-image-tools/es/index.js';
 //import * as mv from "mirador"
-
+/*
 import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
-
+*/
 export default class extends Controller {
   initialize() {
-    console.log(Mirador)
+   /* console.log(Mirador)
     let searchInput = document.getElementById("pvSearch");
     let resetButton = document.getElementById("pvSearchReset");
     resetButton.addEventListener("click", ()=>{
@@ -808,12 +808,12 @@ export default class extends Controller {
 
         crossOrigin: "anonymous"
 
-      }
+      }*/
 
     }
 
 
-    fetch(manifest).then((response) => {
+    /*fetch(manifest).then((response) => {
       response.json().then(result => {
         let miradorInstance = Mirador.viewer(mconfig, mplugins);
         const data = {
@@ -846,28 +846,14 @@ export default class extends Controller {
           let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
           console.log(canvasImageUrl)
 
-          /*
-          id="pvFullImage" 
-          href="<%= @canvasImageUrl %>" 
-          */
           let pvFullImageLink = document.getElementById("pvFullImage");
           pvFullImageLink.setAttribute("href", canvasImageUrl);
 
 
-          /*
-          id="pvFullImageDownload" 
-          data-download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.jpg" 
-          data-href="<%= @canvasImageUrl %>"
-          */
           let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload");
           pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg");
           pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl);
 
-          /*
-          id="pvDownloadSingle" 
-          download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
-          href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
-          */
           let pvDownloadSingleLink = document.getElementById("pvDownloadSingle");
           pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf");
           pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf");
@@ -887,6 +873,6 @@ export default class extends Controller {
           }
         })
       })
-    })
+    })*/
   }
 }
