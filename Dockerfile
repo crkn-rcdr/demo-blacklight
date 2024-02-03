@@ -15,6 +15,7 @@ RUN gem install devise devise-guests
 
 RUN rails generate blacklight:install --devise --marc --solr_version=latest
 RUN rails shakapacker:install
+RUN rails shakapacker:compile
 
 COPY . .
 
