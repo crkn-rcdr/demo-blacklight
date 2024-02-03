@@ -42,12 +42,3 @@ default: &default
 
   # Select whether the compiler will use SHA digest ('digest' option) or most most recent modified timestamp ('mtime') to determine freshness
   compiler_strategy: digest
-
-production:
-  <<: *default
-
-  # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
-
-  # Cache manifest.json for performance
-  cache_manifest: true
