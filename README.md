@@ -73,7 +73,9 @@ pin "mirador", to: "https://unpkg.com/mirador@latest/dist/mirador.min.js"
 
 Then download and add files to vendor/javascript.
 
-For shakapacker:
+docker run -v /root/demo-blacklight:/app demo-blacklight-web
+
+Then, For shakapacker:
 docker exec -it demo-blacklight-web-1 bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
@@ -83,5 +85,7 @@ rails shakapacker:install
 rails shakapacker:compile
 exit
 docker container restart demo-blacklight-web-1
+git add --all 
+git commit
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/

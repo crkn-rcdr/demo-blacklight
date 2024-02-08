@@ -20,7 +20,6 @@
     "jquery": "^3.7.1",
     "leaflet": "^1.9.3",
     "lodash": "^4.17.21",
-    "mirador": "^3.3.0",
     "mirador-dl-plugin": "^0.13.0",
     "mirador-image-tools": "^0.8.0",
     "mirador-share-plugin": "^0.11.0",

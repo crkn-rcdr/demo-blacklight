@@ -1,6 +1,6 @@
 'use strict';
 
-import Mirador from 'mirador/dist/es/src/index.js';
+//import Mirador from 'mirador/dist/es/src/index.js';
 import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js';
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js';
 import miradorSharePlugin from 'mirador-share-plugin/es/miradorSharePlugin.js';
