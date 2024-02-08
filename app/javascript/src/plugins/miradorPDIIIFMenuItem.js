@@ -9,6 +9,39 @@ import { getCanvasGroupings } from "mirador/dist/es/src/state/selectors";
 import { estimatePdfSize } from "pdiiif";
 import { checkImageApiHasCors, checkStreamsaverSupport } from "../utils";
 
+/**
+ * Check support for streamsaver
+ * Adapted from PDIIIF web example: https://github.com/jbaiter/pdiiif/blob/main/pdiiif-web/src/util.ts
+ */
+function checkStreamsaverSupport() {
+  try {
+    // Our usecase requires WriteableStream
+    new Response(new WritableStream());
+    if (isSecureContext && !("serviceWorker" in navigator)) {
+      return false;
+    }
+  } catch (err) {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Check image API has CORS
+ * Adapted from PDIIIF web example: https://github.com/jbaiter/pdiiif/blob/main/pdiiif-web/src/iiif.ts
+ * @returns {boolean} true if image API has CORS
+ */
+async function checkImageApiHasCors() {
+  try {
+    let testImgResp = await fetch(images[0]["@id"] ?? images[0].id);
+    let testImgData = new Uint8Array(await testImgResp.arrayBuffer());
+    return testImgData[0] !== undefined ? true : false;
+  } catch {
+    return false;
+  }
+}
+
+
 // select an icon from material icons to import and use: https://v4.mui.com/components/material-icons/
 import PDFIcon from "@material-ui/icons/PictureAsPdf";
 
