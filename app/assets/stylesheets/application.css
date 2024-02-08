@@ -160,6 +160,9 @@ button[aria-label="Toggle sidebar"] {
 .mirador-canvas-nav+div { 
     top: 60px !important;
 }
+.MuiTypography-subtitle2 {
+    font-size: 1rem;
+}
 #page-viewer {
     background: white;
 }
