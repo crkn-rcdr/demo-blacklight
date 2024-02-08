@@ -161,7 +161,7 @@ button[aria-label="Toggle sidebar"] {
     top: 60px !important;
 }
 .MuiTypography-subtitle2 {
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
 #page-viewer {
     background: white;
