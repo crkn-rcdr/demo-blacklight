@@ -41,7 +41,7 @@ export default {
         let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
         
         let mplugins = [
-          //...miradorImageToolsPlugin
+          ...miradorImageToolsPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
