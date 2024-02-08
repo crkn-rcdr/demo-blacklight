@@ -1,35 +1,36 @@
-import Mirador from 'mirador/dist/es/src/index.js';
-import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js';
-import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js';
-import miradorSharePlugin from 'mirador-share-plugin/es/miradorSharePlugin.js';
-import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js';
-import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js';
-import shareMenuPlugin from '../plugins/shareMenuPlugin';
-import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin';
-//import embedModePlugin from '../plugins/embedModePlugin';
-//import analyticsPlugin from '../plugins/analyticsPlugin';
-//import cdlAuthPlugin from '../plugins/cdlAuthPlugin';
+import Mirador from 'mirador/dist/es/src/index.js'
+import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
+import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
+import miradorSharePlugin from 'mirador-share-plugin/es/miradorSharePlugin.js'
+import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js'
+import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js'
+import shareMenuPlugin from '../plugins/shareMenuPlugin'
+import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
+import harvardLtsmiradorPdiiifPlugin from 'https://cdn.jsdelivr.net/npm/@harvard-lts/mirador-pdiiif-plugin@0.1.29/+esm'
+//import embedModePlugin from '../plugins/embedModePlugin'
+//import analyticsPlugin from '../plugins/analyticsPlugin'
+//import cdlAuthPlugin from '../plugins/cdlAuthPlugin'
 
 export default {
   init: function() {
         console.log(Mirador)
-        let searchInput = document.getElementById("pvSearch");
-        let resetButton = document.getElementById("pvSearchReset");
+        let searchInput = document.getElementById("pvSearch")
+        let resetButton = document.getElementById("pvSearchReset")
         resetButton.addEventListener("click", ()=>{
-          searchInput.value = '';
+          searchInput.value = ''
           // Construct URLSearchParams object instance from current URL querystring.
-          var queryParams = new URLSearchParams(window.location.search);
-          queryParams.set("pageNum", pageNum);
-          if(queryParams.has("q")) queryParams.delete("q");
-          history.pushState(null, null, "?"+queryParams.toString());
-        });
+          var queryParams = new URLSearchParams(window.location.search)
+          queryParams.set("pageNum", pageNum)
+          if(queryParams.has("q")) queryParams.delete("q")
+          history.pushState(null, null, "?"+queryParams.toString())
+        })
         searchInput.addEventListener("keydown", () =>{
-          if(searchInput.value === "") resetButton.style.display ="none";
-          else resetButton.style.display ="inherit";
-        });
+          if(searchInput.value === "") resetButton.style.display ="none"
+          else resetButton.style.display ="inherit"
+        })
   
     
-        const documentId = "oocihm.84056";//this.element.getAttribute("data-docid")
+        const documentId = "oocihm.84056"//this.element.getAttribute("data-docid")
         let canvasIndex = 0
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
@@ -587,7 +588,7 @@ export default {
     
               //   if (action.annotationId) {
     
-              //     action.annotationJson = {};
+              //     action.annotationJson = {}
     
               //   }
     
@@ -832,28 +833,28 @@ export default {
     
         fetch(manifest).then((response) => {
           response.json().then(result => {
-            let miradorInstance = Mirador.viewer(mconfig, mplugins);
+            let miradorInstance = Mirador.viewer(mconfig, mplugins)
             const data = {
               manifest,
               canvasIndex
-            };
+            }
     
-            console.log("page is fully loaded");
-            var queryParams = new URLSearchParams(window.location.search);
-            if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit";
-            else resetButton.style.display ="none";
+            console.log("page is fully loaded")
+            var queryParams = new URLSearchParams(window.location.search)
+            if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
+            else resetButton.style.display ="none"
     
             function setCanvas(pageNum) {
               // Construct URLSearchParams object instance from current URL querystring.
-              var queryParams = new URLSearchParams(window.location.search);
+              var queryParams = new URLSearchParams(window.location.search)
               console.log(pageNum, queryParams.get("pageNum"))
               console.log(typeof pageNum, typeof queryParams.get("pageNum"))
               if(pageNum === queryParams.get("pageNum")) return
     
               console.log("updating...")
     
-              queryParams.set("pageNum", pageNum);
-              history.pushState(null, null, "?"+queryParams.toString());
+              queryParams.set("pageNum", pageNum)
+              history.pushState(null, null, "?"+queryParams.toString())
     
     
               let newCanvasIndex = pageNum-1
@@ -863,17 +864,17 @@ export default {
               let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
               console.log(canvasImageUrl)
     
-              let pvFullImageLink = document.getElementById("pvFullImage");
-              pvFullImageLink.setAttribute("href", canvasImageUrl);
+              let pvFullImageLink = document.getElementById("pvFullImage")
+              pvFullImageLink.setAttribute("href", canvasImageUrl)
     
     
-              let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload");
-              pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg");
-              pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl);
+              let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload")
+              pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg")
+              pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl)
     
-              let pvDownloadSingleLink = document.getElementById("pvDownloadSingle");
-              pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf");
-              pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf");
+              let pvDownloadSingleLink = document.getElementById("pvDownloadSingle")
+              pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf")
+              pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
             }
     
             console.log(miradorInstance)
@@ -881,7 +882,7 @@ export default {
               let selected = document.getElementsByClassName("Mui-selected")
               for(let elem of selected) {
                 if(elem.tagName == "LI") {
-                  let para = elem.getElementsByTagName("p");
+                  let para = elem.getElementsByTagName("p")
                   if(para.length) {
                     let pageNum = para[0].innerHTML.replace("Image ", "")
                     setCanvas(pageNum)
@@ -893,20 +894,20 @@ export default {
         })    
 
 
-    /*const el = document.getElementById('page-viewer');
-    const data = el.dataset;
+    /*const el = document.getElementById('page-viewer')
+    const data = el.dataset
     const showAttribution = (data.showAttribution === 'true')
     const hideWindowTitle = (data.hideTitle === 'true')
     const imageTools = (data.imageTools === 'true')
     const cdl = (data.cdl === 'true')
 
     // Determine which panel should be open
-    var sideBarPanel = 'info';
+    var sideBarPanel = 'info'
     if (data.search.length > 0) {
-      sideBarPanel = 'search';
+      sideBarPanel = 'search'
     }
     if (showAttribution) {
-      sideBarPanel = 'attribution';
+      sideBarPanel = 'attribution'
     }
 
     Mirador.viewer({
@@ -1012,6 +1013,6 @@ export default {
         target: 'WindowTopBarShareMenu',
       },
       analyticsPlugin,
-    ].filter(Boolean));*/
+    ].filter(Boolean))*/
   }
-};
+}
