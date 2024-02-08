@@ -81,6 +81,7 @@ nvm install 18
 corepack enable
 rails shakapacker:install
 rails shakapacker:compile
+exit
 docker container restart demo-blacklight-web-1
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/

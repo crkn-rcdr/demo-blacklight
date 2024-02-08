@@ -42,6 +42,8 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
+
+/*
 .mosaic-window-body{
     border: 1px solid #dbdbdb;
     border-top: none;
@@ -167,6 +169,11 @@ button[aria-label="Toggle sidebar"] {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+section[id$="gallery"] {
+    border-top: 1px solid #dbdbdb !important;
+}
+*/
 #pvSearch {
     color: black;
     border-radius: 3px;
@@ -232,7 +239,4 @@ input[type="search"]::-webkit-search-cancel-button {
     color: black !important;
     border: none;
     margin-left: 1.4rem;
-}
-section[id$="gallery"] {
-    border-top: 1px solid #dbdbdb !important;
 }
