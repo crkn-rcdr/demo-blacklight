@@ -56,8 +56,7 @@ export default {
           {
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
-          },
-          ...harvardLtsmiradorPdiiifPlugin
+          }
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
