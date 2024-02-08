@@ -39,6 +39,7 @@
     "mirador-image-tools": "^0.8.0",
     "mirador-share-plugin": "^0.11.0",
     "pdfjs-dist": "^3.11.174",
-    "pdiiif": "^0.1.5"
+    "pdiiif": "^0.1.5",
+    "streamsaver": "^2.0.6"
   }
 }
