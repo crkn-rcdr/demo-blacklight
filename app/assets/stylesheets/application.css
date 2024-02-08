@@ -147,11 +147,17 @@ button[aria-label="Toggle sidebar"] {
 .mirador84.mirador82 {
     display: none;
 }*/
+.MuiDrawer-paperAnchorDockedLeft{
+    display: none !important;
+}
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
     background-color: rgb(151 151 151 / 8%) !important
 }
 .MuiIconButton-root {
     color: black !important;
+}
+.mirador-canvas-nav+div { 
+    top: 60px !important;
 }
 #page-viewer {
     background: white;
