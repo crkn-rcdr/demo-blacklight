@@ -77,9 +77,6 @@ footer {
 .mirador-companion-window-header > h3, .mirador-companion-window-header > button {
     display: none;
 }
-.mirador38 { 
-    margin-top: 47px !important;
-}
 button[aria-label="Toggle sidebar"] {
     display: none;  
 }
@@ -118,13 +115,16 @@ button[aria-label="Toggle sidebar"] {
     flex-direction: row;
     justify-content: center;
 }
-.mirador65, .mirador-canvas-nav {
+.mirador-canvas-nav { /*.mirador65, */
     height: 3rem !important;
     min-height: 50px !important;
     background: #ffffff !important;
     top: 0 !important;
 }
-.mirador28 {
+/*.mirador38 { 
+    margin-top: 47px !important;
+}*/
+/*.mirador28 {
     border-right: none !important;
 }
 .mirador29 {
@@ -136,12 +136,6 @@ button[aria-label="Toggle sidebar"] {
 .mirador40 {
     border-bottom: none !important;
 }
-.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
-    background-color: rgb(151 151 151 / 8%) !important
-}
-.mirador84.mirador82 {
-    display: none;
-}
 .mirador6 {
     margin-top: 50px !important;
 }
@@ -149,6 +143,12 @@ button[aria-label="Toggle sidebar"] {
     display: inline-flex !important;
     height: 20px !important;
     margin-bottom: 1rem !important;
+}
+.mirador84.mirador82 {
+    display: none;
+}*/
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+    background-color: rgb(151 151 151 / 8%) !important
 }
 .MuiIconButton-root {
     color: black !important;
