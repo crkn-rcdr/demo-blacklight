@@ -11,6 +11,10 @@
     <title><%= render_page_title %></title>
     <%= javascript_pack_tag "application" %>
     <%= javascript_importmap_tags %>
+    <script type="module">
+    import harvardLtsmiradorPdiiifPlugin from 'https://cdn.jsdelivr.net/npm/@harvard-lts/mirador-pdiiif-plugin@0.1.29/+esm'
+    </script>
+
     <script>
       document.querySelector('html').classList.remove('no-js');
     </script>

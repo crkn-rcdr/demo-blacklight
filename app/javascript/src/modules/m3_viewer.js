@@ -6,7 +6,6 @@ import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js
 import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js';
 import shareMenuPlugin from '../plugins/shareMenuPlugin';
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin';
-import miradorPdiiifPlugin from '@harvard-lts/mirador-pdiiif-plugin/dist/es/src/index.js';
 //import embedModePlugin from '../plugins/embedModePlugin';
 //import analyticsPlugin from '../plugins/analyticsPlugin';
 //import cdlAuthPlugin from '../plugins/cdlAuthPlugin';
@@ -52,7 +51,7 @@ export default {
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
           },
-          ...miradorPdiiifPlugin
+          ...harvardLtsmiradorPdiiifPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
