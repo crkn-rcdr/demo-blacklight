@@ -39,7 +39,7 @@ export default {
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
     
     
-        let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
+        let manifest = "https://blacklight.crkn-demo-test.ca/iiif/oocihm.84056.json"//"https://www.canadiana.ca/iiif/"+documentId+"/manifest"
         
         let mplugins = [
           miradorPDIIIFMenuItemPlugin,
