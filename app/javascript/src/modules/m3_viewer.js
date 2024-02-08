@@ -6,7 +6,7 @@ import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js
 import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js';
 import shareMenuPlugin from '../plugins/shareMenuPlugin';
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin';
-import embedModePlugin from '../plugins/embedModePlugin';
+//import embedModePlugin from '../plugins/embedModePlugin';
 //import analyticsPlugin from '../plugins/analyticsPlugin';
 //import cdlAuthPlugin from '../plugins/cdlAuthPlugin';
 
@@ -40,13 +40,19 @@ export default {
         
         let mplugins = [
           ...miradorImageToolsPlugin,
-          ...miradorShareDialogPlugin,
-          ...miradorSharePlugin,
-          ...miradorDownloadPlugin,
-          ...miradorDownloadDialogPlugin,
-          ...shareMenuPlugin,
-          ...miradorZoomBugPlugin,
-          ...embedModePlugin 
+          miradorZoomBugPlugin,
+          shareMenuPlugin,
+          {
+            ...miradorSharePlugin,
+            target: 'WindowTopBarShareMenu',
+          },
+          miradorShareDialogPlugin,
+          miradorDownloadDialogPlugin,
+          {
+            ...miradorDownloadPlugin,
+            target: 'WindowTopBarShareMenu',
+          }
+
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
