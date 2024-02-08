@@ -7,7 +7,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import { withStyles } from "@material-ui/core/styles";
 import { getCanvasGroupings } from "mirador/dist/es/src/state/selectors";
 import { estimatePdfSize } from "pdiiif";
-import { checkImageApiHasCors, checkStreamsaverSupport } from "../utils";
 
 /**
  * Check support for streamsaver
