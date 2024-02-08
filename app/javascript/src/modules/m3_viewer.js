@@ -6,6 +6,7 @@ import miradorDownloadPlugin from 'mirador-dl-plugin/es/miradorDownloadPlugin.js
 import miradorDownloadDialogPlugin from 'mirador-dl-plugin/es/MiradorDownloadDialog.js';
 import shareMenuPlugin from '../plugins/shareMenuPlugin';
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin';
+import miradorPdiiifPlugin from '@harvard-lts/mirador-pdiiif-plugin/dist/es/src/index.js';
 //import embedModePlugin from '../plugins/embedModePlugin';
 //import analyticsPlugin from '../plugins/analyticsPlugin';
 //import cdlAuthPlugin from '../plugins/cdlAuthPlugin';
@@ -27,7 +28,6 @@ export default {
           if(searchInput.value === "") resetButton.style.display ="none";
           else resetButton.style.display ="inherit";
         });
-    
   
     
         const documentId = "oocihm.84056";//this.element.getAttribute("data-docid")
@@ -51,8 +51,8 @@ export default {
           {
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
-          }
-
+          },
+          ...miradorPdiiifPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
