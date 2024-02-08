@@ -115,15 +115,15 @@ button[aria-label="Toggle sidebar"] {
     flex-direction: row;
     justify-content: center;
 }
-.mirador-canvas-nav { /*.mirador65, */
+.mirador-canvas-nav { 
     height: 3rem !important;
     min-height: 50px !important;
     background: #ffffff !important;
     top: 0 !important;
 }
-/*.mirador38 { 
-    margin-top: 47px !important;
-}*/
+.mirador39 { /* side panel toggle button */
+    margin-top: 50px !important;
+}
 /*.mirador28 {
     border-right: none !important;
 }
@@ -133,21 +133,22 @@ button[aria-label="Toggle sidebar"] {
 .mirador22 {
     display: none;
 }
-.mirador40 {
-    border-bottom: none !important;
-}
 .mirador6 {
     margin-top: 50px !important;
 }
-.mirador64 {
+*/
+.mirador41 { /*side panel item wrapper */
+    border-bottom: none !important;
+}
+.mirador77 { /* side panel item toggle */ 
+    display: none;
+}
+.mirador78 { /*side nav item header */
     display: inline-flex !important;
     height: 20px !important;
     margin-bottom: 1rem !important;
 }
-.mirador84.mirador82 {
-    display: none;
-}*/
-.MuiDrawer-paperAnchorDockedLeft{
+.MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar */
     display: none !important;
 }
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
