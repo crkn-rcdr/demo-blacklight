@@ -141,7 +141,7 @@ button[aria-label="Toggle sidebar"] {
     border-bottom: none !important;
 }
 .mirador77 { /* side panel item toggle */ 
-    display: none;
+    display: none !important;
 }
 .mirador78 { /*side nav item header */
     display: inline-flex !important;
