@@ -120,6 +120,10 @@ button[aria-label="Toggle sidebar"] {
     border: 1px solid #dbdbdb !important;
     border-left: none !important;
     border-right: none !important;
+    width: fit-content !important;
+    z-index: 50 !important;
+    right: 40% !important;
+    background-color: transparent !important;
 }
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
