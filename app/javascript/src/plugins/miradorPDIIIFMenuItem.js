@@ -236,7 +236,7 @@ const styles = () => ({
 });
 
 export default {
-  target: "WindowTopBarPluginMenu",
+  target: "WindowTopBarShareMenu",
   mode: "add",
   name: "PDIIIFMenuItem",
   component: withStyles(styles)(PDIIIFMenuItem),

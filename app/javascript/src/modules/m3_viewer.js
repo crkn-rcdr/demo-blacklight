@@ -47,10 +47,8 @@ export default {
           {
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
-          },{
-            miradorPDIIIFMenuItemPlugin,
-            target: 'WindowTopBarShareMenu',
           },
+          miradorPDIIIFMenuItemPlugin,
           {
             ...miradorSharePlugin,
             target: 'WindowTopBarShareMenu',
