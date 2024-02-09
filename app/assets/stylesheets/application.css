@@ -82,9 +82,10 @@ button[aria-label="Toggle sidebar"] {
 }
 .mosaic-window-body > section > div:nth-child(1) {
     display: inline;
-    width: 160px;
+    width: 100%;
     position: absolute;
-    height: fit-content;
+    background: white;
+    height: 50px;
     right: 0;
     padding: 0;
     top: 0;
@@ -93,11 +94,6 @@ button[aria-label="Toggle sidebar"] {
 }
 .mosaic-window-body > section > div:nth-child(1) button { 
     padding: 11px !important;
-}
-.mirador-canvas-nav {
-    border: 1px solid #dbdbdb !important;
-    border-left: none !important;
-    border-right: none !important;
 }
 .mirador-thumb-navigation {
     border-left: 1px solid #dbdbdb !important;
@@ -119,10 +115,13 @@ button[aria-label="Toggle sidebar"] {
     height: 3rem !important;
     min-height: 50px !important;
     background: #ffffff !important;
-    top: 0 !important;
+    top: 50px !important;
+    border: 1px solid #dbdbdb !important;
+    border-left: none !important;
+    border-right: none !important;
 }
 .mirador39 { /* side panel toggle button */
-    margin-top: 50px !important;
+    margin-top: 0px !important;
 }
 /*.mirador28 {
     border-right: none !important;

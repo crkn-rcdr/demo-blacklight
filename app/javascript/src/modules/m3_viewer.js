@@ -42,19 +42,21 @@ export default {
         let manifest = "https://blacklight.crkn-demo-test.ca/iiif/oocihm.84056.json"//"https://www.canadiana.ca/iiif/"+documentId+"/manifest"
         
         let mplugins = [
-          miradorPDIIIFMenuItemPlugin,
-          miradorPDIIIFDialogPlugin,
-          ...miradorImageToolsPlugin,
           miradorZoomBugPlugin,
-          shareMenuPlugin,
-          {
-            ...miradorSharePlugin,
-            target: 'WindowTopBarShareMenu',
-          },
+          miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
           miradorDownloadDialogPlugin,
+          ...miradorImageToolsPlugin,
+          shareMenuPlugin,
           {
             ...miradorDownloadPlugin,
+            target: 'WindowTopBarShareMenu',
+          },{
+            miradorPDIIIFMenuItemPlugin,
+            target: 'WindowTopBarShareMenu',
+          },
+          {
+            ...miradorSharePlugin,
             target: 'WindowTopBarShareMenu',
           }
         ]
