@@ -91,6 +91,7 @@ button[aria-label="Toggle sidebar"] {
     top: 0;
     border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb !important;
+    z-index:0;
 }
 .mosaic-window-body > section > div:nth-child(1) button { 
     padding: 11px !important;
@@ -115,13 +116,13 @@ button[aria-label="Toggle sidebar"] {
     height: 3rem !important;
     min-height: 50px !important;
     background: #ffffff !important;
-    top: 50px !important;
+    top: 49px !important;
     border: 1px solid #dbdbdb !important;
     border-left: none !important;
     border-right: none !important;
 }
 .mirador39 { /* side panel toggle button */
-    margin-top: 0px !important;
+    margin-top: 1px !important;
 }
 /*.mirador28 {
     border-right: none !important;
@@ -156,8 +157,8 @@ button[aria-label="Toggle sidebar"] {
 .MuiIconButton-root {
     color: black !important;
 }
-.mirador-canvas-nav+div { 
-    top: 60px !important;
+.mirador-canvas-nav+div { /*image tools*/
+    top: 50px !important;
 }
 .MuiTypography-subtitle2 {
     font-size: 1rem !important;
