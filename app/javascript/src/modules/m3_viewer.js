@@ -43,10 +43,6 @@ export default {
         
         let mplugins = [
           miradorZoomBugPlugin,
-          miradorPDIIIFDialogPlugin,
-          miradorShareDialogPlugin,
-          miradorDownloadDialogPlugin,
-          ...miradorImageToolsPlugin,
           shareMenuPlugin,
           {
             ...miradorDownloadPlugin,
@@ -58,7 +54,11 @@ export default {
           {
             ...miradorSharePlugin,
             target: 'WindowTopBarShareMenu',
-          }
+          },
+          miradorPDIIIFDialogPlugin,
+          miradorShareDialogPlugin,
+          miradorDownloadDialogPlugin,
+          ...miradorImageToolsPlugin,
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
