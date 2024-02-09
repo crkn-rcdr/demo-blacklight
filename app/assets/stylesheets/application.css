@@ -116,7 +116,7 @@ button[aria-label="Toggle sidebar"] {
     height: 3rem !important;
     min-height: 50px !important;
     background: #ffffff !important;
-    top: 49px !important;
+    top: 0px !important;
     border: 1px solid #dbdbdb !important;
     border-left: none !important;
     border-right: none !important;
@@ -162,7 +162,7 @@ button[aria-label="Toggle sidebar"] {
     color: black !important;
 }
 .mirador-canvas-nav+div { /*image tools*/
-    top: 50px !important;
+    top: 56px !important;
 }
 .MuiTypography-subtitle2 {
     font-size: 1rem !important;
