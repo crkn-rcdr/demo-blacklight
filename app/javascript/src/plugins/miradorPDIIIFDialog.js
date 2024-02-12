@@ -506,24 +506,24 @@ export class PDIIIFDialog extends Component {
         maxWidth="xs"
       >
         <DialogTitle disableTypography className={classes.h2}>
-          <Typography variant="h2">PDF Download</Typography>
+          <Typography variant="h2">Print Images to PDF</Typography>
         </DialogTitle>
         <DialogContent>
           {savingError && (
             <DialogContentText>{savingError.message}</DialogContentText>
           )}
           <DialogContentText>
-            Download a PDF of the current document?
+            Note: The resulting PDF will NOT be a searchable PDF. 
             <br />
             <br />
-            The document contains {canvasIds.length} pages{fileSizeText}. All
-            pages will be included by default. If you wish to download certain
+            The document contains {canvasIds.length} images{fileSizeText}. All
+            images will be included by default. If you wish to download certain
             portions of it, you may provide a comma separated list of pages
-            and/or ranges.
+            and/or ranges below. 
           </DialogContentText>
           <TextField
             id="pages"
-            label="Pages"
+            label="Images"
             margin="normal"
             variant="outlined"
             placeholder="1, 4, 8-12, ..."
