@@ -1,18 +1,7 @@
 <div id="dl-menu" class="btn-toolbar">
-    <!--span data-bs-toggle="tooltip" data-bs-placement="top" title="Open full-size image in new tab" data-original-title="Open full-size image in new tab">
-        <a id="pvFullImage" 
-        class="btn btn-light mr-1" 
-        data-slug="<%= @prefix %>.<%= @documentId %>" 
-        href="<%= @canvasImageUrl %>" 
-        target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
-                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
-            </svg>
-            <span class="visually-hidden">Open full-size image in new tab</span>
-        </a>
-    </span>
-    <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download full-size image in JPG format" data-original-title="Download full-size image in JPG format">
+
+    <!--TODO: Mirador plugin-->
+    <!--span data-bs-toggle="tooltip" data-bs-placement="top" title="Download full-size image in JPG format" data-original-title="Download full-size image in JPG format">
         <button id="pvFullImageDownload" 
             data-controller="document_downloads" 
             class="btn btn-light btn-outline-primary mr-1" 
@@ -27,8 +16,10 @@
             <span class="visually-hidden">Download PDF (single image)</span>
         </button>
     </span-->
-    <!-- TODO: USE api to download --> 
-    <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download PDF (single image)" data-original-title="Download PDF (single image)">
+
+
+    <!-- TODO: USE api to download/Mirador PLugin --> 
+    <!--span data-bs-toggle="tooltip" data-bs-placement="top" title="Download PDF (single image)" data-original-title="Download PDF (single image)">
         <a id="pvDownloadSingle" 
         class="btn btn-light btn-outline-primary mr-1" 
         download="<%= @prefix %>.<%= @documentId %>.<%= @pageNum %>.pdf"
@@ -38,19 +29,25 @@
             </svg>
             <span class="visually-hidden">Download PDF (single image)</span>
         </a>
-    </span>
+    </span-->
+
+
     <!-- TODO: USE api to download --> 
     <span data-bs-toggle="tooltip" data-bs-placement="top" title="Download PDF (full document)" data-original-title="Download PDF (full document)">
         <a id="pvDownloadFull" 
         class="btn btn-light btn-outline-primary mr-1" 
         download="<%= @prefix %>.<%= @documentId %>.pdf" 
         href="/access-files/69429/<%= @prefix %>.<%= @documentId %>.pdf">
-            <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
+            <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 13h-3V3h-2v10H8l4 4 4-4zM4 19v2h16v-2H4z"></path></svg>
+            <!--svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="23" height="23" fill="currentColor" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M14 6.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V6.5h-2A1.5 1.5 0 0 1 9.5 5V3H4a1 1 0 0 0-1 1v7H2V4c0-1.105.9-1.9 2-2h5.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"></path>
                 <path fill-rule="evenodd" d="M8.5 1H4C2.502 1 1 2.504 1 4v7H0V4c0-2 2-4 4-4h3.5z"></path>
-            </svg>
-            (2.4M) 
-            <span class="visually-hidden">Download PDF (full document)</span>
+            </svg-->
+            Searchable PDF (2.4M)
+            <span class="visually-hidden">Download Searchable PDF (full item)</span>
         </a>
+        <span>
+            Recommended for people using assistive technologies.
+        </span>
     </span> 
 </div>

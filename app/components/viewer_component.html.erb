@@ -6,6 +6,8 @@
         <span>57 images, 55 with full-text search</span>
     </div>
 
+    <%= render(DocumentDownloadsComponent.new(documentId: @documentId, prefix: 'oocihm', pageNum: params[:pageNum])) do %><% end %>
+
     <div id="pvToolbarTop" aria-label="Viewer controls">
         <form id="pvSearchForm" class="DocSearch-Form" method="GET">
             <label class="DocSearch-MagnifierLabel" for="docsearch-input" id="docsearch-label">
@@ -41,8 +43,6 @@
                 <%= render(LegacyOcrSearchComponent.new(documentId: @documentId, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
             </div>
         <% end %>
-
-        <%= render(DocumentDownloadsComponent.new(documentId: @documentId, prefix: 'oocihm', pageNum: params[:pageNum])) do %><% end %>
     </div>
     <div class="mv" id="page-viewer" style="overflow: hidden; width: 100%; min-height: 50rem !important; height: 60vh; position: relative;"></div>
 
