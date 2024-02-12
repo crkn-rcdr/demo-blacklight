@@ -1,5 +1,5 @@
 import Mirador from 'mirador/dist/es/src/index.js'
-import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
+//later: import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
@@ -56,10 +56,7 @@ export default {
           miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
           miradorDownloadDialogPlugin,
-          {
-            ...miradorImageToolsPlugin,
-            target: "WindowTopBarPluginArea"
-          }
+          //...miradorImageToolsPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
