@@ -516,7 +516,7 @@ export class PDIIIFDialog extends Component {
             Note: The resulting PDF will NOT be a searchable PDF. 
             <br />
             <br />
-            The document contains {canvasIds.length} images{fileSizeText}. All
+            The resulting PDF will contain {canvasIds.length} images{fileSizeText}. All
             images will be included by default. If you wish to download certain
             portions of it, you may provide a comma separated list of pages
             and/or ranges below. 
