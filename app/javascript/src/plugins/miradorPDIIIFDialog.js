@@ -518,7 +518,7 @@ export class PDIIIFDialog extends Component {
             <br />
             The resulting PDF will contain {canvasIds.length} images{fileSizeText}. All
             images will be included by default. If you wish to download certain
-            portions of it, you may provide a comma separated list of pages
+            portions of images, you may provide a comma separated list of image numbers
             and/or ranges below. 
           </DialogContentText>
           <TextField
