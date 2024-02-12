@@ -5,7 +5,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 
-class FullResDownload extends Component {
+class PDFDownload extends Component {
   downloadAndCloseMenu() {
     const { handleClose } = this.props;
     handleClose();
@@ -19,7 +19,7 @@ class FullResDownload extends Component {
             <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
-            Download Image (Full Resolution)
+            Download Image as Searchable PDF
           </ListItemText>
         </MenuItem>
       </React.Fragment>
@@ -27,17 +27,17 @@ class FullResDownload extends Component {
   }
 }
 
-FullResDownload.propTypes = {
+PDFDownload.propTypes = {
   handleClose: PropTypes.func
 };
 
-FullResDownload.defaultProps = {
+PDFDownload.defaultProps = {
   handleClose: () => {}
 };
 
 export default {
   target: 'WindowTopBarPluginMenu',
   mode: 'add',
-  name: 'FullResDownloadPlugin',
-  component: FullResDownload
+  name: 'PDFDownloadPlugin',
+  component: PDFDownload
 };

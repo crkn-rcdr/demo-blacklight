@@ -2,17 +2,13 @@ import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
+import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin'
 import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog'
 import shareMenuPlugin from '../plugins/shareMenuPlugin'
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
-
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
 import miradorPDIIIFDialogPlugin from '../plugins//miradorPDIIIFDialog.js'
-//import harvardLtsmiradorPdiiifPlugin from 'https://cdn.jsdelivr.net/npm/@harvard-lts/mirador-pdiiif-plugin@0.1.29/+esm'
-//import embedModePlugin from '../plugins/embedModePlugin'
-//import analyticsPlugin from '../plugins/analyticsPlugin'
-//import cdlAuthPlugin from '../plugins/cdlAuthPlugin'
 
 export default {
   init: function() {
@@ -50,6 +46,10 @@ export default {
           },
           {
             ...miradorDownloadPlugin,
+            target: 'WindowTopBarShareMenu',
+          },
+          {
+            ...pdfDownloadPlugin,
             target: 'WindowTopBarShareMenu',
           },
           miradorPDIIIFMenuItemPlugin,
