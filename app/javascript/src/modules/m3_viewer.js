@@ -1,11 +1,10 @@
 import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
-import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js';
+import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin'
 import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog'
 import shareMenuPlugin from '../plugins/shareMenuPlugin'
-import dlMenuPlugin from '../plugins/dlMenuPlugin.js'
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
 
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
@@ -44,14 +43,14 @@ export default {
         
         let mplugins = [
           miradorZoomBugPlugin,
-          dlMenuPlugin,
+          shareMenuPlugin,
           {
             ...fullResDownloadPlugin,
-            target: 'WindowTopBarDlMenu',
+            target: 'WindowTopBarShareMenu',
           },
           {
             ...miradorDownloadPlugin,
-            target: 'WindowTopBarDlMenu',
+            target: 'WindowTopBarShareMenu',
           },
           miradorPDIIIFMenuItemPlugin,
           miradorPDIIIFDialogPlugin,
