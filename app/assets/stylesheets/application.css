@@ -128,19 +128,10 @@ button[aria-label="Toggle sidebar"] {
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
 }
-/*.mirador28 {
-    border-right: none !important;
+.mirador6 {/* canvas thumbnail list */
+    height: 94% !important;
+    align-self: flex-end !important;
 }
-.mirador29 {
-    display: none;
-}
-.mirador22 {
-    display: none;
-}
-.mirador6 {
-    margin-top: 50px !important;
-}
-*/
 .mirador41 { /*side panel item wrapper */
     border-bottom: none !important;
 }
