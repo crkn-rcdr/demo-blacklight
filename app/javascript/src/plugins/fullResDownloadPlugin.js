@@ -8,7 +8,7 @@ import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 class FullResDownload extends Component {
   downloadAndCloseMenu() {
     const { handleClose } = this.props;
-
+    console.log("close")
     handleClose();
   }
 
@@ -40,6 +40,5 @@ export default {
   target: 'WindowTopBarShareMenu',
   mode: 'add',
   name: 'FullResDownloadPlugin',
-  component: FullResDownload,
-  mapDispatchToProps,
+  component: FullResDownload
 };
