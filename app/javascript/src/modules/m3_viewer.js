@@ -45,7 +45,7 @@ export default {
         let mplugins = [
           miradorZoomBugPlugin,
           shareMenuPlugin,
-          ...fullResDownloadPlugin,
+          fullResDownloadPlugin,
           {
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
