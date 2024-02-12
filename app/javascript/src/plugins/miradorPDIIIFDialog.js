@@ -523,7 +523,7 @@ export class PDIIIFDialog extends Component {
           </DialogContentText>
           <TextField
             id="pages"
-            label="(optional) Image Numbers..."
+            label="(Optional) Image Numbers..."
             margin="normal"
             variant="outlined"
             placeholder="1, 4, 8-12, ..."
