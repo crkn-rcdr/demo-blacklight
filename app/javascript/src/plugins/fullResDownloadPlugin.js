@@ -28,11 +28,11 @@ class FullResDownload extends Component {
   }
 }
 
-MiradorDownload.propTypes = {
+FullResDownload.propTypes = {
   handleClose: PropTypes.func
 };
 
-MiradorDownload.defaultProps = {
+FullResDownload.defaultProps = {
   handleClose: () => {}
 };
 
