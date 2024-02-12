@@ -243,9 +243,7 @@ input[type="search"]::-webkit-search-cancel-button {
 #pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
     padding: 0 !important;
     background: white;
-    color: black !important;
     border: none;
-    margin-left: 1.4rem;
 }
 section[id$="gallery"] {
     border-top: 1px solid #dbdbdb !important;
