@@ -620,6 +620,8 @@ export default {
           view: "catalogueView",
     
           window: {
+
+            imageToolsOpen: false,
     
             //global window defaults
     
