@@ -19,7 +19,7 @@ class FullResDownload extends Component {
             <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
-            Download Image (Full Resolution)
+            Download Image in Full Resolution
           </ListItemText>
         </MenuItem>
       </React.Fragment>

@@ -56,7 +56,10 @@ export default {
           miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
           miradorDownloadDialogPlugin,
-          ...miradorImageToolsPlugin
+          {
+            ...miradorImageToolsPlugin,
+            target: "WindowTopBarPluginArea"
+          }
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
