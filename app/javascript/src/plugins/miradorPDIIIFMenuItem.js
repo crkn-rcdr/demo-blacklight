@@ -180,14 +180,14 @@ class PDIIIFMenuItem extends Component {
     const { allowPdfDownload } = this.props;
 
     if (!hasChecked) {
-      return "Checking document";
+      return "Prepping Images for Printing...";
     }
 
     if (allowPdfDownload) {
-      return "Download PDF";
+      return "Print Images to PDF";
     }
 
-    return "PDF Unavailable";
+    return "Image Printing Unavailable";
   };
 
   render() {
@@ -236,7 +236,7 @@ const styles = () => ({
 });
 
 export default {
-  target: "WindowTopBarShareMenu",
+  target: "WindowTopBarPluginMenu",
   mode: "add",
   name: "PDIIIFMenuItem",
   component: withStyles(styles)(PDIIIFMenuItem),
