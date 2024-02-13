@@ -8,7 +8,8 @@ import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDow
 import shareMenuPlugin from '../plugins/shareMenuPlugin'
 import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
-import miradorPDIIIFDialogPlugin from '../plugins//miradorPDIIIFDialog.js'
+import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
+import navControlsPlugin from '../plugins/navControlsPlugin'
 
 export default {
   init: function() {
@@ -59,7 +60,8 @@ export default {
           miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
           miradorDownloadDialogPlugin,
-          ...miradorImageToolsPlugin
+          ...miradorImageToolsPlugin,
+          navControlsPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
