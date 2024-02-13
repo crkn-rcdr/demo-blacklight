@@ -9,14 +9,37 @@ import {
   getCurrentCanvas,
 } from 'mirador/dist/es/src/state/selectors'
 
+
+
+function downloadFile(url, filename) {
+  fetch(url, {
+      method: 'GET',
+      //headers: new Headers({
+      //    "Authorization": "Bearer " + token
+      //})
+  })
+  .then(response => response.blob())
+  .then(blob => {
+      var url = window.URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
+      a.click();    
+      a.remove();  //afterwards we remove the element again         
+  });
+}
+
 class FullResDownload extends Component {
   downloadAndCloseMenu() {
     const { handleClose, canvasIndex, manifestId, canvas } = this.props;
     console.log("c", canvas)
     console.log("m", manifestId)
     let page = canvasIndex + 1
-    console.log("/access-files/69429/oocihm.84056."+page+".pdf")
-    handleClose();
+    console.log("url", canvas.__jsonld.items[0].items[0].body.id)
+    downloadFile(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
+    console.log("/access-files/69429/oocihm.84056."+page+".jpg")
+    handleClose()
   }
 
   render() {
