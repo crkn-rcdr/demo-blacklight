@@ -844,14 +844,14 @@ export default {
         
         let first = true
         miradorInstance.store.subscribe( () => {
-          if(first) {
+          //if(first) {
             let navs = document.getElementsByClassName('mirador-canvas-nav')
             if(navs.length) {
               let nav = navs[0]
               let buttons = nav.getElementsByTagName("button")
               console.log("buttons", buttons)
             }
-          }
+          //}
           first = false
         }) 
   }
