@@ -875,6 +875,8 @@ export default {
                 queryParams.set("pageNum", pageNum)
                 history.pushState(null, null, "?"+queryParams.toString())
               })
+
+              //mirador-thumbnail-nav-container aria-colindex
             }
           }
           first = false
