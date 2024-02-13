@@ -850,54 +850,19 @@ export default {
           console.log("buttons", buttons)
         }
         
-    
-
         console.log("page is fully loaded", miradorInstance)
         miradorInstance.store.subscribe( () => {
-          console.log("s", miradorInstance.store.getState())
-        })
-        
-        //fetch(manifest).then((response) => {
-          //response.json().then(result => {
-
-        //
-        /*const data = {
-          manifest,
-          canvasIndex
-        }*/
-        /*function setCanvas(pageNum) {
-          // Construct URLSearchParams object instance from current URL querystring.
-          var queryParams = new URLSearchParams(window.location.search)
-          console.log(pageNum, queryParams.get("pageNum"))
-          console.log(typeof pageNum, typeof queryParams.get("pageNum"))
-          if(pageNum === queryParams.get("pageNum")) return
-
-          console.log("updating...")
-
-          queryParams.set("pageNum", pageNum)
-          history.pushState(null, null, "?"+queryParams.toString())
-
-          let newCanvasIndex = pageNum-1
-
-          // TODO: think about better way to do this
-          console.log(result)
-          let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
-          console.log(canvasImageUrl)
-
-          let pvFullImageLink = document.getElementById("pvFullImage")
-          pvFullImageLink.setAttribute("href", canvasImageUrl)
-
-
-          let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload")
-          pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg")
-          pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl)
-
-          let pvDownloadSingleLink = document.getElementById("pvDownloadSingle")
-          pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf")
-          pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
-        }*/
-
-          //})
-        //})    
+          let state = miradorInstance.store.getState()
+          for (let prop in state['windows']) {
+            let miradorWindow = state['windows'][prop]
+            if('canvasIndex' in miradorWindow && miradorWindow['canvasIndex'] != pageNum) {
+              console.log("new page", miradorWindow['canvasIndex'])
+              queryParams.set("pageNum", pageNum)
+              history.pushState(null, null, "?"+queryParams.toString())
+            } else {
+              console.log("same page")
+            }
+          }
+        }) 
   }
 }
