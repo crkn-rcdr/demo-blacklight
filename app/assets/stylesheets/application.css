@@ -122,8 +122,8 @@ button[aria-label="Toggle sidebar"] {
     border-right: none !important;
     width: fit-content !important;
     z-index: 50 !important;
-    right: 40% !important;
     background-color: transparent !important;
+    left: 47% !important;
 }
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
@@ -142,9 +142,6 @@ button[aria-label="Toggle sidebar"] {
     display: inline-flex !important;
     height: 20px !important;
     margin-bottom: 1rem !important;
-}
-.mirador-84 { /*nav buttons*/
-    left: 47% !important;
 }
 .MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar */
     display: none !important;

@@ -833,20 +833,33 @@ export default {
           }
     
         }
-    
-    
-        //fetch(manifest).then((response) => {
-          //response.json().then(result => {
-        let miradorInstance = Mirador.viewer(mconfig, mplugins)
-        const data = {
-          manifest,
-          canvasIndex
-        }
 
-        console.log("page is fully loaded")
+
         var queryParams = new URLSearchParams(window.location.search)
         if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
         else resetButton.style.display ="none"
+
+
+        let navs = document.getElementsByClassName('mirador-canvas-nav')
+
+        if(navs.length) {
+          let nav = navs[0]
+          let buttons = nav.getElementsByTagName("button")
+          console.log("buttons", buttons)
+        }
+        
+    
+
+        console.log("page is fully loaded")
+        //fetch(manifest).then((response) => {
+          //response.json().then(result => {
+
+        //let miradorInstance = Mirador.viewer(mconfig, mplugins)
+
+        /*const data = {
+          manifest,
+          canvasIndex
+        }*/
         /*function setCanvas(pageNum) {
           // Construct URLSearchParams object instance from current URL querystring.
           var queryParams = new URLSearchParams(window.location.search)
@@ -879,9 +892,6 @@ export default {
           pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
         }*/
 
-        miradorInstance.store.subscribe(e => {
-          console.log("state: ", e)
-        })
           //})
         //})    
   }
