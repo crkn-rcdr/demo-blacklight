@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types"
 import {
   getCanvasIndex,
-} from '../state/selectors'
+} from 'mirador/dist/es/src/state/selectors'
 
 export class NavControlsPlugin extends Component {
   constructor(props) {
