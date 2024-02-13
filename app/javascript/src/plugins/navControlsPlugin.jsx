@@ -1,5 +1,6 @@
 import React from 'react';
 import { ViewerNavigation } from 'mirador/dist/es/src/components/ViewerNavigation.js';
+import * as actions from 'mirador/dist/es/src/state/actions';
 /*import {
   getCurrentCanvas
 } from 'mirador/dist/es/src/state/selectors';*/
@@ -15,30 +16,24 @@ class WatchViewerNavigationControls extends ViewerNavigation {
     //this.setNextCanvas = this.setNextCanvas.bind(this);
     //this.setPreviousCanvas = this.setPreviousCanvas.bind(this);
   }
-
-  /**
-   */
-  setNextCanvas(windowId) {
-    //const { hasNextCanvas, setNextCanvas } = this.props;
-    //super(this.props);
-    console.log(this.props)
-    console.log("??? next")
-  }
-
-  /**
-   */
-  setPreviousCanvas(windowId) {
-    //super(this.props);
-    console.log(this.props)
-    console.log("??? prev")
-
-    //Set Page Num
-    //let queryParams = new URLSearchParams(window.location.search)
-    //queryParams.set("pageNum", pageNum)
-    //history.pushState(null, null, "?"+queryParams.toString())
-  
-  }
 }
+
+/**
+ * mapDispatchToProps - used to hook up connect to action creators
+ * @memberof ManifestForm
+ * @private
+ */
+const mapDispatchToProps = (dispatch, { windowId }) => ({
+  setNextCanvas: (...args) => {
+    console.log("???????????")
+    dispatch(actions.setNextCanvas(windowId))
+  },
+  setPreviousCanvas: (...args) => {
+    console.log("???????????")
+    dispatch(actions.setPreviousCanvas(windowId))
+  },
+});
+
 
 const NavControlsPlugin = ({ targetProps }) => (
   <WatchViewerNavigationControls {...targetProps}  />
@@ -48,4 +43,5 @@ export default {
   target: 'ViewerNavigation',
   mode: 'wrap',
   component: NavControlsPlugin,
+  mapDispatchToProps
 };
