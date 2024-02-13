@@ -1,47 +1,37 @@
-import React from 'react';
-import { ViewerNavigation } from 'mirador/dist/es/src/components/ViewerNavigation.js';
-import * as actions from 'mirador/dist/es/src/state/actions';
-/*import {
-  getCurrentCanvas
-} from 'mirador/dist/es/src/state/selectors';*/
+import React, { Component } from 'react'
+import PropTypes from "prop-types"
+import {
+  getCanvasIndex,
+} from '../state/selectors'
 
-class WatchViewerNavigationControls extends ViewerNavigation {
-  /**
-   * constructor -
-   */
+export class NavControlsPlugin extends Component {
   constructor(props) {
     super(props);
-    console.log("???????", this, props)
-
-    //this.setNextCanvas = this.setNextCanvas.bind(this);
-    //this.setPreviousCanvas = this.setPreviousCanvas.bind(this);
   }
 }
 
+NavControlsPlugin.propTypes = {
+  canvasIndex: PropTypes.number
+};
+
 /**
- * mapDispatchToProps - used to hook up connect to action creators
- * @memberof ManifestForm
+ * mapStateToProps - to hook up connect
+ * @memberof Window
  * @private
  */
-const mapDispatchToProps = (dispatch, { windowId }) => ({
-  setNextCanvas: (...args) => {
-    console.log("???????????")
-    dispatch(actions.setNextCanvas(windowId))
-  },
-  setPreviousCanvas: (...args) => {
-    console.log("???????????")
-    dispatch(actions.setPreviousCanvas(windowId))
-  },
-});
+const mapStateToProps = (state, props) => {
+  const { windowId } = props;
+  const canvasIndex = getCanvasIndex(state, { windowId });
+  console.log("???", canvasIndex)
+  return {
+    canvasIndex
+  };
+};
 
-
-const NavControlsPlugin = ({ targetProps }) => (
-  <WatchViewerNavigationControls {...targetProps}  />
-);
 
 export default {
-  target: 'ViewerNavigation',
-  mode: 'wrap',
+  //target: 'ViewerNavigation',
+  //mode: 'wrap',
   component: NavControlsPlugin,
-  mapDispatchToProps
+  mapStateToProps
 };
