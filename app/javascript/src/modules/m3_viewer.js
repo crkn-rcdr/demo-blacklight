@@ -15,6 +15,9 @@ export default {
         console.log(Mirador)
         let searchInput = document.getElementById("pvSearch")
         let resetButton = document.getElementById("pvSearchReset")
+
+        if(typeof resetButton === "undefined") return
+
         resetButton.addEventListener("click", ()=>{
           searchInput.value = ''
           // Construct URLSearchParams object instance from current URL querystring.
@@ -844,8 +847,7 @@ export default {
         
         let first = true
         miradorInstance.store.subscribe( () => {
-          //if(first) {
-            
+          if(first) {
             let navs = document.getElementsByClassName('mirador-canvas-nav')
             if(navs.length) {
               let nav = navs[0]
@@ -859,9 +861,22 @@ export default {
               let nextButton = buttons[3];
               let prevButton = buttons[4];
 
-
+              nextButton.addEventListener("click", () => {
+                canvasIndex += 1
+                console.log("updating...")
+                let pageNum = canvasIndex + 1
+                queryParams.set("pageNum", pageNum)
+                history.pushState(null, null, "?"+queryParams.toString())
+              })
+              prevButton.addEventListener("click", () => {
+                canvasIndex -= 1
+                console.log("updating...")
+                let pageNum = canvasIndex + 1
+                queryParams.set("pageNum", pageNum)
+                history.pushState(null, null, "?"+queryParams.toString())
+              })
             }
-          //}
+          }
           first = false
         }) 
   }
