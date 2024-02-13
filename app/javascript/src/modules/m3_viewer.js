@@ -63,8 +63,6 @@ export default {
         let mconfig = {
     
           id: 'page-viewer', // id selector where Mirador should be instantiated
-          //selectedTheme: 'dark', // dark also available
-          
     
           canvasNavigation: {
     
@@ -837,188 +835,54 @@ export default {
         }
     
     
-        fetch(manifest).then((response) => {
-          response.json().then(result => {
-            let miradorInstance = Mirador.viewer(mconfig, mplugins)
-            const data = {
-              manifest,
-              canvasIndex
-            }
-    
-            console.log("page is fully loaded")
-            var queryParams = new URLSearchParams(window.location.search)
-            if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
-            else resetButton.style.display ="none"
-    
-            function setCanvas(pageNum) {
-              // Construct URLSearchParams object instance from current URL querystring.
-              var queryParams = new URLSearchParams(window.location.search)
-              console.log(pageNum, queryParams.get("pageNum"))
-              console.log(typeof pageNum, typeof queryParams.get("pageNum"))
-              if(pageNum === queryParams.get("pageNum")) return
-    
-              console.log("updating...")
-    
-              queryParams.set("pageNum", pageNum)
-              history.pushState(null, null, "?"+queryParams.toString())
-    
-    
-              let newCanvasIndex = pageNum-1
-    
-              // TODO: think about better way to do this
-              console.log(result)
-              let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
-              console.log(canvasImageUrl)
-    
-              let pvFullImageLink = document.getElementById("pvFullImage")
-              pvFullImageLink.setAttribute("href", canvasImageUrl)
-    
-    
-              let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload")
-              pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg")
-              pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl)
-    
-              let pvDownloadSingleLink = document.getElementById("pvDownloadSingle")
-              pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf")
-              pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
-            }
-    
-            console.log(miradorInstance)
-            miradorInstance.store.subscribe(e => {
-              let selected = document.getElementsByClassName("Mui-selected")
-              for(let elem of selected) {
-                if(elem.tagName == "LI") {
-                  let para = elem.getElementsByTagName("p")
-                  if(para.length) {
-                    let pageNum = para[0].innerHTML.replace("Image ", "")
-                    setCanvas(pageNum)
-                  }
-                }
-              }
-            })
-          })
-        })    
-
-
-    /*const el = document.getElementById('page-viewer')
-    const data = el.dataset
-    const showAttribution = (data.showAttribution === 'true')
-    const hideWindowTitle = (data.hideTitle === 'true')
-    const imageTools = (data.imageTools === 'true')
-    const cdl = (data.cdl === 'true')
-
-    // Determine which panel should be open
-    var sideBarPanel = 'info'
-    if (data.search.length > 0) {
-      sideBarPanel = 'search'
-    }
-    if (showAttribution) {
-      sideBarPanel = 'attribution'
-    }
-
-    Mirador.viewer({
-      id: 'sul-embed-m3',
-      miradorDownloadPlugin: {
-        restrictDownloadOnSizeDefinition: true,
-      },
-      miradorSharePlugin: {
-        embedOption: {
-          enabled: true,
-          embedUrlReplacePattern: [
-            /.*\.edu\/(\w+)\/iiif\d?\/manifest/,
-            'https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/$1',
-          ],
-        },
-        dragAndDropInfoLink: 'https://library.stanford.edu/projects/international-image-interoperability-framework/viewers',
-        shareLink: {
-          enabled: true,
-          manifestIdReplacePattern: [
-            /(purl.*.stanford.edu.*)\/iiif\d?\/manifest(.json)?$/,
-            '$1',
-          ],
-        },
-      },
-      selectedTheme: 'sul',
-      themes: {
-        sul: {
-          palette: {
-            type: 'light',
-            primary: {
-              main: '#8c1515',
-            },
-            secondary: {
-              main: '#8c1515',
-            },
-            shades: {
-              dark: '#2e2d29',
-              main: '#ffffff',
-              light: '#f4f4f4',
-            },
-            notification: {
-              main: '#e98300'
-            },
-          }
+        //fetch(manifest).then((response) => {
+          //response.json().then(result => {
+        let miradorInstance = Mirador.viewer(mconfig, mplugins)
+        const data = {
+          manifest,
+          canvasIndex
         }
-      },
-      windows: [{
-        id: 'main',
-        defaultSearchQuery: data.search.length > 0 ? data.search : undefined,
-        suggestedSearches: data.suggestedSearch.length > 0 ? [data.suggestedSearch] : null,
-        loadedManifest: data.m3Uri,
-        canvasIndex: Number(data.canvasIndex),
-        canvasId: data.canvasId,
-        ...(cdl && {
-          cdl: {
-            cdlHoldRecordId: data.cdlHoldRecordId && data.cdlHoldRecordId.toString(),
-          }
-        }),
-      }],
-      window: {
-        allowClose: false,
-        allowFullscreen: true,
-        allowMaximize: false,
-        authNewWindowCenter: 'screen',
-        sideBarPanel,
-        hideWindowTitle: hideWindowTitle,
-        panels: {
-          annotations: true,
-          layers: true,
-          search: true,
-        },
-        sideBarOpen: (showAttribution || data.search.length > 0),
-        imageToolsEnabled: true,
-        imageToolsOpen: false,
-        views: [
-          { key: 'single', behaviors: [null, 'individuals'] },
-          { key: 'book', behaviors: [null, 'paged'] },
-          { key: 'scroll', behaviors: ['continuous'] },
-          { key: 'gallery' },
-        ],
-      },
-      workspace: {
-        showZoomControls: true,
-        type: imageTools ? 'mosaic' : 'single',
-      },
-      workspaceControlPanel: {
-        enabled: false,
-      }
-    }, [
-      ...((cdl && cdlAuthPlugin) || []),
-      ...((imageTools && miradorImageToolsPlugin) || []),
-      (!cdl && shareMenuPlugin),
-      miradorZoomBugPlugin,
-      ...((imageTools && embedModePlugin) || []),
-      {
-        ...miradorSharePlugin,
-        target: 'WindowTopBarShareMenu',
-      },
-      miradorShareDialogPlugin,
-      miradorDownloadDialogPlugin,
-      {
-        ...miradorDownloadPlugin,
-        target: 'WindowTopBarShareMenu',
-      },
-      analyticsPlugin,
-    ].filter(Boolean))*/
+
+        console.log("page is fully loaded")
+        var queryParams = new URLSearchParams(window.location.search)
+        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
+        else resetButton.style.display ="none"
+        /*function setCanvas(pageNum) {
+          // Construct URLSearchParams object instance from current URL querystring.
+          var queryParams = new URLSearchParams(window.location.search)
+          console.log(pageNum, queryParams.get("pageNum"))
+          console.log(typeof pageNum, typeof queryParams.get("pageNum"))
+          if(pageNum === queryParams.get("pageNum")) return
+
+          console.log("updating...")
+
+          queryParams.set("pageNum", pageNum)
+          history.pushState(null, null, "?"+queryParams.toString())
+
+          let newCanvasIndex = pageNum-1
+
+          // TODO: think about better way to do this
+          console.log(result)
+          let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
+          console.log(canvasImageUrl)
+
+          let pvFullImageLink = document.getElementById("pvFullImage")
+          pvFullImageLink.setAttribute("href", canvasImageUrl)
+
+
+          let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload")
+          pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg")
+          pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl)
+
+          let pvDownloadSingleLink = document.getElementById("pvDownloadSingle")
+          pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf")
+          pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
+        }*/
+
+        miradorInstance.store.subscribe(e => {
+          console.log("state: ", e)
+        })
+          //})
+        //})    
   }
 }

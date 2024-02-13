@@ -35,6 +35,8 @@ Create page_txt field in page core
 
 (On first run only) `docker logs demo-blacklight-web-1 --follow`
 
+(On first run only) Run this script to add page search - https://github.com/crkn-rcdr/crkn-scripting/blob/main/export-alto/export.py
+
 Solr instance will be running at:
 http://localhost:8983
 
