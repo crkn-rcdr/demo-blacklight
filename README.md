@@ -77,9 +77,6 @@ Then download and add files to vendor/javascript.
 
 docker run -v /root/demo-blacklight:/app demo-blacklight-web
 
-
-rails shakapacker:install
-
 Then, for shakapacker:
 docker exec -it demo-blacklight-web-1 bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

@@ -841,29 +841,18 @@ export default {
         if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
         else resetButton.style.display ="none"
 
-
-        let navs = document.getElementsByClassName('mirador-canvas-nav')
-
-        if(navs.length) {
-          let nav = navs[0]
-          let buttons = nav.getElementsByTagName("button")
-          console.log("buttons", buttons)
-        }
         
-        console.log("page is fully loaded", miradorInstance)
+        let first = true
         miradorInstance.store.subscribe( () => {
-          let state = miradorInstance.store.getState()
-          console.log("s", state)
-          for (let prop in state['windows']) {
-            let miradorWindow = state['windows'][prop]
-            if('canvasIndex' in miradorWindow && miradorWindow['canvasIndex'] != canvasIndex) {
-              console.log("new page", miradorWindow['canvasIndex']+1)
-              queryParams.set("pageNum", miradorWindow['canvasIndex']+1)
-              history.pushState(null, null, "?"+queryParams.toString())
-            } else {
-              console.log("same page")
+          if(first) {
+            let navs = document.getElementsByClassName('mirador-canvas-nav')
+            if(navs.length) {
+              let nav = navs[0]
+              let buttons = nav.getElementsByTagName("button")
+              console.log("buttons", buttons)
             }
           }
+          first = false
         }) 
   }
 }
