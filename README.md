@@ -79,14 +79,20 @@ docker run -v /root/demo-blacklight:/app demo-blacklight-web
 
 Then, for shakapacker:
 docker exec -it demo-blacklight-web-1 bash
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 nvm install 18
 corepack enable
 rails shakapacker:compile
+
 exit
 docker container restart demo-blacklight-web-1
 git add --all 
 git commit
+
+Out of space warning:
+
+
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
