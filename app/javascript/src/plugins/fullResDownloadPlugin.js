@@ -4,10 +4,18 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
+import {
+  getCanvasIndex, 
+  getCurrentCanvas,
+} from 'mirador/dist/es/src/state/selectors'
 
 class FullResDownload extends Component {
   downloadAndCloseMenu() {
-    const { handleClose } = this.props;
+    const { handleClose, canvasIndex, manifestId, canvas } = this.props;
+    console.log("c", canvas)
+    console.log("m", manifestId)
+    let page = canvasIndex + 1
+    console.log("/access-files/69429/oocihm.84056."+page+".pdf")
     handleClose();
   }
 
@@ -28,60 +36,37 @@ class FullResDownload extends Component {
 }
 
 FullResDownload.propTypes = {
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func,
+  canvasIndex: PropTypes.number,
+  canvas: PropTypes.object,
+  manifestId: PropTypes.string
 };
 
 FullResDownload.defaultProps = {
   handleClose: () => {}
 };
 
+/**
+ * mapStateToProps - to hook up connect
+ * @memberof Window
+ * @private
+ */
+const mapStateToProps = (state, props) => {
+  const { windowId } = props;
+  const canvasIndex = getCanvasIndex(state, { windowId })
+  const canvas = getCurrentCanvas(state, { windowId })
+  const manifestId = state.windows[windowId].manifestId
+  return {
+    canvasIndex,
+    canvas,
+    manifestId
+  };
+};
+
 export default {
   target: 'WindowTopBarPluginMenu',
   mode: 'add',
   name: 'FullResDownloadPlugin',
-  component: FullResDownload
+  component: FullResDownload,
+  mapStateToProps
 };
-
-
-
-//fetch(manifest).then((response) => {
-//response.json().then(result => {
-
-//
-/*const data = {
-manifest,
-canvasIndex
-}*/
-/*function setCanvas(pageNum) {
-// Construct URLSearchParams object instance from current URL querystring.
-var queryParams = new URLSearchParams(window.location.search)
-console.log(pageNum, queryParams.get("pageNum"))
-console.log(typeof pageNum, typeof queryParams.get("pageNum"))
-if(pageNum === queryParams.get("pageNum")) return
-
-console.log("updating...")
-
-queryParams.set("pageNum", pageNum)
-history.pushState(null, null, "?"+queryParams.toString())
-
-let newCanvasIndex = pageNum-1
-
-// TODO: think about better way to do this
-console.log(result)
-let canvasImageUrl = result["items"][newCanvasIndex]["items"][0]["items"][0]["body"]["id"]
-console.log(canvasImageUrl)
-
-let pvFullImageLink = document.getElementById("pvFullImage")
-pvFullImageLink.setAttribute("href", canvasImageUrl)
-
-let pvFullImageDownloadButton = document.getElementById("pvFullImageDownload")
-pvFullImageDownloadButton.setAttribute("data-download", documentId + "." + pageNum + ".jpg")
-pvFullImageDownloadButton.setAttribute("data-href", canvasImageUrl)
-
-let pvDownloadSingleLink = document.getElementById("pvDownloadSingle")
-pvDownloadSingleLink.setAttribute("download", documentId + "." + pageNum + ".pdf")
-pvDownloadSingleLink.setAttribute("href", "/access-files/69429/"+documentId+"."+pageNum+".pdf")
-}*/
-
-//})
-//})   

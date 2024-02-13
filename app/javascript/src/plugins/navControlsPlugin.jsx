@@ -7,7 +7,6 @@ import {
 export class NavControlsPlugin extends Component {
   constructor(props) {
     super(props);
-    console.log("???")
   }
 
   render() {
@@ -31,18 +30,13 @@ NavControlsPlugin.propTypes = {
 const mapStateToProps = (state, props) => {
   const { windowId } = props;
   const canvasIndex = getCanvasIndex(state, { windowId });
-  console.log("???", canvasIndex)
-
   let pageNum = canvasIndex + 1
   let queryParams = new URLSearchParams(window.location.search)
-  console.log(typeof queryParams.get("pageNum"))
   const queryPageNum = queryParams.get("pageNum")
   if(typeof queryPageNum !== "undefined" && pageNum !== parseInt(queryPageNum)) {
     queryParams.set("pageNum", pageNum)
     history.pushState(null, null, "?"+queryParams.toString())
-    console.log("updating...")
   }
-
   return {
     canvasIndex
   };
