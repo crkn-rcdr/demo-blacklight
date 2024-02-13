@@ -853,6 +853,10 @@ export default {
     
 
         console.log("page is fully loaded", miradorInstance)
+        miradorInstance.store.subscribe( () => {
+          console.log("s", miradorInstance.store.getState())
+        })
+        
         //fetch(manifest).then((response) => {
           //response.json().then(result => {
 
