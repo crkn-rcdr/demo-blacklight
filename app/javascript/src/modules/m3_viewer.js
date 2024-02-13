@@ -853,6 +853,7 @@ export default {
         console.log("page is fully loaded", miradorInstance)
         miradorInstance.store.subscribe( () => {
           let state = miradorInstance.store.getState()
+          console.log("s", state)
           for (let prop in state['windows']) {
             let miradorWindow = state['windows'][prop]
             if('canvasIndex' in miradorWindow && miradorWindow['canvasIndex'] != canvasIndex) {
