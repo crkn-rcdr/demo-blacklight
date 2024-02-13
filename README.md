@@ -92,7 +92,7 @@ git add --all
 git commit
 
 Out of space warning:
-
+`docker system prune`
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
