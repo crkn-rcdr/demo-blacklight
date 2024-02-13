@@ -36,7 +36,8 @@ const mapStateToProps = (state, props) => {
   let pageNum = canvasIndex + 1
   let queryParams = new URLSearchParams(window.location.search)
   console.log(typeof queryParams.get("pageNum"))
-  if(pageNum !== queryParams.get("pageNum")) {
+  const queryPageNum = queryParams.get("pageNum")
+  if(typeof queryPageNum !== "undefined" && pageNum !== parseInt(queryPageNum)) {
     queryParams.set("pageNum", pageNum)
     history.pushState(null, null, "?"+queryParams.toString())
     console.log("updating...")
