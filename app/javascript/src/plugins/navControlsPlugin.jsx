@@ -32,6 +32,15 @@ const mapStateToProps = (state, props) => {
   const { windowId } = props;
   const canvasIndex = getCanvasIndex(state, { windowId });
   console.log("???", canvasIndex)
+
+  let pageNum = canvasIndex + 1
+  let queryParams = new URLSearchParams(window.location.search)
+  if(pageNum !== queryParams.get("pageNum")) {
+    queryParams.set("pageNum", pageNum)
+    history.pushState(null, null, "?"+queryParams.toString())
+    console.log("updating...")
+  }
+
   return {
     canvasIndex
   };
