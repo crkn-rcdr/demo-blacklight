@@ -855,9 +855,9 @@ export default {
           let state = miradorInstance.store.getState()
           for (let prop in state['windows']) {
             let miradorWindow = state['windows'][prop]
-            if('canvasIndex' in miradorWindow && miradorWindow['canvasIndex'] != pageNum) {
-              console.log("new page", miradorWindow['canvasIndex'])
-              queryParams.set("pageNum", pageNum)
+            if('canvasIndex' in miradorWindow && miradorWindow['canvasIndex'] != canvasIndex) {
+              console.log("new page", miradorWindow['canvasIndex']+1)
+              queryParams.set("pageNum", miradorWindow['canvasIndex']+1)
               history.pushState(null, null, "?"+queryParams.toString())
             } else {
               console.log("same page")
