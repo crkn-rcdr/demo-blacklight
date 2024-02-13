@@ -12,14 +12,13 @@ class WatchViewerNavigationControls extends ViewerNavigation {
     super(props);
     console.log("???????", this, props)
 
-    this.setNextCanvas = this.setNextCanvas.bind(this);
-    this.setPreviousCanvas = this.setPreviousCanvas.bind(this);
+    //this.setNextCanvas = this.setNextCanvas.bind(this);
+    //this.setPreviousCanvas = this.setPreviousCanvas.bind(this);
   }
 
   /**
-   * @private
    */
-  setNextCanvas() {
+  setNextCanvas(windowId) {
     //const { hasNextCanvas, setNextCanvas } = this.props;
     //super(this.props);
     console.log(this.props)
@@ -27,9 +26,8 @@ class WatchViewerNavigationControls extends ViewerNavigation {
   }
 
   /**
-   * @private
    */
-  setPreviousCanvas() {
+  setPreviousCanvas(windowId) {
     //super(this.props);
     console.log(this.props)
     console.log("??? prev")
