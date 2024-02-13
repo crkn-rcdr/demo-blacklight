@@ -834,6 +834,8 @@ export default {
     
         }
 
+        let miradorInstance = Mirador.viewer(mconfig, mplugins)
+
 
         var queryParams = new URLSearchParams(window.location.search)
         if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
@@ -850,12 +852,11 @@ export default {
         
     
 
-        console.log("page is fully loaded")
+        console.log("page is fully loaded", miradorInstance)
         //fetch(manifest).then((response) => {
           //response.json().then(result => {
 
-        //let miradorInstance = Mirador.viewer(mconfig, mplugins)
-
+        //
         /*const data = {
           manifest,
           canvasIndex
