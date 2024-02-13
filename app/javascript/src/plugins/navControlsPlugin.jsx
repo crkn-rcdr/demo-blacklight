@@ -7,7 +7,7 @@ import {
 export class NavControlsPlugin extends Component {
   constructor(props) {
     super(props);
-    console.log("???", canvasIndex)
+    console.log("???")
   }
 
   render() {
