@@ -10,7 +10,7 @@ class WatchViewerNavigationControls extends ViewerNavigation {
    */
   constructor(props) {
     super(props);
-    console.log("???????")
+    console.log("???????", this, props)
 
     this.nextCanvas = this.nextCanvas.bind(this);
     this.previousCanvas = this.previousCanvas.bind(this);
