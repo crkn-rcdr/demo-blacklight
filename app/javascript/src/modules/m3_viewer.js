@@ -6,7 +6,7 @@ import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin'
 import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog'
 import shareMenuPlugin from '../plugins/shareMenuPlugin'
-import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
+//import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
 import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
 import navControlsPlugin from '../plugins/navControlsPlugin'
@@ -43,7 +43,7 @@ export default {
         let manifest = "https://blacklight.crkn-demo-test.ca/iiif/oocihm.84056.json"//"https://www.canadiana.ca/iiif/"+documentId+"/manifest"
         
         let mplugins = [
-          miradorZoomBugPlugin,
+          //miradorZoomBugPlugin,
           shareMenuPlugin,
           {
             ...fullResDownloadPlugin,
