@@ -143,6 +143,9 @@ button[aria-label="Toggle sidebar"] {
     height: 20px !important;
     margin-bottom: 1rem !important;
 }
+.mirador92, .mirador92 button { /*zoom buttons*/
+    z-index: 9000000000 !important;
+}
 .MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar */
     display: none !important;
 }
