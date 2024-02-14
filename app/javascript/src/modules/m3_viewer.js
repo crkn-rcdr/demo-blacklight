@@ -840,48 +840,5 @@ export default {
         }
 
         let miradorInstance = Mirador.viewer(mconfig, mplugins)
-
-
-        var queryParams = new URLSearchParams(window.location.search)
-        if(queryParams.has("q") && queryParams.get("q") != "") resetButton.style.display ="inherit"
-        else resetButton.style.display ="none"
-
-        
-        let first = true
-        miradorInstance.store.subscribe( () => {
-          if(first) {
-            let navs = document.getElementsByClassName('mirador-canvas-nav')
-            if(navs.length) {
-              let nav = navs[0]
-              let buttons = nav.getElementsByTagName("button")
-              console.log("buttons", buttons)
-
-              let zoomInButton = buttons[0];
-              let zoomOutButton = buttons[1];
-              let zoomReset = buttons[2];
-
-              let nextButton = buttons[3];
-              let prevButton = buttons[4];
-
-              nextButton.addEventListener("click", () => {
-                canvasIndex += 1
-                console.log("updating...")
-                let pageNum = canvasIndex + 1
-                queryParams.set("pageNum", pageNum)
-                history.pushState(null, null, "?"+queryParams.toString())
-              })
-              prevButton.addEventListener("click", () => {
-                canvasIndex -= 1
-                console.log("updating...")
-                let pageNum = canvasIndex + 1
-                queryParams.set("pageNum", pageNum)
-                history.pushState(null, null, "?"+queryParams.toString())
-              })
-
-              //mirador-thumbnail-nav-container aria-colindex
-            }
-          }
-          first = false
-        }) 
   }
 }
