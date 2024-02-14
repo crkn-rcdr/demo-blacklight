@@ -19,7 +19,7 @@ class FixedZoomControls extends ZoomControls {
     const { windowId, updateViewport, viewer } = this.props;
 
     console.log("?<<<<")
-    const zoom = viewer.zoom ? viewer.zoom : viewer.zoom + 1
+    const zoom = viewer.zoom + 1
     console.log(zoom)
 
     updateViewport(windowId, {
@@ -35,7 +35,7 @@ class FixedZoomControls extends ZoomControls {
     const { windowId, updateViewport, viewer } = this.props;
 
     console.log(">?>>>>")
-    const zoom = viewer.zoom ? viewer.zoom : viewer.zoom - 1
+    const zoom = viewer.zoom + 1
     console.log(zoom)
     updateViewport(windowId, {
       ...viewer,
