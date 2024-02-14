@@ -7,7 +7,7 @@ class FixedZoomControls extends ZoomControls {
    */
   constructor(props) {
     super(props);
-
+    console.log("??")
     this.handleZoomInClick = this.handleZoomInClick.bind(this);
     this.handleZoomOutClick = this.handleZoomOutClick.bind(this);
   }
@@ -17,6 +17,8 @@ class FixedZoomControls extends ZoomControls {
    */
   handleZoomInClick() {
     const { windowId, updateViewport, viewer } = this.props;
+
+    console.log("?<<<<")
 
     updateViewport(windowId, {
       ...viewer,
@@ -30,6 +32,7 @@ class FixedZoomControls extends ZoomControls {
   handleZoomOutClick() {
     const { windowId, updateViewport, viewer } = this.props;
 
+    console.log(">?>>>>")
     updateViewport(windowId, {
       ...viewer,
       zoom: viewer.zoom / 2,
