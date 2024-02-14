@@ -17,7 +17,8 @@ export default {
         let searchInput = document.getElementById("pvSearch")
         let resetButton = document.getElementById("pvSearchReset")
 
-        if(typeof resetButton === "undefined") return
+        console.log("rb", resetButton)
+        if(!resetButton) return
 
         resetButton.addEventListener("click", ()=>{
           searchInput.value = ''
