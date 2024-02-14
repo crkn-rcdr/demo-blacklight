@@ -20,8 +20,10 @@ class FixedZoomControls extends ZoomControls {
 
     console.log("?<<<<")
     console.log(viewer.zoom)
-    const zoom = viewer.zoom < 1 ? (viewer.zoom + 2) * 2 : viewer.zoom * 2
+    const zoom = viewer.zoom * 2
     console.log(zoom)
+
+    console.log(updateViewport)
 
     updateViewport(windowId, {
       ...viewer,
@@ -37,9 +39,10 @@ class FixedZoomControls extends ZoomControls {
 
     console.log(">?>>>>")
     console.log(viewer.zoom)
-    const zoom = viewer.zoom < 1 ? (viewer.zoom - 2) / 2 : viewer.zoom / 2
+    const zoom = viewer.zoom / 2
     console.log(zoom)
 
+    console.log(updateViewport)
     updateViewport(windowId, {
       ...viewer,
       zoom: zoom
