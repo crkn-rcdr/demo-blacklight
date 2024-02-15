@@ -101,7 +101,7 @@ button[aria-label="Toggle sidebar"] {
     border-top: 1px solid #dbdbdb !important;
     background-color: #ffffff !important;
 }
-.openseadragon-canvas {
+.openseadragon-container {
     top: 50px !important;
 }
 .mirador-osd-navigation {
@@ -167,7 +167,7 @@ button[aria-label="Toggle sidebar"] {
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
     left: 7px !important;
-    top: 55px !important;
+    top: 5px !important;
     z-index: 90000 !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
     border-radius: 25px !important;
