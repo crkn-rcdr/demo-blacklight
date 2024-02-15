@@ -101,7 +101,7 @@ button[aria-label="Toggle sidebar"] {
     border-top: 1px solid #dbdbdb !important;
     background-color: #ffffff !important;
 }
-.openseadragon-canvas {
+.mirador-osd-container > .openseadragon-container > .openseadragon-canvas {
     padding-top: 50px !important;
 }
 .mirador-osd-navigation {
