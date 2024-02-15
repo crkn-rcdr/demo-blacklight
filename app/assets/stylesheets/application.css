@@ -166,7 +166,7 @@ button[aria-label="Toggle sidebar"] {
     font-size: 1rem !important;
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
-    left: 35px !important;
+    left: 7px !important;
     top: 55px !important;
     z-index: 90000 !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
