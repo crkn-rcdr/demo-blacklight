@@ -848,5 +848,28 @@ export default {
         }
 
         let miradorInstance = Mirador.viewer(mconfig, mplugins)
+        console.log(miradorInstance)
+        
+        /*Enable keyboard nav of canvas controls*/
+        let zoomIns = document.querySelectorAll('[data-title="Zoom in"]')
+        console.log(zoomIns)
+        if(zoomIns.length) {
+          zoomIns[0].setAttribute("tabindex", "0")
+        }
+        let zoomOuts = document.querySelectorAll('[data-title="Zoom out"]')
+        console.log(zoomOuts)
+        if(zoomOuts.length) {
+          zoomOuts[0].setAttribute("tabindex", "0")
+        }
+        let resets = document.querySelectorAll('[data-title="Go home"]')
+        console.log(resets)
+        if(resets.length) {
+          resets[0].setAttribute("tabindex", "0")
+        }
+        let fullscreens = document.querySelectorAll('[data-title="Toggle full page"]')
+        console.log(fullscreens)
+        if(fullscreens.length) {
+          fullscreens[0].setAttribute("tabindex", "0")
+        }
   }
 }
