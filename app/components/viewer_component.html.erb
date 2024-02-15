@@ -41,11 +41,9 @@
         </form>
 
         <% if params[:q] && params[:q].length != 0 && params[:q] != "*:*" %>
-            <div class="card card-body">
-                <div class="pvSearchResults">
-                    <%= render(LegacyOcrSearchComponent.new(documentId: @documentId, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
-                </div>
-            </div> 
+            <div class="pvSearchResults">
+                <%= render(LegacyOcrSearchComponent.new(documentId: @documentId, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
+            </div>
         <% end %>
     </div>
     <div class="mv" id="page-viewer" style="overflow: hidden; width: 100%; min-height: 50rem !important; height: 60vh; position: relative;"></div>

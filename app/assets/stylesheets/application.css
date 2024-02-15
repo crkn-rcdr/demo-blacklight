@@ -207,6 +207,7 @@ div[title="Toggle full page"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column;
 }
 #pvSearch {
     color: black;
