@@ -180,7 +180,7 @@ class PDIIIFMenuItem extends Component {
     const { allowPdfDownload } = this.props;
 
     if (!hasChecked) {
-      return "Loading Printing Options";
+      return "Loading Print Options";
     }
 
     if (allowPdfDownload) {

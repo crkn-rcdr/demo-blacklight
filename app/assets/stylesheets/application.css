@@ -189,7 +189,10 @@ div[title="Toggle full page"] {
 }
 .mirador-osd-navigation > button {
     padding: 5px !important;
-  }
+}
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, 0px) scale(0.75) !important;
+}
 #page-viewer {
     background: white;
 }
