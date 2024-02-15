@@ -101,7 +101,7 @@ button[aria-label="Toggle sidebar"] {
     border-top: 1px solid #dbdbdb !important;
     background-color: #ffffff !important;
 }
-.openseadragon-container {
+.openseadragon-canvas {
     top: 50px !important;
 }
 .mirador-osd-navigation {
@@ -119,7 +119,7 @@ button[aria-label="Toggle sidebar"] {
     border-right: none !important;
     width: fit-content !important;
     background-color: transparent !important;
-    left: 40% !important;
+    left: 46% !important;
     z-index: 9000000 !important;
 }
 .mirador39 { /* side panel toggle button */
@@ -160,7 +160,7 @@ button[aria-label="Toggle sidebar"] {
     top: 65px !important;
 }
 div[title="Toggle full page"] {
-    display: none;
+    display: none !important;
 }
 #page-viewer {
     background: white;
@@ -228,6 +228,7 @@ input[type="search"]::-webkit-search-cancel-button {
 } 
 #pv-images-info {
     margin-bottom: 0.6rem !important;
+    width: fit-content !important;
 }
 #dl-menu {
     display: inline-flex !important;
