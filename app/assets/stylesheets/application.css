@@ -174,12 +174,15 @@ button[aria-label="Toggle sidebar"] {
 }
 div[title="Zoom in"] {
     margin-right: 5px !important;
+    cursor: pointer !important;
 }
 div[title="Zoom out"] {
     margin-right: 5px !important;
+    cursor: pointer !important;
 }
 div[title="Go home"] {
     margin-right: 5px !important;
+    cursor: pointer !important;
 }
 div[title="Toggle full page"] {
     display: none !important;
