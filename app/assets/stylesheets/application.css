@@ -133,6 +133,7 @@ button[aria-label="Toggle sidebar"] {
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
     padding-top: 0px !important;
+    border: none !important
 }
 .mirador6 {/* canvas thumbnail list */
     height: 94% !important;
