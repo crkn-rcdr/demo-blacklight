@@ -165,7 +165,7 @@ button[aria-label="Toggle sidebar"] {
 .MuiTypography-subtitle2 {
     font-size: 1rem !important;
 }
-.openseadragon-canvas+div{
+.mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
     left: 35px !important;
     top: 55px !important;
     z-index: 90000 !important;
