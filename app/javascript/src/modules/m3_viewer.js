@@ -14,24 +14,25 @@ import navControlsPlugin from '../plugins/navControlsPlugin'
 export default {
   init: function() {
         console.log(Mirador)
-        let searchInput = document.getElementById("pvSearch")
-        let resetButton = document.getElementById("pvSearchReset")
+        //let searchInput = document.getElementById("pvSearch")
+        //let resetButton = document.getElementById("pvSearchReset")
 
-        console.log("rb", resetButton)
-        if(!resetButton) return
+        //console.log("rb", resetButton)
+        let pageViewer = document.getElementById("page-viewer")
+        if(!pageViewer) return
 
-        resetButton.addEventListener("click", ()=>{
+        /*resetButton.addEventListener("click", ()=>{
           searchInput.value = ''
           // Construct URLSearchParams object instance from current URL querystring.
           var queryParams = new URLSearchParams(window.location.search)
           queryParams.set("pageNum", pageNum)
           if(queryParams.has("q")) queryParams.delete("q")
           history.pushState(null, null, "?"+queryParams.toString())
-        })
-        searchInput.addEventListener("keydown", () =>{
+        })*/
+        /*searchInput.addEventListener("keydown", () =>{
           if(searchInput.value === "") resetButton.style.display ="none"
           else resetButton.style.display ="inherit"
-        })
+        })*/
   
     
         const documentId = "oocihm.84056"//this.element.getAttribute("data-docid")
