@@ -797,63 +797,7 @@ export default {
             showNavigator: true,
             autoHideControls: false,
             showNavigationControl: true,
-            showFullPageControl: true,
-            navImages: {
-              zoomIn : {
-                REST: "zoomin.svg",
-                GROUP: "zoomin.svg",
-                HOVER: "zoomin.svg",
-                DOWN: "zoomin.svg"
-              },
-              zoomOut : {
-                REST: "zoomout.svg",
-                GROUP: "zoomout.svg",
-                HOVER: "zoomout.svg",
-                DOWN: "zoomout.svg"
-              },
-              home : {
-                REST: "home.svg",
-                GROUP: "home.svg",
-                HOVER: "home.svg",
-                DOWN: "home.svg"
-              },
-              fullpage : {
-                REST: "fullpage.svg",
-                GROUP: "fullpage.svg",
-                HOVER: "fullpage.svg",
-                DOWN: "fullpage.svg"
-              },
-              /*rotateleft : {
-                REST: "",
-                GROUP: "",
-                HOVER: "",
-                DOWN: ""
-              },
-              rotateright : {
-                REST: "",
-                GROUP: "",
-                HOVER: "",
-                DOWN: ""
-              },
-              flip : {
-                REST: "",
-                GROUP: "",
-                HOVER: "",
-                DOWN: ""
-              },*/
-              previous : {
-                REST: "prev.svg",
-                GROUP: "prev.svg",
-                HOVER: "prev.svg",
-                DOWN: "prev.svg"
-              },
-              next: {
-                REST: "next.svg",
-                GROUP: "next.svg",
-                HOVER: "next.svg",
-                DOWN: "next.svg"
-              }
-            }
+            showFullPageControl: true
           },
     
           export: {
