@@ -132,6 +132,7 @@ button[aria-label="Toggle sidebar"] {
 }
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
+    padding-top: 0px !important;
 }
 .mirador6 {/* canvas thumbnail list */
     height: 94% !important;
@@ -164,8 +165,9 @@ button[aria-label="Toggle sidebar"] {
     font-size: 1rem !important;
 }
 .openseadragon-canvas+div{
-    left: 15px !important;
+    left: 35px !important;
     top: 65px !important;
+    z-index: 90000 !important;
 }
 div[title="Zoom in"] {
     margin-right: 5px !important;
