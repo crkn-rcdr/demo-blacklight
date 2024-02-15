@@ -852,22 +852,22 @@ export default {
 
         miradorInstance.store.subscribe(() => {
           /*Enable keyboard nav of canvas controls*/
-          let zoomIns = document.querySelectorAll('[data-title="Zoom in"]')
+          let zoomIns = document.querySelectorAll('[title="Zoom in"]')
           console.log(zoomIns)
           if(zoomIns.length) {
             zoomIns[0].setAttribute("tabindex", "0")
           }
-          let zoomOuts = document.querySelectorAll('[data-title="Zoom out"]')
+          let zoomOuts = document.querySelectorAll('[title="Zoom out"]')
           console.log(zoomOuts)
           if(zoomOuts.length) {
             zoomOuts[0].setAttribute("tabindex", "0")
           }
-          let resets = document.querySelectorAll('[data-title="Go home"]')
+          let resets = document.querySelectorAll('[title="Go home"]')
           console.log(resets)
           if(resets.length) {
             resets[0].setAttribute("tabindex", "0")
           }
-          let fullscreens = document.querySelectorAll('[data-title="Toggle full page"]')
+          let fullscreens = document.querySelectorAll('[title="Toggle full page"]')
           console.log(fullscreens)
           if(fullscreens.length) {
             fullscreens[0].setAttribute("tabindex", "0")
