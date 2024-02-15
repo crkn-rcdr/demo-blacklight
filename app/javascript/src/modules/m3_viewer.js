@@ -769,7 +769,7 @@ export default {
     
           osdConfig: {
     
-            // Default config used for OpenSeadragon
+            // Default config used for OpenSeadragon https://openseadragon.github.io/docs/OpenSeadragon.html#.Options
     
             alwaysBlend: false,
     

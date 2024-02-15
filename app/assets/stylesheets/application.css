@@ -166,8 +166,11 @@ button[aria-label="Toggle sidebar"] {
 }
 .openseadragon-canvas+div{
     left: 35px !important;
-    top: 65px !important;
+    top: 55px !important;
     z-index: 90000 !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 10px;
 }
 div[title="Zoom in"] {
     margin-right: 5px !important;
