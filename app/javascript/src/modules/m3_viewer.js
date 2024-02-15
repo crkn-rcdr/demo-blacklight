@@ -634,7 +634,7 @@ export default {
     
             allowTopMenuButton: true, // Configure if window view and thumbnail display menu are visible or not
     
-            allowWindowSideBar: true, // Configure if side bar menu is visible or not
+            allowWindowSideBar: false, // Configure if side bar menu is visible or not
     
             authNewWindowCenter: "parent", // Configure how to center a new window created by the authentication flow. Options: parent, screen
     
@@ -735,7 +735,7 @@ export default {
     
             height: 5000, // height of the elastic mode's virtual canvas
     
-            showZoomControls: true, // Configure if zoom controls should be displayed by default
+            showZoomControls: false, // Configure if zoom controls should be displayed by default
     
             type: "mosaic", // Which workspace type to load by default. Other possible values are "elastic". If "mosaic" or "elastic" are not selected no worksapce type will be used.
     
