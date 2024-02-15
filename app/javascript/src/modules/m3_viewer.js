@@ -779,7 +779,6 @@ export default {
     
             preserveViewport: true,
     
-            showNavigationControl: false,
     
             zoomPerScroll: 1,
     
@@ -790,7 +789,17 @@ export default {
             gestureSettingsTouch: {
               scrollToZoom: false,
               dragToPan: false
-            }
+            },
+
+            minScrollDeltaTime: 0,
+            clickTimeThreshold: 0,
+            zoomPerSecond: 1.2,
+            showNavigator: true,
+
+            showNavigationControl: true,
+            showFullPageControl: true
+
+
     
           },
     
