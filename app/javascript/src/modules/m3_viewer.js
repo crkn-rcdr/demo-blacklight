@@ -783,7 +783,9 @@ export default {
             zoomPerScroll: 1,
     
             gestureSettingsMouse: {
-              scrollToZoom: false
+              scrollToZoom: false,
+              clickToZoom: false,
+              dblClickToZoom: false
             },
     
             gestureSettingsTouch: {
