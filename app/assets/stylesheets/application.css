@@ -159,6 +159,9 @@ button[aria-label="Toggle sidebar"] {
     left: 15px !important;
     top: 65px !important;
 }
+div[title="Toggle full page"] {
+    display: none;
+}
 #page-viewer {
     background: white;
 }
