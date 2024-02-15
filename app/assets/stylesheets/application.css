@@ -122,6 +122,9 @@ button[aria-label="Toggle sidebar"] {
     left: 46% !important;
     z-index: 9000000 !important;
 }
+.mirador-canvas-label {
+    display: none !important;
+}
 .mirador39 { /* side panel toggle button */
     margin-top: 1px !important;
 }
