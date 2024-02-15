@@ -797,6 +797,7 @@ export default {
             showNavigator: true,
             autoHideControls: false,
             showNavigationControl: true,
+            navigatorPosition: "BOTTOM_RIGHT",
             showFullPageControl: true
           },
     
