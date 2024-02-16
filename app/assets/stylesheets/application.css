@@ -123,7 +123,7 @@ button[aria-label="Toggle sidebar"] {
     z-index: 9000000 !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
     .mirador-canvas-nav { 
         left: 10px !important;
     }
