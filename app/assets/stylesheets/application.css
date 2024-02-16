@@ -122,6 +122,12 @@ button[aria-label="Toggle sidebar"] {
     left: 46% !important;
     z-index: 9000000 !important;
 }
+
+@media (max-width: 1400px) {
+    .mirador-canvas-nav { 
+        left: 10px !important;
+    }
+}
 .mirador-osd-info {
     width:fit-content !important;
     padding-top: 5px !important;
