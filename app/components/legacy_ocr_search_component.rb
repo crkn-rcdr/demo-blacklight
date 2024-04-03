@@ -1,10 +1,9 @@
 require 'view_component/version'
 
 class LegacyOcrSearchComponent < ViewComponent::Base
-    def initialize(documentId:, term:, prefix:)
+    def initialize(documentId:, term:)
         @documentId = documentId
         @term = term
-        @prefix = prefix
         puts term.length
         if @term.length != 0
             rsolr = RSolr.connect :url => 'http://blacklight.crkn-demo-test.ca:8983/solr/page'

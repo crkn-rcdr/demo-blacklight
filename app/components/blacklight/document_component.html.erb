@@ -18,7 +18,7 @@
       <% end %>
       <%= title %>
       <% if @component.to_s == 'div' %>
-        <%= render(ViewerComponent.new(documentId: @document.id, prefix: 'oocihm')) %>
+        <%= render(ViewerComponent.new(documentId: @document.id)) %>
       <% end %>
       <%= embed %>
       <%= content %>
@@ -47,7 +47,7 @@
         <%= partial %>
       <% end %>
       <% if @component.to_s == 'article' %>
-        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
+        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '')) do %><% end %>
       <% end %>
     </div>
 
