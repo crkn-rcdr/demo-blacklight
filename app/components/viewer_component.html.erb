@@ -1,7 +1,5 @@
 <div data-controller="iiif_viewer" data-docid="<%= @documentId %>">
 
-    <%= render(DocumentDownloadsComponent.new(documentId: @documentId, pageNum: params[:pageNum])) do %><% end %>
-
     <div id="pv-images-info" class="text-aligned">
         <span data-toggle="tooltip" data-placement="right" title="" data-original-title="Canadiana uses OCR (optical character recognition) to provide full-text search for printed documents.">
         </span>

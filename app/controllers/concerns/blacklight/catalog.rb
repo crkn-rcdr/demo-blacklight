@@ -46,6 +46,8 @@ module Blacklight::Catalog
     # get a single document from the index
     # to add responses for formats other than html or json see _Blacklight::Document::Export_
     def show
+      puts "ID"
+      puts params[:id]
       @document = search_service.fetch(params[:id])
   
       respond_to do |format|
