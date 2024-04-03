@@ -219,9 +219,7 @@ div[title="Toggle full page"] {
     flex-direction: column;
 }
 #pvSearch, .autocompleteText {
-    background: #3a3a3a !important;
     padding: 0.25rem 0.5rem !important;
-    color: white !important;
     border: none !important;
 }
 #pvSearchForm {
