@@ -220,7 +220,6 @@ div[title="Toggle full page"] {
 }
 #pvSearch, .autocompleteText {
     padding: 0.25rem 0.5rem !important;
-    border: none !important;
 }
 #pvSearchForm {
     padding: 0.5rem;
