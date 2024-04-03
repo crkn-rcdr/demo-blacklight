@@ -40,8 +40,9 @@ export default {
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
     
-    
-        let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
+        let apiPrefix =  "https://www.canadiana.ca/iiif/"
+        if(documentId.includes("ooga")) apiPrefix =  "https://nrcan.canadiana.ca/iiif/"
+        let manifest = apiPrefix+documentId+"/manifest"
         
         let mplugins = [
           //miradorZoomBugPlugin,
