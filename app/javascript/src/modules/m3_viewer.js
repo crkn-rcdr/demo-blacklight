@@ -35,7 +35,7 @@ export default {
         })*/
   
     
-        const documentId = this.element.getAttribute("data-docid")
+        const documentId = pageViewer.getAttribute("data-docid")
         let canvasIndex = 0
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
