@@ -42,17 +42,186 @@ footer {
 .text-lg-right {
     text-align: right !important;
 }
+<<<<<<< HEAD
 .centerPanel > .title {
     display: none !important;
 }
+=======
+.mosaic-window-body{
+    border: 1px solid #dbdbdb;
+    border-top: none;
+}
+.MuiToolbar-root {
+    border-bottom: 1px solid #dbdbdb;
+}
+.MuiPaper-elevation4 {
+    box-shadow: none !important;
+}
+.mirador4 .mosaic-tile {
+    box-shadow: none !important;
+}
+.MuiToolbar-dense {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}
+.mosaic-tile {
+    margin: 0 !important;
+}
+.mosaic-root {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+.MuiToolbar-root > .MuiTypography-root {
+    visibility: hidden;
+}
+.mirador-companion-window-header > h3, .mirador-companion-window-header > button {
+    display: none;
+}
+button[aria-label="Toggle sidebar"] {
+    display: none;  
+}
+.mosaic-window-body > section > div:nth-child(1) {
+    display: inline;
+    width: 100%;
+    position: absolute;
+    background: white;
+    height: 50px;
+    right: 0;
+    padding: 0;
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb !important;
+    z-index: 50;
+}
+.mosaic-window-body > section > div:nth-child(1) button { 
+    padding: 11px !important;
+}
+.mirador-thumb-navigation {
+    border-left: 1px solid #dbdbdb !important;
+    border-top: 1px solid #dbdbdb !important;
+    background-color: #ffffff !important;
+}
+.mirador-osd-container > .openseadragon-container > .openseadragon-canvas {
+    padding-top: 50px !important;
+}
+.mirador-osd-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mirador-canvas-nav { 
+    height: 3rem !important;
+    min-height: 50px !important;
+    background: #ffffff !important;
+    top: 0px !important;
+    border: 1px solid #dbdbdb !important;
+    border-left: none !important;
+    border-right: none !important;
+    width: fit-content !important;
+    background-color: transparent !important;
+    left: 46% !important;
+    z-index: 9000000 !important;
+}
+
+@media (max-width: 1000px) {
+    .mirador-canvas-nav { 
+        left: 10px !important;
+    }
+}
+.mirador-osd-info {
+    width:fit-content !important;
+    padding-top: 5px !important;
+    margin-left: 5px !important;
+}
+.mirador-canvas-label {
+    display: none !important;
+}
+.mirador39 { /* side panel toggle button */
+    margin-top: 1px !important;
+    padding-top: 0px !important;
+    border: none !important
+}
+.mirador6 {/* canvas thumbnail list */
+    height: 94% !important;
+    align-self: flex-end !important;
+}
+.mirador41 { /*side panel item wrapper */
+    border-bottom: none !important;
+}
+.mirador78 { /*side nav item header */
+    display: inline-flex !important;
+    height: 20px !important;
+    margin-bottom: 1rem !important;
+}
+.mirador92, .mirador92 button { /*zoom buttons*/
+    z-index: 9000000000 !important;
+}
+.MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar */
+    display: none !important;
+}
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+    background-color: rgb(151 151 151 / 8%) !important
+}
+.MuiIconButton-root {
+    color: black !important;
+}
+.mirador-canvas-nav+div { /*image tools*/
+    top: 56px !important;
+}
+.MuiTypography-subtitle2 {
+    font-size: 1rem !important;
+}
+.mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
+    left: 7px !important;
+    top: 55px !important;
+    z-index: 90000 !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 25px !important;
+    padding: 10px !important;
+}
+div[title="Zoom in"] {
+    margin-right: 5px !important;
+    cursor: pointer !important;
+}
+div[title="Zoom out"] {
+    margin-right: 5px !important;
+    cursor: pointer !important;
+}
+div[title="Go home"] {
+    margin-right: 5px !important;
+    cursor: pointer !important;
+}
+div[title="Toggle full page"] {
+    display: none !important;
+}
+.mirador-osd-navigation > button {
+    padding: 5px !important;
+}
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, 0px) scale(0.75) !important;
+}
+>>>>>>> usability-testing-mirador
 #page-viewer {
-    background: black;
+    background: white;
 }
 #pvToolbarTop {
-    background: #282828;
+    background: white;
     padding: 0.5rem;
-    color: white;
+    color: black;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
 }
+<<<<<<< HEAD
 #pvSearch, .autocompleteText {
     background: #3a3a3a !important;
     padding: 0.25rem 0.5rem !important;
@@ -63,16 +232,21 @@ footer {
     padding: 0.5rem;
 }
 #pvSearch { 
+=======
+#pvSearch {
+    color: black;
+    border-radius: 3px;
+>>>>>>> usability-testing-mirador
     max-width: 26rem;
     min-width: 19rem;
 }
 .pvSearchResults {
-    background: #282828;
+    background: white;
     padding: 0.5rem;
-    color: white;
+    color: black;
 }
 .pvSearchResult {
-    color: white !important;
+    color: black !important;
     margin-right: 0.5rem;
 }
 .pvSearchResults p {
@@ -89,8 +263,9 @@ footer {
     text-decoration: underline;
 }
 #pvToolbarBottom {
-    background: #282828;
+    background: white;
     padding: 0.2rem;
+<<<<<<< HEAD
 }
 .my-1 {
     background: #282828;
@@ -98,6 +273,11 @@ footer {
     margin-left: 0.4rem;
     border-radius: 0;
     border: none;
+=======
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+>>>>>>> usability-testing-mirador
 }
 .thumbsView{
     overflow-x: hidden !important;
@@ -108,6 +288,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #pvSearchReset {
     display: none;
+<<<<<<< HEAD
     border-radius:0 !important;
 }
 #pvSearchSubmit {
@@ -115,12 +296,19 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .pv-help-icon {
     margin-right: 0.4rem;
+=======
+}
+.pv-help-icon {
+    margin-right: 0.4rem;
+    margin-left: 3px;
+>>>>>>> usability-testing-mirador
 }
 .text-aligned {
     display: flex;
     align-items: center;
 }
 #download-help {
+<<<<<<< HEAD
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 }
@@ -140,4 +328,32 @@ input[type="search"]::-webkit-search-cancel-button {
     .uv .leftPanel .views {
         height: 93% !important;
     }
+=======
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+    /*border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;*/
+} 
+#pv-images-info {
+    margin-bottom: 0.6rem !important;
+    width: fit-content !important;  
+}
+#dl-menu {
+    display: inline-flex !important;
+    margin-bottom: 0.6rem !important;
+}
+#pvSearchForm {
+    display: inline;
+}
+#pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
+    padding: 0 !important;
+    background: white;
+    border: none;
+}
+#pvDownloadFull, #pvDownloadFull:hover{
+    color: #155e66 !important
+}
+section[id$="gallery"] {
+    border-top: 1px solid #dbdbdb !important;
+>>>>>>> usability-testing-mirador
 }

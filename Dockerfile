@@ -16,6 +16,12 @@ RUN gem install devise devise-guests
 
 RUN rails generate blacklight:install --devise --marc --solr_version=latest
 
+#RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+#RUN source ~/.bashrc
+#RUN nvm install 18
+#RUN corepack enable
+#RUN rails shakapacker:compile
+
 COPY . .
 
 EXPOSE 3000

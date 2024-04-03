@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: 159.203.33.98
+    hostname: blacklight.crkn-demo-test.ca
     port: 8983
     log_level: WARNING
     path: /solr/blacklight
@@ -9,14 +9,14 @@ production:
 
 development:
   solr:
-    hostname: 159.203.33.98
+    hostname: blacklight.crkn-demo-test.ca
     port: 8983
     log_level: WARNING
     path: /solr/coseblacklightarch2
 
 test:
   solr:
-    hostname: 159.203.33.98
+    hostname: blacklight.crkn-demo-test.ca
     port: 8983
     log_level: WARNING
     path: /solr/blacklight
