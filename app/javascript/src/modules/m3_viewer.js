@@ -1,5 +1,5 @@
 import Mirador from 'mirador/dist/es/src/index.js'
-import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin'
+import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin.js'
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
