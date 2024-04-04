@@ -192,6 +192,9 @@ div[title="Go home"] {
 div[title="Toggle full page"] {
     display: none !important;
 }
+button[aria-label="Window options"] {
+    display: none !important;
+}
 .mirador-osd-navigation > button {
     padding: 5px !important;
 }
