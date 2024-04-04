@@ -620,7 +620,7 @@ export default {
     
             allowMaximize: false, // Configure if windows can be maximized or not
     
-            allowTopMenuButton: true, // Configure if window view and thumbnail display menu are visible or not
+            allowTopMenuButton: false, // Configure if window view and thumbnail display menu are visible or not
     
             allowWindowSideBar: false, // Configure if side bar menu is visible or not
     
@@ -702,7 +702,7 @@ export default {
     
             defaultPosition: "off", // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
     
-            displaySettings: true, // Display the settings for this in WindowTopMenu
+            displaySettings: false, // Display the settings for this in WindowTopMenu
     
             height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
     
