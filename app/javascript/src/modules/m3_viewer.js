@@ -622,7 +622,7 @@ export default {
     
             allowMaximize: false, // Configure if windows can be maximized or not
     
-            allowTopMenuButton: true, // Configure if window view and thumbnail display menu are visible or not
+            allowTopMenuButton: false, // Configure if window view and thumbnail display menu are visible or not
     
             allowWindowSideBar: false, // Configure if side bar menu is visible or not
     
