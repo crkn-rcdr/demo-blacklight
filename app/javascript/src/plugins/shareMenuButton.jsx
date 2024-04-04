@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MoreVertIcon from '@mui/icons-material/MoreVertSharp';
 import Menu from '@mui/material/Menu';
-import MiradorMenuButton from '../containers/MiradorMenuButton';
-import { PluginHook } from './PluginHook';
+import MiradorMenuButton from 'mirador/dist/es/src/containers/MiradorMenuButton';
+import { PluginHook } from 'mirador/dist/es/src/components/PluginHook';
 import WindowTopBarPluginMenu from 'mirador/dist/es/src/components/WindowTopBarPluginMenu.js';
 
 /**
