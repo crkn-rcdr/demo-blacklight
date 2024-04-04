@@ -111,6 +111,5 @@ ShareWindowTopBarPluginMenu.defaultProps = {
 export default {
   target: 'WindowTopBarShareMenu',
   mode: 'wrap',
-  component: ShareWindowTopBarPluginMenu,
-  mapStateToProps
+  component: ShareWindowTopBarPluginMenu
 };
