@@ -57,7 +57,7 @@ const styles = ({ breakpoints, palette }) => {
       },
     },
     toggleButtonLabel : {
-      fontSize: '1rem'
+      fontSize: '0.8rem'
     }
   };
 };
@@ -182,7 +182,7 @@ class MiradorImageTools extends Component {
           onClick={this.toggleState}
         >
           { open ? <CloseSharpIcon /> : <TuneSharpIcon /> }
-          { open ? "" : <label className={classes.toggleButtonLabel}>Tools</label> }
+          { open ? "" : <label className={classes.toggleButtonLabel}>Image Tools</label> }
           
         </MiradorMenuButton>
       </div>
