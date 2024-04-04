@@ -56,22 +56,9 @@ export class ShareWindowTopBarPluginMenu extends WindowTopBarPluginMenu {
   }
 }
 
-ShareWindowTopBarPluginMenu.propTypes = {
-  anchorEl: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  container: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  menuIcon: PropTypes.element,
-  open: PropTypes.bool,
-  PluginComponents: PropTypes.arrayOf(
-    PropTypes.node,
-  ),
-  t: PropTypes.func.isRequired,
-  windowId: PropTypes.string.isRequired,
-};
-
-ShareWindowTopBarPluginMenu.defaultProps = {
-  anchorEl: null,
-  container: null,
-  menuIcon: <MoreVertIcon />,
-  open: false,
-  PluginComponents: [],
+export default {
+  target: 'WindowTopBarShareMenu',
+  mode: 'wrap',
+  component: ShareWindowTopBarPluginMenu,
+  mapStateToProps
 };
