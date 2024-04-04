@@ -14,7 +14,7 @@ export default [
     },
     mapStateToProps: (state, { windowId }) => ({
       containerId: getContainerId(state),
-      enabled: getWindowConfig(state, { windowId }).imageToolsEnabled || false,
+      enabled: getWindowConfig(state, { windowId }).imageToolsEnabled || true,
       open: getWindowConfig(state, { windowId }).imageToolsOpen || false,
       viewConfig: getViewer(state, { windowId }) || {},
     }),

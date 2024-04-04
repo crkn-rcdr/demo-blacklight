@@ -17,7 +17,6 @@ const MiradorImageToolsMenuItem = ({
     <MenuItem onClick={handleClickOpen}>
       <ListItemIcon>
         <TuneSharpIcon />
-        Tools
       </ListItemIcon>
       <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
         { enabled ? t('hide') : t('show') }
