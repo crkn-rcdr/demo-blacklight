@@ -4,12 +4,44 @@ import MoreVertIcon from '@material-ui/icons/MoreVertSharp';
 import Menu from '@material-ui/core/Menu';
 import MiradorMenuButton from 'mirador/dist/es/src/containers/MiradorMenuButton';
 import { PluginHook } from 'mirador/dist/es/src/components/PluginHook';
-import WindowTopBarPluginMenu from 'mirador/dist/es/src/components/WindowTopBarPluginMenu.js';
 
 /**
  *
  */
-export class ShareWindowTopBarPluginMenu extends WindowTopBarPluginMenu {
+export class ShareWindowTopBarPluginMenu extends Component {
+  /**
+   * constructor -
+   */
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchorEl: null,
+      open: false,
+    };
+    this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleMenuClose = this.handleMenuClose.bind(this);
+  }
+
+  /**
+   * Set the anchorEl state to the click target
+   */
+  handleMenuClick(event) {
+    this.setState({
+      anchorEl: event.currentTarget,
+      open: true,
+    });
+  }
+
+  /**
+   * Set the anchorEl state to null (closing the menu)
+   */
+  handleMenuClose() {
+    this.setState({
+      anchorEl: null,
+      open: false,
+    });
+  }
+
   /**
    * render component
    */
@@ -55,6 +87,26 @@ export class ShareWindowTopBarPluginMenu extends WindowTopBarPluginMenu {
     );
   }
 }
+
+ShareWindowTopBarPluginMenu.propTypes = {
+  anchorEl: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  container: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  menuIcon: PropTypes.element,
+  open: PropTypes.bool,
+  PluginComponents: PropTypes.arrayOf(
+    PropTypes.node,
+  ),
+  t: PropTypes.func.isRequired,
+  windowId: PropTypes.string.isRequired,
+};
+
+ShareWindowTopBarPluginMenu.defaultProps = {
+  anchorEl: null,
+  container: null,
+  menuIcon: <MoreVertIcon />,
+  open: false,
+  PluginComponents: [],
+};
 
 export default {
   target: 'WindowTopBarShareMenu',
