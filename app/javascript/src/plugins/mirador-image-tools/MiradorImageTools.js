@@ -179,7 +179,7 @@ class MiradorImageTools extends Component {
           onClick={this.toggleState}
         >
           { open ? <CloseSharpIcon /> : <TuneSharpIcon /> }
-          { open ? Close : Tools }
+          { open ? "" : "Tools" }
           
         </MiradorMenuButton>
       </div>
