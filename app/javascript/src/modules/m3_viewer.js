@@ -1,39 +1,22 @@
-import Mirador from 'mirador/dist/es/src/index.js'
-import miradorImageToolsPlugin from 'mirador-image-tools/es/plugins/miradorImageToolsPlugin.js'
-import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
+import mirador from 'https://cdn.jsdelivr.net/npm/mirador@4.0.0-alpha.2/+esm'
+import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin.js'
+import miradorShareDialogPlugin from '../plugins/mirador-share-plugin/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
-import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin'
-import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog'
-import shareMenuPlugin from '../plugins/shareMenuPlugin'
+import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
+import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
+import shareMenuPlugin from '../plugins/shareMenuPlugin.jsx'
 //import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
 import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
-import navControlsPlugin from '../plugins/navControlsPlugin'
+import navControlsPlugin from '../plugins/navControlsPlugin.jsx'
 
 export default {
   init: function() {
-        console.log(Mirador)
-        //let searchInput = document.getElementById("pvSearch")
-        //let resetButton = document.getElementById("pvSearchReset")
+        console.log(mirador)
 
-        //console.log("rb", resetButton)
         let pageViewer = document.getElementById("page-viewer")
         if(!pageViewer) return
-
-        /*resetButton.addEventListener("click", ()=>{
-          searchInput.value = ''
-          // Construct URLSearchParams object instance from current URL querystring.
-          var queryParams = new URLSearchParams(window.location.search)
-          queryParams.set("pageNum", pageNum)
-          if(queryParams.has("q")) queryParams.delete("q")
-          history.pushState(null, null, "?"+queryParams.toString())
-        })*/
-        /*searchInput.addEventListener("keydown", () =>{
-          if(searchInput.value === "") resetButton.style.display ="none"
-          else resetButton.style.display ="inherit"
-        })*/
-  
     
         const documentId = pageViewer.getAttribute("data-docid")
         let canvasIndex = 0
@@ -851,7 +834,7 @@ export default {
     
         }
 
-        let miradorInstance = Mirador.viewer(mconfig, mplugins)
+        let miradorInstance = mirador.viewer(mconfig, mplugins)
         console.log(miradorInstance)
 
         miradorInstance.store.subscribe(() => {
@@ -880,4 +863,10 @@ export default {
         
      
   }
+}
+
+
+window.document.onload = function(e){ 
+  console.log("document.onload", e, Date.now() ,window.tdiff,  
+  (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred) ); 
 }
