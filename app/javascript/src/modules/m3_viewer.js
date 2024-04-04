@@ -10,7 +10,7 @@ import shareMenuPlugin from '../plugins/shareMenuPlugin.jsx'
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
 import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
 import navControlsPlugin from '../plugins/navControlsPlugin.jsx'
-import miradorViewPlugin from '../plugins/miradorViewPlugin.js'
+import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
 
 export default {
   init: function() {

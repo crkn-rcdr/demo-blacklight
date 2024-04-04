@@ -1,9 +1,9 @@
-import { React, Component } from 'react';
+import React, { Component } from 'react';
 import WindowViewSettings from 'mirador/dist/es/src/containers/WindowViewSettings';
 
 /**
  */
-class ViewPlugin extends Component {
+export class ViewPlugin extends Component {
   /**
    * render
    * @return
