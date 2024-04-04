@@ -151,11 +151,6 @@ button[aria-label="Toggle sidebar"] {
 .mirador41 { /*side panel item wrapper */
     border-bottom: none !important;
 }
-.mirador78 { /*side nav item header */
-    display: inline-flex !important;
-    height: 20px !important;
-    margin-bottom: 1rem !important;
-}
 .mirador92, .mirador92 button { /*zoom buttons*/
     z-index: 9000000000 !important;
 }
