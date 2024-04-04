@@ -650,7 +650,7 @@ export default {
     
               // Configure which panels are visible in WindowSideBarButtons
     
-              info: true,
+              info: false,
     
               attribution: false,
     
