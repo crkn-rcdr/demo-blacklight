@@ -33,6 +33,7 @@ export default {
         
         let mplugins = [
           //miradorZoomBugPlugin,
+          miradorViewPlugin,
           shareMenuPlugin,
           {
             ...fullResDownloadPlugin,
@@ -46,7 +47,6 @@ export default {
             ...pdfDownloadPlugin,
             target: 'WindowTopBarShareMenu',
           },
-          miradorViewPlugin,
           miradorPDIIIFMenuItemPlugin,
           miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
