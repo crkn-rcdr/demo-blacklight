@@ -1,6 +1,6 @@
-import mirador from 'https://cdn.jsdelivr.net/npm/mirador@4.0.0-alpha.2/+esm'
-import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin.js'
-import miradorShareDialogPlugin from '../plugins/mirador-share-plugin/MiradorShareDialog.js'
+import Mirador from 'mirador/dist/es/src/index.js'
+import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin'
+import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
@@ -13,8 +13,11 @@ import navControlsPlugin from '../plugins/navControlsPlugin.jsx'
 
 export default {
   init: function() {
-        console.log(mirador)
+        console.log(Mirador)
+        //let searchInput = document.getElementById("pvSearch")
+        //let resetButton = document.getElementById("pvSearchReset")
 
+        //console.log("rb", resetButton)
         let pageViewer = document.getElementById("page-viewer")
         if(!pageViewer) return
     
@@ -834,7 +837,7 @@ export default {
     
         }
 
-        let miradorInstance = mirador.viewer(mconfig, mplugins)
+        let miradorInstance = Mirador.viewer(mconfig, mplugins)
         console.log(miradorInstance)
 
         miradorInstance.store.subscribe(() => {
@@ -863,10 +866,4 @@ export default {
         
      
   }
-}
-
-
-window.document.onload = function(e){ 
-  console.log("document.onload", e, Date.now() ,window.tdiff,  
-  (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred) ); 
 }

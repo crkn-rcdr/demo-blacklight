@@ -91,6 +91,7 @@ rails shakapacker:compile
 
 exit
 docker container restart demo-blacklight-web-1
+
 git add --all 
 git commit
 
