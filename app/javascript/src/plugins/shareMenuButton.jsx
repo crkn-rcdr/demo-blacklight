@@ -62,8 +62,16 @@ export class ShareWindowTopBarPluginMenu extends Component {
           selected={open}
           onClick={this.handleMenuClick}
         >
-          {menuIcon}
-          Download
+          <span style={{ 
+            display: 'flex', 
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            fontSize: '0.8rem'
+          }}>
+            {menuIcon}
+            <span>Download</span>
+          </span>
         </MiradorMenuButton>
 
         <Menu

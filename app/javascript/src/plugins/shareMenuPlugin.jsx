@@ -9,7 +9,7 @@ import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 const WindowTopBarShareMenu = (props) => (
   <ShareWindowTopBarPluginMenu
     {...props}
-    t={() => 'Download current image'}
+    t={() => 'Download options'}
     menuIcon={<DownloadIcon />}
   />
 )
