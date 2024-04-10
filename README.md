@@ -39,7 +39,7 @@ Create page_txt field in page core
 (On first run only) Run this script to add page search - https://github.com/crkn-rcdr/crkn-scripting/blob/main/export-alto/export.py
 
 Solr instance will be running at:
-http://localhost:8983
+http://solr:8983
 
 Blacklight instance will be running at:
 http://localhost:3000
@@ -56,8 +56,8 @@ Notes:
 * with docker compose up, use --force-recreate if you want to reset the contents of solr
 * or use this Solr API curl command:
 `curl -X POST -H 'Content-Type: application/json' 'http://crkn-solr.c7a.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'http://localhost:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'http://blacklight.crkn-demo-test.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 
 
 To install new javascript libraries enter the docker container.

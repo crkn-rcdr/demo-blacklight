@@ -6,7 +6,7 @@ class LegacyOcrSearchComponent < ViewComponent::Base
         @term = term
         puts term.length
         if @term.length != 0
-            rsolr = RSolr.connect :url => 'http://blacklight.crkn-demo-test.ca:8983/solr/page'
+            rsolr = RSolr.connect :url => 'http://solr:8983/solr/page'
             if term != "*:*"
                 @legacy_ocr_search_request= rsolr.get 'select', :params => {
                     :rows => 500,

@@ -160,7 +160,7 @@ Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms | Allocations:
 Blacklight::Exceptions::InvalidRequest (RSolr::Error::Http - 400 Bad Request
 Error: sort param field can't be found: pub_date_si
 
-URI: http://localhost:8983/solr/blacklight/select?wt=json&qt=*%3A*&q=*%3A*&df=title_tsim&qf=title_tsim%5E100+author_tsim%5E20+all_text_timv&facet=true&facet.field=format&facet.field=collection_tsim_str&facet.field=subject_ssim_str&facet.field=author_ssm_str&facet.field=subject_geo_ssim_str&facet.field=language_ssim_str&facet.field=published_ssm_str&facet.field=pub_date_si&f.published_ssm_str.facet.sort=index&f.published_ssm_str.facet.limit=11&rows=10&sort=score+desc%2C+pub_date_si+desc
+URI: http://solr:8983/solr/blacklight/select?wt=json&qt=*%3A*&q=*%3A*&df=title_tsim&qf=title_tsim%5E100+author_tsim%5E20+all_text_timv&facet=true&facet.field=format&facet.field=collection_tsim_str&facet.field=subject_ssim_str&facet.field=author_ssm_str&facet.field=subject_geo_ssim_str&facet.field=language_ssim_str&facet.field=published_ssm_str&facet.field=pub_date_si&f.published_ssm_str.facet.sort=index&f.published_ssm_str.facet.limit=11&rows=10&sort=score+desc%2C+pub_date_si+desc
 
 Backtrace: /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rsolr-2.5.0/lib/rsolr/client.rb:220:in `rescue in execute'
 /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rsolr-2.5.0/lib/rsolr/client.rb:208:in `execute'
@@ -266,7 +266,7 @@ Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms | Allocations:
 Blacklight::Exceptions::InvalidRequest (RSolr::Error::Http - 400 Bad Request
 Error: sort param field can't be found: pub_date_si
 
-URI: http://localhost:8983/solr/blacklight/select?wt=json&qt=*%3A*&q=*%3A*&df=title_tsim&qf=title_tsim%5E100+author_tsim%5E20+all_text_timv&facet=true&facet.field=format&facet.field=collection_tsim_str&facet.field=subject_ssim_str&facet.field=author_ssm_str&facet.field=subject_geo_ssim_str&facet.field=language_ssim_str&facet.field=published_ssm_str&facet.field=pub_date_si&f.published_ssm_str.facet.sort=index&f.published_ssm_str.facet.limit=11&rows=10&sort=score+desc%2C+pub_date_si+desc
+URI: http://solr:8983/solr/blacklight/select?wt=json&qt=*%3A*&q=*%3A*&df=title_tsim&qf=title_tsim%5E100+author_tsim%5E20+all_text_timv&facet=true&facet.field=format&facet.field=collection_tsim_str&facet.field=subject_ssim_str&facet.field=author_ssm_str&facet.field=subject_geo_ssim_str&facet.field=language_ssim_str&facet.field=published_ssm_str&facet.field=pub_date_si&f.published_ssm_str.facet.sort=index&f.published_ssm_str.facet.limit=11&rows=10&sort=score+desc%2C+pub_date_si+desc
 
 Backtrace: /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rsolr-2.5.0/lib/rsolr/client.rb:220:in `rescue in execute'
 /home/brittny/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rsolr-2.5.0/lib/rsolr/client.rb:208:in `execute'
@@ -4344,7 +4344,7 @@ Completed 500 Internal Server Error in 98ms (ActiveRecord: 37.6ms | Allocations:
 Blacklight::Exceptions::InvalidRequest (RSolr::Error::Http - 500 Internal Server Error
 Error: Query must not be null
 
-URI: http://localhost:8983/solr/blacklight/select?wt=json
+URI: http://solr:8983/solr/blacklight/select?wt=json
 Request Headers: {"Content-Type"=>"application/json"}
 Request Data: "{\"params\":{\"qt\":\"*:*\",\"df\":\"title_tsim\",\"qf\":\"title_tsim^100 author_tsim^20 all_text_timv\",\"fq\":[\"{!term f=format}electronic\"],\"facet\":true,\"facet.field\":[\"format\",\"collection_tsim_str\",\"subject_ssim_str\",\"author_ssm_str\",\"subject_geo_ssim_str\",\"language_ssim_str\",\"published_ssm_str\",\"pub_date_si\"],\"f.published_ssm_str.facet.sort\":\"index\",\"f.published_ssm_str.facet.limit\":11,\"rows\":10,\"sort\":\"score desc, pub_date_si desc\"},\"query\":{\"bool\":{\"must\":[\"\",\"*:*\"]}}}"
 
@@ -11169,7 +11169,7 @@ Completed 500 Internal Server Error in 72ms (ActiveRecord: 11.6ms | Allocations:
 Blacklight::Exceptions::InvalidRequest (RSolr::Error::Http - 500 Internal Server Error
 Error: Query must not be null
 
-URI: http://localhost:8983/solr/blacklight/select?wt=json
+URI: http://solr:8983/solr/blacklight/select?wt=json
 Request Headers: {"Content-Type"=>"application/json"}
 Request Data: "{\"params\":{\"qt\":\"*:*\",\"df\":\"title_tsim\",\"qf\":\"title_tsim^100 author_tsim^20 all_text_timv\",\"facet\":true,\"facet.field\":[\"format\",\"collection_tsim_str\",\"subject_ssim_str\",\"author_ssm_str\",\"subject_geo_ssim_str\",\"language_ssim_str\",\"published_ssm_str\",\"pub_date_si\"],\"f.published_ssm_str.facet.sort\":\"index\",\"f.published_ssm_str.facet.limit\":11,\"rows\":10,\"sort\":\"score desc, pub_date_si desc\"},\"query\":{\"bool\":{\"must\":[\"\",\"*:*\"]}}}"
 
