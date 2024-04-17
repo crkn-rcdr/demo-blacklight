@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import NavigationIcon from '@material-ui/icons/NavigateNext';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import classNames from 'classnames';
-import MiradorMenuButton from 'mirador/dist/es/src/containers/MiradorMenuButton';
 import ns from 'mirador/dist/es/src/config/css-ns';
 import Select from 'react-select';
 import * as actions from 'mirador/dist/es/src/state/actions';
@@ -13,6 +12,7 @@ import {
   getPreviousCanvasGrouping,
   getCanvases
 } from 'mirador/dist/es/src/state/selectors';
+import isEqual from 'lodash/isEqual'
 
 /**
  */
@@ -22,8 +22,8 @@ class ViewerNavigation extends Component {
    */
   render() {
     const {
-      hasNextCanvas, hasPreviousCanvas, setNextCanvas, setPreviousCanvas, t,
-      viewingDirection, setFirstCanvas, setLastCanvas, lastCanvas, firstCanvas
+      hasNextCanvas, hasPreviousCanvas, setNextCanvas, setPreviousCanvas, 
+      viewingDirection, setCanvas, lastCanvas, firstCanvas
     } = this.props;
 
     let htmlDir = 'ltr';
@@ -60,7 +60,7 @@ class ViewerNavigation extends Component {
             aria-label="Last Image" 
             title="First Image"
             disabled={!hasPreviousCanvas}
-            onClick={() => { hasPreviousCanvas && setFirstCanvas(firstCanvas); }}>
+            onClick={() => { hasPreviousCanvas && setCanvas(firstCanvas); }}>
             <SkipNextIcon style={previousIconStyle} />
           </button>
           <button 
@@ -87,7 +87,7 @@ class ViewerNavigation extends Component {
             aria-label="Last Image" 
             title="Last Image"
             disabled={!hasNextCanvas}
-            onClick={() => { hasNextCanvas && setLastCanvas(lastCanvas); }}>
+            onClick={() => { hasNextCanvas && setCanvas(lastCanvas); }}>
             <SkipNextIcon style={nextIconStyle} />
           </button>
         </div>
@@ -101,45 +101,57 @@ ViewerNavigation.propTypes = {
   hasPreviousCanvas: PropTypes.bool,
   setNextCanvas: PropTypes.func,
   setPreviousCanvas: PropTypes.func,
-  setFirstCanvas: PropTypes.func,
-  setLastCanvas: PropTypes.func,
+  setCanvas: PropTypes.func,
   t: PropTypes.func.isRequired,
   viewingDirection: PropTypes.string,
+  firstCanvas: PropTypes.string,
+  lastCanvas: PropTypes.string,
 };
 
-
 export class NavControlsPlugin extends Component {
+  state = {
+    firstCanvas: "",
+    lastCanvas: "",
+    selectOptions: [],
+    selectedOption: null
+  }
+
   constructor(props) {
     super(props);
   }
 
-  options = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ]
-
-  state = {
-    selectedOption: this.options[0],
-    options: this.options
-  };
-
   handleChange = (selectedOption) => {
+
+    console.log()
     this.setState({ selectedOption }, () =>
-      console.log(`Option selected:`, this.state.selectedOption)
+      this.props.setCanvas(selectedOption.value)
     );
-  };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!isEqual(this.props.canvases, prevProps.canvases)) {
+      this.state.selectOptions = this.props.canvases.map((canvas, index) => {
+        return {
+          value: canvas.id,
+          label: `Image ${index+1}`
+        }
+      })
+      this.state.selectedOption =  this.state.selectOptions[0]
+      this.state.canvasIds = this.props.canvases.map((canvas) => canvas.id)
+      this.state.firstCanvas = this.state.canvasIds[0]
+      this.state.lastCanvas = this.state.canvasIds.pop()
+    }
+  }
 
   render() {
-    const { windowId, hasNextCanvas, hasPreviousCanvas, viewingDirection, setNextCanvas, setPreviousCanvas, setFirstCanvas, setLastCanvas, lastCanvas, firstCanvas } = this.props
-    const { selectedOption, options} = this.state
-
+    const { windowId, hasNextCanvas, hasPreviousCanvas, viewingDirection, setNextCanvas, setPreviousCanvas, setCanvas } = this.props
+    const { firstCanvas, lastCanvas, selectOptions, selectedOption } = this.state
     return (
       <div  style={{zIndex: 1000000, position: "absolute", top: "0.6rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
         <Select
           value={selectedOption}
           onChange={this.handleChange}
-          options={options}
+          options={selectOptions}
         />
         <ViewerNavigation 
           windowId={windowId}
@@ -148,8 +160,7 @@ export class NavControlsPlugin extends Component {
           viewingDirection={viewingDirection}
           setNextCanvas={setNextCanvas}
           setPreviousCanvas={setPreviousCanvas}
-          setFirstCanvas={setFirstCanvas}
-          setLastCanvas={setLastCanvas}
+          setCanvas={setCanvas}
           lastCanvas={lastCanvas}
           firstCanvas={firstCanvas}
          />
@@ -163,8 +174,7 @@ const mapStateToProps = (state, { windowId }) => ({
   hasNextCanvas: !!getNextCanvasGrouping(state, { windowId }),
   hasPreviousCanvas: !!getPreviousCanvasGrouping(state, { windowId }),
   viewingDirection: getSequenceViewingDirection(state, { windowId }),
-  firstCanvas: getCanvases(state, { windowId }).map((canvas) => canvas.id)[0],
-  lastCanvas:  getCanvases(state, { windowId }).map((canvas) => canvas.id).pop()
+  canvases: getCanvases(state, { windowId })
 });
 
 /**
@@ -175,11 +185,8 @@ const mapStateToProps = (state, { windowId }) => ({
 const mapDispatchToProps = (dispatch, { windowId }) => ({
   setNextCanvas: (...args) => dispatch(actions.setNextCanvas(windowId)),
   setPreviousCanvas: (...args) => dispatch(actions.setPreviousCanvas(windowId)),
-  setFirstCanvas: (firstCanvas) => {
-    return dispatch(actions.setCanvas(windowId, firstCanvas))
-  },
-  setLastCanvas: (lastCanvas) => {
-    return dispatch(actions.setCanvas(windowId, lastCanvas))
+  setCanvas: (canvasId) => {
+    return dispatch(actions.setCanvas(windowId, canvasId))
   },
 });
 

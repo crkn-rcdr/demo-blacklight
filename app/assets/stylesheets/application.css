@@ -103,7 +103,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     z-index: 50;
 }
 .mosaic-window-body > section > div:nth-child(1) button { 
-    padding: 11px !important;
+    padding: 5px 10px !important;
 }
 .mirador-thumb-navigation {
     border-left: 1px solid #dbdbdb !important;
@@ -126,7 +126,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
-    left: 18rem !important;
+    left: 21rem !important;
     z-index: 9000000 !important;
 }
 
