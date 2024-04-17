@@ -122,11 +122,11 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     height: 4rem!important;
     min-height: 50px !important;
     background: #ffffff !important;
-    top: 0px !important;
+    top: 2px !important;
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
-    left: 1rem !important;
+    left: 18rem !important;
     z-index: 9000000 !important;
 }
 
@@ -199,8 +199,22 @@ div[title="Toggle full page"] {
 button[aria-label="Window options"] {
     display: none !important;
 }
-.mirador-osd-navigation > button {
-    padding: 5px !important;
+.mirador-osd-navigation {
+    display: none;
+}
+.mirador-osd-navigation-custom > button {
+    padding: 2px !important;
+    border-radius: 0;
+}
+.mirador-osd-navigation-custom > button svg {
+    width: 1.3em !important;
+    height: 1.3em !important;
+}
+.mirador-first-canvas-button {
+    margin-left: 0.5rem !important;
+}
+.mirador-last-canvas-button {
+    margin-right:0.5rem !important;
 }
 .MuiInputLabel-outlined.MuiInputLabel-shrink {
     transform: translate(14px, 0px) scale(0.75) !important;
@@ -332,4 +346,13 @@ button[aria-label="Expand image tools"] * {
 }
 button[aria-label="Expand image tools"] span label {
     margin-left: 0.5rem;
+}
+.MuiIconButton-root.Mui-disabled {
+    color: #c5c5c5 !important;
+}
+.css-13cymwt-control {
+    border: none !important;
+}
+.css-b62m3t-container {
+    height: fit-content;
 }

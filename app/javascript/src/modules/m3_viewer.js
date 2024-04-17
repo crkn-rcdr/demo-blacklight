@@ -5,12 +5,12 @@ import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
 import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
-import shareMenuPlugin from '../plugins/shareMenuPlugin.jsx'
-//import miradorZoomBugPlugin from '../plugins/miradorZoomBugPlugin'
+import downloadMenuPlugin from '../plugins/downloadMenuPlugin.jsx'
 import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
 import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
-import navControlsPlugin from '../plugins/navControlsPlugin.jsx'
+import pageNumPlugin from '../plugins/pageNumPlugin.jsx'
 import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
+import navControlsPlugin from '../plugins/navControls.jsx'
 
 export default {
   init: function() {
@@ -34,7 +34,7 @@ export default {
         let mplugins = [
           //miradorZoomBugPlugin,
           miradorViewPlugin,
-          shareMenuPlugin,
+          downloadMenuPlugin,
           {
             ...fullResDownloadPlugin,
             target: 'WindowTopBarShareMenu',
@@ -52,6 +52,7 @@ export default {
           miradorShareDialogPlugin,
           miradorDownloadDialogPlugin,
           ...miradorImageToolsPlugin,
+          pageNumPlugin,
           navControlsPlugin
         ]
     

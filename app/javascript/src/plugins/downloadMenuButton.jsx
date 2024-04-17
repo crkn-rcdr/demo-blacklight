@@ -8,7 +8,7 @@ import { PluginHook } from 'mirador/dist/es/src/components/PluginHook';
 /**
  *
  */
-export class ShareWindowTopBarPluginMenu extends Component {
+export class DownloadWindowTopBarPluginMenu extends Component {
   /**
    * constructor -
    */
@@ -96,7 +96,7 @@ export class ShareWindowTopBarPluginMenu extends Component {
   }
 }
 
-ShareWindowTopBarPluginMenu.propTypes = {
+DownloadWindowTopBarPluginMenu.propTypes = {
   anchorEl: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   container: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   menuIcon: PropTypes.element,
@@ -108,7 +108,7 @@ ShareWindowTopBarPluginMenu.propTypes = {
   windowId: PropTypes.string.isRequired,
 };
 
-ShareWindowTopBarPluginMenu.defaultProps = {
+DownloadWindowTopBarPluginMenu.defaultProps = {
   anchorEl: null,
   container: null,
   menuIcon: <MoreVertIcon />,
@@ -119,5 +119,5 @@ ShareWindowTopBarPluginMenu.defaultProps = {
 export default {
   target: 'WindowTopBarShareMenu',
   mode: 'wrap',
-  component: ShareWindowTopBarPluginMenu
+  component: DownloadWindowTopBarPluginMenu
 };

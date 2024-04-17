@@ -4,7 +4,7 @@ import {
   getCanvasIndex,
 } from 'mirador/dist/es/src/state/selectors'
 
-export class NavControlsPlugin extends Component {
+export class PageNumPlugin extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,11 +14,13 @@ export class NavControlsPlugin extends Component {
      TargetComponent, targetProps
     } = this.props;
 
-    return <TargetComponent {...targetProps} />;
+    return (
+      <TargetComponent {...targetProps} />
+    )
   }
 }
 
-NavControlsPlugin.propTypes = {
+PageNumPlugin.propTypes = {
   canvasIndex: PropTypes.number
 };
 
@@ -44,8 +46,8 @@ const mapStateToProps = (state, props) => {
 
 
 export default {
-  target: 'ViewerNavigation',
+  target: 'WindowCanvasNavigationControls',
   mode: 'wrap',
-  component: NavControlsPlugin,
+  component: PageNumPlugin,
   mapStateToProps
 };

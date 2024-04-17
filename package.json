@@ -49,6 +49,8 @@
     "pdfjs-dist": "^3.11.174",
     "pdiiif": "^0.1.5",
     "streamsaver": "^2.0.6",
-    "notistack": "^3.0.1"
+    "notistack": "^3.0.1",
+    "react-select": "5.8.0",
+    "classnames": "^2.5.1"
   }
 }

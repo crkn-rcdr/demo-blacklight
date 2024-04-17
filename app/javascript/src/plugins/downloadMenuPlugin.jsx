@@ -2,12 +2,12 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
 import { withPlugins } from 'mirador/dist/es/src/extend/withPlugins';
-import { ShareWindowTopBarPluginMenu } from './shareMenuButton.jsx';
+import { DownloadWindowTopBarPluginMenu } from './downloadMenuButton.jsx';
 import { getContainerId } from 'mirador/dist/es/src/state/selectors';
 import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 
 const WindowTopBarShareMenu = (props) => (
-  <ShareWindowTopBarPluginMenu
+  <DownloadWindowTopBarPluginMenu
     {...props}
     t={() => 'Download options'}
     menuIcon={<DownloadIcon />}
