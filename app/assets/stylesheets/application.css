@@ -158,8 +158,17 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
     background-color: rgb(151 151 151 / 8%) !important
 }
-.MuiIconButton-root {
-    color: black !important;
+.MuiIconButton-root, .MuiSvgIcon-root {
+    color: #666 !important;
+}
+.MuiSvgIcon-colorSecondary {
+    color:#155e66 !important;
+}
+.MuiIconButton-label span, .MuiIconButton-label label, .MuiFormControlLabel-label, .css-19bb58m {
+    color: #666 !important;
+}
+.mirador21 {
+    color: #155e66 !important;
 }
 .mirador-canvas-nav+div { /*image tools*/
     top: 73px !important;
@@ -230,6 +239,10 @@ button[aria-label="Window options"] {
 }
 #pvSearch, .autocompleteText {
     padding: 0.25rem 0.5rem !important;
+    border-radius: var(--bs-border-radius) 0px 0px var(--bs-border-radius);
+}
+#item-search-submit {
+    border-radius: 0px var(--bs-border-radius) var(--bs-border-radius) 0px;
 }
 #pvSearchForm {
     padding: 0.5rem;
@@ -322,9 +335,13 @@ button[aria-label="Expand image tools"]{
 }
 div[title="Zoom in"], div[title="Zoom out"], div[title="Go home"] {
     border-radius: 50% !important;
+    opacity: 0.65;
 }
 div[title="Zoom in"]:hover, div[title="Zoom out"]:hover, div[title="Go home"]:hover {
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.01) !important;
 }
 div[title="Zoom in"] img:nth-child(2), div[title="Zoom in"] img:nth-child(2), div[title="Zoom in"] img:nth-child(3) {
     display: none;
@@ -341,8 +358,11 @@ button[aria-label="Expand image tools"] * {
 button[aria-label="Expand image tools"] span label {
     margin-left: 0.5rem;
 }
-.MuiIconButton-root.Mui-disabled {
-    color: #c5c5c5 !important;
+button:disabled{
+    color: #d6d6d6 !important;
+}
+button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
+    color: #d6d6d6 !important;
 }
 .css-13cymwt-control {
     border: none !important;
@@ -352,4 +372,14 @@ button[aria-label="Expand image tools"] span label {
 }
 .MuiListItem-button {
     background-color: white !important;
+}
+.css-1xc3v61-indicatorContainer {
+    color: #666 !important;
+}
+.css-1dimb5e-singleValue {
+    color: #666 !important;
+    font-size: 0.8rem !important;
+}
+.mirador85 {
+    color: #666 !important;
 }
