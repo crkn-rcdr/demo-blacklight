@@ -155,7 +155,7 @@ export class NavControlsPlugin extends Component {
     const { windowId, hasNextCanvas, hasPreviousCanvas, viewingDirection, setNextCanvas, setPreviousCanvas, setCanvas } = this.props
     const { firstCanvas, lastCanvas, selectOptions, selectedOption } = this.state
     return (
-      <div  style={{zIndex: 1000000, position: "absolute", top: "0.6rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
+      <div  style={{zIndex: 1000000, position: "absolute", top: "3.9rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
         <Select
           value={selectedOption}
           onChange={this.handleChange}

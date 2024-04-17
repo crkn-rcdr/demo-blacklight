@@ -7,44 +7,8 @@
         <span>57 images, 55 with full-text search</span>
     </div>
 
-    <div id="pvToolbarTop" aria-label="Viewer controls">
-        <form id="pvSearchForm" class="DocSearch-Form" method="GET">
-            <label class="DocSearch-MagnifierLabel" for="docsearch-input" id="docsearch-label">
-                <span class="visually-hidden">Search within this item</span>
-            </label>
-            
-            <span class="d-inline-flex">
-                <input type="hidden" name="pageNum" value="1" /> 
-                <input 
-                id="pvSearch" 
-                class="DocSearch-Input search-q q form-control"
-                aria-autocomplete="both" 
-                aria-labelledby="docsearch-label" 
-                autocomplete="off" 
-                autocorrect="off" 
-                autocapitalize="off" 
-                enterkeyhint="search" 
-                spellcheck="false" 
-                placeholder="Search within images..."
-                type="search"
-                name="q"
-                value="<%= params[:q] %>"/>
-                <button type="submit" id="item-search-submit" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                    </svg>
-                </button>
-                <!--button id="pvSearchReset" class="btn btn-secondary">Reset</button-->
-            </span>
-        </form>
-
-        <% if params[:q] && params[:q].length != 0 && params[:q] != "*:*" %>
-            <div class="pvSearchResults">
-                <%= render(LegacyOcrSearchComponent.new(documentId: @documentId, term: params[:q] || '')) do %><% end %>
-            </div>
-        <% end %>
-    </div>
     <div class="mv" data-docid="<%= @documentId %>" id="page-viewer" style="overflow: hidden; width: 100%; min-height: 50rem !important; height: 60vh; position: relative;"></div>
+
 
     <div id="download-help" class="text-aligned">
         <img class="pv-help-icon" src="/help.png" width="19" height="19" class="" alt=""/>

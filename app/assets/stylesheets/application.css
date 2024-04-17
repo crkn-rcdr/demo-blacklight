@@ -111,7 +111,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     background-color: #ffffff !important;
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas {
-    padding-top: 50px !important;
+    padding-top: 125px !important;
 }
 .mirador-osd-navigation {
     display: flex;
@@ -122,12 +122,14 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     height: 4rem!important;
     min-height: 50px !important;
     background: #ffffff !important;
-    top: 2px !important;
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
     left: 49% !important;
     z-index: 9000000 !important;
+    color: #666 !important;
+    position: absolute !important;
+    top: 3.4rem !important;
 }
 .mirador-osd-info {
     width:fit-content !important;
@@ -171,18 +173,21 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     color: #155e66 !important;
 }
 .mirador-canvas-nav+div { /*image tools*/
-    top: 73px !important;
+    top: 8rem !important;
 }
 .MuiTypography-subtitle2 {
     font-size: 1rem !important;
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
     left: 7px !important;
-    top: 73px !important;
+    top: 8rem !important;
     z-index: 90000 !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
     border-radius: 25px !important;
     padding: 10px !important;
+}
+.mirador-osd-container {
+   border-top: 1px solid #dbdbdb;
 }
 div[title="Zoom in"] {
     margin-right: 5px !important;
@@ -225,18 +230,6 @@ button[aria-label="Window options"] {
 #page-viewer {
     background: white;
 }
-#pvToolbarTop {
-    background: white;
-    padding: 0.5rem;
-    color: black;
-    border-top: 1px solid #dbdbdb;
-    border-left: 1px solid #dbdbdb;
-    border-right: 1px solid #dbdbdb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
-}
 #pvSearch, .autocompleteText {
     padding: 0.25rem 0.5rem !important;
     border-radius: var(--bs-border-radius) 0px 0px var(--bs-border-radius);
@@ -263,15 +256,6 @@ button[aria-label="Window options"] {
 .pvSearchResults p {
     margin-top: 0.2rem;
     margin-bottom: 0.5rem !important; 
-}
-#pvToolbarTop .pv-go-to-index {
-    color: #25a8c4 !important;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-#pvToolbarTop .pv-go-to-index:hover, #pvToolbarTop .pv-go-to-index:active {
-    text-decoration: underline;
 }
 #pvToolbarBottom {
     background: white;
@@ -325,7 +309,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 section[id$="gallery"] {
     border-top: 1px solid #dbdbdb !important;
-    padding-top: 73px !important;
+    padding-top: 105px !important;
 }
 button[aria-label="Download options"] {
     border-radius: 0 !important;
@@ -380,6 +364,26 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     color: #666 !important;
     font-size: 0.8rem !important;
 }
-.mirador85 {
-    color: #666 !important;
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.container-flex .card {
+    margin-left:1rem;
+    margin-bottom:1rem;
+}
+.card {
+    width: 18rem;
+}
+#pvToolbarTop {
+    width:100%;
+    display: flex;
+}
+.fullscreen {
+    bottom: 0;
+    height: auto !important;
+}
+.MuiAppBar-root {
+    top:3.5rem;
 }

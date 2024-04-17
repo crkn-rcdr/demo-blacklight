@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  #mount IiifViewer::Engine, at: "/iiif_viewer"
-  #mount LegacyOcrSearch::Engine, at: "/legacy_ocr_search"
-
   get 'download/:filename', to: 'downloads#index'
+  get 'legacy/:id', to: 'legacy_search#index'
 
   mount Blacklight::Engine => '/'
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
@@ -26,9 +24,4 @@ Rails.application.routes.draw do
       delete 'clear'
     end
   end
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

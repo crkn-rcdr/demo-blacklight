@@ -11,6 +11,8 @@ import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
 import pageNumPlugin from '../plugins/pageNumPlugin.jsx'
 import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
 import navControlsPlugin from '../plugins/navControls.jsx'
+import legacySearchPlugin from '../plugins/legacySearchPlugin.jsx'
+
 
 export default {
   init: function() {
@@ -53,7 +55,8 @@ export default {
           miradorDownloadDialogPlugin,
           ...miradorImageToolsPlugin,
           pageNumPlugin,
-          navControlsPlugin
+          navControlsPlugin,
+          legacySearchPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
@@ -866,7 +869,6 @@ export default {
             fullscreens[0].setAttribute("tabindex", "0")
           }
         })
-        
      
   }
 }
