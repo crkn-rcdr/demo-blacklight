@@ -118,18 +118,26 @@ export class NavControlsPlugin extends Component {
 
   constructor(props) {
     super(props);
+    this.state.selectOptions = this.props.canvases?.map((canvas, index) => {
+      return {
+        value: canvas.id,
+        label: `Image ${index+1}`
+      }
+    })
+    this.state.selectedOption =  this.state.selectOptions?.[0]
+    this.state.canvasIds = this.props.canvases?.map((canvas) => canvas.id)
+    this.state.firstCanvas = this.state.canvasIds?.[0]
+    this.state.lastCanvas = this.state.canvasIds?.pop()
   }
 
   handleChange = (selectedOption) => {
-
-    console.log()
     this.setState({ selectedOption }, () =>
       this.props.setCanvas(selectedOption.value)
     );
   }
 
   componentDidUpdate(prevProps) {
-    if (!isEqual(this.props.canvases, prevProps.canvases)) {
+    if (this.props.canvases && !isEqual(this.props.canvases, prevProps.canvases)) {
       this.state.selectOptions = this.props.canvases.map((canvas, index) => {
         return {
           value: canvas.id,

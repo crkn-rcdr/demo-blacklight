@@ -126,14 +126,8 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
-    left: 21rem !important;
+    left: 49% !important;
     z-index: 9000000 !important;
-}
-
-@media (max-width: 1000px) {
-    .mirador-canvas-nav { 
-        left: 10px !important;
-    }
 }
 .mirador-osd-info {
     width:fit-content !important;
@@ -355,4 +349,7 @@ button[aria-label="Expand image tools"] span label {
 }
 .css-b62m3t-container {
     height: fit-content;
+}
+.MuiListItem-button {
+    background-color: white !important;
 }
