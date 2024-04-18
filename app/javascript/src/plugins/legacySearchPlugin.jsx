@@ -3,12 +3,18 @@ import * as actions from 'mirador/dist/es/src/state/actions';
 import {
   getCanvases
 } from 'mirador/dist/es/src/state/selectors';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
 
 export class LegacySearchPlugin extends Component {
 
   state = {
     query: '',
-    results: []
+    results: [],
+    currentViewIndex: 0,
+    resultsListOpen: false,
+    resultsMenuOpen: false
   }
 
   constructor(props) {
@@ -19,28 +25,30 @@ export class LegacySearchPlugin extends Component {
     this.state.query = query ? query : ""
   }
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption }, () =>
-      this.props.setCanvas(selectedOption.value)
-    );
-  }
-
   handleSearch = () => {
     fetch('/legacy/84056?' + new URLSearchParams({
         q: this.state.query
     })).then(response => {
       response.json().then(content => {
         this.state.results = content
-        console.log("h", this.state.results)
+        this.state.resultsListOpen = true
         this.forceUpdate()
       })
     })
   }
+/*
+  handleCardClick = (windowId, result, canvas) => {
+    console.log("r", this.props.setCanvas, canvas)
+    this.state.currentViewIndex = result
+    this.state.resultsListOpen = false
+    this.state.resultsMenuOpen = true
+    this.forceUpdate()
+  }*/
   
   render() {
-    const { windowId, canvases } = this.props
+    const { windowId, canvases, setCanvas } = this.props
     return (
-      <div className={this.state.results.length ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "0", left: "0", padding:"0.5rem 1rem", height: "fit-content", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
+      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "0", left: "0", padding:"0.5rem 1rem", height: "fit-content", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
         <div id="pvToolbarTop" aria-label="Viewer controls">
             <input 
             id="pvSearch" 
@@ -70,23 +78,52 @@ export class LegacySearchPlugin extends Component {
                 </svg>
             </button>
         </div>
-        <div class="container-fluid container-flex">
-          {this.state.results.map((result) => (
-            <a href={"?pageNum="+result+"&q="+this.state.query}>
-              <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Image {result}</h5>
-                    <a href={"?pageNum="+result+"&q="+this.state.query} class="btn btn-primary">Go to page</a>
-                </div>
-              </div>
-            </a>))}
+        <div class="container-fluid container-flex card-section">
+          { this.state.resultsListOpen ? this.state.results.map((result) => (
+            <Card className='mui-card' onClick={() => {
+              this.state.currentViewIndex = result
+              this.state.resultsListOpen = false
+              this.state.resultsMenuOpen = true
+              console.log(windowId, canvases[result-1].id)
+              setCanvas(canvases[result-1].id)
+              this.forceUpdate()
+            }}>
+              <CardHeader
+                title={"Image " + result}
+              />
+              <CardMedia
+                image={canvases[result-1].__jsonld.items[0].items[0].body.id}
+                height="390px"
+                title="Paella dish"
+              />
+            </Card>
+          )) : this.state.resultsMenuOpen ?
+            <div className="legacy-search-menu">
+              all results
+              image {result}
+              result 3 of 15
+
+              previous result
+              next result
+            </div> 
+            : ""
+          }
         </div>
+
+        
       </div>
     )
   }
 }
 
-/** */
+/**
+ *               <!--div class="card">
+                <img src={canvases[result-1].__jsonld.items[0].items[0].body.id} class="card-img-top" alt="..."/>
+                <div class="card-body">
+                    <a href={"?pageNum="+result+"&q="+this.state.query}>Image {result}</a>
+                </div>
+              </div-->
+ */
 const mapStateToProps = (state, { windowId }) => ({
   canvases: getCanvases(state, { windowId })
 });
