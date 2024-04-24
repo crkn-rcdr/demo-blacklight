@@ -6,15 +6,18 @@ import {
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 export class LegacySearchPlugin extends Component {
 
   state = {
     query: '',
     results: [],
-    currentViewIndex: 0,
+    currentResultIndex: 0,
+    currentCanvasIndex: 0,
     resultsListOpen: false,
-    resultsMenuOpen: false
+    resultsMenuOpen: false,
   }
 
   constructor(props) {
@@ -79,9 +82,10 @@ export class LegacySearchPlugin extends Component {
             </button>
         </div>
         <div class="container-fluid container-flex card-section">
-          { this.state.resultsListOpen ? this.state.results.map((result) => (
+          { this.state.resultsListOpen ? this.state.results.map((result, index) => (
             <Card className='mui-card' onClick={() => {
-              this.state.currentViewIndex = result
+              this.state.currentCanvasIndex = result
+              this.state.currentResultIndex = index
               this.state.resultsListOpen = false
               this.state.resultsMenuOpen = true
               console.log(windowId, canvases[result-1].id)
@@ -99,12 +103,34 @@ export class LegacySearchPlugin extends Component {
             </Card>
           )) : this.state.resultsMenuOpen ?
             <div className="legacy-search-menu">
-              all results
-              image {result}
-              result 3 of 15
-
-              previous result
-              next result
+              <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
+                <Button variant="contained" color="primary" onClick={() => {
+                  this.state.resultsListOpen = true
+                  this.state.resultsMenuOpen = false
+                  this.forceUpdate()
+                }}
+                  className="btn-ghost btn-icon"
+                  style={{marginLeft: "1rem"}}>
+                  <ArrowBackIcon />
+                  All results
+                </Button>
+              </div>
+              <div style={{display : "flex", justifyContent: "center", alignItems: "center", color: "#666"}} className="MuiTypography-caption">
+                <span style={{paddingRight : "0.6rem", borderRight: "1px solid #dbdbdb"}}>
+                  Image {this.state.currentCanvasIndex}
+                </span>
+                <span style={{marginLeft: "0.5rem"}}>
+                  Result {this.state.currentResultIndex+1} of {this.state.results.length}
+                </span>
+              </div>
+              <div style={{display : "flex", justifyContent: "flex-end", alignItems: "center"}}>
+                <Button variant="contained" className="btn-ghost">
+                  previous result
+                </Button>
+                <Button variant="contained" className="btn-ghost">
+                  next result
+                </Button>
+              </div>
             </div> 
             : ""
           }

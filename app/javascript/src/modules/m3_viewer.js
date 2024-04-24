@@ -12,7 +12,7 @@ import pageNumPlugin from '../plugins/pageNumPlugin.jsx'
 import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
 import navControlsPlugin from '../plugins/navControls.jsx'
 import legacySearchPlugin from '../plugins/legacySearchPlugin.jsx'
-
+import textOverlayPlugin from 'mirador-textoverlay/es';
 
 export default {
   init: function() {
@@ -56,7 +56,8 @@ export default {
           ...miradorImageToolsPlugin,
           pageNumPlugin,
           navControlsPlugin,
-          legacySearchPlugin
+          legacySearchPlugin,
+          textOverlayPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
