@@ -10,6 +10,7 @@ import {
   getSequenceViewingDirection,
   getNextCanvasGrouping,
   getPreviousCanvasGrouping,
+  getCurrentCanvas,
   getCanvases
 } from 'mirador/dist/es/src/state/selectors';
 import isEqual from 'lodash/isEqual'
@@ -137,6 +138,19 @@ export class NavControlsPlugin extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    console.log(this.props.currentCanvas, prevProps.currentCanvas)
+    if(this.props.currentCanvas.id !== prevProps.currentCanvas?.id) {
+      let index = 0
+      for(let canvas of this.props.canvases) {
+        if (canvas['id'] === this.props.currentCanvas.id) break
+        index++
+      }
+      this.state.selectedOption = {
+        value: this.props.currentCanvas.id,
+        label: `Image ${index+1}`
+      }
+      this.forceUpdate()
+    }
     if (this.props.canvases && !isEqual(this.props.canvases, prevProps.canvases)) {
       this.state.selectOptions = this.props.canvases.map((canvas, index) => {
         return {
@@ -144,10 +158,11 @@ export class NavControlsPlugin extends Component {
           label: `Image ${index+1}`
         }
       })
-      this.state.selectedOption =  this.state.selectOptions[0]
+      this.state.selectedOption = this.state.selectOptions[0]
       this.state.canvasIds = this.props.canvases.map((canvas) => canvas.id)
       this.state.firstCanvas = this.state.canvasIds[0]
       this.state.lastCanvas = this.state.canvasIds.pop()
+      this.forceUpdate()
     }
   }
 
@@ -155,7 +170,7 @@ export class NavControlsPlugin extends Component {
     const { windowId, hasNextCanvas, hasPreviousCanvas, viewingDirection, setNextCanvas, setPreviousCanvas, setCanvas } = this.props
     const { firstCanvas, lastCanvas, selectOptions, selectedOption } = this.state
     return (
-      <div  style={{zIndex: 1000000, position: "absolute", top: "3.9rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
+      <div  style={{zIndex: 1000000, position: "absolute", top: "0.6rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
         <Select
           value={selectedOption}
           onChange={this.handleChange}
@@ -182,6 +197,7 @@ const mapStateToProps = (state, { windowId }) => ({
   hasNextCanvas: !!getNextCanvasGrouping(state, { windowId }),
   hasPreviousCanvas: !!getPreviousCanvasGrouping(state, { windowId }),
   viewingDirection: getSequenceViewingDirection(state, { windowId }),
+  currentCanvas: getCurrentCanvas(state, { windowId }),
   canvases: getCanvases(state, { windowId })
 });
 
@@ -202,7 +218,7 @@ export default {
   component: NavControlsPlugin,
   mode: 'add',
   name: 'NavControlsPlugin',
-  target: 'OpenSeadragonViewer',
+  target: 'WindowTopBarPluginArea',
   mapStateToProps,
   mapDispatchToProps
 };

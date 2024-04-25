@@ -94,7 +94,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     width: 100%;
     position: absolute;
     background: white;
-    height: 50px;
+    height: 58px;
     right: 0;
     padding: 0;
     top: 0;
@@ -125,15 +125,14 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
-    left: 49% !important;
-    z-index: 9000000 !important;
+    left: 19.5rem !important;
+    z-index: 10 !important;
     color: #666 !important;
     position: absolute !important;
     top: 3.4rem !important;
 }
 .mirador-osd-info {
     width:fit-content !important;
-    padding-top: 5px !important;
     margin-left: 5px !important;
 }
 .mirador-canvas-label {
@@ -174,6 +173,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 }
 .mirador-canvas-nav+div { /*image tools*/
     top: 8rem !important;
+    z-index: 10 !important;
 }
 .MuiTypography-subtitle2 {
     font-size: 1rem !important;
@@ -181,7 +181,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
     left: 7px !important;
     top: 8rem !important;
-    z-index: 90000 !important;
+    z-index: 10 !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
     border-radius: 25px !important;
     padding: 10px !important;
@@ -309,7 +309,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 section[id$="gallery"] {
     border-top: 1px solid #dbdbdb !important;
-    padding-top: 105px !important;
+    margin-top: 115px;
 }
 button[aria-label="Download options"] {
     border-radius: 0 !important;
@@ -382,7 +382,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 }
 .fullscreen {
     bottom: 0;
-    height: auto !important;
+    height: 82vh !important;
 }
 .MuiAppBar-root {
     top:3.5rem;

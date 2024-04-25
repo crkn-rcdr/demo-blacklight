@@ -8,6 +8,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export class LegacySearchPlugin extends Component {
 
@@ -28,30 +29,33 @@ export class LegacySearchPlugin extends Component {
     this.state.query = query ? query : ""
   }
 
-  handleSearch = () => {
-    fetch('/legacy/84056?' + new URLSearchParams({
-        q: this.state.query
-    })).then(response => {
-      response.json().then(content => {
-        this.state.results = content
-        this.state.resultsListOpen = true
-        this.forceUpdate()
-      })
-    })
-  }
-/*
-  handleCardClick = (windowId, result, canvas) => {
-    console.log("r", this.props.setCanvas, canvas)
-    this.state.currentViewIndex = result
+
+  handleClear = () => {
+    this.state.results = []
+    this.state.currentResultIndex = 0
     this.state.resultsListOpen = false
-    this.state.resultsMenuOpen = true
+    this.state.resultsMenuOpen = false
     this.forceUpdate()
-  }*/
+  }
+
+  handleSearch = () => {
+    if(this.state.query.length) {
+      fetch('/legacy/84056?' + new URLSearchParams({
+          q: this.state.query
+      })).then(response => {
+        response.json().then(content => {
+          this.state.results = content
+          this.state.resultsListOpen = true
+          this.forceUpdate()
+        })
+      })
+    } else this.handleClear()
+  }
   
   render() {
     const { windowId, canvases, setCanvas } = this.props
     return (
-      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "0", left: "0", padding:"0.5rem 1rem", height: "fit-content", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
+      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"0.5rem 1rem", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
         <div id="pvToolbarTop" aria-label="Viewer controls">
             <input 
             id="pvSearch" 
@@ -80,6 +84,15 @@ export class LegacySearchPlugin extends Component {
                     <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                 </svg>
             </button>
+            { 
+              this.state.resultsListOpen || this.state.resultsMenuOpen ? (
+              <Button 
+                onClick={this.handleClear}
+                className="btn-ghost"
+                id="item-search-clear">
+                  <ClearIcon />
+              </Button> ) : ("")
+            }
         </div>
         <div class="container-fluid container-flex card-section">
           { this.state.resultsListOpen ? this.state.results.map((result, index) => (
@@ -124,10 +137,24 @@ export class LegacySearchPlugin extends Component {
                 </span>
               </div>
               <div style={{display : "flex", justifyContent: "flex-end", alignItems: "center"}}>
-                <Button variant="contained" className="btn-ghost">
+                <Button disabled={this.state.currentResultIndex === 0} variant="contained" className="btn-ghost" onClick={() => {
+                  if(this.state.currentResultIndex > 0) {
+                    this.state.currentResultIndex -= 1
+                    this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
+                    setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    this.forceUpdate()
+                  }
+                }}>
                   previous result
                 </Button>
-                <Button variant="contained" className="btn-ghost">
+                <Button disabled={this.state.currentResultIndex === this.state.results.length-1} variant="contained" className="btn-ghost" onClick={() => {
+                  if(this.state.currentResultIndex < this.state.results.length-1) {
+                    this.state.currentResultIndex += 1
+                    this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
+                    setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    this.forceUpdate()
+                  }
+                }}>
                   next result
                 </Button>
               </div>
@@ -142,14 +169,6 @@ export class LegacySearchPlugin extends Component {
   }
 }
 
-/**
- *               <!--div class="card">
-                <img src={canvases[result-1].__jsonld.items[0].items[0].body.id} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <a href={"?pageNum="+result+"&q="+this.state.query}>Image {result}</a>
-                </div>
-              </div-->
- */
 const mapStateToProps = (state, { windowId }) => ({
   canvases: getCanvases(state, { windowId })
 });
@@ -169,7 +188,7 @@ export default {
   component: LegacySearchPlugin,
   mode: 'add',
   name: 'LegacySearchPlugin',
-  target: 'OpenSeadragonViewer',
+  target: 'WindowTopBarPluginArea',
   mapStateToProps,
   mapDispatchToProps
 };
