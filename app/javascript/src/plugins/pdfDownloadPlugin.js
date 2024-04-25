@@ -45,7 +45,7 @@ class PDFDownload extends Component {
             <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
-            Download Image as Searchable PDF
+            Current image as a searchable PDF
           </ListItemText>
         </MenuItem>
       </React.Fragment>

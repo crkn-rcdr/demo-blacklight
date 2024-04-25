@@ -101,6 +101,7 @@ export class PDIIIFDialog extends Component {
       pageError: false,
       filteredCanvasIds: undefined, // Undefined will trigger all pages
       progress: 0,
+      pdfPath: ""
     };
   }
 
@@ -414,8 +415,9 @@ export class PDIIIFDialog extends Component {
       } else {
         // Reset the error state
         this.setState({ savingError: null });
-
-        const pdfPath = (await handle.getFile()).name;
+        const file = await handle.getFile()
+        console.log("F", file)
+        this.state.pdfPath = file.name;
         const webWritable = await handle.createWritable();
 
         this.setState({ webWritable: webWritable });
@@ -506,7 +508,7 @@ export class PDIIIFDialog extends Component {
         maxWidth="xs"
       >
         <DialogTitle disableTypography className={classes.h2}>
-          <Typography variant="h2">Print Images to PDF</Typography>
+          <Typography variant="h2">Download a range of images to non-searchable PDF</Typography>
         </DialogTitle>
         <DialogContent>
           {savingError && (
@@ -516,11 +518,11 @@ export class PDIIIFDialog extends Component {
             Note: The resulting PDF will NOT be a searchable PDF. 
             <br />
             <br />
-            The resulting PDF will contain {canvasIds.length} images{fileSizeText}. All
-            images will be included by default. If you wish to only download certain
-            images, you may provide a comma separated list of image numbers
-            and/or ranges below. 
+            {isDownloading || progress === 100 ? isDownloading ? "Downloading " + this.state.pdfPath  : this.state.pdfPath + " downloaded!":
+            ("The resulting PDF will contain " + canvasIds.length + " images " + fileSizeText + ". All images will be included by default. If you wish to only download certain images, you may provide a comma separated list of image numbers and/or ranges below.") }
           </DialogContentText>
+          {isDownloading || progress === 100 ? progress === 100 ? (
+          <DialogContentText>Done! Navigate to the location you selected on your computer to view your PDF.</DialogContentText>): this.renderProgress() : (
           <TextField
             id="pages"
             label="(Optional) Image Numbers..."
@@ -532,7 +534,7 @@ export class PDIIIFDialog extends Component {
             value={this.state.indexSpec}
             disabled={isDownloading || progress === 100}
           />
-          {this.renderProgress()}
+          )}
         </DialogContent>
         <DialogActions>
           <Button

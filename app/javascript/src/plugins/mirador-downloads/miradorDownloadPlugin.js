@@ -46,7 +46,7 @@ class MiradorDownload extends Component {
             <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
-            Download Image in Other Resolutions
+            Current image in other resolutions
           </ListItemText>
         </MenuItem>
       </React.Fragment>

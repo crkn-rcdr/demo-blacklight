@@ -5,11 +5,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 import {
-  getCanvasIndex, 
-  getCurrentCanvas,
+  getCanvasIndex,
 } from 'mirador/dist/es/src/state/selectors'
-
-
 
 function downloadFile(url, filename) {
   fetch(url, {
@@ -30,16 +27,14 @@ function downloadFile(url, filename) {
   });
 }
 
-class FullResDownload extends Component {
+class FullPDFDownload extends Component {
   downloadAndCloseMenu() {
-    const { handleClose, canvasIndex, manifestId, canvas } = this.props;
-    console.log("c", canvas)
+    const { handleClose, canvasIndex, manifestId } = this.props;
     console.log("m", manifestId)
     let page = canvasIndex + 1
-    console.log("url", canvas.__jsonld.items[0].items[0].body.id)
-    downloadFile(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
-    console.log("/access-files/69429/oocihm.84056."+page+".jpg")
-    handleClose()
+    console.log("/access-files/69429/oocihm.84056.pdf")
+    downloadFile("/access-files/69429/oocihm.84056.pdf", "oocihm.84056.pdf") 
+    handleClose();
   }
 
   render() {
@@ -50,7 +45,7 @@ class FullResDownload extends Component {
             <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
-            Current image in full resolution
+            All images as a searchable PDF
           </ListItemText>
         </MenuItem>
       </React.Fragment>
@@ -58,14 +53,13 @@ class FullResDownload extends Component {
   }
 }
 
-FullResDownload.propTypes = {
+FullPDFDownload.propTypes = {
   handleClose: PropTypes.func,
   canvasIndex: PropTypes.number,
-  canvas: PropTypes.object,
   manifestId: PropTypes.string
 };
 
-FullResDownload.defaultProps = {
+FullPDFDownload.defaultProps = {
   handleClose: () => {}
 };
 
@@ -77,11 +71,9 @@ FullResDownload.defaultProps = {
 const mapStateToProps = (state, props) => {
   const { windowId } = props;
   const canvasIndex = getCanvasIndex(state, { windowId })
-  const canvas = getCurrentCanvas(state, { windowId })
-  const manifestId = state.windows[windowId].manifestId
+  const  manifestId = state.windows[windowId].manifestId
   return {
     canvasIndex,
-    canvas,
     manifestId
   };
 };
@@ -89,7 +81,7 @@ const mapStateToProps = (state, props) => {
 export default {
   target: 'WindowTopBarPluginMenu',
   mode: 'add',
-  name: 'FullResDownloadPlugin',
-  component: FullResDownload,
+  name: 'FullPDFDownloadPlugin',
+  component: FullPDFDownload,
   mapStateToProps
 };

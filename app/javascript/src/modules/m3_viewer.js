@@ -3,6 +3,7 @@ import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImage
 import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
 import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
 import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
+import fullPdfDownloadPlugin from '../plugins/fullPdfDownloadPlugin.js'
 import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
 import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
 import downloadMenuPlugin from '../plugins/downloadMenuPlugin.jsx'
@@ -47,6 +48,10 @@ export default {
           },
           {
             ...pdfDownloadPlugin,
+            target: 'WindowTopBarShareMenu',
+          },
+          {
+            ...fullPdfDownloadPlugin,
             target: 'WindowTopBarShareMenu',
           },
           miradorPDIIIFMenuItemPlugin,

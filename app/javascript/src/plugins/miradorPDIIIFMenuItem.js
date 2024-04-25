@@ -42,7 +42,7 @@ async function checkImageApiHasCors() {
 
 
 // select an icon from material icons to import and use: https://v4.mui.com/components/material-icons/
-import PDFIcon from "@material-ui/icons/PictureAsPdf";
+import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
 
 const dialogReducer = (state = {}, action) => {
   if (action.type === "OPEN_WINDOW_DIALOG") {
@@ -180,14 +180,14 @@ class PDIIIFMenuItem extends Component {
     const { allowPdfDownload } = this.props;
 
     if (!hasChecked) {
-      return "Loading Print Options";
+      return "Loading non-searchable PDF options";
     }
 
     if (allowPdfDownload) {
-      return "Print Images to PDF";
+      return "Range of images in a non-searchable PDF";
     }
 
-    return "Image Printing Unavailable";
+    return "Non-searchable PDF Unavailable";
   };
 
   render() {
@@ -200,7 +200,7 @@ class PDIIIFMenuItem extends Component {
           onClick={() => this.openDialogAndCloseMenu()}
         >
           <ListItemIcon>
-            <PDFIcon />
+            <DownloadIcon />
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{ variant: "body1" }}>
             {this.renderMenuItemText()}
