@@ -31,6 +31,8 @@ export class LegacySearchPlugin extends Component {
 
 
   handleClear = () => {
+    document.getElementById("pvSearch").value = ""
+    this.state.query = ""
     this.state.results = []
     this.state.currentResultIndex = 0
     this.state.resultsListOpen = false
