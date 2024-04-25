@@ -98,7 +98,7 @@ export class LegacySearchPlugin extends Component {
         </div>
         <div class="container-fluid container-flex card-section">
           { this.state.resultsListOpen ? this.state.results.map((result, index) => (
-            <Card className='mui-card' onClick={() => {
+            <Card className='mui-card clickable' onClick={() => {
               this.state.currentCanvasIndex = result
               this.state.currentResultIndex = index
               this.state.resultsListOpen = false

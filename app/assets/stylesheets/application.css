@@ -441,3 +441,6 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     letter-spacing: 0.033em;
     color: #666;
 }
+.clickable {
+    cursor: pointer !important;
+}
