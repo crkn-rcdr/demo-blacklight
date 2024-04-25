@@ -522,7 +522,7 @@ export class PDIIIFDialog extends Component {
             ("The resulting PDF will contain " + canvasIds.length + " images " + fileSizeText + ". All images will be included by default. If you wish to only download certain images, you may provide a comma separated list of image numbers and/or ranges below.") }
           </DialogContentText>
           {isDownloading || progress === 100 ? progress === 100 ? (
-          <DialogContentText>Done! Navigate to the location you selected on your computer to view your PDF.</DialogContentText>): this.renderProgress() : (
+          <DialogContentText>Download finished! Navigate to the location you selected on your computer to view your PDF.</DialogContentText>): this.renderProgress() : (
           <TextField
             id="pages"
             label="(Optional) Image Numbers..."
@@ -556,7 +556,14 @@ export class PDIIIFDialog extends Component {
             })()}
           </Button>
           <Button onClick={closeDialog} color="primary">
-            Close
+            {(() => {
+              if (progress === 100) {
+                return "Ok";
+              } 
+              else {
+                return "Close";
+              }
+            })()}
           </Button>
         </DialogActions>
       </Dialog>
