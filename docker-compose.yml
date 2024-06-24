@@ -13,6 +13,7 @@ services:
     volumes:
       - ./app:/app/app
       - ./config:/app/config
+      - ./public:/app/public
   solr:
     image: solr
     ports:

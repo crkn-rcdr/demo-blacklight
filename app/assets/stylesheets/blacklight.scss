@@ -7,7 +7,9 @@
 $logo-image: image_url('blacklight/canadiana-logo-light.jpg');
 $logo-width: 225px;
 $logo-height: 50px;
-
+#main-container{
+    overflow-x: hidden;
+}
 .navbar-logo {  /* The main logo image for the Blacklight instance */
     @if $logo-image {
       background: transparent $logo-image no-repeat top left;
@@ -28,11 +30,16 @@ $logo-height: 50px;
         max-width: 85vw !important
     }
 }
-
 .nav-item {
     margin-left: 1rem;
 }
-
 .navbar-light.bg-light {
     background: white !important;
+}
+.row {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top:  0 !important;
+    margin-right:  0 !important;
+    margin-left:  0 !important;
 }

@@ -7,11 +7,15 @@
   <%= render 'home' %>
   <%= render 'shared/sitelinks_search_box' %>
 <% else %>
-  <% content_for(:sidebar) do %>
-    <% conf = blacklight_config.view_config(document_index_view_type) %>
-    <%= render conf.sidebar_component.new(blacklight_config: blacklight_config,
-                                          response: @response,
-                                          view_config: conf) %>
-  <% end %>
-  <%= render 'search_results' %>
+    <div class="results-main">
+      <div>
+        <% conf = blacklight_config.view_config(document_index_view_type) %>
+        <%= render conf.sidebar_component.new(blacklight_config: blacklight_config,
+                                              response: @response,
+                                              view_config: conf) %>
+      </div>
+      <div>
+        <%= render 'search_results' %>
+      </div>
+    </div>
 <% end %>
