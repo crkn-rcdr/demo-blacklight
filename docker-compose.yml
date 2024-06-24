@@ -12,6 +12,7 @@ services:
       - test
     volumes:
       - ./app:/app/app
+      - ./config:/app/config
   solr:
     image: solr
     ports:

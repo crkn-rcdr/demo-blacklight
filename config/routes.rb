@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   get 'legacy/:id', to: 'legacy_search#index'
 
   mount Blacklight::Engine => '/'
+  root to: "pages#home"
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
-  root to: "catalog#index"
   concern :searchable, Blacklight::Routes::Searchable.new
-
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end

@@ -46,9 +46,7 @@
       <% partials.each do |partial| %>
         <%= partial %>
       <% end %>
-      <% if @component.to_s == 'article' %>
-        <%= render(LegacyOcrSearchComponent.new(documentId: @document.id, term: params[:q] || '')) do %><% end %>
-      <% end %>
+      
     </div>
 
     <%= thumbnail %>
