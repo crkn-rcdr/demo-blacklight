@@ -26,6 +26,20 @@ body {
 main {
     grid-area: main;
 }
+.home-search-wrap {
+    position: absolute;
+    top: 44vh;
+    width:99vw;
+}
+.home-search {
+    background-color: rgba(34, 34, 34, .65) !important;
+    width: fit-content !important;
+    padding: 1.5rem;
+    margin: auto;
+}
+.home-search form {
+    margin-bottom: 0 !important;
+}
 .carousel-caption {
     padding: .5rem !important;
     margin-left: 1rem !important;

@@ -9,9 +9,15 @@
     </div>
 </div>
 <br/>
-<%= render(Blacklight::SearchBarComponent.new(
-      url: '/catalog',
-      params: search_state.params_for_search.except(:qt))) %>
+
+<div class="home-search-wrap">
+    <div class="home-search">
+    <%= render(Blacklight::SearchBarComponent.new(
+        url: '/catalog',
+        params: search_state.params_for_search.except(:qt))) %>
+    </div>
+</div>
+
 <br/>
 <div class="row justify-content-start home-cards">
     <h2>Explore our collections</h2>
