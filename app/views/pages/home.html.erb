@@ -3,7 +3,7 @@
         <div class="carousel-item active">
             <img src="/images/oocihm.8_06251_308@20.jpg" alt="..." class="banner-img">
             <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
+                <h5>The Canadian magazine : Vol. 51, no. 6 (Oct. 1918)</h5>
             </div>
         </div>
     </div>
@@ -12,7 +12,7 @@
 
 <div class="home-search-wrap">
     <div class="home-search">
-        <h2>Search our collection</h2>
+        <h2>Search our collections</h2>
         <%= render(Blacklight::SearchBarComponent.new(
             url: '/catalog',
             params: search_state.params_for_search.except(:qt))) %>

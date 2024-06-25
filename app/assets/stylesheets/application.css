@@ -28,7 +28,7 @@ main {
 }
 .home-search-wrap {
     position: absolute;
-    top: 42vh;
+    top: 40vh;
     width:99vw;
 }
 .home-search {
@@ -51,7 +51,8 @@ main {
     margin-left: 1rem !important;
     background-color: rgba(34, 34, 34, .65) !important;
     width: fit-content !important;
-    left: 70% !important;
+    left: 58% !important;
+    min-width: 410px;
 }
 .carousel-caption h5 {
     margin-bottom: 0 !important;
