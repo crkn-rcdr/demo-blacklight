@@ -10,6 +10,9 @@ $logo-height: 50px;
 #main-container{
     overflow-x: hidden;
 }
+nav {
+    padding: 1.5rem 0.5rem !important;
+}
 .navbar-logo {  /* The main logo image for the Blacklight instance */
     @if $logo-image {
       background: transparent $logo-image no-repeat top left;
@@ -41,6 +44,9 @@ $logo-height: 50px;
     margin-top:  0 !important;
     margin-right:  0 !important;
     margin-left:  0 !important;
+}
+#appliedParams {
+    padding: 0 0.5rem !important;
 }
 .sidenav {
     min-height: 70vh;
