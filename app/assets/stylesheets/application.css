@@ -28,7 +28,7 @@ main {
 }
 .home-search-wrap {
     position: absolute;
-    top: 44vh;
+    top: 42vh;
     width:99vw;
 }
 .home-search {
@@ -37,8 +37,14 @@ main {
     padding: 1.5rem;
     margin: auto;
 }
+.home-search h2 {
+    color: white;
+}
 .home-search form {
     margin-bottom: 0 !important;
+}
+.home-search input {
+    min-width: 20rem !important;
 }
 .carousel-caption {
     padding: .5rem !important;

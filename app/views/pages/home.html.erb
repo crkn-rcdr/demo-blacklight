@@ -12,9 +12,10 @@
 
 <div class="home-search-wrap">
     <div class="home-search">
-    <%= render(Blacklight::SearchBarComponent.new(
-        url: '/catalog',
-        params: search_state.params_for_search.except(:qt))) %>
+        <h2>Search our collection</h2>
+        <%= render(Blacklight::SearchBarComponent.new(
+            url: '/catalog',
+            params: search_state.params_for_search.except(:qt))) %>
     </div>
 </div>
 
