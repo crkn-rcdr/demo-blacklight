@@ -84,6 +84,9 @@ main {
 footer {
     grid-area: footer;
 }
+footer a {
+    color: white !important;
+}
 .MuiTypography-body1 {
     font-size: 0.8rem !important;
 }
