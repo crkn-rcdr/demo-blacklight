@@ -17,11 +17,12 @@
 <% end %>
 
 <% content_for(:container_header) do -%>
+  <br/>
   <div class="container-fluid">
-<%= render (Blacklight::SearchBarComponent.new(
-      url: '/catalog',
-      params: search_state.params_for_search.except(:qt))) %>
-</div>
+    <%= render (Blacklight::SearchBarComponent.new(
+          url: '/catalog',
+          params: search_state.params_for_search.except(:qt))) %>
+  </div>
   <%= render 'search_results_header' %>
   <%= render 'constraints' %>
 <% end %>
