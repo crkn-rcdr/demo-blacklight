@@ -16,7 +16,7 @@
 
 <div class="home-search-wrap">
     <div class="home-search">
-        <h2>Search the Canadiana Collections</h2>
+        <h3>Search the Canadiana Collections</h3>
         <%= render(Blacklight::SearchBarComponent.new(
             url: '/catalog',
             params: search_state.params_for_search.except(:qt))) %>

@@ -39,7 +39,7 @@ main {
 }
 .home-search-wrap {
     position: absolute;
-    top: 33vh;
+    top: 38vh;
     width:99vw;
 }
 .home-search {
@@ -48,7 +48,7 @@ main {
     padding: 1.5rem;
     margin: auto;
 }
-.home-search h2 {
+.home-search h3 {
     color: white;
 }
 .home-search form {
@@ -70,7 +70,7 @@ main {
 }
 .banner-img {
     width: 99vw;
-    height: 80vh;
+    height: 90vh;
 }
 .home-cards {
     width: 70rem;
