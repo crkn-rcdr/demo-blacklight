@@ -48,8 +48,8 @@ main {
     padding: 1.5rem;
     margin: auto;
 }
-.home-search h3 {
-    color: white;
+.home-search {
+    color: white !important;
 }
 .home-search form {
     margin-bottom: 0 !important;

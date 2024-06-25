@@ -7,7 +7,7 @@
         <div class="carousel-item active">
             <img src="/images/oocihm.8_06251_308@20.jpg" alt="..." class="banner-img">
             <div class="carousel-caption d-none d-md-block">
-                <h5>The Canadian magazine : Vol. 51, no. 6 (Oct. 1918)</h5>
+                <span>The Canadian magazine : Vol. 51, no. 6 (Oct. 1918)</span>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
 
 <div class="home-search-wrap">
     <div class="home-search">
-        <h3>Search the Canadiana Collections</h3>
+        <!--h2>Search the Canadiana Collection</h2-->
         <%= render(Blacklight::SearchBarComponent.new(
             url: '/catalog',
             params: search_state.params_for_search.except(:qt))) %>
@@ -25,7 +25,7 @@
 
 <br/>
 <div class="row justify-content-start home-cards">
-    <h2>Explore the Canadiana Collections</h2>
+    <h3>Explore the Canadiana Collections</h3>
 </div>
 <div class="row justify-content-start home-cards">
     <div class="col">
