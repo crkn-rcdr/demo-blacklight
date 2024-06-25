@@ -55,8 +55,18 @@ main {
     margin-bottom: 0 !important;
 }
 .home-search input {
-    min-width: 20rem !important;
+    min-width: 28rem !important;
+    padding: 0.75rem !important;
 }
+.home-search svg {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+/*.carousel.home-main-images {
+    width: 85vw;
+    height: 45vh;
+    margin: auto;
+}*/
 .carousel-caption {
     padding: .5rem !important;
     margin-left: 1rem !important;
@@ -70,7 +80,7 @@ main {
 }
 .banner-img {
     width: 99vw;
-    height: 90vh;
+    height: 100vh;
 }
 .home-cards {
     width: 70rem;
