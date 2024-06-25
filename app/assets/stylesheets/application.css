@@ -26,8 +26,28 @@ body {
 main {
     grid-area: main;
 }
+.carousel-caption {
+    padding: .5rem !important;
+    margin-left: 1rem !important;
+    background-color: rgba(34, 34, 34, .65) !important;
+    width: fit-content !important;
+    left: 70% !important;
+}
+.carousel-caption h5 {
+    margin-bottom: 0 !important;
+}
 .banner-img {
     width: 99vw;
+    height: 80vh;
+}
+.home-cards {
+    width: 70rem;
+    position: relative;
+    margin: auto !important;
+}
+.home-cards .card {
+    width: 33rem !important;
+    margin-bottom: 1rem;
 }
 footer {
     grid-area: footer;

@@ -50,8 +50,8 @@
         <%= content_for(:skip_links) %>
       </nav>
       <%= render partial: 'shared/header_navbar' %>
-
       <div id="main-container" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+        
         <%= content_for(:container_header) %>
 
         <%= content_for?(:content) ? yield(:content) : yield %>

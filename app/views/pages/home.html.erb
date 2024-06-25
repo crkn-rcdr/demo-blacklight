@@ -4,13 +4,94 @@
             <img src="/images/oocihm.8_06251_308@20.jpg" alt="..." class="banner-img">
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="container">
-    hiii
+<br/>
+<%= render(Blacklight::SearchBarComponent.new(
+      url: '/catalog',
+      params: search_state.params_for_search.except(:qt))) %>
+<br/>
+<div class="row justify-content-start home-cards">
+    <h2>Explore our collections</h2>
+</div>
+<div class="row justify-content-start home-cards">
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
     </div>
 </div>
+<br/>
