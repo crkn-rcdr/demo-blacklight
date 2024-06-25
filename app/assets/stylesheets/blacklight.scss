@@ -24,6 +24,11 @@ nav.topbar {
     white-space: nowrap;
     width: $logo-width;
 }
+.floatnav nav .navbar-logo{  
+    background: transparent image_url('blacklight/canadiana-logo-white.png') no-repeat top left;
+    background-size: $logo-width $logo-height;
+}
+
 .mirador-mosaic {
     background-color: white !important;
 }

@@ -26,9 +26,20 @@ body {
 main {
     grid-area: main;
 }
+.floatnav nav {    
+    background-color: rgb(34 34 34 / 77%) !important;
+    color: white !important;
+    position: fixed;
+    left:0;
+    right:0;
+    z-index:10000;
+}
+.floatnav nav a {
+    color: white !important;
+}
 .home-search-wrap {
     position: absolute;
-    top: 40vh;
+    top: 33vh;
     width:99vw;
 }
 .home-search {
