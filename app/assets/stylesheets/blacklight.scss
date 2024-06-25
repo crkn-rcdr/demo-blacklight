@@ -48,6 +48,18 @@ nav {
 #appliedParams {
     padding: 0 0.5rem !important;
 }
+@media (min-width: 995px) {
+.results-main {
+    display: grid;
+    grid-template: 
+            "a b b b" 1fr;
+}
 .sidenav {
     min-height: 70vh;
+}
+}
+@media(max-width: 995px){
+    .facets-header {
+        display: block !important;
+    }
 }

@@ -26,11 +26,6 @@ body {
 main {
     grid-area: main;
 }
-.results-main {
-    display: grid;
-    grid-template: 
-            "a b b b" 1fr;
-}
 .banner-img {
     width: 99vw;
 }
