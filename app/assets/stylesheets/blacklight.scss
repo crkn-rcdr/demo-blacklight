@@ -68,3 +68,24 @@ nav.topbar {
         display: block !important;
     }
 }
+.constraint, .catalog_startOverLink, .catalog_startOverLink:hover, .constraint-value:hover, .catalog_startOverLink:active{
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.constraint-value, .constraint .btn {
+    border: none !important;
+}
+.catalog_startOverLink:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+.catalog_startOverLink:active, .catalog_startOverLink:active:focus {
+    color: #212529;
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}
+.citation-page {
+    min-height:80vh;
+}
