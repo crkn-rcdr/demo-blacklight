@@ -68,10 +68,10 @@ nav.topbar {
         display: block !important;
     }
 }
-.constraint, .catalog_startOverLink, .catalog_startOverLink:hover, .constraint-value:hover, .catalog_startOverLink:active{
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
+.constraint, .catalog_startOverLink, .catalog_startOverLink:hover, .constraint-value, .constraint-value:hover, .constraint-value:active, .constraint-value:focus, .catalog_startOverLink:active{
+    color: #212529 !important;
+    background-color: #f8f9fa !important;;
+    border-color: #f8f9fa !important;;
 }
 .constraint-value, .constraint .btn {
     border: none !important;
