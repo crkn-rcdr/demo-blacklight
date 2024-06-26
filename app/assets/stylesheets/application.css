@@ -451,6 +451,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 .fullscreen {
     bottom: 0;
     height: 82vh !important;
+    min-height: 805px;;
 }
 .MuiAppBar-root {
     top:3.5rem;
