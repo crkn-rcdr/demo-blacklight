@@ -1,5 +1,6 @@
 
 <%= render partial: 'shared/header_navbar' %>
+<div class="container">
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_title { t('blacklight.search.librarian_view.title') } %>
   <%- if @document.respond_to?(:to_marc) -%>
@@ -8,3 +9,4 @@
     <%= t('blacklight.search.librarian_view.empty') %>
   <%- end -%>
 <% end %>
+</div>
