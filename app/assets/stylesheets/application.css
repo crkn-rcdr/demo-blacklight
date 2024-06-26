@@ -90,6 +90,13 @@ main {
 .home-cards .card {
     width: 33rem !important;
     margin-bottom: 1rem;
+    min-height:585px;
+}
+.home-cards .card-img, .home-cards .card-img-top {
+    height: 350px;
+}
+.home-cards .card-body p {
+    height: 80px;
 }
 footer {
     grid-area: footer;
