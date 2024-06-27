@@ -169,6 +169,7 @@ class CatalogController < ApplicationController
 
     config.add_show_field 'language_ssim', label: 'Language'
     config.add_show_field 'collection_tsim', label: 'Collection'
+    config.add_show_field 'is_issue', label: 'Is Issue'
     
     config.add_show_field 'access_note_tsim', label: 'Access Note'
     config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
