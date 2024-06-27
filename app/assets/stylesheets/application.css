@@ -554,3 +554,6 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 .clickable {
     cursor: pointer !important;
 }
+.crumbs {
+    margin-bottom: 0.5rem;;
+}

@@ -14,7 +14,12 @@
     <div class="document-main-section container-xxl">
 
       <% if @component.to_s == 'div' %>
-   
+        <div class="crumbs">
+          <a href="/catalog">Collection search</a> <span>/</span> 
+          <% @document._source["collection_tsim"].each do |val| %>
+            <a href="/catalog?f%5Bcollection_tsim_str%5D%5B%5D=<%= val %>"><%= val %></a>  / 
+          <% end %>
+        </div>
       <% end %>
       <%= title %>
       <% if @component.to_s == 'div' %>
