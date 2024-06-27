@@ -10,33 +10,6 @@ $logo-height: 50px;
 #main-container{
     overflow-x: hidden;
 }
-nav.topbar {
-    padding: 1rem 0.5rem !important;
-}
-.navbar-logo {  /* The main logo image for the Blacklight instance */
-    /*@if $logo-image {
-      background: transparent $logo-image no-repeat top left;
-      background-size: $logo-width $logo-height;
-    }
-    height: $logo-height;
-    overflow: visible;
-    text-indent: 100%;
-    white-space: nowrap;
-    width: $logo-width;*/
-    /*color: black;*/
-    text-indent: inherit;
-    width: fit-content;
-    height: fit-content;
-    background: orange;
-    color: black;
-    border-radius: 5px;
-    margin-left: 0.5rem;
-    padding: 0.5rem 1rem;
-}
-.floatnav nav .navbar-logo{  
-    background: transparent image_url('blacklight/canadiana-logo-white.png') no-repeat top left;
-    background-size: $logo-width $logo-height;
-}
 
 .mirador-mosaic {
     background-color: white !important;
