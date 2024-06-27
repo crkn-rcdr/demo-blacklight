@@ -71,3 +71,17 @@ $logo-height: 50px;
 .citation-page {
     min-height:80vh;
 }
+.matching-image-label {
+    margin-right:0.5rem;
+    color: var(--bs-secondary-color);
+}
+.pv-go-to-index {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+    padding: 0.5rem 1rem;
+} 
+.page-search-res-wrap {
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+}
