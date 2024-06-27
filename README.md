@@ -100,3 +100,6 @@ Out of space warning:
 
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
+https://digitalcollections.library.harvard.edu/catalog/990071779400203941 
+https://catalog.library.cornell.edu/?f%5Bonline%5D%5B%5D=Online 
+https://searchworks.stanford.edu/
