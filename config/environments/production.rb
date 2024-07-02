@@ -92,5 +92,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  config.hosts << 'blacklight.crkn-demo-test.ca'
+  config.hosts << 'sea-lion-app-kv5jd.ondigitalocean.app'
 end

@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: blacklight.crkn-demo-test.ca
+    hostname: sea-lion-app-kv5jd.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/blacklight
@@ -9,14 +9,14 @@ production:
 
 development:
   solr:
-    hostname: blacklight.crkn-demo-test.ca
+    hostname: sea-lion-app-kv5jd.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/coseblacklightarch2
 
 test:
   solr:
-    hostname: blacklight.crkn-demo-test.ca
+    hostname: sea-lion-app-kv5jd.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/blacklight

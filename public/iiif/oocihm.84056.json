@@ -1,6 +1,6 @@
 {
    "@context" : "http://iiif.io/api/presentation/3/context.json",
-   "id" : "https://blacklight.crkn-demo-test.ca/iiif/oocihm.84056.json",
+   "id" : "https://sea-lion-app-kv5jd.ondigitalocean.app/iiif/oocihm.84056.json",
    "items" : [
       {
          "height" : 3437,
