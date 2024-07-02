@@ -21,18 +21,18 @@ class Blacklight::Solr::Request < ActiveSupport::HashWithIndifferentAccess
   def append_query(query)
     return if query.nil?
 
-    if self['q'] || dig(:json, :query, :bool)
-      self[:json] ||= { query: { bool: { must: [] } } }
-      self[:json][:query] ||= { bool: { must: [] } }
-      self[:json][:query][:bool][:must] << query
+    #if self['q'] || dig(:json, :query, :bool)
+    #  self[:json] ||= { query: { bool: { must: [] } } }
+    #  self[:json][:query] ||= { bool: { must: [] } }
+    #  self[:json][:query][:bool][:must] << query
 
-      if self['q']
-        self[:json][:query][:bool][:must] << self['q']
-        delete 'q'
-      end
-    else
-      self['q'] = query
-    end
+    #  if self['q']
+    #    self[:json][:query][:bool][:must] << self['q']
+    #    delete 'q'
+    #  end
+    #else
+    self['q'] = query
+    #end
   end
 
   def append_boolean_query(bool_operator, query)
