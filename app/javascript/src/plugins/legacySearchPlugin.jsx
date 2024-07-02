@@ -97,7 +97,7 @@ export class LegacySearchPlugin extends Component {
             }
         </div>
         <div class="container-fluid container-flex card-section">
-          { this.state.resultsListOpen ? this.state.results.map((result, index) => (
+          { this.state.resultsListOpen ? this.state.results.length ? this.state.results.map((result, index) => (
             <Card className='mui-card clickable' onClick={() => {
               this.state.currentCanvasIndex = result
               this.state.currentResultIndex = index
@@ -113,10 +113,10 @@ export class LegacySearchPlugin extends Component {
               <CardMedia
                 image={canvases[result-1].__jsonld.items[0].items[0].body.id}
                 height="390px"
-                title="Paella dish"
+                title={"Image " + result}
               />
             </Card>
-          )) : this.state.resultsMenuOpen ?
+          )) : "No results" : this.state.resultsMenuOpen ?
             <div className="legacy-search-menu">
               <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
                 <Button variant="contained" color="primary" onClick={() => {

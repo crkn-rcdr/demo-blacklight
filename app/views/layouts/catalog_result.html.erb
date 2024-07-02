@@ -1,4 +1,7 @@
 
+<% content_for(:container_header) do -%>
+  <%= render partial: 'shared/header_navbar' %>
+<% end %>
 <% content_for(:content) do %>
   <section>
     <%= yield %>
