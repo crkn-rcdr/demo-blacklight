@@ -58,7 +58,7 @@ Notes:
 `curl -X POST -H 'Content-Type: application/json' 'http://crkn-solr.c7a.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 `curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 `curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-
+`curl -X POST -H 'Content-Type: application/json' 'https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 
 To install new javascript libraries enter the docker container.
 `docker exec -it demo-blacklight-web-1 bash`

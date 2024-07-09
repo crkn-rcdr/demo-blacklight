@@ -30,8 +30,7 @@ export default {
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
     
-        let apiPrefix =  "https://www.canadiana.ca/iiif/oocihm."
-        if(documentId.includes("ooga")) apiPrefix =  "https://nrcan.canadiana.ca/iiif/"
+        let apiPrefix =  "https://www.canadiana.ca/iiif/"
         let manifest = apiPrefix+documentId+"/manifest"
         
         let mplugins = [

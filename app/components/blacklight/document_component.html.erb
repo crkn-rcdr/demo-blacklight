@@ -22,8 +22,16 @@
         </div>
       <% end %>
       <%= title %>
-      <% if @component.to_s == 'div' %>
-        <%= render(ViewerComponent.new(documentId: @document.id)) %>
+      <% if !(@document._source["is_serial"] && @document._source["is_serial"][0] === 'Yes') %>
+        <% if @component.to_s == 'div' %>
+          <%= render(ViewerComponent.new(documentId: @document.id)) %>
+        <% end %>
+      <% else %>
+        <div class="row gx-2 gy-1">
+          <div class="col-sm-9">
+          Items list...
+          </div>
+        </div>
       <% end %>
       <%= embed %>
       <%= content %>

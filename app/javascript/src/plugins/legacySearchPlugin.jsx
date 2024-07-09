@@ -42,7 +42,12 @@ export class LegacySearchPlugin extends Component {
 
   handleSearch = () => {
     if(this.state.query.length) {
-      fetch('/legacy/84056?' + new URLSearchParams({
+      let currURL = window.location.href
+      let urlArr=currURL.split('/')
+      let parameters=urlArr[urlArr.length-1].split('?')
+      let slugA = parameters[0].split('.')
+      let id = slugA[slugA.length-1]
+      fetch('/legacy/'+id+'?' + new URLSearchParams({
           q: this.state.query
       })).then(response => {
         response.json().then(content => {
@@ -55,7 +60,7 @@ export class LegacySearchPlugin extends Component {
   }
   
   render() {
-    const { windowId, canvases, setCanvas } = this.props
+    const { windowId, canvases, setCanvas, manifestId } = this.props
     return (
       <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"0.5rem 1rem", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
         <div id="pvToolbarTop" aria-label="Viewer controls">
