@@ -96,7 +96,6 @@ module Blacklight
                    counter: nil, document_counter: nil, counter_offset: 0,
                    show: false, **args)
       Blacklight.deprecation.warn('the `presenter` argument to DocumentComponent#initialize is deprecated; pass the `presenter` in as document instead') if presenter
-
       @presenter = presenter || document || args[self.class.collection_parameter]
       @document = @presenter.document
       @view_partials = partials || []

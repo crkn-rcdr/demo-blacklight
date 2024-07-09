@@ -148,9 +148,9 @@ class CatalogController < ApplicationController
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'author_ssm_str', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
-    config.add_index_field 'id', label: 'ID'
     config.add_index_field 'is_issue', label: 'Is Issue'
     config.add_index_field 'pub_date_si', label: 'Date'
+    config.add_index_field 'id', label: 'ID'
     
 
     # solr fields to be displayed in the show (single result) view
@@ -234,6 +234,22 @@ class CatalogController < ApplicationController
         df: 'subject_tsim'
       }
       field.label = "Subject"
+    end
+
+    config.add_search_field('id') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'id'
+      }
+      field.label = "Item Code"
+    end
+    
+    config.add_search_field('serial_key') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'serial_key'
+      }
+      field.label = "Serial Code"
     end
 
 
