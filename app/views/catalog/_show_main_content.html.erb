@@ -12,6 +12,9 @@
               <button type="button" class="btn btn-primary">Browse issues in this serial</button>
             </a> 
             <br/>
+
+            <%= render(CollectionItemsComponent.new(documentId: @document.id)) do %><% end %>
+
             <!-- 
             "f"=>{"collection_tsim_str"=>["Publications en série"]} 
             <%= render (Blacklight::SearchBarComponent.new(

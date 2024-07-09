@@ -1,0 +1,13 @@
+<% if @collection_items %>
+    <div class="page-search-res-wrap">
+        <% if @collection_items.length > 0 %>
+            <% @collection_items.each do |collection_item| %>
+                <a href="/catalog/<%= collection_item['id'] %>?pageNum=<%= collection_item['id'] %>" class="pv-go-to-index"><%= collection_item['id'] %></a>
+            <% end %>
+        <% else %>
+            <p>
+                No items in this serial
+            </p>
+        <% end %>
+    </div>
+<% end %>
