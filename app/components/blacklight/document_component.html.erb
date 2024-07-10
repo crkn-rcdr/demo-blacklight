@@ -19,7 +19,7 @@
             <a href="/catalog?f%5Bcollection_tsim_str%5D%5B%5D=<%= val %>"><%= val %></a>  / 
           <% end %>
           <% if @document._source['is_issue'] && @document._source['is_issue'][0] == "Yes" && @document._source['serial_title'] %>
-            <a href="/catalog?f%5Bcollection_tsim_str%5D%5B%5D=<%=  @document._source['serial_key'] %>"><%=  @document._source['serial_title'][0] %></a>  / 
+            <a href="/catalog/<%=  @document._source['serial_key'] %>"><%=  @document._source['serial_title'][0] %></a>  / 
           <% end %>
         </div>
       <% end %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'download/:filename', to: 'downloads#index'
   get 'legacy/:id', to: 'legacy_search#index'
+  get 'dl/:id', to: 'item_downloads#index', :constraints  => { :id => /[0-z\.]+/ }
 
   mount Blacklight::Engine => '/'
   root to: "pages#home"

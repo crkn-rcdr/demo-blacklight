@@ -82,10 +82,7 @@ Then, for shakapacker:
 docker exec -it demo-blacklight-web-1 bash
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source ~/.bashrc
-nvm install 18
-corepack enable
-rails shakapacker:install 
+source ~/.bashrc && nvm install 18 && corepack enable && rails shakapacker:install 
 (n/n/n/y)
 rails shakapacker:compile
 
@@ -98,6 +95,11 @@ git commit
 Out of space warning:
 `docker system prune`
 
+
+## Deploying to Digital Ocean
+`docker build . --no-cache`
+`docker tag '<image>' brilap/crkn`
+`docker push brilap/crkn`
 ## Reference:
 https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
 https://digitalcollections.library.harvard.edu/catalog/990071779400203941 
