@@ -59,5 +59,5 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
 
 
-  config.hosts << 'ec2-54-237-38-135.compute-1.amazonaws.com:3000'
+  config.hosts << 'sea-lion-app-kv5jd.ondigitalocean.app'
 end

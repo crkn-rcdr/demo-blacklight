@@ -5,6 +5,22 @@
 <% document_component = blacklight_config.view_config(:show).document_component -%>
 <%= render (document_component).new(document_component.collection_parameter => document_presenter(@document), component: :div, show: true, partials: blacklight_config.view_config(:show).partials) do |component| %>
   <% component.with_title(as: 'h1', classes: '', link_to_document: false, actions: false) %>
+      <% if @document._source["is_serial"] && @document._source["is_serial"][0] === 'Yes' %>
+            <!--a href="/catalog?search_field=serial_key&q=<%= @document.id =%>">
+              <button type="button" class="btn btn-primary">Browse issues in this serial</button>
+            </a--> 
+            <br/>
+
+            <%= render(CollectionItemsComponent.new(documentId: @document.id)) do %><% end %>
+
+            <!-- 
+            "f"=>{"collection_tsim_str"=>["Publications en série"]} 
+            <%= render (Blacklight::SearchBarComponent.new(
+              url: '/catalog',
+              params: {"q"=> @document._source["id"], "search_field"=>"serial_key" } )) %>
+            <%= {"q"=> @document._source["id"], "search_field"=>"serial_key" } %>
+            --> 
+      <% end %>
   <% component.with_footer do %>
     <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
       <!-- COinS, for Zotero among others. -->

@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
-  #mount IiifViewer::Engine, at: "/iiif_viewer"
-  #mount LegacyOcrSearch::Engine, at: "/legacy_ocr_search"
-
   get 'download/:filename', to: 'downloads#index'
+  get 'legacy/:id', to: 'legacy_search#index'
+  get 'dl/:id', to: 'item_downloads#index', :constraints  => { :id => /[0-z\.]+/ }
 
   mount Blacklight::Engine => '/'
+  root to: "pages#home"
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
-  root to: "catalog#index"
   concern :searchable, Blacklight::Routes::Searchable.new
-
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end
 
   concern :exportable, Blacklight::Routes::Exportable.new
 
-  resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
+  resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog', id: /[^\/]+/ do
     concerns [:exportable, :marc_viewable]
   end
 
@@ -26,9 +24,4 @@ Rails.application.routes.draw do
       delete 'clear'
     end
   end
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

@@ -1,17 +1,23 @@
+
 <% content_for(:head) do %>
   <meta name="blacklight-search-storage" content="<%= blacklight_config.track_search_session.storage %>">
 <% end %>
+
 
 <% unless has_search_parameters? %>
   <%# if there are no input/search related params, display the "home" partial -%>
   <%= render 'home' %>
   <%= render 'shared/sitelinks_search_box' %>
 <% else %>
-  <% content_for(:sidebar) do %>
-    <% conf = blacklight_config.view_config(document_index_view_type) %>
-    <%= render conf.sidebar_component.new(blacklight_config: blacklight_config,
-                                          response: @response,
-                                          view_config: conf) %>
-  <% end %>
-  <%= render 'search_results' %>
+    <div class="results-main">
+      <div class="container-fluid">
+        <% conf = blacklight_config.view_config(document_index_view_type) %>
+        <%= render conf.sidebar_component.new(blacklight_config: blacklight_config,
+                                              response: @response,
+                                              view_config: conf) %>
+      </div>
+      <div class="container-fluid">
+        <%= render 'search_results' %>
+      </div>
+    </div>
 <% end %>

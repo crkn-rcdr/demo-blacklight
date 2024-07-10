@@ -1,5 +1,6 @@
-<div>
-  <h1 class="modal-title"><%= title %></h1>
+<%= render partial: 'shared/header_navbar' %>
+<div class="container citation-page">
+  <h1><%= title %></h1>
 
   <% @formats.each do |i18n_key, citation_method| %>
     <h2><%= t(i18n_key) %></h2>

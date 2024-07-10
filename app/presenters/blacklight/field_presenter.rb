@@ -41,7 +41,7 @@ module Blacklight
       # @return [Enumerable]
       def values
         @values ||= retrieve_values
-        puts "TESTT"
+        puts "values"
         pp @values
       end
   

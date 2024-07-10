@@ -18,5 +18,8 @@ module MyNewBlacklightapp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.web_console.permissions = '172.18.0.1'
+    config.hosts << "172.18.0.1"
+    config.hosts << "sea-lion-app-kv5jd.ondigitalocean.app"
   end
 end

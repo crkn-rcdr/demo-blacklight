@@ -116,6 +116,7 @@ class CatalogController < ApplicationController
 
 
     #config.add_facet_field 'title_tsim', label: 'Title'
+    config.add_facet_field 'is_issue', label: 'Is Issue'
     config.add_facet_field 'format', label: 'Format'
     config.add_facet_field 'collection_tsim_str', label: 'Collection'
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
@@ -123,7 +124,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'author_ssm_str', label: 'Creator'
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     config.add_facet_field 'language_ssim_str', label: 'Language'
-    config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index', limit: true
+    config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index'
     config.add_facet_field 'pub_date_si', label: 'Publish Date'
 
 
@@ -145,9 +146,12 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_tsim', label: 'Creator'
+    config.add_index_field 'author_ssm_str', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
+    config.add_index_field 'is_issue', label: 'Is Issue'
+    config.add_index_field 'pub_date_si', label: 'Date'
     config.add_index_field 'id', label: 'ID'
+    
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -155,7 +159,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'title_addl_tsim', label: 'Other Titles'
 
-    config.add_show_field 'author_tsim', label: 'Creator'
+    config.add_show_field 'author_ssm_str', label: 'Creator'
     config.add_show_field 'published_ssm', label: 'Published Statement'
     config.add_show_field 'subject_ssim', label: 'Subject'
 
@@ -165,6 +169,7 @@ class CatalogController < ApplicationController
 
     config.add_show_field 'language_ssim', label: 'Language'
     config.add_show_field 'collection_tsim', label: 'Collection'
+    config.add_show_field 'is_issue', label: 'Is Issue'
     
     config.add_show_field 'access_note_tsim', label: 'Access Note'
     config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
@@ -231,15 +236,31 @@ class CatalogController < ApplicationController
       field.label = "Subject"
     end
 
+    config.add_search_field('id') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'id'
+      }
+      field.label = "Item Code"
+    end
+    
+    config.add_search_field('serial_key') do |field|
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+      field.solr_parameters = {
+        df: 'serial_key'
+      }
+      field.label = "Serial Code"
+    end
+
 
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the Solr field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case). Add the sort: option to configure a
     # custom Blacklight url parameter value separate from the Solr sort fields.
-    config.add_sort_field 'relevance', sort: 'score desc, pub_date_si desc', label: 'relevance'
+    config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
     config.add_sort_field 'year-desc', sort: 'pub_date_si desc', label: 'year'
-    config.add_sort_field 'author', sort: 'author_si asc', label: 'creator'
+    #config.add_sort_field 'author', sort: 'author_si asc', label: 'creator'
     #config.add_sort_field 'title_si asc, pub_date_si desc', label: 'title'
 
     # If there are more than this many search results, no spelling ("did you

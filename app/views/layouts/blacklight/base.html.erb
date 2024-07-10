@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <%= content_tag :html, class: 'no-js', **html_tag_attributes do %>
   <head>
+    <script>
+    (function (m, a, z, e) {
+      var s, t;
+      try {
+        t = m.sessionStorage.getItem('maze-us');
+      } catch (err) {}
+    
+      if (!t) {
+        t = new Date().getTime();
+        try {
+          m.sessionStorage.setItem('maze-us', t);
+        } catch (err) {}
+      }
+    
+      s = a.createElement('script');
+      s.src = z + '?apiKey=' + e;
+      s.async = true;
+      a.getElementsByTagName('head')[0].appendChild(s);
+      m.mazeUniversalSnippetApiKey = e;
+    })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '664bceb1-f9a7-4057-87ea-e2cd647e5945');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <title><%= render_page_title %></title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/universalviewer@4.0.0/dist/uv.css"
-    />
-    <script
-      type="application/javascript"
-      src="https://cdn.jsdelivr.net/npm/universalviewer@4.0.0/dist/umd/UV.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <%= javascript_pack_tag "application", "m3" %>
+
     <script>
       document.querySelector('html').classList.remove('no-js');
     </script>
     <%= opensearch_description_tag application_name, opensearch_catalog_url(format: 'xml') %>
     <%= favicon_link_tag %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"  %>
-    <% if defined? Importmap %>
-      <%= javascript_importmap_tags %>
-    <% elsif defined? Propshaft %>
-      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <% else %>
-      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-      <%= javascript_include_tag "blacklight/blacklight", type: 'module' %>
-      <script type="module">
-        import githubAutoCompleteElement from 'https://cdn.skypack.dev/@github/auto-complete-element';
-      </script>
-    <% end %>
-
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
   </head>
@@ -42,16 +49,13 @@
         <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
         <%= content_for(:skip_links) %>
       </nav>
-      <%= render partial: 'shared/header_navbar' %>
-
-      <div id="main-container" class="<%= container_classes %>-fluid" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+      
+      <div id="main-container" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+        
         <%= content_for(:container_header) %>
 
-        <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>
-
-        <div class="row">
-          <%= content_for?(:content) ? yield(:content) : yield %>
-        </div>
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      
       </div>
       <br/>
     </main>

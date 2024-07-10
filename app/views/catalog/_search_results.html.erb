@@ -1,3 +1,4 @@
+
 <% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
 
 <% content_for(:head) do -%>
@@ -12,6 +13,13 @@
 <% end %>
 
 <% content_for(:container_header) do -%>
+  <%= render partial: 'shared/header_navbar' %>
+  <br/>
+  <div class="container-fluid">
+    <%= render (Blacklight::SearchBarComponent.new(
+          url: '/catalog',
+          params: search_state.params_for_search.except(:qt))) %>
+  </div>
   <%= render 'search_results_header' %>
   <%= render 'constraints' %>
 <% end %>

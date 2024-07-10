@@ -1,10 +1,10 @@
 load_defaults: 8.0.1
 development:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://solr:8983/solr/blacklight" %>
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"
 test: &test
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://solr:8983/solr/blacklight" %>
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"
 production:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://solr:8983/solr/blacklight" %>
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"

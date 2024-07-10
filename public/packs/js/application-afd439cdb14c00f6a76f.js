@@ -1,0 +1,2 @@
+(self.webpackChunkdemo_blacklight=self.webpackChunkdemo_blacklight||[]).push([[72],{78992:()=>{console.log("Hello World from shakapacker")}},l=>{var e;e=78992,l(l.s=e)}]);
+//# sourceMappingURL=application-afd439cdb14c00f6a76f.js.map

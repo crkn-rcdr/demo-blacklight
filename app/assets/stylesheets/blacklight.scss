@@ -7,25 +7,81 @@
 $logo-image: image_url('blacklight/canadiana-logo-light.jpg');
 $logo-width: 225px;
 $logo-height: 50px;
-
-.navbar-logo {  /* The main logo image for the Blacklight instance */
-    @if $logo-image {
-      background: transparent $logo-image no-repeat top left;
-      background-size: $logo-width $logo-height;
-    }
-    height: $logo-height;
-    overflow: visible;
-    text-indent: 100%;
-    white-space: nowrap;
-    width: $logo-width;
+#main-container{
+    overflow-x: hidden;
 }
 
+.mirador-mosaic {
+    background-color: white !important;
+}
 @media (min-width: 1400px) {
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 75vw !important
+        max-width: 85vw !important
     }
 }
-
 .nav-item {
     margin-left: 1rem;
+}
+.navbar-light.bg-light {
+    background: white !important;
+}
+.row {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top:  0 !important;
+    margin-right:  0 !important;
+    margin-left:  0 !important;
+}
+#appliedParams {
+    padding: 0 0.5rem !important;
+}
+@media (min-width: 995px) {
+.results-main {
+    display: grid;
+    grid-template: 
+            "a b b b" 1fr;
+}
+.sidenav {
+    min-height: 70vh;
+}
+}
+@media(max-width: 995px){
+    .facets-header {
+        display: block !important;
+    }
+}
+.constraint, .catalog_startOverLink, .catalog_startOverLink:hover, .constraint-value, .constraint-value:hover, .constraint-value:active, .constraint-value:focus, .catalog_startOverLink:active{
+    color: #212529 !important;
+    background-color: #f8f9fa !important;;
+    border-color: #f8f9fa !important;;
+}
+.constraint-value, .constraint .btn {
+    border: none !important;
+}
+.catalog_startOverLink:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+.catalog_startOverLink:active, .catalog_startOverLink:active:focus {
+    color: #212529;
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}
+.citation-page {
+    min-height:80vh;
+}
+.matching-image-label {
+    margin-right:0.5rem;
+    color: var(--bs-secondary-color);
+}
+.pv-go-to-index {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+    padding: 0.5rem 1rem;
+} 
+.page-search-res-wrap {
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
 }

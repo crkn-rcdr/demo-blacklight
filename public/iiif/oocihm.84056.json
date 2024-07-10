@@ -1,0 +1,2664 @@
+{
+   "@context" : "http://iiif.io/api/presentation/3/context.json",
+   "id" : "https://sea-lion-app-kv5jd.ondigitalocean.app/iiif/oocihm.84056.json",
+   "items" : [
+      {
+         "height" : 3437,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p1",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p1/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 3437,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0dn3zv0nx2t/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0dn3zv0nx2t",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2713
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p1/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p1",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 1"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0dn3zv0nx2t/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2713
+      },
+      {
+         "height" : 3437,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p2",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p2/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 3437,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08w3823149z/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08w3823149z",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2713
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p2/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p2",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 2"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08w3823149z/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2713
+      },
+      {
+         "height" : 3408,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p3",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p3/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 3408,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0542j85cc5q/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0542j85cc5q",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2698
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p3/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p3",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 3"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0542j85cc5q/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2698
+      },
+      {
+         "height" : 1277,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p4",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p4/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 1277,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc01c1tg7qm3b/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc01c1tg7qm3b",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 1316
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p4/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p4",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 4"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc01c1tg7qm3b/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 1316
+      },
+      {
+         "height" : 2832,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p5",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p5/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2832,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wm13q0392q/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wm13q0392q",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p5/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p5",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 5"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wm13q0392q/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p6",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p6/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rv0cx2fj33/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rv0cx2fj33",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p6/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p6",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 6"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rv0cx2fj33/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p7",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p7/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n29p44sr91/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n29p44sr91",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p7/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p7",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 7"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n29p44sr91/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p8",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p8/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0hd7nr00540/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0hd7nr00540",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2230
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p8/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p8",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 8"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0hd7nr00540/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2230
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p9",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p9/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cn6xz2bd0f/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cn6xz2bd0f",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2230
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p9/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p9",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 9"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cn6xz2bd0f/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2230
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p10",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p10/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07w6754pm7k/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07w6754pm7k",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2266
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p10/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p10",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 10"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07w6754pm7k/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2266
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p11",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p11/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0445hc71v50/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0445hc71v50",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2266
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p11/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p11",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 11"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0445hc71v50/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2266
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p12",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p12/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc00c4sk9d359/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc00c4sk9d359",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p12/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p12",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 12"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc00c4sk9d359/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p13",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p13/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vm42t1rs7f/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vm42t1rs7f",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p13/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p13",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 13"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vm42t1rs7f/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p14",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p14/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qz22d6z56h/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qz22d6z56h",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p14/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p14",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 14"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qz22d6z56h/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2875,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p15",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p15/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2875,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m61bm99d7p/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m61bm99d7p",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p15/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p15",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 15"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m61bm99d7p/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p16",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p16/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0gf0mv1nn3r/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0gf0mv1nn3r",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2230
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p16/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p16",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 16"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0gf0mv1nn3r/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2230
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p17",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p17/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bn9x240w29/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bn9x240w29",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2230
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p17/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p17",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 17"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bn9x240w29/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2230
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p18",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p18/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06w9686c39j/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06w9686c39j",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2281
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p18/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p18",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 18"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06w9686c39j/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2281
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p19",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p19/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0348gg8qc0x/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0348gg8qc0x",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2281
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p19/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p19",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 19"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0348gg8qc0x/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2281
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p20",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p20/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0zc7rq1320h/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0zc7rq1320h",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p20/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p20",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 20"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0zc7rq1320h/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p21",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p21/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0tq5r968f0n/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0tq5r968f0n",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p21/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p21",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 21"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0tq5r968f0n/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p22",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p22/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pz51h8mn9j/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pz51h8mn9j",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p22/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p22",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 22"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pz51h8mn9j/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p23",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p23/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k649r0zw73/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k649r0zw73",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p23/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p23",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 23"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k649r0zw73/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p24",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p24/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0ff3kz3b42z/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0ff3kz3b42z",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p24/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p24",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 24"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0ff3kz3b42z/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p25",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p25/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09p2w55pc00/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09p2w55pc00",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p25/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p25",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 25"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09p2w55pc00/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p26",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p26/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05x25c81k76/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05x25c81k76",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2209
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p26/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p26",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 26"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05x25c81k76/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2209
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p27",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p27/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0251fm0ct6b/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0251fm0ct6b",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2209
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p27/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p27",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 27"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0251fm0ct6b/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2209
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p28",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p28/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0xg9f65kp3d/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0xg9f65kp3d",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p28/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p28",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 28"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0xg9f65kp3d/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p29",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p29/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0sq8qd7xx11/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0sq8qd7xx11",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p29/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p29",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 29"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0sq8qd7xx11/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p30",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p30/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0nz80n0945m/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0nz80n0945m",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2137
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p30/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p30",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 30"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0nz80n0945m/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2137
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p31",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p31/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0j678v2nc1c/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0j678v2nc1c",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2137
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p31/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p31",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 31"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0j678v2nc1c/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2137
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p32",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p32/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0df6k250m12/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0df6k250m12",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2166
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p32/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p32",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 32"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0df6k250m12/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2166
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p33",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p33/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08p5v87bv1v/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08p5v87bv1v",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2166
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p33/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p33",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 33"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc08p5v87bv1v/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2166
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p34",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p34/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc04x54g9q324/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc04x54g9q324",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2166
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p34/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p34",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 34"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc04x54g9q324/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2166
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p35",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p35/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0183434wg26/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0183434wg26",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2166
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p35/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p35",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 35"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0183434wg26/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2166
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p36",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p36/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wh2d97854b/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wh2d97854b",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p36/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p36",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 36"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0wh2d97854b/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p37",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p37/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rr1ph9mc9h/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rr1ph9mc9h",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p37/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p37",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 37"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0rr1ph9mc9h/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p38",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p38/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n00zr1zm8n/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n00zr1zm8n",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2202
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p38/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p38",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 38"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0n00zr1zm8n/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2202
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p39",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p39/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0h707z49v5j/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0h707z49v5j",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2202
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p39/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p39",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 39"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0h707z49v5j/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2202
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p40",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p40/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cf9j56p35q/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cf9j56p35q",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p40/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p40",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 40"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0cf9j56p35q/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p41",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p41/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07p8tc91b4d/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07p8tc91b4d",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p41/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p41",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 41"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc07p8tc91b4d/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p42",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p42/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0416t046q52/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0416t046q52",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p42/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p42",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 42"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0416t046q52/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p43",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p43/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0086366jz32/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0086366jz32",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p43/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p43",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 43"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0086366jz32/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p44",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p44/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vh5cd8xn2z/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vh5cd8xn2z",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p44/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p44",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 44"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0vh5cd8xn2z/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p45",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p45/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qr4nn18v8t/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qr4nn18v8t",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p45/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p45",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 45"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0qr4nn18v8t/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p46",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p46/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m03xv3n368/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m03xv3n368",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p46/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p46",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 46"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0m03xv3n368/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p47",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p47/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0g737260b45/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0g737260b45",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p47/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p47",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 47"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0g737260b45/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p48",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p48/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bg2h88bk4z/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bg2h88bk4z",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p48/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p48",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 48"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0bg2h88bk4z/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p49",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p49/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06t0gw3hz6g/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06t0gw3hz6g",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p49/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p49",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 49"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc06t0gw3hz6g/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2846,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p50",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p50/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2846,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0319s35w636/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0319s35w636",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p50/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p50",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 50"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0319s35w636/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2846,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p51",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p51/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2846,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0z892987w1v/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0z892987w1v",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2223
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p51/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p51",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 51"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0z892987w1v/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2223
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p52",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p52/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0th8bj0m38b/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0th8bj0m38b",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p52/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p52",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 52"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0th8bj0m38b/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2861,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p53",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p53/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2861,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pr7mr2zb84/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pr7mr2zb84",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2216
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p53/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p53",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 53"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0pr7mr2zb84/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2216
+      },
+      {
+         "height" : 2846,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p54",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p54/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2846,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k06wz59k8q/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k06wz59k8q",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2180
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p54/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p54",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 54"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0k06wz59k8q/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2180
+      },
+      {
+         "height" : 2846,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p55",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p55/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2846,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0f76657nt89/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0f76657nt89",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2180
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p55/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p55",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 55"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc0f76657nt89/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2180
+      },
+      {
+         "height" : 2803,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p56",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p56/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 2803,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09k45s2v67k/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09k45s2v67k",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2137
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p56/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p56",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 56"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc09k45s2v67k/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2137
+      },
+      {
+         "height" : 3408,
+         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p57",
+         "items" : [
+            {
+               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p57/main",
+               "items" : [
+                  {
+                     "body" : {
+                        "format" : "image/jpeg",
+                        "height" : 3408,
+                        "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05t3g056f6p/full/max/0/default.jpg",
+                        "service" : [
+                           {
+                              "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05t3g056f6p",
+                              "profile" : "level2",
+                              "type" : "ImageService2"
+                           }
+                        ],
+                        "type" : "Image",
+                        "width" : 2727
+                     },
+                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p57/image",
+                     "motivation" : "painting",
+                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p57",
+                     "type" : "Annotation"
+                  }
+               ],
+               "type" : "AnnotationPage"
+            }
+         ],
+         "label" : {
+            "none" : [
+               "Image 57"
+            ]
+         },
+         "thumbnail" : [
+            {
+               "format" : "image/jpeg",
+               "id" : "https://image-tor.canadiana.ca/iiif/2/69429%2Fc05t3g056f6p/full/max/0/default.jpg",
+               "type" : "Image"
+            }
+         ],
+         "type" : "Canvas",
+         "width" : 2727
+      }
+   ],
+   "label" : {
+      "none" : [
+         "Guide to bee-keeping in British Columbia /"
+      ]
+   },
+   "metadata" : [],
+   "provider" : [
+      {
+         "homepage" : [
+            {
+               "format" : "text/html",
+               "id" : "https://www.crkn-rcdr.ca/",
+               "label" : {
+                  "en" : [
+                     "Canadian Research Knowledge Network / Réseau canadien de documentation pour la recherche"
+                  ],
+                  "fr" : [
+                     "Réseau canadien de documentation pour la recherche / Canadian Research Knowledge Network"
+                  ]
+               },
+               "type" : "Text"
+            }
+         ],
+         "id" : "https://www.crkn-rcdr.ca/",
+         "label" : {
+            "en" : [
+               "Canadian Research Knowledge Network / Réseau canadien de documentation pour la recherche"
+            ],
+            "fr" : [
+               "Réseau canadien de documentation pour la recherche / Canadian Research Knowledge Network"
+            ]
+         },
+         "type" : "Agent"
+      }
+   ],
+   "type" : "Manifest"
+}
