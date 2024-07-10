@@ -8,7 +8,7 @@ class ItemDownloadsController < ApplicationController
         #http://localhost:3000/dl/oocihm.8_00001_1
         #https://github.com/crkn-rcdr/cap/blob/2cea946258b7474dd30bc6a1428b62025e6ac29a/CAP/lib/CIHM/Access/Presentation/SwiftClient.pm#L52
         @documentId            = params[:id]
-        key                    = ENV["cappassword "]
+        key                    = ENV["cappassword"]
         expires                = (Time.now.to_i + 86400).to_s
         swift_uri              = "https://swift.canadiana.ca"
 
