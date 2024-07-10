@@ -9,32 +9,33 @@ import {
 } from 'mirador/dist/es/src/state/selectors'
 
 function downloadFile(url, filename) {
-  fetch(url, {
-      method: 'GET',
-      //headers: new Headers({
-      //    "Authorization": "Bearer " + token
-      //})
-  })
-  .then(response => response.blob())
-  .then(blob => {
-      var url = window.URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
-      a.click();    
-      a.remove();  //afterwards we remove the element again         
-  });
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
+  a.click();    
+  a.remove();  //afterwards we remove the element again     
 }
 
 class FullPDFDownload extends Component {
   downloadAndCloseMenu() {
-    const { handleClose, canvasIndex, manifestId } = this.props;
-    console.log("m", manifestId)
-    let page = canvasIndex + 1
-    console.log("/access-files/69429/oocihm.84056.pdf")
-    downloadFile("/access-files/69429/oocihm.84056.pdf", "oocihm.84056.pdf") 
-    handleClose();
+    const { handleClose, manifestId } = this.props
+    const pathname = new URL(manifestId).pathname
+    const parts = pathname.split('/')
+    const id = parts[parts.length - 2]
+    console.log("/dl/" + id)
+    fetch("/dl/" + id, {
+      method: 'GET'
+    })
+    .then((response) => response.json())
+    .then(data => {
+      if(data["docPdfUri"]?.length) {
+        downloadFile(data["docPdfUri"], id + ".pdf") 
+        handleClose() 
+      } else {
+        alert("error")
+      } 
+    })
   }
 
   render() {

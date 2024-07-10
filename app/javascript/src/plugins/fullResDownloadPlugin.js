@@ -13,10 +13,7 @@ import {
 
 function downloadFile(url, filename) {
   fetch(url, {
-      method: 'GET',
-      //headers: new Headers({
-      //    "Authorization": "Bearer " + token
-      //})
+      method: 'GET'
   })
   .then(response => response.blob())
   .then(blob => {
@@ -36,9 +33,7 @@ class FullResDownload extends Component {
     console.log("c", canvas)
     console.log("m", manifestId)
     let page = canvasIndex + 1
-    console.log("url", canvas.__jsonld.items[0].items[0].body.id)
     downloadFile(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
-    console.log("/access-files/69429/oocihm.84056."+page+".jpg")
     handleClose()
   }
 

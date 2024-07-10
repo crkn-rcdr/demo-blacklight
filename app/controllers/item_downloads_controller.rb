@@ -8,13 +8,13 @@ class ItemDownloadsController < ApplicationController
         #http://localhost:3000/dl/oocihm.8_00001_1
         #https://github.com/crkn-rcdr/cap/blob/2cea946258b7474dd30bc6a1428b62025e6ac29a/CAP/lib/CIHM/Access/Presentation/SwiftClient.pm#L52
         @documentId            = params[:id]
-        key                    = "J?E7Fc}4F+jeaWN@" #ENV["cappassword "]
+        key                    = ENV["cappassword "]
         expires                = (Time.now.to_i + 86400).to_s
         swift_uri              = "https://swift.canadiana.ca"
 
 
         doc_pdf_uri            = ""
-        canvas_download_uris   = {}
+        canvas_download_uris   = []
 
         #https://swift.canadiana.ca/v1/AUTH_crkn/access-files/69429/c0hh6c43gm7w.pdf?filename=oocihm.8_00001_1.1.pdf&temp_url_expires=1720704856&temp_url_sig=03086e0b6ea40dad9d146a0b7e4ab329861c34c7
         #https://swift.canadiana.ca/v1/AUTH_crkn/access-files/69429/c0hh6c43gm7w.pdf?filename=oocihm.8_00001_1.1.pdf&temp_url_expires=1720716848&temp_url_sig=4995770b5f16888fff31bd8d1ddb2bca9c295017
@@ -67,10 +67,7 @@ class ItemDownloadsController < ApplicationController
                     signature              = OpenSSL::HMAC.hexdigest(digest, key, payload)
                     uri_suffix             = "&temp_url_expires=#{expires}&temp_url_sig=#{signature}"
                     canvas_pdf_uri         = "#{swift_uri}#{path}?filename=#{@documentId}.#{canvasNumber}.pdf#{uri_suffix}"
-                    canvas_download_uris[canvas['id']] = {
-                        "canvasImageUri" => canvas['thumbnail'][0]['id'], #.force_encoding("ISO-8859-1").encode("UTF-8"), 
-                        "canvasPdfUri"   => canvas_pdf_uri #.force_encoding("ISO-8859-1").encode("UTF-8")
-                    } 
+                    canvas_download_uris.append(canvas_pdf_uri)
                 end
             end
         end

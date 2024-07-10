@@ -4,7 +4,3 @@
 
 import { application } from "./application"
 
-import IIIFViewerController from './iiif_viewer_component_controller'
-application.register('iiif_viewer', IIIFViewerController)
-import DocumentDownloadsController from './document_downloads_component_controller'
-application.register('document_downloads', DocumentDownloadsController)
