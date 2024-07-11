@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: sea-lion-app-kv5jd.ondigitalocean.app
+    hostname: parl-blacklight-test-bcwg7.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/lop-blacklight
@@ -9,14 +9,14 @@ production:
 
 development:
   solr:
-    hostname: sea-lion-app-kv5jd.ondigitalocean.app
+    hostname: parl-blacklight-test-bcwg7.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/coseblacklightarch2
 
 test:
   solr:
-    hostname: sea-lion-app-kv5jd.ondigitalocean.app
+    hostname: parl-blacklight-test-bcwg7.ondigitalocean.app
     port: 8983
     log_level: WARNING
     path: /solr/lop-blacklight

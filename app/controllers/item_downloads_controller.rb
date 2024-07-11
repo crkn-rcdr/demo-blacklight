@@ -20,23 +20,22 @@ class ItemDownloadsController < ApplicationController
         #https://swift.canadiana.ca/v1/AUTH_crkn/access-files/69429/c0hh6c43gm7w.pdf?filename=oocihm.8_00001_1.1.pdf&temp_url_expires=1720716848&temp_url_sig=4995770b5f16888fff31bd8d1ddb2bca9c295017
         uri = URI('https://parl.canadiana.ca/iiif/'+@documentId+'/manifest')
         res = Net::HTTP.get(uri)
-        if res 
-            puts res  
+        if res  
             result = JSON.parse(res)
             #"label": {
-            #    "en": [
-            #    "Creator"
+            #    "none": [
+            #    "noid"
             #    ]
             #},
             #"value": {
-            #    "en": [
-            #    "Glindoni, Henry Gillard, 1852-1913"
+            #    "none": [
+            #    "noid"
             #    ]
             #}
             
             documentNoid = ""
             result['metadata'].each do |metadata|
-                if metadata['label']['none']
+                if metadata['label']['none'] == "noid"
                     documentNoid = metadata['value']['none']
                 end
             end

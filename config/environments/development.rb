@@ -69,4 +69,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.hosts << 'sea-lion-app-kv5jd.ondigitalocean.app'
+  config.hosts << "parl-blacklight-test-bcwg7.ondigitalocean.app"
 end

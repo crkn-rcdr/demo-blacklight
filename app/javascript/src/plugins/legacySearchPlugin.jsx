@@ -116,11 +116,11 @@ export class LegacySearchPlugin extends Component {
               />
               <CardMedia
                 image={canvases[result-1].__jsonld.items[0].items[0].body.id}
-                height="390px"
+                height="300px"
                 title={"Image " + result}
               />
             </Card>
-          )) : "No results" : this.state.resultsMenuOpen ?
+          )) : (<p><br/>No results</p>) : this.state.resultsMenuOpen ?
             <div className="legacy-search-menu">
               <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
                 <Button variant="contained" color="primary" onClick={() => {

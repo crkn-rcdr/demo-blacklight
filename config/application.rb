@@ -21,5 +21,6 @@ module MyNewBlacklightapp
     config.web_console.permissions = '172.18.0.1'
     config.hosts << "172.18.0.1"
     config.hosts << "sea-lion-app-kv5jd.ondigitalocean.app"
+    config.hosts << "parl-blacklight-test-bcwg7.ondigitalocean.app"
   end
 end

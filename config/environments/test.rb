@@ -60,4 +60,5 @@ Rails.application.configure do
 
 
   config.hosts << 'sea-lion-app-kv5jd.ondigitalocean.app'
+  config.hosts << "parl-blacklight-test-bcwg7.ondigitalocean.app"
 end
