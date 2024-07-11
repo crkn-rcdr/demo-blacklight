@@ -489,6 +489,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 #pvToolbarTop {
     width:100%;
     display: flex;
+    padding-bottom: 0.5rem;
 }
 .fullscreen {
     bottom: 0;
@@ -502,7 +503,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     overflow: hidden;
     margin-right: 1rem;
     margin-top: 0.5rem;
-    width: 17rem;
+    width: 15rem;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12) !important;
     border-top: 1px solid #ededed !important;
     border-radius: 0 !important;
