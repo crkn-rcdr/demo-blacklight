@@ -54,23 +54,23 @@ nav.topbar {
     text-indent: inherit;
     width: fit-content;
     height: fit-content;
-    background: orange;
-    color: black !important;
+    background: rgb(10, 22, 64);
+    color: white !important;
     border-radius: 5px;
     margin-left: 0.5rem;
     padding: 0.5rem 1rem;
 }
-.nav-image-wrap {
+/*.nav-image-wrap {
     display: inline-block;
     background: transparent url(/canadiana-logo-light.jpg) no-repeat top left !important;
     background-size: 225px 50px !important;
     height: 50px;
     width: 225px;
 }
-.floatnav .nav-image-wrap {  /* The main logo image for the Blacklight instance */
+.floatnav .nav-image-wrap {  
     background: transparent url(/canadiana-logo-white.png) no-repeat top left !important;
     background-size: 225px 50px !important;
-}
+}*/
 .home-search-wrap {
     position: absolute;
     top: 44vh;

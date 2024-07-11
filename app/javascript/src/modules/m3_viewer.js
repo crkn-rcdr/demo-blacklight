@@ -30,7 +30,7 @@ export default {
         const params = new URLSearchParams(window.location.search)
         if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
     
-        let apiPrefix =  "https://www.canadiana.ca/iiif/"
+        let apiPrefix =  "https://parl.canadiana.ca/iiif/"
         let manifest = apiPrefix+documentId+"/manifest"
         
         let mplugins = [
@@ -779,7 +779,7 @@ export default {
             preserveViewport: true,
     
     
-            zoomPerScroll: 1,
+            zoomPerScroll: 1.5,
     
             gestureSettingsMouse: {
               scrollToZoom: false,

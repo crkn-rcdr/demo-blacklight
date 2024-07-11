@@ -5,7 +5,7 @@ class CollectionItemsComponent < ViewComponent::Base
         @documentId = documentId
         #https://dolphin-app-p9llh.ondigitalocean.app/solr//select?indent=true&q.op=OR&q=%3Aoocihm.8_01278&useParams=
 
-        rsolr = RSolr.connect :url => 'https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight'
+        rsolr = RSolr.connect :url => 'https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight'
 
         @response_data = rsolr.get 'select', :params => {
             :rows => 500,

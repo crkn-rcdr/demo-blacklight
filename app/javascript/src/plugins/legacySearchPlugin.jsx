@@ -45,8 +45,7 @@ export class LegacySearchPlugin extends Component {
       let currURL = window.location.href
       let urlArr=currURL.split('/')
       let parameters=urlArr[urlArr.length-1].split('?')
-      let slugA = parameters[0].split('.')
-      let id = slugA[slugA.length-1]
+      let id = parameters[0]
       fetch('/legacy/'+id+'?' + new URLSearchParams({
           q: this.state.query
       })).then(response => {

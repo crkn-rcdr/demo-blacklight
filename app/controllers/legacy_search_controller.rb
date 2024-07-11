@@ -8,7 +8,7 @@ class LegacySearchController < ApplicationController
         @documentId = params[:id]
         @term = params[:q]
         if @term.length != 0
-            rsolr = RSolr.connect :url => 'https://dolphin-app-p9llh.ondigitalocean.app/solr/page'
+            rsolr = RSolr.connect :url => 'https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-page'
             if @term != "*:*"
                 @legacy_ocr_search_request= rsolr.get 'select', :params => {
                     :rows => 500,

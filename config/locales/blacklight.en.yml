@@ -20,7 +20,7 @@ en:
       next: 'Next &raquo;'
 
   blacklight:
-    application_name: 'Beta'
+    application_name: 'Library of Parliament Blacklight Test'
     skip_links:
       label: 'Skip links'
       main_content: 'Skip to main content'

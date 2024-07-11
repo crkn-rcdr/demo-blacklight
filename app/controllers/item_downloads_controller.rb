@@ -18,7 +18,7 @@ class ItemDownloadsController < ApplicationController
 
         #https://swift.canadiana.ca/v1/AUTH_crkn/access-files/69429/c0hh6c43gm7w.pdf?filename=oocihm.8_00001_1.1.pdf&temp_url_expires=1720704856&temp_url_sig=03086e0b6ea40dad9d146a0b7e4ab329861c34c7
         #https://swift.canadiana.ca/v1/AUTH_crkn/access-files/69429/c0hh6c43gm7w.pdf?filename=oocihm.8_00001_1.1.pdf&temp_url_expires=1720716848&temp_url_sig=4995770b5f16888fff31bd8d1ddb2bca9c295017
-        uri = URI('https://www.canadiana.ca/iiif/'+@documentId+'/manifest')
+        uri = URI('https://parl.canadiana.ca/iiif/'+@documentId+'/manifest')
         res = Net::HTTP.get(uri)
         if res 
             puts res  

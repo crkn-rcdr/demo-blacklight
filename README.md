@@ -55,10 +55,10 @@ See CRKN test data!
 Notes: 
 * with docker compose up, use --force-recreate if you want to reset the contents of solr
 * or use this Solr API curl command:
-`curl -X POST -H 'Content-Type: application/json' 'http://crkn-solr.c7a.ca:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
-`curl -X POST -H 'Content-Type: application/json' 'https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://crkn-solr.c7a.ca:8983/solr/lop-blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/lop-blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'http://solr:8983/solr/lop-blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
+`curl -X POST -H 'Content-Type: application/json' 'https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight/update?commit=true' -d '{ "delete": {"query":"*:*"} }'`
 
 To install new javascript libraries enter the docker container.
 `docker exec -it demo-blacklight-web-1 bash`
@@ -105,3 +105,6 @@ https://workshop.projectblacklight.org/v7.11.1/solr-in-blacklight/
 https://digitalcollections.library.harvard.edu/catalog/990071779400203941 
 https://catalog.library.cornell.edu/?f%5Bonline%5D%5B%5D=Online 
 https://searchworks.stanford.edu/
+
+docker exec -it demo-blacklight-solr-1 solr create_core -c lop-page
+curl -X POST -H 'Content-Type: application/json' 'https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight/update?commit=true' -d '{ "delete": {"query":"id:oop.bills_CDC_1501_1"} }'

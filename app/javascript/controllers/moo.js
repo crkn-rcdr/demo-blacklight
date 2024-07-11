@@ -32,7 +32,7 @@ export default class extends Controller {
     if(params.has("pageNum")) canvasIndex = parseInt(params.get("pageNum")-1)
 
 
-    let manifest = "https://www.canadiana.ca/iiif/"+documentId+"/manifest"
+    let manifest = "https://parl.canadiana.ca/iiif/"+documentId+"/manifest"
     
     let mplugins = [
       ...miradorImageToolsPlugin
@@ -754,7 +754,7 @@ export default class extends Controller {
 
         showNavigationControl: false,
 
-        zoomPerScroll: 1,
+        zoomPerScroll: 1.5,
 
         gestureSettingsMouse: {
           scrollToZoom: false

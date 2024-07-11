@@ -1,10 +1,10 @@
 load_defaults: 8.0.1
 development:
   adapter: solr
-  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight"
 test: &test
   adapter: solr
-  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight"
 production:
   adapter: solr
-  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/blacklight"
+  url: "https://dolphin-app-p9llh.ondigitalocean.app/solr/lop-blacklight"

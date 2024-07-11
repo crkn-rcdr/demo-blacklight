@@ -4,10 +4,10 @@
    "items" : [
       {
          "height" : 3437,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p1",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p1",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p1/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p1/main",
                "items" : [
                   {
                      "body" : {
@@ -24,9 +24,9 @@
                         "type" : "Image",
                         "width" : 2713
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p1/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p1/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p1",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p1",
                      "type" : "Annotation"
                   }
                ],
@@ -50,10 +50,10 @@
       },
       {
          "height" : 3437,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p2",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p2",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p2/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p2/main",
                "items" : [
                   {
                      "body" : {
@@ -70,9 +70,9 @@
                         "type" : "Image",
                         "width" : 2713
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p2/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p2/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p2",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p2",
                      "type" : "Annotation"
                   }
                ],
@@ -96,10 +96,10 @@
       },
       {
          "height" : 3408,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p3",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p3",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p3/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p3/main",
                "items" : [
                   {
                      "body" : {
@@ -116,9 +116,9 @@
                         "type" : "Image",
                         "width" : 2698
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p3/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p3/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p3",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p3",
                      "type" : "Annotation"
                   }
                ],
@@ -142,10 +142,10 @@
       },
       {
          "height" : 1277,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p4",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p4",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p4/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p4/main",
                "items" : [
                   {
                      "body" : {
@@ -162,9 +162,9 @@
                         "type" : "Image",
                         "width" : 1316
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p4/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p4/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p4",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p4",
                      "type" : "Annotation"
                   }
                ],
@@ -188,10 +188,10 @@
       },
       {
          "height" : 2832,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p5",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p5",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p5/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p5/main",
                "items" : [
                   {
                      "body" : {
@@ -208,9 +208,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p5/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p5/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p5",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p5",
                      "type" : "Annotation"
                   }
                ],
@@ -234,10 +234,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p6",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p6",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p6/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p6/main",
                "items" : [
                   {
                      "body" : {
@@ -254,9 +254,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p6/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p6/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p6",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p6",
                      "type" : "Annotation"
                   }
                ],
@@ -280,10 +280,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p7",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p7",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p7/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p7/main",
                "items" : [
                   {
                      "body" : {
@@ -300,9 +300,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p7/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p7/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p7",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p7",
                      "type" : "Annotation"
                   }
                ],
@@ -326,10 +326,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p8",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p8",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p8/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p8/main",
                "items" : [
                   {
                      "body" : {
@@ -346,9 +346,9 @@
                         "type" : "Image",
                         "width" : 2230
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p8/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p8/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p8",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p8",
                      "type" : "Annotation"
                   }
                ],
@@ -372,10 +372,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p9",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p9",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p9/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p9/main",
                "items" : [
                   {
                      "body" : {
@@ -392,9 +392,9 @@
                         "type" : "Image",
                         "width" : 2230
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p9/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p9/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p9",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p9",
                      "type" : "Annotation"
                   }
                ],
@@ -418,10 +418,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p10",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p10",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p10/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p10/main",
                "items" : [
                   {
                      "body" : {
@@ -438,9 +438,9 @@
                         "type" : "Image",
                         "width" : 2266
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p10/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p10/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p10",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p10",
                      "type" : "Annotation"
                   }
                ],
@@ -464,10 +464,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p11",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p11",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p11/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p11/main",
                "items" : [
                   {
                      "body" : {
@@ -484,9 +484,9 @@
                         "type" : "Image",
                         "width" : 2266
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p11/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p11/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p11",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p11",
                      "type" : "Annotation"
                   }
                ],
@@ -510,10 +510,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p12",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p12",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p12/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p12/main",
                "items" : [
                   {
                      "body" : {
@@ -530,9 +530,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p12/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p12/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p12",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p12",
                      "type" : "Annotation"
                   }
                ],
@@ -556,10 +556,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p13",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p13",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p13/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p13/main",
                "items" : [
                   {
                      "body" : {
@@ -576,9 +576,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p13/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p13/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p13",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p13",
                      "type" : "Annotation"
                   }
                ],
@@ -602,10 +602,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p14",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p14",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p14/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p14/main",
                "items" : [
                   {
                      "body" : {
@@ -622,9 +622,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p14/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p14/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p14",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p14",
                      "type" : "Annotation"
                   }
                ],
@@ -648,10 +648,10 @@
       },
       {
          "height" : 2875,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p15",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p15",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p15/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p15/main",
                "items" : [
                   {
                      "body" : {
@@ -668,9 +668,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p15/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p15/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p15",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p15",
                      "type" : "Annotation"
                   }
                ],
@@ -694,10 +694,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p16",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p16",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p16/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p16/main",
                "items" : [
                   {
                      "body" : {
@@ -714,9 +714,9 @@
                         "type" : "Image",
                         "width" : 2230
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p16/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p16/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p16",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p16",
                      "type" : "Annotation"
                   }
                ],
@@ -740,10 +740,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p17",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p17",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p17/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p17/main",
                "items" : [
                   {
                      "body" : {
@@ -760,9 +760,9 @@
                         "type" : "Image",
                         "width" : 2230
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p17/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p17/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p17",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p17",
                      "type" : "Annotation"
                   }
                ],
@@ -786,10 +786,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p18",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p18",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p18/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p18/main",
                "items" : [
                   {
                      "body" : {
@@ -806,9 +806,9 @@
                         "type" : "Image",
                         "width" : 2281
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p18/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p18/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p18",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p18",
                      "type" : "Annotation"
                   }
                ],
@@ -832,10 +832,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p19",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p19",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p19/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p19/main",
                "items" : [
                   {
                      "body" : {
@@ -852,9 +852,9 @@
                         "type" : "Image",
                         "width" : 2281
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p19/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p19/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p19",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p19",
                      "type" : "Annotation"
                   }
                ],
@@ -878,10 +878,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p20",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p20",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p20/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p20/main",
                "items" : [
                   {
                      "body" : {
@@ -898,9 +898,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p20/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p20/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p20",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p20",
                      "type" : "Annotation"
                   }
                ],
@@ -924,10 +924,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p21",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p21",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p21/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p21/main",
                "items" : [
                   {
                      "body" : {
@@ -944,9 +944,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p21/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p21/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p21",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p21",
                      "type" : "Annotation"
                   }
                ],
@@ -970,10 +970,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p22",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p22",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p22/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p22/main",
                "items" : [
                   {
                      "body" : {
@@ -990,9 +990,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p22/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p22/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p22",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p22",
                      "type" : "Annotation"
                   }
                ],
@@ -1016,10 +1016,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p23",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p23",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p23/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p23/main",
                "items" : [
                   {
                      "body" : {
@@ -1036,9 +1036,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p23/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p23/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p23",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p23",
                      "type" : "Annotation"
                   }
                ],
@@ -1062,10 +1062,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p24",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p24",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p24/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p24/main",
                "items" : [
                   {
                      "body" : {
@@ -1082,9 +1082,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p24/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p24/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p24",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p24",
                      "type" : "Annotation"
                   }
                ],
@@ -1108,10 +1108,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p25",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p25",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p25/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p25/main",
                "items" : [
                   {
                      "body" : {
@@ -1128,9 +1128,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p25/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p25/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p25",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p25",
                      "type" : "Annotation"
                   }
                ],
@@ -1154,10 +1154,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p26",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p26",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p26/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p26/main",
                "items" : [
                   {
                      "body" : {
@@ -1174,9 +1174,9 @@
                         "type" : "Image",
                         "width" : 2209
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p26/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p26/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p26",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p26",
                      "type" : "Annotation"
                   }
                ],
@@ -1200,10 +1200,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p27",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p27",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p27/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p27/main",
                "items" : [
                   {
                      "body" : {
@@ -1220,9 +1220,9 @@
                         "type" : "Image",
                         "width" : 2209
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p27/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p27/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p27",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p27",
                      "type" : "Annotation"
                   }
                ],
@@ -1246,10 +1246,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p28",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p28",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p28/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p28/main",
                "items" : [
                   {
                      "body" : {
@@ -1266,9 +1266,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p28/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p28/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p28",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p28",
                      "type" : "Annotation"
                   }
                ],
@@ -1292,10 +1292,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p29",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p29",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p29/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p29/main",
                "items" : [
                   {
                      "body" : {
@@ -1312,9 +1312,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p29/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p29/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p29",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p29",
                      "type" : "Annotation"
                   }
                ],
@@ -1338,10 +1338,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p30",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p30",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p30/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p30/main",
                "items" : [
                   {
                      "body" : {
@@ -1358,9 +1358,9 @@
                         "type" : "Image",
                         "width" : 2137
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p30/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p30/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p30",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p30",
                      "type" : "Annotation"
                   }
                ],
@@ -1384,10 +1384,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p31",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p31",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p31/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p31/main",
                "items" : [
                   {
                      "body" : {
@@ -1404,9 +1404,9 @@
                         "type" : "Image",
                         "width" : 2137
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p31/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p31/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p31",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p31",
                      "type" : "Annotation"
                   }
                ],
@@ -1430,10 +1430,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p32",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p32",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p32/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p32/main",
                "items" : [
                   {
                      "body" : {
@@ -1450,9 +1450,9 @@
                         "type" : "Image",
                         "width" : 2166
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p32/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p32/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p32",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p32",
                      "type" : "Annotation"
                   }
                ],
@@ -1476,10 +1476,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p33",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p33",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p33/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p33/main",
                "items" : [
                   {
                      "body" : {
@@ -1496,9 +1496,9 @@
                         "type" : "Image",
                         "width" : 2166
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p33/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p33/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p33",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p33",
                      "type" : "Annotation"
                   }
                ],
@@ -1522,10 +1522,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p34",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p34",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p34/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p34/main",
                "items" : [
                   {
                      "body" : {
@@ -1542,9 +1542,9 @@
                         "type" : "Image",
                         "width" : 2166
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p34/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p34/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p34",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p34",
                      "type" : "Annotation"
                   }
                ],
@@ -1568,10 +1568,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p35",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p35",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p35/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p35/main",
                "items" : [
                   {
                      "body" : {
@@ -1588,9 +1588,9 @@
                         "type" : "Image",
                         "width" : 2166
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p35/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p35/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p35",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p35",
                      "type" : "Annotation"
                   }
                ],
@@ -1614,10 +1614,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p36",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p36",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p36/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p36/main",
                "items" : [
                   {
                      "body" : {
@@ -1634,9 +1634,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p36/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p36/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p36",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p36",
                      "type" : "Annotation"
                   }
                ],
@@ -1660,10 +1660,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p37",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p37",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p37/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p37/main",
                "items" : [
                   {
                      "body" : {
@@ -1680,9 +1680,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p37/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p37/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p37",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p37",
                      "type" : "Annotation"
                   }
                ],
@@ -1706,10 +1706,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p38",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p38",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p38/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p38/main",
                "items" : [
                   {
                      "body" : {
@@ -1726,9 +1726,9 @@
                         "type" : "Image",
                         "width" : 2202
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p38/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p38/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p38",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p38",
                      "type" : "Annotation"
                   }
                ],
@@ -1752,10 +1752,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p39",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p39",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p39/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p39/main",
                "items" : [
                   {
                      "body" : {
@@ -1772,9 +1772,9 @@
                         "type" : "Image",
                         "width" : 2202
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p39/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p39/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p39",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p39",
                      "type" : "Annotation"
                   }
                ],
@@ -1798,10 +1798,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p40",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p40",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p40/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p40/main",
                "items" : [
                   {
                      "body" : {
@@ -1818,9 +1818,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p40/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p40/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p40",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p40",
                      "type" : "Annotation"
                   }
                ],
@@ -1844,10 +1844,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p41",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p41",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p41/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p41/main",
                "items" : [
                   {
                      "body" : {
@@ -1864,9 +1864,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p41/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p41/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p41",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p41",
                      "type" : "Annotation"
                   }
                ],
@@ -1890,10 +1890,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p42",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p42",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p42/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p42/main",
                "items" : [
                   {
                      "body" : {
@@ -1910,9 +1910,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p42/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p42/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p42",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p42",
                      "type" : "Annotation"
                   }
                ],
@@ -1936,10 +1936,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p43",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p43",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p43/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p43/main",
                "items" : [
                   {
                      "body" : {
@@ -1956,9 +1956,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p43/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p43/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p43",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p43",
                      "type" : "Annotation"
                   }
                ],
@@ -1982,10 +1982,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p44",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p44",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p44/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p44/main",
                "items" : [
                   {
                      "body" : {
@@ -2002,9 +2002,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p44/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p44/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p44",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p44",
                      "type" : "Annotation"
                   }
                ],
@@ -2028,10 +2028,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p45",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p45",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p45/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p45/main",
                "items" : [
                   {
                      "body" : {
@@ -2048,9 +2048,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p45/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p45/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p45",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p45",
                      "type" : "Annotation"
                   }
                ],
@@ -2074,10 +2074,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p46",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p46",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p46/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p46/main",
                "items" : [
                   {
                      "body" : {
@@ -2094,9 +2094,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p46/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p46/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p46",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p46",
                      "type" : "Annotation"
                   }
                ],
@@ -2120,10 +2120,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p47",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p47",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p47/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p47/main",
                "items" : [
                   {
                      "body" : {
@@ -2140,9 +2140,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p47/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p47/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p47",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p47",
                      "type" : "Annotation"
                   }
                ],
@@ -2166,10 +2166,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p48",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p48",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p48/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p48/main",
                "items" : [
                   {
                      "body" : {
@@ -2186,9 +2186,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p48/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p48/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p48",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p48",
                      "type" : "Annotation"
                   }
                ],
@@ -2212,10 +2212,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p49",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p49",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p49/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p49/main",
                "items" : [
                   {
                      "body" : {
@@ -2232,9 +2232,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p49/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p49/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p49",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p49",
                      "type" : "Annotation"
                   }
                ],
@@ -2258,10 +2258,10 @@
       },
       {
          "height" : 2846,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p50",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p50",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p50/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p50/main",
                "items" : [
                   {
                      "body" : {
@@ -2278,9 +2278,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p50/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p50/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p50",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p50",
                      "type" : "Annotation"
                   }
                ],
@@ -2304,10 +2304,10 @@
       },
       {
          "height" : 2846,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p51",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p51",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p51/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p51/main",
                "items" : [
                   {
                      "body" : {
@@ -2324,9 +2324,9 @@
                         "type" : "Image",
                         "width" : 2223
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p51/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p51/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p51",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p51",
                      "type" : "Annotation"
                   }
                ],
@@ -2350,10 +2350,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p52",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p52",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p52/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p52/main",
                "items" : [
                   {
                      "body" : {
@@ -2370,9 +2370,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p52/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p52/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p52",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p52",
                      "type" : "Annotation"
                   }
                ],
@@ -2396,10 +2396,10 @@
       },
       {
          "height" : 2861,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p53",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p53",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p53/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p53/main",
                "items" : [
                   {
                      "body" : {
@@ -2416,9 +2416,9 @@
                         "type" : "Image",
                         "width" : 2216
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p53/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p53/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p53",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p53",
                      "type" : "Annotation"
                   }
                ],
@@ -2442,10 +2442,10 @@
       },
       {
          "height" : 2846,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p54",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p54",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p54/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p54/main",
                "items" : [
                   {
                      "body" : {
@@ -2462,9 +2462,9 @@
                         "type" : "Image",
                         "width" : 2180
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p54/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p54/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p54",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p54",
                      "type" : "Annotation"
                   }
                ],
@@ -2488,10 +2488,10 @@
       },
       {
          "height" : 2846,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p55",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p55",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p55/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p55/main",
                "items" : [
                   {
                      "body" : {
@@ -2508,9 +2508,9 @@
                         "type" : "Image",
                         "width" : 2180
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p55/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p55/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p55",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p55",
                      "type" : "Annotation"
                   }
                ],
@@ -2534,10 +2534,10 @@
       },
       {
          "height" : 2803,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p56",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p56",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p56/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p56/main",
                "items" : [
                   {
                      "body" : {
@@ -2554,9 +2554,9 @@
                         "type" : "Image",
                         "width" : 2137
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p56/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p56/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p56",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p56",
                      "type" : "Annotation"
                   }
                ],
@@ -2580,10 +2580,10 @@
       },
       {
          "height" : 3408,
-         "id" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p57",
+         "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p57",
          "items" : [
             {
-               "id" : "https://www.canadiana.ca/iiif/oocihm.84056/page/p57/main",
+               "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/page/p57/main",
                "items" : [
                   {
                      "body" : {
@@ -2600,9 +2600,9 @@
                         "type" : "Image",
                         "width" : 2727
                      },
-                     "id" : "https://www.canadiana.ca/iiif/oocihm.84056/annotation/p57/image",
+                     "id" : "https://parl.canadiana.ca/iiif/oocihm.84056/annotation/p57/image",
                      "motivation" : "painting",
-                     "target" : "https://www.canadiana.ca/iiif/oocihm.84056/canvas/p57",
+                     "target" : "https://parl.canadiana.ca/iiif/oocihm.84056/canvas/p57",
                      "type" : "Annotation"
                   }
                ],

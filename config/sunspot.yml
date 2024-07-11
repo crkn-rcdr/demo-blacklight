@@ -3,7 +3,7 @@ production:
     hostname: sea-lion-app-kv5jd.ondigitalocean.app
     port: 8983
     log_level: WARNING
-    path: /solr/blacklight
+    path: /solr/lop-blacklight
     # read_timeout: 2
     # open_timeout: 0.5
 
@@ -19,5 +19,5 @@ test:
     hostname: sea-lion-app-kv5jd.ondigitalocean.app
     port: 8983
     log_level: WARNING
-    path: /solr/blacklight
+    path: /solr/lop-blacklight
     

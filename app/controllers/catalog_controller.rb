@@ -116,16 +116,17 @@ class CatalogController < ApplicationController
 
 
     #config.add_facet_field 'title_tsim', label: 'Title'
-    config.add_facet_field 'is_issue', label: 'Is Issue'
-    config.add_facet_field 'format', label: 'Format'
-    config.add_facet_field 'collection_tsim_str', label: 'Collection'
+    #config.add_facet_field 'is_issue', label: 'Is Issue'
+    #config.add_facet_field 'format', label: 'Format'
+    #config.add_facet_field 'collection_tsim_str', label: 'Collection'
     #config.add_facet_field 'title_series_tsim_str', label: 'Series'
     config.add_facet_field 'subject_ssim_str', label: 'Subject'
-    config.add_facet_field 'author_ssm_str', label: 'Creator'
+    config.add_facet_field 'serial_key', label: 'Series'
+    #config.add_facet_field 'author_ssm_str', label: 'Creator'
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
-    config.add_facet_field 'language_ssim_str', label: 'Language'
-    config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index'
-    config.add_facet_field 'pub_date_si', label: 'Publish Date'
+    #config.add_facet_field 'language_ssim_str', label: 'Language'
+    #config.add_facet_field 'published_ssm_str', label: 'Publishing Location', sort: 'index'
+    #config.add_facet_field 'pub_date_si', label: 'Publish Date'
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
@@ -145,35 +146,35 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_ssm', label: 'Title'
-    config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_ssm_str', label: 'Creator'
-    config.add_index_field 'collection_tsim', label: 'Collection'
-    config.add_index_field 'is_issue', label: 'Is Issue'
-    config.add_index_field 'pub_date_si', label: 'Date'
+    #config.add_index_field 'format', label: 'Format'
+    #config.add_index_field 'author_ssm_str', label: 'Creator'
+    #config.add_index_field 'collection_tsim', label: 'Collection'
+    #config.add_index_field 'is_issue', label: 'Is Issue'
+    #config.add_index_field 'pub_date_si', label: 'Date'
     config.add_index_field 'id', label: 'ID'
     
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
     config.add_show_field 'title_ssm', label: 'Title'
-    config.add_show_field 'subtitle_tsim', label: 'Subtitle'
-    config.add_show_field 'title_addl_tsim', label: 'Other Titles'
+    #config.add_show_field 'subtitle_tsim', label: 'Subtitle'
+    #config.add_show_field 'title_addl_tsim', label: 'Other Titles'
 
     config.add_show_field 'author_ssm_str', label: 'Creator'
-    config.add_show_field 'published_ssm', label: 'Published Statement'
-    config.add_show_field 'subject_ssim', label: 'Subject'
+    #config.add_show_field 'published_ssm', label: 'Published Statement'
+    #config.add_show_field 'subject_ssim', label: 'Subject'
 
-    config.add_show_field 'doc_source_tsim', label: 'Document Source'
-    config.add_show_field 'original_version_note_tsim', label: 'Original Version Note'
+    #config.add_show_field 'doc_source_tsim', label: 'Document Source'
+    #config.add_show_field 'original_version_note_tsim', label: 'Original Version Note'
     config.add_show_field 'notes_tsim', label: 'Notes'
 
-    config.add_show_field 'language_ssim', label: 'Language'
-    config.add_show_field 'collection_tsim', label: 'Collection'
-    config.add_show_field 'is_issue', label: 'Is Issue'
+    #config.add_show_field 'language_ssim', label: 'Language'
+    #config.add_show_field 'collection_tsim', label: 'Collection'
+    #config.add_show_field 'is_issue', label: 'Is Issue'
     
-    config.add_show_field 'access_note_tsim', label: 'Access Note'
-    config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
-    config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
+    #config.add_show_field 'access_note_tsim', label: 'Access Note'
+    #config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
+    #config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
     #config.add_show_field 'url_fulltext_ssm', label: 'Canadiana URL'
     #config.add_show_field 'subject_geo_ssim', label: 'Region'
     #config.add_show_field 'title_series_tsim', label: 'Series'
