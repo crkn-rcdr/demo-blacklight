@@ -138,7 +138,6 @@ export class NavControlsPlugin extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(this.props.currentCanvas, prevProps.currentCanvas)
     if(this.props.currentCanvas.id !== prevProps.currentCanvas?.id) {
       let index = 0
       for(let canvas of this.props.canvases) {

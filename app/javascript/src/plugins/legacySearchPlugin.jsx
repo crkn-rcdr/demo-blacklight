@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import * as actions from 'mirador/dist/es/src/state/actions';
+import * as actions from 'mirador/dist/es/src/state/actions'
 import {
   getCanvases
-} from 'mirador/dist/es/src/state/selectors';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ClearIcon from '@material-ui/icons/Clear';
+} from 'mirador/dist/es/src/state/selectors'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import ClearIcon from '@material-ui/icons/Clear'
+import Pagination from '@material-ui/lab/Pagination'
 
 export class LegacySearchPlugin extends Component {
 
@@ -19,6 +20,12 @@ export class LegacySearchPlugin extends Component {
     currentCanvasIndex: 0,
     resultsListOpen: false,
     resultsMenuOpen: false,
+    itemOffset: 0,
+    endOffset: 0,
+    currentItems: [],
+    pageCount: 0,
+    page: 1,
+    itemsPerPage: 20
   }
 
   constructor(props) {
@@ -29,7 +36,6 @@ export class LegacySearchPlugin extends Component {
     this.state.query = query ? query : ""
   }
 
-
   handleClear = () => {
     document.getElementById("pvSearch").value = ""
     this.state.query = ""
@@ -37,6 +43,9 @@ export class LegacySearchPlugin extends Component {
     this.state.currentResultIndex = 0
     this.state.resultsListOpen = false
     this.state.resultsMenuOpen = false
+    this.state.endOffset = 0
+    this.state.currentItems = 0
+    this.state.pageCount = 0
     this.forceUpdate()
   }
 
@@ -46,17 +55,32 @@ export class LegacySearchPlugin extends Component {
       let urlArr=currURL.split('/')
       let parameters=urlArr[urlArr.length-1].split('?')
       let id = parameters[0]
-      fetch('/legacy/'+id+'?' + new URLSearchParams({
+      fetch('/legacy/'+id+'?'+ new URLSearchParams({
           q: this.state.query
       })).then(response => {
         response.json().then(content => {
           this.state.results = content
           this.state.resultsListOpen = true
+          this.state.page = 0
+          this.state.itemOffset = 0
+          this.state.endOffset = 1 * this.state.itemsPerPage 
+          this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
+          this.state.pageCount = Math.ceil(this.state.results.length / this.state.itemsPerPage)
+          console.log("???", this.state.currentItems, this.state.pageCount, this.state.endOffset, this.state.itemsPerPage)
           this.forceUpdate()
         })
       })
     } else this.handleClear()
   }
+
+  handleChangePage = (event, newPage) => {
+    this.state.page = newPage
+    this.state.itemOffset = (this.state.page - 1) * this.state.itemsPerPage 
+    this.state.endOffset = (this.state.page ) * this.state.itemsPerPage 
+    this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
+    console.log("???", this.state)
+    this.forceUpdate()
+  };
   
   render() {
     const { windowId, canvases, setCanvas, manifestId } = this.props
@@ -101,14 +125,14 @@ export class LegacySearchPlugin extends Component {
             }
         </div>
         <div class="container-fluid container-flex card-section">
-          { this.state.resultsListOpen ? this.state.results.length ? this.state.results.map((result, index) => (
+          { this.state.resultsListOpen ? this.state.currentItems.length ? this.state.currentItems.map((result, index) => (
             <Card className='mui-card clickable' onClick={() => {
-              this.state.currentCanvasIndex = result
-              this.state.currentResultIndex = index
+              this.state.currentCanvasIndex = result - 1
+              this.state.currentResultIndex = this.state.itemOffset + index 
               this.state.resultsListOpen = false
               this.state.resultsMenuOpen = true
-              console.log(windowId, canvases[result-1].id)
-              setCanvas(canvases[result-1].id)
+              console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
+              setCanvas(canvases[this.state.currentCanvasIndex].id)
               this.forceUpdate()
             }}>
               <CardHeader
@@ -125,7 +149,11 @@ export class LegacySearchPlugin extends Component {
               <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
                 <Button variant="contained" color="primary" onClick={() => {
                   this.state.resultsListOpen = true
-                  this.state.resultsMenuOpen = false
+                  this.state.resultsMenuOpen = false 
+                  this.state.page = 1
+                  this.state.itemOffset = 0
+                  this.state.endOffset = 1 * this.state.itemsPerPage 
+                  this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
                   this.forceUpdate()
                 }}
                   className="btn-ghost btn-icon"
@@ -136,10 +164,10 @@ export class LegacySearchPlugin extends Component {
               </div>
               <div style={{display : "flex", justifyContent: "center", alignItems: "center", color: "#666"}} className="MuiTypography-caption">
                 <span style={{paddingRight : "0.6rem", borderRight: "1px solid #dbdbdb"}}>
-                  Image {this.state.currentCanvasIndex}
+                  Image {this.state.currentCanvasIndex + 1}
                 </span>
                 <span style={{marginLeft: "0.5rem"}}>
-                  Result {this.state.currentResultIndex+1} of {this.state.results.length}
+                  Result {this.state.currentResultIndex + 1} of {this.state.results.length}
                 </span>
               </div>
               <div style={{display : "flex", justifyContent: "flex-end", alignItems: "center"}}>
@@ -148,6 +176,7 @@ export class LegacySearchPlugin extends Component {
                     this.state.currentResultIndex -= 1
                     this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
                     setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    console.log(canvases[this.state.currentCanvasIndex])
                     this.forceUpdate()
                   }
                 }}>
@@ -158,6 +187,7 @@ export class LegacySearchPlugin extends Component {
                     this.state.currentResultIndex += 1
                     this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
                     setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    console.log(canvases[this.state.currentCanvasIndex])
                     this.forceUpdate()
                   }
                 }}>
@@ -169,6 +199,11 @@ export class LegacySearchPlugin extends Component {
           }
         </div>
 
+        { this.state.resultsListOpen && this.state.currentItems.length ? (
+          <div class="card-pagination-wrapper">
+            <Pagination count={this.state.pageCount} page={this.state.page} onChange={this.handleChangePage} />
+          </div>
+         ) : "" }
         
       </div>
     )

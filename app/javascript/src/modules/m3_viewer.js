@@ -137,13 +137,13 @@ export default {
     
               primary: {
     
-                main: "#155e66" // Controls the color of the Add button and current window indicator
+                main: "#3a78ae" // Controls the color of the Add button and current window indicator
     
               },
     
               secondary: {
     
-                main: "#155e66" // Controls the color of Selects and FormControls
+                main: "#3a78ae" // Controls the color of Selects and FormControls
     
               },
     

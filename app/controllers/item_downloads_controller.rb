@@ -35,8 +35,8 @@ class ItemDownloadsController < ApplicationController
             
             documentNoid = ""
             result['metadata'].each do |metadata|
-                if metadata['label']['none'] == "noid"
-                    documentNoid = metadata['value']['none']
+                if metadata['label']['none'][0] == "noid"
+                    documentNoid = metadata['value']['none'][0]
                 end
             end
 
@@ -60,7 +60,6 @@ class ItemDownloadsController < ApplicationController
                     canvasId = extracted_string.gsub('%2F', '/')
                     expires                = Time.now.to_i + 86400  # expires in a day
                     path                   = File.join("/v1/AUTH_crkn/access-files", "/#{canvasId}.pdf")
-                    puts path
                     payload                = "GET\n#{expires}\n#{path}"
                     digest                 = OpenSSL::Digest.new('sha1')
                     signature              = OpenSSL::HMAC.hexdigest(digest, key, payload)

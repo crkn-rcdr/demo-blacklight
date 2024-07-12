@@ -273,13 +273,13 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     color: #666 !important;
 }
 .MuiSvgIcon-colorSecondary {
-    color:#155e66 !important;
+    color:#3a78ae !important;
 }
 .MuiIconButton-label span, .MuiIconButton-label label, .MuiFormControlLabel-label, .css-19bb58m {
     color: #666 !important;
 }
 .mirador21 {
-    color: #155e66 !important;
+    color: #3a78ae !important;
 }
 .mirador-canvas-nav+div { /*image tools*/
     top: 8rem !important;
@@ -415,7 +415,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border: none;
 }
 #pvDownloadFull, #pvDownloadFull:hover{
-    color: #155e66 !important
+    color: #3a78ae !important
 }
 section[id$="gallery"] {
     border-top: 1px solid #dbdbdb !important;
@@ -516,9 +516,12 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     height: 300px;
 }
 .card-section {
-    max-height: 90%;
+    max-height: 73%;
     overflow: auto;
     padding: 0px 2px;
+}
+.card-pagination-wrapper { 
+    margin-top: 0.5rem;
 }
 .legacy-search-menu {
     position: absolute;
