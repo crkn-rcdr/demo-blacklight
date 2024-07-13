@@ -157,7 +157,7 @@ en:
           post_label: 'for'
         search:
           label: 'search for'
-          placeholder: 'Search the Canadiana collections...'
+          placeholder: 'Search the Canadian Parliamentary Historical Resources...'
         submit: 'Search'
       pagination:
         title: 'Results navigation'
