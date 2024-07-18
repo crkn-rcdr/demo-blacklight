@@ -34,7 +34,6 @@ class FullResDownload extends Component {
     console.log("m", manifestId)
     let page = canvasIndex + 1
     downloadFile(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
-    handleClose()
   }
 
   render() {

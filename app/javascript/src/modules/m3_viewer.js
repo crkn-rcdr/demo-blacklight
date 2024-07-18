@@ -1,19 +1,18 @@
 import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin.js'
-import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
-import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
-import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
-import fullPdfDownloadPlugin from '../plugins/fullPdfDownloadPlugin.js'
-import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
-import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
+//import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
+//import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
+//import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
+//import fullPdfDownloadPlugin from '../plugins/fullPdfDownloadPlugin.js'
+//import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
+//import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
+//import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
+//import textOverlayPlugin from 'mirador-textoverlay/es';
 import downloadMenuPlugin from '../plugins/downloadMenuPlugin.jsx'
-import miradorPDIIIFMenuItemPlugin from '../plugins/miradorPDIIIFMenuItem.js'
-import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
 import pageNumPlugin from '../plugins/pageNumPlugin.jsx'
 import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
 import navControlsPlugin from '../plugins/navControls.jsx'
 import legacySearchPlugin from '../plugins/legacySearchPlugin.jsx'
-//import textOverlayPlugin from 'mirador-textoverlay/es';
 
 export default {
   init: function() {
@@ -34,34 +33,12 @@ export default {
         let manifest = apiPrefix+documentId+"/manifest"
         
         let mplugins = [
-          //miradorZoomBugPlugin,
-          miradorViewPlugin,
-          downloadMenuPlugin,
-          {
-            ...fullResDownloadPlugin,
-            target: 'WindowTopBarShareMenu',
-          },
-          /*{
-            ...miradorDownloadPlugin,
-            target: 'WindowTopBarShareMenu',
-          },*/
-          {
-            ...pdfDownloadPlugin,
-            target: 'WindowTopBarShareMenu',
-          },
-          {
-            ...fullPdfDownloadPlugin,
-            target: 'WindowTopBarShareMenu',
-          },
-          miradorPDIIIFMenuItemPlugin,
-          miradorPDIIIFDialogPlugin,
-          miradorShareDialogPlugin,
-          //miradorDownloadDialogPlugin,
           ...miradorImageToolsPlugin,
           pageNumPlugin,
           legacySearchPlugin,
-          navControlsPlugin
-          //textOverlayPlugin
+          navControlsPlugin,
+          miradorViewPlugin,
+          downloadMenuPlugin
         ]
     
         //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
