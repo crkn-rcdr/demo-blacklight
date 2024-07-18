@@ -612,3 +612,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 .mv-menu-nav .nav-item {
     margin-left: 0;
 }
+a[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
