@@ -633,8 +633,10 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     background: none !important;
     width: 100% !important;
     height: 41% !important;
-    top: 2rem !important;
     position: absolute !important;
+}
+button[title="Expand image tools"] .MuiTouchRipple-child {
+    top: 2rem !important;
 }
 .MuiTouchRipple-root {
     overflow: visible !important;
