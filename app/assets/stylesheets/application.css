@@ -613,6 +613,13 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 .mv-menu-nav .nav-item {
     margin-left: 0;
 }
+#downloadsModal .mv-menu-nav {    
+    width: 100%;
+}
+#downloadsModal .mv-menu-nav .nav-item {    
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+}
 a[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
