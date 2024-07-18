@@ -54,44 +54,72 @@ class ViewerNavigation extends Component {
         className={classNames(ns('osd-navigation-custom'))}
         dir={htmlDir}
       >
-        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-          <button 
-            class="MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
-            tabindex="0" type="button" 
+        <ul class="nav nav-pills" aria-label="Item navigation buttons">
+          <li class="nav-item">
+            <a 
+            class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+            tabindex="0"
             aria-label="Last Image" 
             title="First Image"
             disabled={!hasPreviousCanvas}
+            onKeyDown={ (e) => {
+              if (e.key === 'Enter' ) {
+                hasPreviousCanvas && setCanvas(firstCanvas)
+              }
+            }}
             onClick={() => { hasPreviousCanvas && setCanvas(firstCanvas); }}>
-            <SkipNextIcon style={previousIconStyle} />
-          </button>
-          <button 
-            class="MuiButtonBase-root MuiIconButton-root mirador-previous-canvas-button btn btn-outline" 
-            tabindex="0" type="button" 
+              <SkipNextIcon style={previousIconStyle} />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+            class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+            tabindex="0" 
             aria-label="Previous Image" 
             title="Previous Image"
             disabled={!hasPreviousCanvas}
+            onKeyDown={ (e) => {
+              if (e.key === 'Enter' ) {
+                hasPreviousCanvas && setPreviousCanvas()
+              }
+            }}
             onClick={() => { hasPreviousCanvas && setPreviousCanvas(); }}>
-            <NavigationIcon style={previousIconStyle} />
-          </button>
-          <button 
-            class="MuiButtonBase-root MuiIconButton-root mirador-next-canvas-button btn btn-outline" 
-            tabindex="0" type="button" 
+              <NavigationIcon style={previousIconStyle} />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+            class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+            tabindex="0" 
             aria-label="Next Image" 
             title="Next Image"
             disabled={!hasNextCanvas}
+            onKeyDown={ (e) => {
+              if (e.key === 'Enter' ) {
+                hasNextCanvas && setNextCanvas()
+              }
+            }}
             onClick={() => { hasNextCanvas && setNextCanvas(); }}>
-            <NavigationIcon style={nextIconStyle} />
-          </button>
-          <button 
-            class="MuiButtonBase-root MuiIconButton-root mirador-last-canvas-button btn btn-outline" 
-            tabindex="0" type="button" 
+              <NavigationIcon style={nextIconStyle} />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a 
+            class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+            tabindex="0" 
             aria-label="Last Image" 
             title="Last Image"
             disabled={!hasNextCanvas}
+            onKeyDown={ (e) => {
+              if (e.key === 'Enter' ) {
+                hasNextCanvas && setCanvas(lastCanvas)
+              }
+            }}
             onClick={() => { hasNextCanvas && setCanvas(lastCanvas); }}>
             <SkipNextIcon style={nextIconStyle} />
-          </button>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
     );
   }
@@ -169,7 +197,7 @@ export class NavControlsPlugin extends Component {
     const { windowId, hasNextCanvas, hasPreviousCanvas, viewingDirection, setNextCanvas, setPreviousCanvas, setCanvas } = this.props
     const { firstCanvas, lastCanvas, selectOptions, selectedOption } = this.state
     return (
-      <div  style={{zIndex: 1000000, position: "absolute", top: "0.6rem", left: "1rem", display: "flex", alignItems: "baseline"}}> 
+      <div  style={{zIndex: 1000000, position: "absolute", top: "0.6rem", left: "1rem", display: "flex", alignItems: "flex-start"}}> 
         <Select
           value={selectedOption}
           onChange={this.handleChange}

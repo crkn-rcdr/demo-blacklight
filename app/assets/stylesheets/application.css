@@ -138,7 +138,7 @@ footer {
 footer a {
     color: white !important;
 }
-.MuiTypography-body1 {
+.MuiTypography-body1, .MuiFormControlLabel-root {
     font-size: 0.8rem !important;
 }
 .dl-invert dt {
@@ -158,11 +158,11 @@ footer a {
     display: none !important;
 }
 .mosaic-window-body{
-    border: 1px solid #dbdbdb;
+    border: none;
     border-top: none;
 }
 .MuiToolbar-root {
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: none;
 }
 .MuiPaper-elevation4 {
     box-shadow: none !important;
@@ -198,30 +198,44 @@ button[aria-label="Toggle sidebar"] {
 nav[aria-label="Window navigation"] div li[role="presentation"]{
     display:none;
 }
+.mv {
+    border-radius: var(--bs-border-radius);
+    border: 1px solid #e5e8eb;
+}
 .mosaic-window-body > section > div:nth-child(1) {
-    display: inline;
-    width: 100%;
+    /* display: inline;
     position: absolute;
-    background: white;
-    height: 58px;
     right: 0;
     padding: 0;
-    top: 0;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb !important;
+    top: 0;*/
+    width: 100%;
+    border-top: none;
+    border-bottom: none !important;
     z-index: 50;
+    height: 7.3rem;
+    background: #fff;
+}
+.mirador-osd-info {
+    display:none;
+}
+.mirador-window-top-bar {
+    background-color: #fff !important;
 }
 .mosaic-window-body > section > div:nth-child(1) button { 
     padding: 5px 10px !important;
+    border-radius: var(--bs-border-radius) !important;
 }
 .mirador-thumb-navigation {
-    border-left: 1px solid #dbdbdb !important;
-    border-top: 1px solid #dbdbdb !important;
-    background-color: #ffffff !important;
+    border-left: none !important;
+    border-top: none !important;
+    background: #fff !important;
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas {
-    margin-top: 116px !important;
-    height: 84% !important;
+    /*margin-top: 130px !important;
+    height: 84% !important;*/
+}
+.openseadragon-canvas {
+    outline: none !important;
 }
 .mirador-osd-navigation {
     display: flex;
@@ -231,7 +245,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 .mirador-canvas-nav { 
     height: 4rem!important;
     min-height: 50px !important;
-    background: #ffffff !important;
+    background: #fff !important;
     border: none !important;
     width: fit-content !important;
     background-color: transparent !important;
@@ -282,7 +296,7 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     color: #3a78ae !important;
 }
 .mirador-canvas-nav+div { /*image tools*/
-    top: 8rem !important;
+    top: 0.8rem !important;
     z-index: 10 !important;
 }
 .MuiTypography-subtitle2 {
@@ -290,14 +304,14 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas+div{
     left: 7px !important;
-    top: 8rem !important;
+    top: 0.8rem !important;
     z-index: 10 !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #fff !important;
     border-radius: 25px !important;
     padding: 10px !important;
 }
 .mirador-osd-container {
-   border-top: 1px solid #dbdbdb;
+   border-top: none;
 }
 div[title="Zoom in"] {
     margin-right: 5px !important;
@@ -338,24 +352,35 @@ button[aria-label="Window options"] {
     transform: translate(14px, 0px) scale(0.75) !important;
 }
 #page-viewer {
-    background: white;
+    background: #fff;
 }
 #pvSearch, .autocompleteText {
     padding: 0.25rem 0.5rem !important;
     border-radius: var(--bs-border-radius) 0px 0px var(--bs-border-radius);
 }
 #item-search-submit {
-    border-radius: 0px var(--bs-border-radius) var(--bs-border-radius) 0px;
+    border-radius: 0px var(--bs-border-radius) var(--bs-border-radius) 0px !important;
 }
 #pvSearchForm {
     padding: 0.5rem;
 }
 #pvSearch { 
-    max-width: 26rem;
+    /*max-width: 26rem;*/
     min-width: 19rem;
+    font-size: 0.82rem !important;
+}
+.mirador-osd-navigation-custom .nav-item {
+    margin-left: 0 !important;
+}
+.mirador-osd-navigation-custom .nav-pills .nav-link {
+    padding: 6px !important;
+}
+.MuiPopover-paper .MuiListItem-gutters {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
 }
 .pvSearchResults {
-    background: white;
+    background: #fff;
     padding: 0.5rem;
     color: black;
 }
@@ -368,11 +393,11 @@ button[aria-label="Window options"] {
     margin-bottom: 0.5rem !important; 
 }
 #pvToolbarBottom {
-    background: white;
+    background: #fff;
     padding: 0.2rem;
-    border-left: 1px solid #dbdbdb;
-    border-right: 1px solid #dbdbdb;
-    border-top: 1px solid #dbdbdb;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 .thumbsView{
     overflow-x: hidden !important;
@@ -395,8 +420,8 @@ input[type="search"]::-webkit-search-cancel-button {
 #download-help {
     margin-top: 0.6rem;
     margin-bottom: 0.4rem;
-    /*border-left: 1px solid #dbdbdb;
-    border-right: 1px solid #dbdbdb;*/
+    /*border-left: none;
+    border-right: none;*/
 } 
 #pv-images-info {
     margin-bottom: 0.6rem !important;
@@ -411,15 +436,14 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #pvFullImage, #pvFullImageDownload, #pvDownloadSingle, #pvDownloadFull {
     padding: 0 !important;
-    background: white;
+    background: #fff;
     border: none;
 }
 #pvDownloadFull, #pvDownloadFull:hover{
     color: #3a78ae !important
 }
 section[id$="gallery"] {
-    border-top: 1px solid #dbdbdb !important;
-    margin-top: 115px;
+    border-top: none !important;
 }
 button[aria-label="Download options"] {
     border-radius: 0 !important;
@@ -459,13 +483,20 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     color: #d6d6d6 !important;
 }
 .css-13cymwt-control {
-    border: none !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius);
 }
 .css-b62m3t-container {
     height: fit-content;
 }
 .MuiListItem-button {
-    background-color: white !important;
+    background-color: #fff !important;
+    border-radius: var(--bs-border-radius) !important;
+}
+.MuiListItem-gutters {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-right: 0.5rem !important;
 }
 .css-1xc3v61-indicatorContainer {
     color: #666 !important;
@@ -525,9 +556,9 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 }
 .legacy-search-menu {
     position: absolute;
-    background: white;
+    background: #fff;
     left: 0;
-    top: 3.5rem;
+    top: 3.6rem;
     height: 3.5rem;
     right: 6rem;
     display: grid;
@@ -562,4 +593,22 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 .crumbs {
     margin-bottom: 0.5rem;
     margin-bottom: 1rem;
+}
+.modal.show {
+    z-index: 9999999999999;
+}
+.modal-backdrop {
+    display: none;
+}
+#downloads-button {
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: 0;
+}
+.mv-menu-nav .nav-link {
+    padding: 0 !important;
+}
+.mv-menu-nav .nav-item {
+    margin-left: 0;
 }

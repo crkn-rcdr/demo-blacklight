@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    depends_on:
-      - solr
     networks:
       - test
     volumes:
@@ -15,14 +13,6 @@ services:
       - ./config:/app/config
       - ./public:/app/public
       - ./vendor:/app/vendor
-  solr:
-    image: solr
-    ports:
-      - "8983:8983"
-    volumes:
-      - data:/var/solr
-    networks:
-      - test
 volumes:
   data:
 networks:

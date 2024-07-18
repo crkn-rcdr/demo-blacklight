@@ -43,7 +43,9 @@ class PDFDownload extends Component {
   render() {
     return (
       <React.Fragment>
-        <MenuItem onClick={() => this.downloadAndCloseMenu()}>
+        <MenuItem  
+        tabIndex="0"
+        onClick={() => this.downloadAndCloseMenu()}>
           <ListItemIcon>
             <DownloadIcon />
           </ListItemIcon>

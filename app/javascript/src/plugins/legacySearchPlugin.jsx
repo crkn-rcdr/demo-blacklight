@@ -85,7 +85,7 @@ export class LegacySearchPlugin extends Component {
   render() {
     const { windowId, canvases, setCanvas, manifestId } = this.props
     return (
-      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"0.5rem 1rem 0 1rem", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
+      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"1rem 1rem 0 1rem", right:"0", background: "#ffffff", borderBottom: "none"}}> 
         <div id="pvToolbarTop" aria-label="Viewer controls">
             <input 
             id="pvSearch" 
@@ -163,11 +163,11 @@ export class LegacySearchPlugin extends Component {
                 </Button>
               </div>
               <div style={{display : "flex", justifyContent: "center", alignItems: "center", color: "#666"}} className="MuiTypography-caption">
-                <span style={{paddingRight : "0.6rem", borderRight: "1px solid #dbdbdb"}}>
+                <span style={{paddingRight : "0.6rem", borderRight: "none"}}>
                   Image {this.state.currentCanvasIndex + 1}
                 </span>
                 <span style={{marginLeft: "0.5rem"}}>
-                  Result {this.state.currentResultIndex + 1} of {this.state.results.length}
+                  (Result {this.state.currentResultIndex + 1} of {this.state.results.length})
                 </span>
               </div>
               <div style={{display : "flex", justifyContent: "flex-end", alignItems: "center"}}>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WindowViewSettings from 'mirador/dist/es/src/containers/WindowViewSettings';
+import WindowViewSettings from './mirador-window-view-settings/windowViewSettingsContainer';
 
 /**
  */

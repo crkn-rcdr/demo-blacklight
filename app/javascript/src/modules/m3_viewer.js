@@ -41,10 +41,10 @@ export default {
             ...fullResDownloadPlugin,
             target: 'WindowTopBarShareMenu',
           },
-          {
+          /*{
             ...miradorDownloadPlugin,
             target: 'WindowTopBarShareMenu',
-          },
+          },*/
           {
             ...pdfDownloadPlugin,
             target: 'WindowTopBarShareMenu',
@@ -56,11 +56,11 @@ export default {
           miradorPDIIIFMenuItemPlugin,
           miradorPDIIIFDialogPlugin,
           miradorShareDialogPlugin,
-          miradorDownloadDialogPlugin,
+          //miradorDownloadDialogPlugin,
           ...miradorImageToolsPlugin,
           pageNumPlugin,
-          navControlsPlugin,
           legacySearchPlugin,
+          navControlsPlugin
           //textOverlayPlugin
         ]
     
@@ -778,13 +778,12 @@ export default {
     
             preserveViewport: true,
     
-    
-            zoomPerScroll: 1.5,
+            zoomPerScroll: 1.2,
     
             gestureSettingsMouse: {
-              scrollToZoom: false,
-              clickToZoom: false,
-              dblClickToZoom: false
+              scrollToZoom: true,
+              clickToZoom: true,
+              dblClickToZoom: true
             },
     
             gestureSettingsTouch: {
