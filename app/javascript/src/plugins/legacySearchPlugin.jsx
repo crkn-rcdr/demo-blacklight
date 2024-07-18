@@ -125,26 +125,50 @@ export class LegacySearchPlugin extends Component {
             }
         </div>
         <div class="container-fluid container-flex card-section">
-          { this.state.resultsListOpen ? this.state.currentItems.length ? this.state.currentItems.map((result, index) => (
-            <Card className='mui-card clickable' onClick={() => {
-              this.state.currentCanvasIndex = result - 1
-              this.state.currentResultIndex = this.state.itemOffset + index 
-              this.state.resultsListOpen = false
-              this.state.resultsMenuOpen = true
-              console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
-              setCanvas(canvases[this.state.currentCanvasIndex].id)
-              this.forceUpdate()
-            }}>
-              <CardHeader
-                title={"Image " + result}
-              />
-              <CardMedia
-                image={canvases[result-1].__jsonld.items[0].items[0].body.id}
-                height="300px"
-                title={"Image " + result}
-              />
-            </Card>
-          )) : (<p><br/>No results</p>) : this.state.resultsMenuOpen ?
+
+          { this.state.resultsListOpen ? this.state.currentItems.length ? 
+           (
+            <ul class="nav" aria-label="Item search results">
+            { this.state.currentItems.map((result, index) => (
+              <li class="nav-item">
+                <a 
+                class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+                tabindex="0"
+                onKeyDown={ (e) => {
+                  if (e.key === 'Enter' ) {
+                    this.state.currentCanvasIndex = result - 1
+                    this.state.currentResultIndex = this.state.itemOffset + index 
+                    this.state.resultsListOpen = false
+                    this.state.resultsMenuOpen = true
+                    console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
+                    setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    this.forceUpdate()
+                  }
+                }}
+                onClick={() => {
+                  this.state.currentCanvasIndex = result - 1
+                  this.state.currentResultIndex = this.state.itemOffset + index 
+                  this.state.resultsListOpen = false
+                  this.state.resultsMenuOpen = true
+                  console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
+                  setCanvas(canvases[this.state.currentCanvasIndex].id)
+                  this.forceUpdate()
+                }}>
+                <Card className='mui-card clickable' >
+                  <CardHeader
+                    title={"Image " + result}
+                  />
+                  <CardMedia
+                    image={canvases[result-1].__jsonld.items[0].items[0].body.id}
+                    height="300px"
+                    title={"Image " + result}
+                  />
+                </Card>
+                </a>
+              </li>
+              ))}
+            </ul>
+          ) : (<p><br/>No results</p>) : this.state.resultsMenuOpen ?
             <div className="legacy-search-menu">
               <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
                 <Button variant="contained" color="primary" onClick={() => {

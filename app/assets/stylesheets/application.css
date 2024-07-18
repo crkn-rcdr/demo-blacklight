@@ -532,8 +532,6 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 }
 .MuiCard-root {
     overflow: hidden;
-    margin-right: 1rem;
-    margin-top: 0.5rem;
     width: 15rem;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12) !important;
     border-top: 1px solid #ededed !important;
@@ -609,9 +607,37 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 }
 .mv-menu-nav .nav-link {
     padding: 0 !important;
+    margin-left: 0;
 }
 .mv-menu-nav .nav-item {
-    margin-left: 0;
+    margin: 0 !important;
+} 
+.card-section .nav-item { 
+    margin-left: 0 !important;
+}
+.card-section .nav-link {
+    margin-right: 1rem !important;
+    margin-top: 0.5rem !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+.nav-link:focus-visible {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(58, 120, 174, 0.25) !important;
+}
+.MuiTouchRipple-child {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(58, 120, 174, 0.25) !important;
+    background: none !important;
+    width: 100% !important;
+    height: 41% !important;
+    top: 2rem !important;
+    position: absolute !important;
+}
+.MuiTouchRipple-root {
+    overflow: visible !important;
 }
 #downloadsModal .mv-menu-nav {    
     width: 100%;
