@@ -1,39 +1,47 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import MoreVertIcon from '@material-ui/icons/MoreVertSharp';
-import { PluginHook } from 'mirador/dist/es/src/components/PluginHook';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuItem from '@material-ui/core/MenuItem';
-import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import MoreVertIcon from '@material-ui/icons/MoreVertSharp'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import MenuItem from '@material-ui/core/MenuItem'
+import DownloadIcon from '@material-ui/icons/VerticalAlignBottomSharp'
+
+function downloadImage(url, filename) {
+  fetch(url, {
+      method: 'GET'
+  })
+  .then(response => response.blob())
+  .then(blob => {
+      var url = window.URL.createObjectURL(blob)
+      var a = document.createElement('a')
+      a.href = url
+      a.download = filename
+      document.body.appendChild(a) // we need to append the element to the dom -> otherwise it will not work in firefox
+      a.click()   
+      a.remove() //afterwards we remove the element again         
+  });    
+}
+
+function downloadPDF(url, filename) {
+  let a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  document.body.appendChild(a) // we need to append the element to the dom -> otherwise it will not work in firefox
+  a.click()
+  a.remove()  //afterwards we remove the element again         
+}
 
 export class DownloadWindowTopBarPluginMenu extends Component {
-  downloadFile(url, filename) {
-    fetch(url, {
-        method: 'GET'
-    })
-    .then(response => response.blob())
-    .then(blob => {
-        var url = window.URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
-        a.click();    
-        a.remove();  //afterwards we remove the element again         
-    });
-  }
-
   downloadSingleImage() {
     const { canvasIndex, manifestId, canvas } = this.props;
     console.log("c", canvas)
     console.log("m", manifestId)
     let page = canvasIndex + 1
-    this.downloadFile(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
+    downloadImage(canvas.__jsonld.items[0].items[0].body.id, "oocihm.84056."+page+".jpg") 
   }
 
   downloadSinglePdf() {
-    const { handleClose, canvasIndex, manifestId } = this.props
+    const { canvasIndex, manifestId } = this.props
     const pathname = new URL(manifestId).pathname
     const parts = pathname.split('/')
     const id = parts[parts.length - 2]
@@ -46,7 +54,7 @@ export class DownloadWindowTopBarPluginMenu extends Component {
       let page = canvasIndex + 1
       console.log("data", data)
       if(data["canvasDownloadUris"]?.length) {
-        this.downloadFile(data["canvasDownloadUris"][canvasIndex], id + "." +page+".pdf") 
+        downloadPDF(data["canvasDownloadUris"][canvasIndex], id + "." +page+".pdf") 
       } else {
         alert("error")
       } 
@@ -54,7 +62,7 @@ export class DownloadWindowTopBarPluginMenu extends Component {
   }
 
   downloadFullPDF() {
-    const { handleClose, manifestId } = this.props
+    const { manifestId } = this.props
     const pathname = new URL(manifestId).pathname
     const parts = pathname.split('/')
     const id = parts[parts.length - 2]
@@ -65,7 +73,7 @@ export class DownloadWindowTopBarPluginMenu extends Component {
     .then((response) => response.json())
     .then(data => {
       if(data["docPdfUri"]?.length) {
-        this.downloadFile(data["docPdfUri"], id + ".pdf") 
+        downloadPDF(data["docPdfUri"], id + ".pdf") 
       } else {
         alert("error downloading full pdf")
       } 
