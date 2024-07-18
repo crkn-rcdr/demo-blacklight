@@ -605,6 +605,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     outline: none;
     border: none;
     margin-left: 0;
+    color: #666666 !important;
 }
 .mv-menu-nav .nav-link {
     padding: 0 !important;
