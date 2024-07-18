@@ -1,13 +1,5 @@
 import Mirador from 'mirador/dist/es/src/index.js'
 import miradorImageToolsPlugin from '../plugins/mirador-image-tools/miradorImageToolsPlugin.js'
-//import miradorShareDialogPlugin from 'mirador-share-plugin/es/MiradorShareDialog.js'
-//import fullResDownloadPlugin from '../plugins/fullResDownloadPlugin.js'
-//import pdfDownloadPlugin from '../plugins/pdfDownloadPlugin.js'
-//import fullPdfDownloadPlugin from '../plugins/fullPdfDownloadPlugin.js'
-//import miradorDownloadPlugin from '../plugins/mirador-downloads/miradorDownloadPlugin.js'
-//import miradorDownloadDialogPlugin from '../plugins/mirador-downloads/MiradorDownloadDialog.js'
-//import miradorPDIIIFDialogPlugin from '../plugins/miradorPDIIIFDialog.js'
-//import textOverlayPlugin from 'mirador-textoverlay/es';
 import downloadMenuPlugin from '../plugins/downloadMenuPlugin.jsx'
 import pageNumPlugin from '../plugins/pageNumPlugin.jsx'
 import miradorViewPlugin from '../plugins/miradorViewPlugin.jsx'
@@ -17,10 +9,6 @@ import legacySearchPlugin from '../plugins/legacySearchPlugin.jsx'
 export default {
   init: function() {
         console.log(Mirador)
-        //let searchInput = document.getElementById("pvSearch")
-        //let resetButton = document.getElementById("pvSearchReset")
-
-        //console.log("rb", resetButton)
         let pageViewer = document.getElementById("page-viewer")
         if(!pageViewer) return
     
@@ -40,8 +28,7 @@ export default {
           miradorViewPlugin,
           downloadMenuPlugin
         ]
-    
-        //https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+        
         let mconfig = {
     
           id: 'page-viewer', // id selector where Mirador should be instantiated
