@@ -7,6 +7,27 @@
 $logo-image: image_url('blacklight/canadiana-logo-light.jpg');
 $logo-width: 225px;
 $logo-height: 50px;
+.navbar-logo {  /* The main logo image for the Blacklight instance */
+    text-indent: inherit;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 0.5rem;
+    color: black !important;
+    background: orange;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+.nav-image-wrap {
+    display: inline-block;
+    background: transparent url(/canadiana-logo-light.jpg) no-repeat top left !important;
+    background-size: 225px 50px !important;
+    height: 50px;
+    width: 225px;
+}
+.floatnav .nav-image-wrap {  
+    background: transparent url(/canadiana-logo-white.png) no-repeat top left !important;
+    background-size: 225px 50px !important;
+}
 #main-container{
     overflow-x: hidden;
 }

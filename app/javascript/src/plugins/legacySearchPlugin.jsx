@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import * as actions from 'mirador/dist/es/src/state/actions';
+import * as actions from 'mirador/dist/es/src/state/actions'
 import {
   getCanvases
-} from 'mirador/dist/es/src/state/selectors';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ClearIcon from '@material-ui/icons/Clear';
+} from 'mirador/dist/es/src/state/selectors'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import ClearIcon from '@material-ui/icons/Clear'
+import Pagination from '@material-ui/lab/Pagination'
 
 export class LegacySearchPlugin extends Component {
 
@@ -19,6 +20,12 @@ export class LegacySearchPlugin extends Component {
     currentCanvasIndex: 0,
     resultsListOpen: false,
     resultsMenuOpen: false,
+    itemOffset: 0,
+    endOffset: 0,
+    currentItems: [],
+    pageCount: 0,
+    page: 1,
+    itemsPerPage: 20
   }
 
   constructor(props) {
@@ -29,7 +36,6 @@ export class LegacySearchPlugin extends Component {
     this.state.query = query ? query : ""
   }
 
-
   handleClear = () => {
     document.getElementById("pvSearch").value = ""
     this.state.query = ""
@@ -37,6 +43,9 @@ export class LegacySearchPlugin extends Component {
     this.state.currentResultIndex = 0
     this.state.resultsListOpen = false
     this.state.resultsMenuOpen = false
+    this.state.endOffset = 0
+    this.state.currentItems = 0
+    this.state.pageCount = 0
     this.forceUpdate()
   }
 
@@ -45,24 +54,38 @@ export class LegacySearchPlugin extends Component {
       let currURL = window.location.href
       let urlArr=currURL.split('/')
       let parameters=urlArr[urlArr.length-1].split('?')
-      let slugA = parameters[0].split('.')
-      let id = slugA[slugA.length-1]
-      fetch('/legacy/'+id+'?' + new URLSearchParams({
+      let id = parameters[0]
+      fetch('/legacy/'+id+'?'+ new URLSearchParams({
           q: this.state.query
       })).then(response => {
         response.json().then(content => {
           this.state.results = content
           this.state.resultsListOpen = true
+          this.state.page = 0
+          this.state.itemOffset = 0
+          this.state.endOffset = 1 * this.state.itemsPerPage 
+          this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
+          this.state.pageCount = Math.ceil(this.state.results.length / this.state.itemsPerPage)
+          console.log("???", this.state.currentItems, this.state.pageCount, this.state.endOffset, this.state.itemsPerPage)
           this.forceUpdate()
         })
       })
     } else this.handleClear()
   }
+
+  handleChangePage = (event, newPage) => {
+    this.state.page = newPage
+    this.state.itemOffset = (this.state.page - 1) * this.state.itemsPerPage 
+    this.state.endOffset = (this.state.page ) * this.state.itemsPerPage 
+    this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
+    console.log("???", this.state)
+    this.forceUpdate()
+  };
   
   render() {
     const { windowId, canvases, setCanvas, manifestId } = this.props
     return (
-      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"0.5rem 1rem", right:"0", background: "white", borderBottom: "1px solid #dbdbdb"}}> 
+      <div className={this.state.resultsListOpen ? "fullscreen" : ""} style={{zIndex: 10000000, position: "absolute", top: "-3.5rem", left: "0", padding:"1rem 1rem 0 1rem", right:"0", background: "#ffffff", borderBottom: "none"}}> 
         <div id="pvToolbarTop" aria-label="Viewer controls">
             <input 
             id="pvSearch" 
@@ -102,31 +125,59 @@ export class LegacySearchPlugin extends Component {
             }
         </div>
         <div class="container-fluid container-flex card-section">
-          { this.state.resultsListOpen ? this.state.results.length ? this.state.results.map((result, index) => (
-            <Card className='mui-card clickable' onClick={() => {
-              this.state.currentCanvasIndex = result
-              this.state.currentResultIndex = index
-              this.state.resultsListOpen = false
-              this.state.resultsMenuOpen = true
-              console.log(windowId, canvases[result-1].id)
-              setCanvas(canvases[result-1].id)
-              this.forceUpdate()
-            }}>
-              <CardHeader
-                title={"Image " + result}
-              />
-              <CardMedia
-                image={canvases[result-1].__jsonld.items[0].items[0].body.id}
-                height="390px"
-                title={"Image " + result}
-              />
-            </Card>
-          )) : "No results" : this.state.resultsMenuOpen ?
+
+          { this.state.resultsListOpen ? this.state.currentItems.length ? 
+           (
+            <ul class="nav" aria-label="Item search results">
+            { this.state.currentItems.map((result, index) => (
+              <li class="nav-item">
+                <a 
+                class="nav-link MuiButtonBase-root MuiIconButton-root mirador-first-canvas-button btn btn-outline" 
+                tabindex="0"
+                onKeyDown={ (e) => {
+                  if (e.key === 'Enter' ) {
+                    this.state.currentCanvasIndex = result - 1
+                    this.state.currentResultIndex = this.state.itemOffset + index 
+                    this.state.resultsListOpen = false
+                    this.state.resultsMenuOpen = true
+                    console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
+                    setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    this.forceUpdate()
+                  }
+                }}
+                onClick={() => {
+                  this.state.currentCanvasIndex = result - 1
+                  this.state.currentResultIndex = this.state.itemOffset + index 
+                  this.state.resultsListOpen = false
+                  this.state.resultsMenuOpen = true
+                  console.log(this.state.currentCanvasIndex, this.state.currentResultIndex)
+                  setCanvas(canvases[this.state.currentCanvasIndex].id)
+                  this.forceUpdate()
+                }}>
+                <Card className='mui-card clickable' >
+                  <CardHeader
+                    title={"Image " + result}
+                  />
+                  <CardMedia
+                    image={canvases[result-1].__jsonld.items[0].items[0].body.id}
+                    height="300px"
+                    title={"Image " + result}
+                  />
+                </Card>
+                </a>
+              </li>
+              ))}
+            </ul>
+          ) : (<p><br/>No results</p>) : this.state.resultsMenuOpen ?
             <div className="legacy-search-menu">
               <div style={{display : "flex", justifyContent: "flex-start", alignItems: "center"}}>
                 <Button variant="contained" color="primary" onClick={() => {
                   this.state.resultsListOpen = true
-                  this.state.resultsMenuOpen = false
+                  this.state.resultsMenuOpen = false 
+                  this.state.page = 1
+                  this.state.itemOffset = 0
+                  this.state.endOffset = 1 * this.state.itemsPerPage 
+                  this.state.currentItems = this.state.results.slice(this.state.itemOffset, this.state.endOffset)
                   this.forceUpdate()
                 }}
                   className="btn-ghost btn-icon"
@@ -136,11 +187,11 @@ export class LegacySearchPlugin extends Component {
                 </Button>
               </div>
               <div style={{display : "flex", justifyContent: "center", alignItems: "center", color: "#666"}} className="MuiTypography-caption">
-                <span style={{paddingRight : "0.6rem", borderRight: "1px solid #dbdbdb"}}>
-                  Image {this.state.currentCanvasIndex}
+                <span style={{paddingRight : "0.6rem", borderRight: "none"}}>
+                  Image {this.state.currentCanvasIndex + 1}
                 </span>
                 <span style={{marginLeft: "0.5rem"}}>
-                  Result {this.state.currentResultIndex+1} of {this.state.results.length}
+                  (Result {this.state.currentResultIndex + 1} of {this.state.results.length})
                 </span>
               </div>
               <div style={{display : "flex", justifyContent: "flex-end", alignItems: "center"}}>
@@ -149,6 +200,7 @@ export class LegacySearchPlugin extends Component {
                     this.state.currentResultIndex -= 1
                     this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
                     setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    console.log(canvases[this.state.currentCanvasIndex])
                     this.forceUpdate()
                   }
                 }}>
@@ -159,6 +211,7 @@ export class LegacySearchPlugin extends Component {
                     this.state.currentResultIndex += 1
                     this.state.currentCanvasIndex = this.state.results[this.state.currentResultIndex]-1
                     setCanvas(canvases[this.state.currentCanvasIndex].id)
+                    console.log(canvases[this.state.currentCanvasIndex])
                     this.forceUpdate()
                   }
                 }}>
@@ -170,6 +223,11 @@ export class LegacySearchPlugin extends Component {
           }
         </div>
 
+        { this.state.resultsListOpen && this.state.currentItems.length ? (
+          <div class="card-pagination-wrapper">
+            <Pagination count={this.state.pageCount} page={this.state.page} onChange={this.handleChangePage} />
+          </div>
+         ) : "" }
         
       </div>
     )

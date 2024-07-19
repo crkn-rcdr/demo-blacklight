@@ -195,7 +195,8 @@ class PDIIIFMenuItem extends Component {
     const { hasChecked } = this.state;
     return (
       <div>
-        <MenuItem
+        <MenuItem 
+          tabIndex="0"
           disabled={!hasChecked || !allowPdfDownload}
           onClick={() => this.openDialogAndCloseMenu()}
         >

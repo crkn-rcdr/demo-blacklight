@@ -47,7 +47,9 @@ class MiradorShare extends Component {
 
   render() {
     return (
-      <MenuItem onClick={() => this.openDialogAndClose()}>
+      <MenuItem  
+      tabIndex="0"
+      onClick={() => this.openDialogAndClose()}>
         <ListItemIcon>
           <ShareIcon />
         </ListItemIcon>
