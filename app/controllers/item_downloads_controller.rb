@@ -37,7 +37,7 @@ class ItemDownloadsController < ApplicationController
             documentNoid = ""
             result['metadata'].each do |metadata|
                 if metadata['label']['none']
-                    documentNoid = metadata['value']['none']
+                    documentNoid = metadata['value']['none'][0]
                 end
             end
 
