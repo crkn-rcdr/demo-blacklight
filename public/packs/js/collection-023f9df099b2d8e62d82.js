@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdemo_blacklight=self.webpackChunkdemo_blacklight||[]).push([[464],{37628:()=>{(function(){document.getElementById("collection-items-list")&&console.log("found")})()}},e=>{var l;l=37628,e(e.s=l)}]);
+//# sourceMappingURL=collection-023f9df099b2d8e62d82.js.map

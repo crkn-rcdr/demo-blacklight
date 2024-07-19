@@ -1,6 +1,7 @@
 require 'view_component/version'
 
 class CollectionItemsComponent < ViewComponent::Base
+
     def initialize(documentId:)
         @documentId = documentId
         #https://dolphin-app-p9llh.ondigitalocean.app/solr//select?indent=true&q.op=OR&q=%3Aoocihm.8_01278&useParams=
