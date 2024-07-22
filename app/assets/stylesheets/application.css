@@ -524,7 +524,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
 }
 .fullscreen {
     bottom: 0;
-    height: 82vh !important;
+    height: 85vh !important;
     min-height: 805px;;
 }
 .MuiAppBar-root {
@@ -545,7 +545,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     height: 300px;
 }
 .card-section {
-    max-height: 73%;
+    max-height: 75vh;
     overflow: auto;
     padding: 0px 2px;
 }
