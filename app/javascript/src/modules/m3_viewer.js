@@ -740,8 +740,6 @@ export default {
     
             preserveImageSizeOnResize: true,
     
-            preserveViewport: true,
-    
             zoomPerScroll: 1.2,
     
             gestureSettingsMouse: {
@@ -762,7 +760,13 @@ export default {
             autoHideControls: false,
             showNavigationControl: true,
             navigatorPosition: "BOTTOM_RIGHT",
-            showFullPageControl: true
+            showFullPageControl: true,
+
+            smoothTileEdgesMinZoom: false,
+            sequenceMode: true,
+            showSequenceControl: false,
+            crossOriginPolicy: "Anonymous",
+            preserveViewport: true,
           },
     
           export: {
