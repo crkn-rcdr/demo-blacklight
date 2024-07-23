@@ -120,7 +120,7 @@ class CatalogController < ApplicationController
     #config.add_facet_field 'title_tsim', label: 'Title'
     config.add_facet_field 'is_issue', label: 'Is an Issue'
     config.add_facet_field 'is_serial', label: 'Is a Series'
-    config.add_facet_field 'pub_date_si', label: 'Date',
+    config.add_facet_field 'pub_date_si', label: 'Date Range',
       range: {
         num_segments: 10,
         assumed_boundaries: [0, Time.now.year + 2],
