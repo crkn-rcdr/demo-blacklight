@@ -4,6 +4,8 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
   include Blacklight::Marc::Catalog
 
 
@@ -118,9 +120,15 @@ class CatalogController < ApplicationController
     #config.add_facet_field 'title_tsim', label: 'Title'
     config.add_facet_field 'is_issue', label: 'Is an Issue'
     config.add_facet_field 'is_serial', label: 'Is a Series'
+    config.add_facet_field 'pub_date_si', label: 'Date',
+      range: {
+        num_segments: 10,
+        assumed_boundaries: [0, Time.now.year + 2],
+        segments: true,
+        maxlength: 4
+      }
     config.add_facet_field 'language_ssim_str', label: 'Language', limit: 20
-    config.add_facet_field 'pub_date_si', label: 'Date', limit: 20
-    config.add_facet_field 'collection_tsim_str', label: 'Collection', limit: 6
+    config.add_facet_field 'collection_tsim_str', label: 'Collection', limit: 6 # Need to figure out why old values aren't clearing
     config.add_facet_field 'subject_ssim_str', label: 'Subject',limit: 20
     #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
     config.add_facet_field 'author_ssm_str', label: 'Creator', limit: 20

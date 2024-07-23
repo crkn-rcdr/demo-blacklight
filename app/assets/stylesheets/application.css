@@ -12,7 +12,12 @@
  *
  *= require_tree .
  *= require_self
- */
+ 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 html, body {
     margin: 0;
     height: 100%;
@@ -21,7 +26,12 @@ body {
     display: grid;
     grid-template-areas: "main" "footer";
     /* grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8rem; */
+    grid-template-rows: 1fr 8rem; 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 }
 main {
     grid-area: main;
@@ -69,7 +79,12 @@ nav.topbar {
     width: 85vw;
     height: 45vh;
     margin: auto;
-}*/
+}
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 .carousel-caption {
     padding: .5rem !important;
     margin-left: 1rem !important;
@@ -114,7 +129,12 @@ footer a {
     text-align: left !important
 }
 .document-tools-btn {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky; /* Safari 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     position: sticky;
     top:1rem;
     z-index: 11;
@@ -176,7 +196,12 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
     position: absolute;
     right: 0;
     padding: 0;
-    top: 0;*/
+    top: 0;
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     width: 100%;
     border-top: none;
     border-bottom: none !important;
@@ -201,7 +226,12 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 }
 .mirador-osd-container > .openseadragon-container > .openseadragon-canvas {
     /*margin-top: 130px !important;
-    height: 84% !important;*/
+    height: 84% !important;
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 }
 .openseadragon-canvas {
     outline: none !important;
@@ -231,22 +261,47 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 .mirador-canvas-label {
     display: none !important;
 }
-.mirador39 { /* side panel toggle button */
+.mirador39 { /* side panel toggle button 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     margin-top: 1px !important;
     padding-top: 0px !important;
     border: none !important
 }
-.mirador6 {/* canvas thumbnail list */
+.mirador6 {/* canvas thumbnail list 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     height: 94% !important;
     align-self: flex-end !important;
 }
-.mirador41 { /*side panel item wrapper */
+.mirador41 { /*side panel item wrapper 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     border-bottom: none !important;
 }
-.mirador92, .mirador92 button { /*zoom buttons*/
+.mirador92, .mirador92 button { /*zoom buttons
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     z-index: 9000000000 !important;
 }
-.MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar */
+.MuiDrawer-paperAnchorDockedLeft { /* left-sidemost navbar 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     display: none !important;
 }
 .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
@@ -264,7 +319,12 @@ nav[aria-label="Window navigation"] div li[role="presentation"]{
 .mirador21 {
     color: #155e66 !important;
 }
-.mirador-canvas-nav+div { /*image tools*/
+.mirador-canvas-nav+div { /*image tools
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     top: 0.8rem !important;
     z-index: 10 !important;
 }
@@ -334,7 +394,12 @@ button[aria-label="Window options"] {
     padding: 0.5rem;
 }
 #pvSearch { 
-    /*max-width: 26rem;*/
+    /*max-width: 26rem;
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
     min-width: 19rem;
     font-size: 0.82rem !important;
 }
@@ -390,7 +455,12 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: 0.6rem;
     margin-bottom: 0.4rem;
     /*border-left: none;
-    border-right: none;*/
+    border-right: none;
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 } 
 #pv-images-info {
     margin-bottom: 0.6rem !important;
@@ -565,7 +635,12 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     z-index: 9999999999999;
 }
 .modal-backdrop {
-    /*display: none;*/
+    /*display: none;
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 }
 #downloads-button {
     background: none;
