@@ -137,7 +137,8 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field 'published_ssm', extract_marc('260abcefg:264abc', alternate_script: false), trim_punctuation #remove_accent
     to_field 'published_vern_ssm', extract_marc('260abcefg:264abc', alternate_script: :only), trim_punctuation #remove_accent
 
-    # Published Dated
+    # Published Date
+    # https://github.com/traject/traject/blob/5d720e2ba0a277cf7af455763f520cd6a2d956c7/lib/traject/macros/marc21_semantics.rb#L307
     to_field 'pub_date_si', marc_publication_date
     to_field 'pub_date_ssim', marc_publication_date
 

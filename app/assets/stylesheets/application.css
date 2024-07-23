@@ -75,7 +75,7 @@ nav.topbar {
     margin-left: 1rem !important;
     background-color: rgba(34, 34, 34, .65) !important;
     width: fit-content !important;
-    left: 58% !important;
+    left: calc(100% - 30rem) !important;
     min-width: 410px;
 }
 .carousel-caption h5 {
@@ -565,7 +565,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     z-index: 9999999999999;
 }
 .modal-backdrop {
-    display: none;
+    /*display: none;*/
 }
 #downloads-button {
     background: none;
@@ -620,4 +620,21 @@ button[title="Expand image tools"] .MuiTouchRipple-child {
 a[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
+}
+.blacklight-collection_tsim_str .more_facets {
+    display:none;
+}
+.facet-modal {
+    position: fixed;
+    top: 10%;
+    right: 37rem;
+    width: 55rem;
+    max-width: 87rem;
+}
+.modal-frame {
+    width: 100%;
+}
+
+div[data-blacklight-modal] .modal-footer {
+    justify-content: flex-start;
 }
