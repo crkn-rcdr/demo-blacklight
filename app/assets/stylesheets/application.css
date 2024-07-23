@@ -635,12 +635,7 @@ button:disabled .MuiIconButton-root, button:disabled .MuiSvgIcon-root {
     z-index: 9999999999999;
 }
 .modal-backdrop {
-    /*display: none;
- *
- * Used by blacklight_range_limit
- *= require  'blacklight_range_limit'
- *
-*/
+   display: none;
 }
 #downloads-button {
     background: none;
