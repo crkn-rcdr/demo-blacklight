@@ -127,7 +127,7 @@ class CatalogController < ApplicationController
       }
     config.add_facet_field 'language_ssim_str', label: 'Language', limit: 20
     config.add_facet_field 'collection_tsim_str', label: 'Collection', limit: 6 # Need to figure out why old values aren't clearing
-    config.add_facet_field 'subject_ssim_str', label: 'Subject',limit: 20
+    config.add_facet_field 'subject_ssim_str', label: 'Subject', limit: 20
     config.add_facet_field 'author_ssm_str', label: 'Creator', limit: 20
     config.add_facet_field 'doc_source_tsim_str', label: 'Source', limit: 20
     #config.add_facet_field 'serial_title', label: 'Series Title', limit: 20
@@ -155,8 +155,10 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_ssm', label: 'Title'
     config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'author_ssm_str', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
+    config.add_index_field 'subject_ssim', label: 'Subject'
+    config.add_index_field 'author_ssm_str', label: 'Creator'
+    config.add_index_field 'doc_source_tsim', label: 'Source'
     config.add_index_field 'pub_date_si', label: 'Date'
     config.add_index_field 'id', label: 'Item Code'
     
@@ -166,22 +168,20 @@ class CatalogController < ApplicationController
     config.add_show_field 'title_ssm', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'title_addl_tsim', label: 'Other Titles'
-
+    config.add_show_field 'collection_tsim', label: 'Collection'
+    config.add_show_field 'subject_ssim', label: 'Subject'
     config.add_show_field 'author_ssm_str', label: 'Creator'
     config.add_show_field 'published_ssm', label: 'Published Statement'
-    config.add_show_field 'subject_ssim', label: 'Subject'
-
     config.add_show_field 'doc_source_tsim', label: 'Document Source'
     config.add_show_field 'original_version_note_tsim', label: 'Original Version Note'
     config.add_show_field 'notes_tsim', label: 'Notes'
-
-    config.add_show_field 'language_ssim', label: 'Language'
-    config.add_show_field 'collection_tsim', label: 'Collection'
-    config.add_show_field 'is_issue', label: 'Is Issue'
-    
     config.add_show_field 'access_note_tsim', label: 'Access Note'
     config.add_show_field 'rights_stat_tsim', label: 'Rights Statement'
+    config.add_show_field 'language_ssim', label: 'Language'
+    config.add_show_field 'pub_date_si', label: 'Date'
     config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
+    config.add_show_field 'is_serial', label: 'Is a Series'
+    config.add_show_field 'is_issue', label: 'Is Issue'
     #config.add_show_field 'url_fulltext_ssm', label: 'Canadiana URL'
     #config.add_show_field 'subject_geo_ssim', label: 'Region'
     #config.add_show_field 'title_series_tsim', label: 'Series'
