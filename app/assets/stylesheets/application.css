@@ -713,3 +713,6 @@ div[data-blacklight-modal] .modal-footer {
 #downloadsModal:not(.show) {
     display: none !important;
 }
+.facet-pagination {
+    width: 100%;
+}

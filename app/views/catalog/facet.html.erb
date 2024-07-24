@@ -2,14 +2,11 @@
   <%= render partial: 'shared/header_navbar' %>
 <% end %>
 <br/>
-<br/>
 <div class="container" style="width: fit-content !important;">
   <%= render Blacklight::System::ModalComponent.new do |component| %>
-      <br/>
       <% component.with_title { "Filter by " + facet_field_label(@facet.key) } %>
       <%= render partial: 'facet_index_navigation' if @facet.index_range && @display_facet.index? %>
 
-      
       <div class="facet-pagination bottom flex-row justify-content-between">
         <%= render :partial=>'facet_pagination' %>
       </div>
