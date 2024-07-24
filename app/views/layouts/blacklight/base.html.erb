@@ -36,10 +36,13 @@
         let modalLinks = modalDiv.getElementsByTagName('a')
         console.log("modalLinks",modalLinks)
         for(let modalLink of modalLinks) {
+          const rel = modalLink.getAttribute("rel")
+          if( rel == "prev" || rel == "next" ) {
             modalLink.onclick = (e) => {
                 e.preventDefault()
                 setModalContent(modalLink.href, modalDiv)
             }
+          }
         }
       }
       function modalReset(modalDiv){
