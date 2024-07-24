@@ -710,3 +710,6 @@ a[disabled] {
 div[data-blacklight-modal] .modal-footer {
     justify-content: flex-start;
 }
+#downloadsModal:not(.show) {
+    display: none !important;
+}
