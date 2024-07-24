@@ -118,8 +118,6 @@ class CatalogController < ApplicationController
 
 
     #config.add_facet_field 'title_tsim', label: 'Title'
-    config.add_facet_field 'is_issue', label: 'Is an Issue'
-    config.add_facet_field 'is_serial', label: 'Is a Series'
     config.add_facet_field 'pub_date_si', label: 'Date Range',
       range: {
         num_segments: 10,
@@ -130,9 +128,13 @@ class CatalogController < ApplicationController
     config.add_facet_field 'language_ssim_str', label: 'Language', limit: 20
     config.add_facet_field 'collection_tsim_str', label: 'Collection', limit: 6 # Need to figure out why old values aren't clearing
     config.add_facet_field 'subject_ssim_str', label: 'Subject',limit: 20
-    #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
     config.add_facet_field 'author_ssm_str', label: 'Creator', limit: 20
+    config.add_facet_field 'doc_source_tsim_str', label: 'Source', limit: 20
+    #config.add_facet_field 'serial_title', label: 'Series Title', limit: 20
+    config.add_facet_field 'is_serial', label: 'Is a Series'
+    config.add_facet_field 'is_issue', label: 'Is an Issue'
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
+    #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
 
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
@@ -155,9 +157,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'author_ssm_str', label: 'Creator'
     config.add_index_field 'collection_tsim', label: 'Collection'
-    config.add_index_field 'is_issue', label: 'Is Issue'
     config.add_index_field 'pub_date_si', label: 'Date'
-    config.add_index_field 'id', label: 'ID'
+    config.add_index_field 'id', label: 'Item Code'
     
 
     # solr fields to be displayed in the show (single result) view
