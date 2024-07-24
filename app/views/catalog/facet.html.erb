@@ -1,7 +1,9 @@
 <% content_for(:container_header) do -%>
   <%= render partial: 'shared/header_navbar' %>
 <% end %>
-<div class="container">
+<br/>
+<br/>
+<div class="container" style="width: fit-content !important;">
   <%= render Blacklight::System::ModalComponent.new do |component| %>
       <br/>
       <% component.with_title { "Filter by " + facet_field_label(@facet.key) } %>
@@ -12,7 +14,6 @@
         <%= render :partial=>'facet_pagination' %>
       </div>
 
-      
       <br/>
 
       <div class="facet-extended-list">

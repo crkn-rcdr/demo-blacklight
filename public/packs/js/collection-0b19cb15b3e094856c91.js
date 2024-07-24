@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdemo_blacklight=self.webpackChunkdemo_blacklight||[]).push([[464],{37628:()=>{(function(){var e=document.getElementById("collection-items-list");if(e){console.log("found");var t=e.dataset.documentId;fetch("https://dolphin-app-p9llh.ondigitalocean.app/solr/#/blacklight/query?q=serial_key:"+t+"&useParams=",{method:"GET"}).then((function(e){return e.json()})).then((function(e){print(e)}))}})()}},e=>{var t;t=37628,e(e.s=t)}]);
-//# sourceMappingURL=collection-0b19cb15b3e094856c91.js.map

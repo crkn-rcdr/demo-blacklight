@@ -18,9 +18,12 @@
 
       <% if @facet_field.modal_path %>
         <div class="more_facets">
-          <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
-            @facet_field.modal_path,
-            data: { blacklight_modal: 'trigger', turbo: false } %>
+          <div class="facet-modal-override">
+            <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
+              @facet_field.modal_path,
+              data: { blacklight_modal: 'trigger', turbo: false } %>
+            <div id="<%= @facet_field.key %>" class="facet-modal-wrapper"></div>
+          </div>
         </div>
       <% end %>
     </div>

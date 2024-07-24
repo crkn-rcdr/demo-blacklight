@@ -17,7 +17,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     ## Specify the style of markup to be generated (may be 4 or 5)
-    # config.bootstrap_version = 5
+    config.bootstrap_version = 5
     #
     ## Class for sending and receiving requests from a search index
     config.repository_class = Blacklight::Solr::Repository

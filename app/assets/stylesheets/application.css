@@ -704,7 +704,9 @@ a[disabled] {
 .modal-frame {
     width: 100%;
 }
-
+.modal {
+    display: block;
+}
 div[data-blacklight-modal] .modal-footer {
     justify-content: flex-start;
 }
