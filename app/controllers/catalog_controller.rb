@@ -131,8 +131,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'author_ssm_str', label: 'Creator', limit: 20
     config.add_facet_field 'doc_source_tsim_str', label: 'Source', limit: 20
     #config.add_facet_field 'serial_title', label: 'Series Title', limit: 20
-    config.add_facet_field 'is_serial', label: 'Is a Series'
-    config.add_facet_field 'is_issue', label: 'Is an Issue'
+    config.add_facet_field 'is_serial', label: 'Is a Serial Title'
+    config.add_facet_field 'is_issue', label: 'Is a Serial Issue'
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
 
