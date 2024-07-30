@@ -5,7 +5,6 @@ class PageSearchComponent < ViewComponent::Base
         @documentId = documentId
         @term = term
         @prefix = prefix
-        puts term.length
         if @term.length != 0
             rsolr = RSolr.connect :url => 'https://dolphin-app-p9llh.ondigitalocean.app/solr/page'
             if term != "*:*"

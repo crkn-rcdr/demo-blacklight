@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdemo_blacklight=self.webpackChunkdemo_blacklight||[]).push([[832],{10336:()=>{(function(){var e=document.getElementById("range_pub_date_si_begin"),n=document.getElementById("range_pub_date_si_end"),r=document.querySelector("p.range.subsection.slider_js");e&&n&&r&&(e.placeholder="From year",n.placeholder="To year",r.innerHTML="Or, enter a custom year range:")})()}},e=>{var n;n=10336,e(e.s=n)}]);
+//# sourceMappingURL=date_facet-9379129781fdbd15b177.js.map

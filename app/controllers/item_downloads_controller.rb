@@ -21,7 +21,6 @@ class ItemDownloadsController < ApplicationController
         uri = URI('https://www.canadiana.ca/iiif/'+@documentId+'/manifest')
         res = Net::HTTP.get(uri)
         if res 
-            puts res  
             result = JSON.parse(res)
             #"label": {
             #    "en": [
@@ -61,7 +60,6 @@ class ItemDownloadsController < ApplicationController
                     canvasId = extracted_string.gsub('%2F', '/')
                     expires                = Time.now.to_i + 86400  # expires in a day
                     path                   = File.join("/v1/AUTH_crkn/access-files", "/#{canvasId}.pdf")
-                    puts path
                     payload                = "GET\n#{expires}\n#{path}"
                     digest                 = OpenSSL::Digest.new('sha1')
                     signature              = OpenSSL::HMAC.hexdigest(digest, key, payload)

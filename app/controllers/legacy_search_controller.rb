@@ -4,7 +4,6 @@ require 'json'
 require 'rsolr'
 class LegacySearchController < ApplicationController
     def index
-        puts params
         @documentId = params[:id]
         @term = params[:q]
         if @term.length != 0

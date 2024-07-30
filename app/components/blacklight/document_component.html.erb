@@ -57,9 +57,9 @@
         <%= partial %>
       <% end %>
 
-      <% if @component.to_s == 'article' %>
+      <!--<% if @component.to_s == 'article' %>
         <%= render(PageSearchComponent.new(documentId: @document.id, term: params[:q] || '', prefix: 'oocihm')) do %><% end %>
-      <% end %>
+      <% end %>-->
       
     </div>
 

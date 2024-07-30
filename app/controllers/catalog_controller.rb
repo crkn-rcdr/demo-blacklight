@@ -125,14 +125,14 @@ class CatalogController < ApplicationController
         segments: true,
         maxlength: 4
       }
-    config.add_facet_field 'language_ssim_str', label: 'Language', limit: 20
-    config.add_facet_field 'collection_tsim_str', label: 'Collection', limit: 6 # Need to figure out why old values aren't clearing
-    config.add_facet_field 'subject_ssim_str', label: 'Subject', limit: 20
-    config.add_facet_field 'author_ssm_str', label: 'Creator', limit: 20
-    config.add_facet_field 'doc_source_tsim_str', label: 'Source', limit: 20
-    #config.add_facet_field 'serial_title', label: 'Series Title', limit: 20
-    config.add_facet_field 'is_serial', label: 'Is a Serial Title'
-    config.add_facet_field 'is_issue', label: 'Is a Serial Issue'
+    config.add_facet_field 'language_ssim_str', label: 'Language', sort: 'index', limit: 20
+    config.add_facet_field 'collection_tsim_str', label: 'Collection', sort: 'index', limit: 7 # Need to figure out why old values aren't clearing
+    config.add_facet_field 'subject_ssim_str', label: 'Subject', sort: 'index', limit: 20
+    config.add_facet_field 'author_ssm_str', label: 'Creator', sort: 'index', limit: 20
+    config.add_facet_field 'doc_source_tsim_str', label: 'Source', sort: 'index', limit: 20
+    #config.add_facet_field 'serial_title_str', label: 'Series Title', limit: 20
+    #config.add_facet_field 'is_serial', label: 'Is a Serial Publication'
+    config.add_facet_field 'is_issue', label: 'Is an Issue of a Serial Publication'
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
 
@@ -165,6 +165,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
+    # , link_to_facet: true
     config.add_show_field 'title_ssm', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'title_addl_tsim', label: 'Other Titles'
@@ -180,8 +181,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'language_ssim', label: 'Language'
     config.add_show_field 'pub_date_si', label: 'Date'
     config.add_show_field 'permalink_fulltext_ssm', label: 'Permalink'
-    config.add_show_field 'is_serial', label: 'Is a Series'
-    config.add_show_field 'is_issue', label: 'Is Issue'
+    config.add_show_field 'is_serial', label: 'Is a Serial Publication'
+    config.add_show_field 'is_issue', label: 'Is an Issue of a Serial Publication'
     #config.add_show_field 'url_fulltext_ssm', label: 'Canadiana URL'
     #config.add_show_field 'subject_geo_ssim', label: 'Region'
     #config.add_show_field 'title_series_tsim', label: 'Series'
@@ -267,7 +268,8 @@ class CatalogController < ApplicationController
     # except in the relevancy case). Add the sort: option to configure a
     # custom Blacklight url parameter value separate from the Solr sort fields.
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
-    config.add_sort_field 'year-desc', sort: 'pub_date_si desc', label: 'year'
+    # config.add_sort_field 'year-asc', sort: 'pub_date_si asc', label: 'oldest to newest' -> Missing get sorted first.
+    config.add_sort_field 'year-desc', sort: 'pub_date_si desc', label: 'newest to oldest'
     #config.add_sort_field 'author', sort: 'author_si asc', label: 'creator'
     #config.add_sort_field 'title_si asc, pub_date_si desc', label: 'title'
 
