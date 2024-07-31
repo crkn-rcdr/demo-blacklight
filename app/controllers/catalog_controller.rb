@@ -126,16 +126,15 @@ class CatalogController < ApplicationController
         maxlength: 4
       }
     config.add_facet_field 'language_ssim_str', label: 'Language', sort: 'index', limit: 20
-    config.add_facet_field 'collection_tsim_str', label: 'Collection', sort: 'index', limit: 7 # Need to figure out why old values aren't clearing
-    config.add_facet_field 'subject_ssim_str', label: 'Subject', sort: 'index', limit: 20
-    config.add_facet_field 'author_ssm_str', label: 'Creator', sort: 'index', limit: 20
-    config.add_facet_field 'doc_source_tsim_str', label: 'Source', sort: 'index', limit: 20
-    #config.add_facet_field 'serial_title_str', label: 'Series Title', limit: 20
-    #config.add_facet_field 'is_serial', label: 'Is a Serial Publication'
-    config.add_facet_field 'is_issue', label: 'Individual Issue'
+    config.add_facet_field 'collection_tsim_str', label: 'Collection', sort: 'count', limit: 7 # Need to figure out why old values aren't clearing
+    config.add_facet_field 'subject_ssim_str', label: 'Subject', sort: 'count', limit: 20
+    config.add_facet_field 'author_ssm_str', label: 'Creator', sort: 'count', limit: 20
+    config.add_facet_field 'doc_source_tsim_str', label: 'Source', sort: 'count', limit: 20
+    config.add_facet_field 'is_issue', label: 'Is an Individual Issue' # TODO: Make checkbox, show: false # don't display the facet, but configure it in case it displays in the constraints (or e.g. a saved search)
     #config.add_facet_field 'subject_geo_ssim_str', label: 'Region'
     #config.add_facet_field 'a_query_field', pivot: ['collection_tsim_str', 'subject_ssim_str']
-
+    #config.add_facet_field 'serial_title_str', label: 'Series Title', limit: 20
+    #config.add_facet_field 'is_serial', label: 'Is a Serial Publication'
 
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', pivot: ['format', 'language_ssim'], collapsing: true
 
