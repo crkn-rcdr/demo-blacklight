@@ -22,6 +22,35 @@ class MarcIndexer < Blacklight::Marc::Indexer
         acc.replace ["No"]
       end
     end
+    to_field "serial_key",  extract_marc('001'), first_only do |rec, acc|
+      if acc[0].count("_") >= 2
+        parts = acc[0].split('_', 3)
+        acc.replace [parts[0..1].join('_')]
+      else
+        acc.replace []
+      end
+    end
+    to_field "serial_title",  extract_marc('245a'), first_only do |rec, acc|
+      if acc[0].count(":") >= 1
+        parts = acc[0].split(':', 2)
+        acc.replace [parts[0]]
+      else
+        acc.replace []
+      end
+    end
+
+    # https://github.com/ruby-marc/ruby-marc
+    # https://github.com/traject/traject/blob/5d720e2ba0a277cf7af455763f520cd6a2d956c7/README.md?plain=1#L279
+    to_field "is_serial" do |record, accumulator|
+      has_two_or_more_underscores = true
+      leader07 = record.leader.slice(7)
+      has_two_or_more_underscores = record["001"].to_s.count("_") >=2
+      if leader07 == "s" && !has_two_or_more_underscores
+        accumulator.replace ["Yes"]
+      else
+        accumulator.replace ["No"]
+      end
+    end
 
     to_field 'marc_ss', get_xml
     to_field "all_text_timv", extract_all_marc_values do |r, acc|
@@ -137,8 +166,7 @@ class MarcIndexer < Blacklight::Marc::Indexer
     to_field 'published_ssm', extract_marc('260abcefg:264abc', alternate_script: false), trim_punctuation #remove_accent
     to_field 'published_vern_ssm', extract_marc('260abcefg:264abc', alternate_script: :only), trim_punctuation #remove_accent
 
-    # Published Date
-    # https://github.com/traject/traject/blob/5d720e2ba0a277cf7af455763f520cd6a2d956c7/lib/traject/macros/marc21_semantics.rb#L307
+    # Published Dated
     to_field 'pub_date_si', marc_publication_date
     to_field 'pub_date_ssim', marc_publication_date
 
