@@ -716,3 +716,6 @@ div[data-blacklight-modal] .modal-footer {
 .facet-pagination {
     width: 100%;
 }
+.mv-menu-nav  {
+    flex-wrap: nowrap !important;
+}
