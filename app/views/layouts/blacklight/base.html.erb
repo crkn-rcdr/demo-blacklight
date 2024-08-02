@@ -37,7 +37,8 @@
         console.log("modalLinks",modalLinks)
         for(let modalLink of modalLinks) {
           const rel = modalLink.getAttribute("rel")
-          if( rel == "prev" || rel == "next" ) {
+          const className = modalLink.className
+          if( rel == "prev" || rel == "next" || className.includes("sort_change")) {
             modalLink.onclick = (e) => {
                 e.preventDefault()
                 setModalContent(modalLink.href, modalDiv)
