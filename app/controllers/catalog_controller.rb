@@ -126,7 +126,7 @@ class CatalogController < ApplicationController
         maxlength: 4
       }
     config.add_facet_field 'language_ssim_str', label: 'Language', sort: 'index', limit: 20
-    config.add_facet_field 'collection_tsim_str', label: 'Collection', sort: 'count', limit: 7 # Need to figure out why old values aren't clearing
+    config.add_facet_field 'collection_tsim_str', label: 'Collection', sort: 'count', limit: 8 # Need to figure out why old values aren't clearing
     config.add_facet_field 'subject_ssim_str', label: 'Subject', sort: 'count', limit: 20
     config.add_facet_field 'author_ssm_str', label: 'Creator', sort: 'count', limit: 20
     config.add_facet_field 'doc_source_tsim_str', label: 'Source', sort: 'count', limit: 20

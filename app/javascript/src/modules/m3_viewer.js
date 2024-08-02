@@ -733,7 +733,7 @@ export default {
           osdConfig: {
     
             // Default config used for OpenSeadragon https://openseadragon.github.io/docs/OpenSeadragon.html#.Options
-            preserveImageSizeOnResize: false,
+            /*preserveImageSizeOnResize: false,
             zoomPerScroll: 1.2,
             zoomPerSecond: 1.2,
             defaultZoomLevel: 0,
@@ -749,21 +749,20 @@ export default {
             gestureSettingsTouch: {
               scrollToZoom: false,
               dragToPan: false
-            },
+            },*/
 
             showNavigator: true,
             autoHideControls: false,
             showNavigationControl: true,
-            sequenceMode: true,
-            showSequenceControl: false,
+            /*sequenceMode: true,
+            showSequenceControl: false,*/
             crossOriginPolicy: "Anonymous",
             navigatorPosition: "BOTTOM_RIGHT",
             showFullPageControl: true,
-            preserveViewport: true,
-
+            /*preserveViewport: true,
             blendTime: 0,
             alwaysBlend: false,
-            smoothTileEdgesMinZoom: false,
+            smoothTileEdgesMinZoom: false,*/
           },
     
           export: {
