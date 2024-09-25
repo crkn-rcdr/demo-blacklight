@@ -76,21 +76,21 @@ pin "mirador", to: "https://unpkg.com/mirador@latest/dist/mirador.min.js"
 
 Then download and add files to vendor/javascript.
 
-docker run -v /root/demo-blacklight:/app demo-blacklight-web
+`docker run -v /root/demo-blacklight:/app demo-blacklight-web`
 
 Then, for shakapacker:
-docker exec -it demo-blacklight-web-1 bash
+`docker exec -it demo-blacklight-web-1 bash`
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source ~/.bashrc && nvm install 18 && corepack enable && rails shakapacker:install 
-(n/n/n/y)
-rails shakapacker:compile
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`
+`source ~/.bashrc && nvm install 18 && corepack enable && rails shakapacker:install `
+`(n/n/n/y)`
+`rails shakapacker:compile`
 
-exit
-docker container restart demo-blacklight-web-1
+`exit`
+`docker container restart demo-blacklight-web-1`
 
-git add --all 
-git commit
+`git add --all `
+`git commit`
 
 Out of space warning:
 `docker system prune`
