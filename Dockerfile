@@ -1,4 +1,4 @@
-FROM ruby:3.0.3
+FROM ruby:3.3.3
 
 RUN apt-get update; \
     apt-get install -y curl gnupg; \
@@ -16,13 +16,9 @@ RUN gem install devise devise-guests
 
 RUN rails generate blacklight:install --devise --marc --solr_version=latest
 
-#RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-#RUN source ~/.bashrc
-#RUN nvm install 18
-#RUN corepack enable
-#RUN rails shakapacker:compile
-
 COPY . .
+
+# RUN /bin/bash -c  /app/setup.sh
 
 EXPOSE 3000
 
